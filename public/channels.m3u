@@ -617,7 +617,7 @@ http://139.224.44.53:1234/673168223
 #EXTINF:-1 tvg-name="CCTV16" tvg-id="CCTV16" tvg-logo="https://gitee.com/suxuang/logo/raw/master/mylogo/CCTV16.png" group-title="央视",CCTV16
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://38.75.136.137:98/gslb/dsdqbv/cctv16hd.m3u8?auth=test20251009
-#EXTINF:-1 tvg-name="CCTV16 4K" group-title="央视" tvg-id="CCTV16",CCTV16 4K
+#EXTINF:-1 tvg-name="CCTV16 4K" tvg-id="CCTV16" group-title="央视",CCTV16 4K
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://192.187.124.34:81/live/cctv164k.m3u8
 #EXTINF:-1 tvg-id="CCTV17" tvg-name="CCTV17" tvg-logo="http://wapx.cmvideo.cn:8080/publish/poms/image/5501/083/631/202204010052_1626678428060_H32_1080.webp" catchup="append" catchup-source="?playbackbegin=${(b)yyyyMMddHHmmss}&playbackend=${(e)yyyyMMddHHmmss}" group-title="央视",CCTV17
