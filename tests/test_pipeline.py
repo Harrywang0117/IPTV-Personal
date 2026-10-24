@@ -106,10 +106,38 @@ class PipelineTests(unittest.TestCase):
         self.assertFalse(kept[0].verified)
         self.assertIn("明天预告", p.render_m3u([kept], self.now, []))
 
-    def test_no_verified_yesterday_fails_gate(self):
+    def test_catalog_presence_does_not_require_cloud_video_reachability(self):
         cfg = dict(self.config, minimum_channels=0)
         entries = [[p.Entry("A", "", f"https://example.com/{delta}", event_date=self.now.date()+p.timedelta(days=delta), upcoming=True)] for delta in [-1,0,1]]
-        self.assertIn("no_verified_events_2026-10-23", p.quality_errors(entries, cfg, self.now))
+        self.assertEqual(p.quality_errors(entries, cfg, self.now), [])
+
+    def test_failed_sports_checks_preserve_catalogue_but_not_verified_status(self):
+        entry = p.Entry("CBA A VS B 19:25", "", "https://example.com/a", event_date=self.now.date())
+        kept, stats = p.select_bucket([entry], self.config, lambda e: {"ok": False, "reason": "timeout"})
+        self.assertEqual(len(kept), 1)
+        self.assertFalse(kept[0].verified)
+        self.assertEqual(kept[0].check_status, "timeout")
+        self.assertEqual(stats["timeout"], 1)
+
+    def test_unchecked_sports_catalogue_does_not_claim_decoded(self):
+        entry = p.Entry("中超 A VS B 15:00", "", "https://example.com/a", event_date=self.now.date())
+        kept, stats = p.select_bucket([entry], self.config, lambda e: self.fail("unsampled event probed"), check_event=False)
+        self.assertEqual(len(kept), 1)
+        self.assertFalse(kept[0].verified)
+        self.assertEqual(stats["event_not_checked"], 1)
+
+    def test_membership_failure_is_visible_in_event_title(self):
+        entry = p.Entry("CBA A VS B 19:25", "", "https://example.com/a", event_date=self.now.date())
+        kept, _ = p.select_bucket([entry], self.config, lambda e: {"ok": False, "reason": "membership_required"})
+        self.assertIn("源提示需会员", p.display_name(kept[0]))
+        self.assertFalse(kept[0].verified)
+
+    def test_reformat_preserves_event_epg_identity(self):
+        entry = p.Entry("CBA A VS B 19:25", "", "https://example.com/a", event_date=self.now.date())
+        first = p.parse_playlist(p.render_m3u([[entry]], self.now, []))[0]
+        first.event_date = entry.event_date
+        second = p.parse_playlist(p.render_m3u([[first]], self.now, []))[0]
+        self.assertEqual(first.attrs["tvg-id"], second.attrs["tvg-id"])
 
     def test_channel_drop_fails_gate(self):
         cfg = dict(self.config, minimum_channels=0)
@@ -248,6 +276,29 @@ class PipelineTests(unittest.TestCase):
             self.assertEqual(code, 2)
             self.assertEqual((out / "all.m3u").read_text(), "previous accepted output")
             self.assertFalse(json.loads((root / "report.json").read_text())["accepted"])
+
+    def test_events_only_keeps_complete_days_and_prior_tv_validation_time(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            out = root / "public"
+            cfg = dict(self.config, sources=[self.spec], minimum_channels=1)
+            old_time = "2026-10-24T08:00:00+08:00"
+            tv = p.Entry("CCTV1", "央视", "https://example.com/tv", verified=True)
+            p.publish(out, [[tv]], {"accepted": True, "channels": 1, "generated_at": old_time}, self.now, cfg)
+            text = '#EXTM3U\n'
+            for word, suffix in [("昨天", "10-23"), ("今天", "10-24"), ("明天", "10-25")]:
+                text += f'#EXTINF:-1 group-title="体育-{word}{suffix}" tvg-id="A VS B",CBA A VS B 全场回放 00:01\nhttps://example.com/{word}\n'
+            with patch("pipeline.fetch_playlist", return_value=text), patch("builtins.print"):
+                code = p.run(cfg, out, root / "report.json", self.now,
+                             probe=lambda e: {"ok": False, "reason": "timeout"}, events_only=True)
+            self.assertEqual(code, 0)
+            report = json.loads((out / "status.json").read_text())
+            self.assertEqual(report["channel_validation_at"], old_time)
+            self.assertEqual(report["channels"], 1)
+            self.assertEqual([day["listed"] for day in report["events"].values()], [1,1,1])
+            self.assertTrue(all(day["verified"] == 0 for day in report["events"].values()))
+            self.assertIn("sports_catalog_contains_unverified_entries", report["warnings"])
+            self.assertIn("https://example.com/tv", (out / "channels.m3u").read_text())
 
 
 if __name__ == "__main__":

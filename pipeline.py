@@ -18,6 +18,8 @@ import subprocess
 import tempfile
 import threading
 import time
+import urllib.error
+import urllib.request
 from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
 
@@ -50,6 +52,7 @@ class Entry:
     event_date: date | None = None
     upcoming: bool = False
     verified: bool = False
+    check_status: str = "not_checked"
 
     @property
     def identity(self):
@@ -232,6 +235,7 @@ class Prober:
     def __init__(self, config):
         self.config = config
         self.deadline = time.monotonic() + config["budget_seconds"]
+        self.event_deadline = time.monotonic() + config.get("event_probe_budget_seconds", 180)
         self.hosts = defaultdict(lambda: threading.Semaphore(config["per_host"]))
         self.lock = threading.Lock()
         help_text = subprocess.run(["ffmpeg", "-hide_banner", "-h", "demuxer=hls"],
@@ -243,14 +247,21 @@ class Prober:
     def __call__(self, entry):
         with self.lock:
             semaphore = self.hosts[urlparse(entry.url).hostname]
-        remaining = self.deadline - time.monotonic()
+        deadline = min(self.deadline, self.event_deadline) if entry.event_date else self.deadline
+        budget_reason = "event_budget" if entry.event_date else "budget"
+        remaining = deadline - time.monotonic()
         if remaining <= 0 or not semaphore.acquire(timeout=max(0, remaining)):
-            return {"ok": False, "reason": "budget", "frames": 0}
+            return {"ok": False, "reason": budget_reason, "frames": 0}
         try:
-            remaining = self.deadline - time.monotonic()
+            remaining = deadline - time.monotonic()
             if remaining < 1:
-                return {"ok": False, "reason": "budget", "frames": 0}
-            return self.decode(entry, min(self.config["probe_timeout"], remaining))
+                return {"ok": False, "reason": budget_reason, "frames": 0}
+            result = self.decode(entry, min(self.config["probe_timeout"], remaining))
+            if entry.event_date and result["reason"] == "decode_failed":
+                hint = membership_hint(entry.url, min(2, max(0, deadline-time.monotonic())))
+                if hint:
+                    result["reason"] = "membership_required"
+            return result
         finally:
             semaphore.release()
 
@@ -319,20 +330,71 @@ def candidate_order(entries, limit):
     return (first + rest)[:limit]
 
 
-def select_bucket(entries, config, probe):
-    lines, stats = [], Counter()
+def membership_hint(url, timeout):
+    if timeout < 0.1:
+        return False
+    class NoRedirect(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, *args, **kwargs):
+            return None
+    try:
+        with urllib.request.build_opener(NoRedirect).open(
+                urllib.request.Request(url, headers={"User-Agent": UA}), timeout=timeout) as response:
+            if "application/json" not in response.headers.get("Content-Type", ""):
+                return False
+            text = response.read(1024).decode("utf-8", "replace")
+            return "会员" in text and any(word in text for word in ("开通", "订购", "购买"))
+    except (OSError, urllib.error.URLError):
+        return False
+
+
+def select_bucket(entries, config, probe, check_event=True):
+    lines, fallback, stats = [], [], Counter()
     for entry in candidate_order(entries, config["candidate_limit"]):
         if entry.upcoming:
             lines.append(entry)
             stats["upcoming_lines"] += 1
+        elif entry.event_date and not check_event:
+            lines.append(entry)
+            stats["event_not_checked"] += 1
         else:
             result = probe(entry)
             stats[result["reason"]] += 1
             if result["ok"]:
-                lines.append(replace(entry, verified=True))
+                lines.append(replace(entry, verified=True, check_status="decoded"))
+            elif entry.event_date:
+                fallback.append(replace(entry, check_status=result["reason"]))
         if len(lines) >= config["max_lines"]:
             break
+    # A sports catalogue must not lose entire matches because a cloud runner
+    # cannot reach the CDN. Preserve unverified entries, with separate status.
+    if entries[0].event_date:
+        fallback.sort(key=lambda e: e.check_status == "membership_required")
+        lines += fallback[:max(0, config["max_lines"]-len(lines))]
+        if stats["membership_required"] and not any(e.verified for e in lines):
+            lines = [replace(e, attrs={**e.attrs, "_membership_hint": True}) for e in lines]
     return lines, stats
+
+
+def event_sample_keys(ordered, limit_per_day):
+    by_day = defaultdict(list)
+    for entries in ordered:
+        entry = entries[0]
+        if entry.event_date and not entry.upcoming:
+            by_day[entry.event_date].append(entry)
+    selected = set()
+    priorities = ("中超", "CBA", "NBA", "斯诺克")
+    for entries in by_day.values():
+        entries.sort(key=lambda e: (next((i for i, league in enumerate(priorities)
+                                        if league in e.name), len(priorities)), rank(e)))
+        seen = set()
+        for entry in entries:
+            match = entry.attrs.get("tvg-id") or entry.name
+            if match not in seen:
+                selected.add(entry.identity)
+                seen.add(match)
+            if len(seen) >= limit_per_day:
+                break
+    return selected
 
 
 def rank(entry):
@@ -349,11 +411,14 @@ def display_name(entry):
     if clock is None:
         return entry.name
     hour, minute = divmod(clock, 60)
+    membership = entry.check_status == "membership_required" or entry.attrs.get("_membership_hint", False)
     if re.match(r"^\s*\d{1,2}:\d{2}\s+", entry.name):
-        return re.sub(r"^\s*\d{1,2}:\d{2}", f"{hour:02d}:{minute:02d}", entry.name)
+        name = re.sub(r"^\s*\d{1,2}:\d{2}", f"{hour:02d}:{minute:02d}", entry.name)
+        return name + ("（源提示需会员）" if membership and "源提示需会员" not in name else "")
     title = re.sub(r"\s*\d{1,2}:\d{2}\s*$", "", entry.name).strip()
     title = re.sub(r"^\d{1,2}:\d{2}\s+", "", title)
-    return f"{hour:02d}:{minute:02d} {title}"
+    suffix = "（源提示需会员）" if membership else ""
+    return f"{hour:02d}:{minute:02d} {title}{suffix}"
 
 
 def display_group(entry, now):
@@ -382,11 +447,13 @@ def render_m3u(buckets, now, epg, single=True):
     for bucket in sorted(buckets, key=lambda b: rank(b[0])):
         for entry in bucket[:1] if single else bucket:
             attrs = {k: v for k, v in entry.attrs.items() if k.startswith("tvg-") or k in CATCHUP}
-            name = display_name(entry)
+            membership = all(e.check_status == "membership_required" for e in bucket)
+            name = display_name(replace(entry, check_status="membership_required" if membership else "not_checked"))
             attrs["tvg-name"] = name
             attrs["group-title"] = display_group(entry, now)
             if entry.event_date:
-                attrs["tvg-id"] = "event-" + hashlib.sha256(repr(entry.identity).encode()).hexdigest()[:16]
+                existing = entry.attrs.get("tvg-id", "")
+                attrs["tvg-id"] = existing if re.fullmatch(r"event-[0-9a-f]{16}", existing) else "event-" + hashlib.sha256(repr(entry.identity).encode()).hexdigest()[:16]
             elif epg_id(entry):
                 attrs["tvg-id"] = epg_id(entry)
             meta = " ".join(f'{k}="{safe_attr(v)}"' for k, v in attrs.items())
@@ -420,8 +487,6 @@ def quality_errors(buckets, config, now, previous_channels=0):
         items = [e for e in events if e.event_date == day]
         if not items:
             errors.append(f"missing_events_{day}")
-        elif delta <= 0 and sum(e.verified for e in items) < config["minimum_verified_per_started_day"]:
-            errors.append(f"no_verified_events_{day}")
     return errors
 
 
@@ -457,9 +522,18 @@ def publish(out_dir, buckets, report, now, config):
             os.replace(Path(staging) / name, out_dir / name)
 
 
-def run(config, out_dir, report_path, now, fixtures=None, probe=None):
+def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_only=False):
+    previous = {}
+    try:
+        previous = json.loads((out_dir / "status.json").read_text())
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass
+    if events_only and not previous.get("accepted"):
+        raise ValueError("events_only_requires_previous_accepted_channels")
     candidates, sources = [], []
     for spec in config["sources"]:
+        if events_only and not spec.get("events"):
+            continue
         started = time.monotonic()
         print(f"source_start id={spec['id']}", flush=True)
         try:
@@ -481,13 +555,17 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None):
         print(f"source_end id={spec['id']} ok={sources[-1]['ok']} seconds={time.monotonic()-started:.1f}", flush=True)
     grouped = defaultdict(list)
     for entry in candidates:
-        grouped[entry.identity].append(entry)
+        if not events_only or entry.event_date:
+            grouped[entry.identity].append(entry)
     probe = probe or Prober(config)
     buckets, stats, finished = [], Counter(), 0
     ordered = sorted(grouped.values(), key=lambda b: rank(b[0]))
+    samples = event_sample_keys(ordered, config.get("event_samples_per_day", 12))
+    ordered.sort(key=lambda b: (0 if b[0].identity in samples else 1 if b[0].event_date else 2, rank(b[0])))
     print(f"probe_start channels_and_events={len(ordered)}", flush=True)
     with ThreadPoolExecutor(max_workers=config["workers"]) as pool:
-        futures = [pool.submit(select_bucket, entries, config, probe) for entries in ordered]
+        futures = [pool.submit(select_bucket, entries, config, probe,
+                               not entries[0].event_date or entries[0].identity in samples) for entries in ordered]
         for future in as_completed(futures):
             lines, counts = future.result()
             finished += 1
@@ -496,11 +574,12 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None):
                 buckets.append(lines)
             if finished % 20 == 0 or finished == len(ordered):
                 print(f"probe_progress done={finished}/{len(ordered)} accepted={len(buckets)} counts={dict(stats)}", flush=True)
-    previous = {}
-    try:
-        previous = json.loads((out_dir / "status.json").read_text())
-    except (FileNotFoundError, json.JSONDecodeError):
-        pass
+    if events_only:
+        saved_channels = defaultdict(list)
+        for entry in parse_playlist((out_dir / "all-backup.m3u").read_text(), "last-accepted"):
+            if not entry.group.startswith("咪咕·"):
+                saved_channels[entry.identity].append(replace(entry, verified=True, check_status="last_accepted"))
+        buckets.extend(saved_channels.values())
     errors = quality_errors(buckets, config, now, previous.get("channels", 0))
     if stats["budget"]:
         errors.append("probe_budget_exhausted")
@@ -509,11 +588,31 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None):
         day = now.date() + timedelta(days=delta)
         entries = [b[0] for b in buckets if b[0].event_date == day]
         by_day[day.isoformat()] = {"listed": len(entries), "verified": sum(e.verified for e in entries),
-                                  "upcoming": sum(e.upcoming for e in entries)}
+                                  "upcoming": sum(e.upcoming for e in entries),
+                                  "not_checked": sum(e.check_status == "not_checked" and not e.upcoming for e in entries),
+                                  "membership_required": sum(e.check_status == "membership_required" or e.attrs.get("_membership_hint", False) for e in entries),
+                                  "failed_checks": sum(not e.verified and e.check_status not in ("not_checked", "last_accepted") for e in entries)}
+    coverage = {}
+    for league in ("CBA", "中超"):
+        matches = [b[0] for b in buckets if b[0].event_date and b[0].name.startswith(league+" ")]
+        coverage[league] = {}
+        for day in sorted(set(e.event_date for e in matches)):
+            items = [e for e in matches if e.event_date == day]
+            coverage[league][day.isoformat()] = {
+                "matches": len(set(e.attrs.get("tvg-id") or e.name for e in items)),
+                "entries": len(items), "decoded_entries": sum(e.verified for e in items)}
+    warnings = []
+    if any(not b[0].verified and not b[0].upcoming for b in buckets if b[0].event_date):
+        warnings.append("sports_catalog_contains_unverified_entries")
+    if stats["membership_required"]:
+        warnings.append("some_sports_entries_require_membership")
     report = {"generated_at": now.isoformat(timespec="seconds"),
               "finished_at": datetime.now(now.tzinfo).isoformat(timespec="seconds"), "accepted": not errors,
-              "errors": errors, "sources": sources, "channels": sum(not b[0].event_date for b in buckets),
+              "errors": errors, "warnings": warnings, "sources": sources, "channels": sum(not b[0].event_date for b in buckets),
               "events": by_day, "probe": dict(stats), "max_lines": config["max_lines"],
+              "event_policy": "complete_catalog_with_sampled_playback_checks", "competition_coverage": coverage,
+              "mode": "events_only" if events_only else "full",
+              "channel_validation_at": (previous.get("channel_validation_at") or previous.get("generated_at")) if events_only else now.isoformat(timespec="seconds"),
               "verification": "decoded_video_and_optional_audio_at_generator_location",
               "decode_seconds": config["decode_seconds"],
               "upcoming_note": "赛前条目未验证可播；开赛后重测。解码成功不证明画面对应赛事或电视端持续播放。"}
@@ -521,6 +620,8 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None):
     if errors:
         print("quality_gate_rejected " + ",".join(errors), flush=True)
         return 2
+    for warning in warnings:
+        print("::warning::" + warning, flush=True)
     publish(out_dir, buckets, report, now, config)
     print(f"published channels={report['channels']} events={by_day}", flush=True)
     return 0
@@ -532,6 +633,7 @@ def main():
     parser.add_argument("--out", type=Path, default=ROOT / "public")
     parser.add_argument("--report", type=Path, default=ROOT / "reports/latest.json")
     parser.add_argument("--fixtures", type=Path, help="Use saved source lists, still decode actual streams")
+    parser.add_argument("--events-only", action="store_true", help="Refresh the complete sports catalogue; reuse last accepted TV channels")
     args = parser.parse_args()
     config = json.loads(args.config.read_text())
     if not 1 <= config["max_lines"] <= 2 or config["candidate_limit"] < config["max_lines"]:
@@ -539,7 +641,8 @@ def main():
     for name in ("ffmpeg", "curl"):
         if not shutil.which(name):
             parser.error(name + " is required")
-    return run(config, args.out, args.report, datetime.now(ZoneInfo(config["timezone"])), args.fixtures)
+    return run(config, args.out, args.report, datetime.now(ZoneInfo(config["timezone"])), args.fixtures,
+               events_only=args.events_only)
 
 
 if __name__ == "__main__":

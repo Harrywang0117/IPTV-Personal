@@ -1,7 +1,12 @@
 {
-  "generated_at": "2026-10-24T17:37:45+08:00",
+  "generated_at": "2026-10-24T19:04:47+08:00",
+  "finished_at": "2026-10-24T19:05:11+08:00",
   "accepted": true,
   "errors": [],
+  "warnings": [
+    "sports_catalog_contains_unverified_entries",
+    "some_sports_entries_require_membership"
+  ],
   "sources": [
     {
       "id": "migu-primary",
@@ -10,46 +15,83 @@
       "selected": 627
     },
     {
-      "id": "migu-backup",
+      "id": "migu-alt",
       "ok": true,
-      "parsed": 631,
-      "selected": 625
+      "parsed": 628,
+      "selected": 622
     },
     {
-      "id": "base",
+      "id": "migu-backup",
       "ok": true,
-      "parsed": 5901,
-      "selected": 1761
+      "parsed": 634,
+      "selected": 628
     }
   ],
   "channels": 296,
   "events": {
     "2026-10-23": {
-      "listed": 86,
-      "verified": 86,
-      "upcoming": 0
+      "listed": 122,
+      "verified": 12,
+      "upcoming": 0,
+      "not_checked": 110,
+      "membership_required": 0,
+      "failed_checks": 0
     },
     "2026-10-24": {
-      "listed": 99,
-      "verified": 14,
-      "upcoming": 85
+      "listed": 246,
+      "verified": 7,
+      "upcoming": 72,
+      "not_checked": 162,
+      "membership_required": 4,
+      "failed_checks": 5
     },
     "2026-10-25": {
-      "listed": 186,
+      "listed": 181,
       "verified": 0,
-      "upcoming": 186
+      "upcoming": 181,
+      "not_checked": 0,
+      "membership_required": 0,
+      "failed_checks": 0
     }
   },
   "probe": {
-    "decode_failed": 911,
-    "decoded": 548,
-    "upcoming_lines": 506,
-    "http_403": 65,
-    "http_500": 2,
-    "timeout": 24,
-    "http_404": 5
+    "decoded": 38,
+    "event_not_checked": 493,
+    "upcoming_lines": 494,
+    "decode_failed": 9,
+    "membership_required": 8
   },
   "max_lines": 2,
-  "verification": "decoded_video_and_optional_audio_3s_at_generator_location",
+  "event_policy": "complete_catalog_with_sampled_playback_checks",
+  "competition_coverage": {
+    "CBA": {
+      "2026-10-23": {
+        "matches": 5,
+        "entries": 17,
+        "decoded_entries": 5
+      },
+      "2026-10-24": {
+        "matches": 3,
+        "entries": 9,
+        "decoded_entries": 1
+      },
+      "2026-10-25": {
+        "matches": 7,
+        "entries": 30,
+        "decoded_entries": 0
+      }
+    },
+    "中超": {
+      "2026-10-24": {
+        "matches": 8,
+        "entries": 27,
+        "decoded_entries": 3
+      }
+    }
+  },
+  "mode": "events_only",
+  "channel_validation_at": "2026-10-24T17:37:45+08:00",
+  "verification": "decoded_video_and_optional_audio_at_generator_location",
+  "decode_seconds": 3,
   "upcoming_note": "赛前条目未验证可播；开赛后重测。解码成功不证明画面对应赛事或电视端持续播放。"
 }

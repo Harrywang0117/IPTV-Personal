@@ -1,8 +1,8 @@
 {
   "timezone": "Asia/Shanghai",
   "sources": [
-    {"id": "migu-alt", "url": "http://112.230.73.82:7788", "events": true},
     {"id": "migu-primary", "url": "http://139.224.44.53:1234", "events": true},
+    {"id": "migu-alt", "url": "http://112.230.73.82:7788", "events": true},
     {"id": "migu-backup", "url": "http://mi.dzpp.uk", "events": true},
     {"id": "base", "url": "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u", "events": false}
   ],
@@ -15,8 +15,9 @@
   "probe_timeout": 18,
   "fetch_timeout": 18,
   "budget_seconds": 2100,
+  "event_probe_budget_seconds": 180,
+  "event_samples_per_day": 12,
   "minimum_channels": 30,
   "minimum_channel_ratio": 0.5,
-  "minimum_verified_per_started_day": 1,
   "epg": ["https://epg.112114.xyz/pp.xml"]
 }
