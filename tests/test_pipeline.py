@@ -141,6 +141,11 @@ class PipelineTests(unittest.TestCase):
         entry = p.Entry("09:55 赛事A", "", "https://example.com/a", event_date=self.now.date())
         self.assertEqual(p.display_name(entry), entry.name)
 
+    def test_displayed_clock_wins_over_time_inside_title(self):
+        entry = p.Entry("19:00 赛事A 昨日精彩回顾 02:00", "", "https://example.com/a", event_date=self.now.date())
+        self.assertEqual(p.event_clock(entry.name), 19*60)
+        self.assertEqual(p.display_name(entry), entry.name)
+
     def test_redirect_or_headers_without_frames_never_pass(self):
         prober = object.__new__(p.Prober)
         prober.config = self.config

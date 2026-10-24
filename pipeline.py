@@ -156,6 +156,11 @@ def event_date(group, today):
 
 def event_clock(name):
     """Return a valid clock in minutes; source lists normally put it last."""
+    prefix = re.match(r"^\s*(\d{1,2}):(\d{2})\s+", name)
+    if prefix:
+        hour, minute = map(int, prefix.groups())
+        if hour < 24 and minute < 60:
+            return hour * 60 + minute
     matches = re.findall(r"(?<!\d)(\d{1,2}):(\d{2})(?!\d)", name)
     for hour, minute in reversed(matches):
         hour, minute = int(hour), int(minute)
@@ -344,6 +349,8 @@ def display_name(entry):
     if clock is None:
         return entry.name
     hour, minute = divmod(clock, 60)
+    if re.match(r"^\s*\d{1,2}:\d{2}\s+", entry.name):
+        return re.sub(r"^\s*\d{1,2}:\d{2}", f"{hour:02d}:{minute:02d}", entry.name)
     title = re.sub(r"\s*\d{1,2}:\d{2}\s*$", "", entry.name).strip()
     title = re.sub(r"^\d{1,2}:\d{2}\s+", "", title)
     return f"{hour:02d}:{minute:02d} {title}"
