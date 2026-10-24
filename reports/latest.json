@@ -1,60 +1,58 @@
 {
-  "generated_at": "2026-10-24T22:35:00+08:00",
-  "finished_at": "2026-10-24T22:35:49+08:00",
+  "generated_at": "2026-10-25T07:48:12+08:00",
+  "finished_at": "2026-10-25T07:49:00+08:00",
   "accepted": true,
   "errors": [],
   "warnings": [
-    "sports_catalog_contains_unverified_entries",
-    "some_sports_entries_require_membership",
-    "some_sports_entries_require_login"
+    "sports_catalog_contains_unverified_entries"
   ],
   "sources": [
     {
       "id": "migu-primary",
       "ok": true,
-      "parsed": 641,
-      "selected": 635,
+      "parsed": 549,
+      "selected": 543,
       "cached": false
     },
     {
       "id": "migu-alt",
       "ok": true,
-      "parsed": 639,
-      "selected": 633,
+      "parsed": 565,
+      "selected": 559,
       "cached": false
     },
     {
       "id": "migu-backup",
       "ok": true,
-      "parsed": 617,
-      "selected": 611,
+      "parsed": 565,
+      "selected": 559,
       "cached": false
     }
   ],
   "channels": 545,
   "events": {
-    "2026-10-23": {
-      "listed": 123,
-      "verified": 12,
+    "2026-10-24": {
+      "listed": 226,
+      "verified": 25,
       "upcoming": 0,
-      "not_checked": 111,
+      "not_checked": 201,
       "membership_required": 0,
       "login_required": 0,
       "failed_checks": 0
     },
-    "2026-10-24": {
-      "listed": 253,
-      "verified": 29,
-      "upcoming": 0,
-      "not_checked": 218,
-      "membership_required": 5,
-      "login_required": 1,
-      "failed_checks": 6
-    },
     "2026-10-25": {
-      "listed": 184,
+      "listed": 183,
+      "verified": 12,
+      "upcoming": 134,
+      "not_checked": 37,
+      "membership_required": 0,
+      "login_required": 0,
+      "failed_checks": 0
+    },
+    "2026-10-26": {
+      "listed": 50,
       "verified": 0,
-      "upcoming": 184,
+      "upcoming": 50,
       "not_checked": 0,
       "membership_required": 0,
       "login_required": 0,
@@ -62,30 +60,28 @@
     }
   },
   "probe": {
-    "decoded": 72,
-    "login_required": 9,
-    "membership_required": 7,
-    "event_not_checked": 612,
-    "upcoming_lines": 354,
-    "decode_failed": 3
+    "decoded": 74,
+    "event_not_checked": 434,
+    "upcoming_lines": 364,
+    "decode_failed": 1
   },
   "max_lines": 2,
   "event_policy": "complete_catalog_with_sampled_playback_checks",
   "competition_coverage": {
     "CBA": {
-      "2026-10-23": {
-        "matches": 5,
-        "entries": 17,
-        "decoded_entries": 5
-      },
       "2026-10-24": {
         "matches": 3,
-        "entries": 13,
-        "decoded_entries": 2
+        "entries": 6,
+        "decoded_entries": 3
       },
       "2026-10-25": {
         "matches": 7,
         "entries": 22,
+        "decoded_entries": 0
+      },
+      "2026-10-26": {
+        "matches": 2,
+        "entries": 8,
         "decoded_entries": 0
       }
     },

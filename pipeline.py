@@ -522,6 +522,12 @@ def render_txt(buckets, now):
                      for line in [group + ",#genre#", *entries]) + "\n"
 
 
+def missing_event_days(entries, now):
+    present = {entry.event_date for entry in entries if entry.event_date}
+    return [now.date() + timedelta(days=delta) for delta in (-1, 0, 1)
+            if now.date() + timedelta(days=delta) not in present]
+
+
 def quality_errors(buckets, config, now, previous_channels=0):
     channels = sum(not bucket[0].event_date for bucket in buckets)
     errors = []
@@ -529,12 +535,7 @@ def quality_errors(buckets, config, now, previous_channels=0):
         errors.append("too_few_verified_channels")
     if previous_channels and channels < previous_channels * config["minimum_channel_ratio"]:
         errors.append("channel_count_dropped")
-    events = [b[0] for b in buckets if b[0].event_date]
-    for delta in (-1, 0, 1):
-        day = now.date() + timedelta(days=delta)
-        items = [e for e in events if e.event_date == day]
-        if not items:
-            errors.append(f"missing_events_{day}")
+    errors += [f"missing_events_{day}" for day in missing_event_days((b[0] for b in buckets), now)]
     return errors
 
 
@@ -606,6 +607,25 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
     for entry in candidates:
         if not events_only or entry.event_date:
             grouped[entry.identity].append(entry)
+    missing = missing_event_days(candidates, now)
+    if missing:
+        deferred = missing == [now.date() + timedelta(days=1)]
+        counts = Counter(entries[0].event_date for entries in grouped.values() if entries[0].event_date)
+        report = {"generated_at": now.isoformat(timespec="seconds"),
+                  "finished_at": datetime.now(now.tzinfo).isoformat(timespec="seconds"),
+                  "accepted": False, "deferred": deferred, "phase": "catalogue_preflight",
+                  "errors": [f"missing_events_{day}" for day in missing],
+                  "warnings": ["upstream_tomorrow_catalogue_pending"] if deferred else [],
+                  "sources": sources, "channels": 0, "previous_channels_retained": previous.get("channels", 0),
+                  "events": {(now.date()+timedelta(days=delta)).isoformat():
+                             {"listed": counts[now.date()+timedelta(days=delta)], "verified": 0}
+                             for delta in (-1, 0, 1)}, "probe": {},
+                  "mode": "events_only" if events_only else "full",
+                  "channel_validation_at": previous.get("channel_validation_at"),
+                  "verification": "not_started_catalogue_incomplete"}
+        atomic_write(report_path, json.dumps(report, ensure_ascii=False, indent=2) + "\n")
+        print(("catalogue_deferred " if deferred else "quality_gate_rejected ") + ",".join(report["errors"]), flush=True)
+        return 3 if deferred else 2
     probe = probe or Prober(config)
     buckets, stats, finished = [], Counter(), 0
     ordered = sorted(grouped.values(), key=lambda b: rank(b[0]))
@@ -687,13 +707,25 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
     return 0
 
 
+def full_update_due(out_dir, now):
+    try:
+        previous = json.loads((out_dir / "status.json").read_text())
+        checked = datetime.fromisoformat(previous["channel_validation_at"])
+        return not (previous.get("accepted") and checked.tzinfo
+                    and checked.astimezone(now.tzinfo).date() == now.date())
+    except (OSError, ValueError, TypeError, KeyError):
+        return True
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", type=Path, default=ROOT / "config.json")
     parser.add_argument("--out", type=Path, default=ROOT / "public")
     parser.add_argument("--report", type=Path, default=ROOT / "reports/latest.json")
     parser.add_argument("--fixtures", type=Path, help="Use saved source lists, still decode actual streams")
-    parser.add_argument("--events-only", action="store_true", help="Refresh the complete sports catalogue; reuse last accepted TV channels")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--events-only", action="store_true", help="Refresh the complete sports catalogue; reuse last accepted TV channels")
+    mode.add_argument("--auto", action="store_true", help="Validate TV channels once per local day; refresh events otherwise")
     parser.add_argument("--check-event", action="append", help="Also test every started commentary containing this text; may be repeated")
     args = parser.parse_args()
     config = json.loads(args.config.read_text())
@@ -702,8 +734,10 @@ def main():
     for name in ("ffmpeg", "curl"):
         if not shutil.which(name):
             parser.error(name + " is required")
-    return run(config, args.out, args.report, datetime.now(ZoneInfo(config["timezone"])), args.fixtures,
-               events_only=args.events_only, check_event=args.check_event)
+    now = datetime.now(ZoneInfo(config["timezone"]))
+    events_only = not full_update_due(args.out, now) if args.auto else args.events_only
+    return run(config, args.out, args.report, now, args.fixtures,
+               events_only=events_only, check_event=args.check_event)
 
 
 if __name__ == "__main__":

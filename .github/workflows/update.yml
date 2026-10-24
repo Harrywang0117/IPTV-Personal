@@ -6,16 +6,15 @@ on:
       mode:
         description: 更新范围
         type: choice
-        options: [full, events]
-        default: full
+        options: [auto, full, events]
+        default: auto
       check_event:
         description: 额外检查的赛事名称（可留空）
         type: string
         required: false
   schedule:
-    # 00:37 全量更新电视频道和赛程；06:37、12:37、18:37 刷新赛事。
-    - cron: '37 16 * * *'
-    - cron: '37 4,10,22 * * *'
+    # 每小时检查；当天首次成功时全量检测，之后仅刷新赛事。
+    - cron: '37 * * * *'
 
 permissions:
   contents: write
@@ -30,6 +29,8 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -49,14 +50,25 @@ jobs:
         continue-on-error: true
         env:
           UPDATE_MODE: ${{ inputs.mode }}
-          UPDATE_SCHEDULE: ${{ github.event.schedule }}
           CHECK_EVENT: ${{ inputs.check_event }}
         run: |
-          if [ "$UPDATE_MODE" = 'events' ] || [ "$UPDATE_SCHEDULE" = '37 4,10,22 * * *' ]; then
-            python pipeline.py --events-only --check-event "$CHECK_EVENT"
-          else
-            python pipeline.py --check-event "$CHECK_EVENT"
+          pipeline_args=(--check-event "$CHECK_EVENT")
+          if [ "$UPDATE_MODE" = 'events' ]; then
+            pipeline_args+=(--events-only)
+          elif [ "$UPDATE_MODE" != 'full' ]; then
+            pipeline_args+=(--auto)
           fi
+          set +e
+          python pipeline.py "${pipeline_args[@]}"
+          pipeline_status=$?
+          set -e
+          if [ "$pipeline_status" -eq 3 ]; then
+            echo 'ready=false' >> "$GITHUB_OUTPUT"
+            echo '::notice::上游明日赛程尚未更新；本轮保留原订阅，下一次自动重试。'
+            exit 0
+          fi
+          echo 'ready=true' >> "$GITHUB_OUTPUT"
+          exit "$pipeline_status"
       - name: 写入赛事完整性和抽测统计
         if: always()
         run: |
@@ -68,6 +80,8 @@ jobs:
               data = json.loads(path.read_text())
               with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as handle:
                   handle.write('赛事清单完整性与线路抽测分别统计；未抽测或未测通不代表可播放。\n\n')
+                  if data.get('deferred'):
+                      handle.write('本轮未发布：上游明日赛程未更新，保留原订阅，下次自动重试；未进行视频检测。\n\n')
                   handle.write('|赛事|日期|场次|解说条目|解码通过条目|\n|---|---|---:|---:|---:|\n')
                   for league, days in data.get('competition_coverage', {}).items():
                       for day, count in days.items():
@@ -83,7 +97,7 @@ jobs:
           if-no-files-found: warn
           retention-days: 14
       - name: 发布通过验收的订阅
-        if: steps.generate.outcome == 'success'
+        if: steps.generate.outcome == 'success' && steps.generate.outputs.ready == 'true'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

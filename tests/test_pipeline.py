@@ -398,6 +398,57 @@ class PipelineTests(unittest.TestCase):
             self.assertEqual((out / "all.m3u").read_text(), "previous accepted output")
             self.assertFalse(json.loads((root / "report.json").read_text())["accepted"])
 
+    def test_missing_tomorrow_waits_before_video_checks_and_keeps_publication(self):
+        text = '#EXTM3U\n'
+        for word, suffix in [("昨天", "10-23"), ("今天", "10-24")]:
+            text += f'#EXTINF:-1 group-title="体育-{word}{suffix}",比赛 00:01\nhttps://example.com/{word}\n'
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            out = root / "public"
+            out.mkdir()
+            old_status = json.dumps({"accepted": True, "channels": 10,
+                                     "channel_validation_at": "2026-10-23T22:00:00+08:00"})
+            (out / "status.json").write_text(old_status)
+            (out / "all.m3u").write_text("previous accepted subscription")
+            cfg = dict(self.config, sources=[self.spec])
+            with patch("pipeline.fetch_playlist", return_value=text), patch("builtins.print"), \
+                    patch("pipeline.Prober", side_effect=AssertionError("video validation started too early")):
+                code = p.run(cfg, out, root / "report.json", self.now)
+            self.assertEqual(code, 3)
+            report = json.loads((root / "report.json").read_text())
+            self.assertTrue(report["deferred"])
+            self.assertFalse(report["accepted"])
+            self.assertEqual(report["errors"], ["missing_events_2026-10-25"])
+            self.assertEqual(report["probe"], {})
+            self.assertEqual(report["previous_channels_retained"], 10)
+            self.assertEqual((out / "status.json").read_text(), old_status)
+            self.assertEqual((out / "all.m3u").read_text(), "previous accepted subscription")
+
+    def test_missing_today_is_failure_instead_of_normal_upstream_wait(self):
+        text = '#EXTM3U\n#EXTINF:-1 group-title="体育-昨天10-23",比赛 00:01\nhttps://example.com/a\n'
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            with patch("pipeline.fetch_playlist", return_value=text), patch("builtins.print"), \
+                    patch("pipeline.Prober", side_effect=AssertionError("video checks started")):
+                code = p.run(dict(self.config, sources=[self.spec]), root / "public", root / "report.json", self.now)
+            self.assertEqual(code, 2)
+            self.assertFalse(json.loads((root / "report.json").read_text())["deferred"])
+
+    def test_daily_full_update_uses_validation_day_in_subscription_timezone(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp)
+            self.assertTrue(p.full_update_due(out, self.now))
+            cases = [("2026-10-23T22:00:00+08:00", True, True),
+                     ("2026-10-24T01:00:00+08:00", True, False),
+                     ("2026-10-23T18:00:00+00:00", True, False),
+                     ("2026-10-24T01:00:00+08:00", False, True),
+                     ("2026-10-24T01:00:00", True, True),
+                     ("bad_timestamp", True, True)]
+            for timestamp, accepted, due in cases:
+                with self.subTest(timestamp=timestamp, accepted=accepted):
+                    (out / "status.json").write_text(json.dumps({"accepted": accepted, "channel_validation_at": timestamp}))
+                    self.assertEqual(p.full_update_due(out, self.now), due)
+
     def test_events_only_keeps_complete_days_and_prior_tv_validation_time(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
