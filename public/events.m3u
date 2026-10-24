@@ -506,21 +506,12 @@ http://139.224.44.53:1234/968421233
 #EXTINF:-1 tvg-id="event-5a68507e45a76641" tvg-name="10:30 ITF世界网球巡回赛 冲决赛！头号种子孙心然登场 中心球场中文解说" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2026/10/16/100000001565106ef9d8.png" group-title="咪咕·今天 10-24",10:30 ITF世界网球巡回赛 冲决赛！头号种子孙心然登场 中心球场中文解说
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://139.224.44.53:1234/968568858
-#EXTINF:-1 tvg-id="event-ffa5c3b946d94fce" tvg-name="10:30 ITF世界网球巡回赛 冲决赛！孙心然压轴登场 中心球场" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2026/10/16/100000001565106ef9d8.png" group-title="咪咕·今天 10-24",10:30 ITF世界网球巡回赛 冲决赛！孙心然压轴登场 中心球场
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968421233
-#EXTINF:-1 tvg-id="event-c91b165e675a263b" tvg-name="10:30 ITF世界网球巡回赛 冲决赛！孙心然压轴登场 中心球场中文解说" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2026/10/16/100000001565106ef9d8.png" group-title="咪咕·今天 10-24",10:30 ITF世界网球巡回赛 冲决赛！孙心然压轴登场 中心球场中文解说
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968568858
 #EXTINF:-1 tvg-id="event-d7cd28953339ec21" tvg-name="10:30 ITF世界网球巡回赛 马卡洛娃出战 孙心然晋级决赛 中心球场" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2026/10/16/100000001565106ef9d8.png" group-title="咪咕·今天 10-24",10:30 ITF世界网球巡回赛 马卡洛娃出战 孙心然晋级决赛 中心球场
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://mi.dzpp.uk/968421233
 #EXTINF:-1 tvg-id="event-fac5c13071fadac5" tvg-name="10:30 ITF世界网球巡回赛 马卡洛娃出战 孙心然晋级决赛 中心球场中文解说" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2026/10/16/100000001565106ef9d8.png" group-title="咪咕·今天 10-24",10:30 ITF世界网球巡回赛 马卡洛娃出战 孙心然晋级决赛 中心球场中文解说
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://mi.dzpp.uk/968568858
-#EXTINF:-1 tvg-id="event-26201c5b41911f3a" tvg-name="10:30 逐马计划 超越巅峰——张德顺对谈李美珍 超越巅峰——张德顺对谈李美珍" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/9/28/1000000011111066d90b.png" group-title="咪咕·今天 10-24",10:30 逐马计划 超越巅峰——张德顺对谈李美珍 超越巅峰——张德顺对谈李美珍
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968609819
 #EXTINF:-1 tvg-id="event-ec26baf66c75f9ce" tvg-name="11:00 WTA 冲决赛！李吉妮率先出战 英文原声" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/3/7/1000000012341069e1a8.jpg" group-title="咪咕·今天 10-24",11:00 WTA 冲决赛！李吉妮率先出战 英文原声
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://139.224.44.53:1234/968414059
@@ -593,36 +584,6 @@ http://mi.dzpp.uk/968696833
 #EXTINF:-1 tvg-id="event-d2b6057ed81a0ed4" tvg-name="13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 徐儒叶" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/5/12/1000000002101068e190.png" group-title="咪咕·今天 10-24",13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 徐儒叶
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://139.224.44.53:1234/968421596
-#EXTINF:-1 tvg-id="event-ad72ac4e71ca296d" tvg-name="13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 1号桌" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/5/12/1000000002101068e190.png" group-title="咪咕·今天 10-24",13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 1号桌
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968421392
-#EXTINF:-1 tvg-id="event-b5100a1a0ecc98d3" tvg-name="13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 2号桌" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/5/12/1000000002101068e190.png" group-title="咪咕·今天 10-24",13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 2号桌
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968421404
-#EXTINF:-1 tvg-id="event-07abb131eb9894fc" tvg-name="13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 3号桌" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/5/12/1000000002101068e190.png" group-title="咪咕·今天 10-24",13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 3号桌
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968421430
-#EXTINF:-1 tvg-id="event-da6150110ac0b77f" tvg-name="13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 4号桌" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/5/12/1000000002101068e190.png" group-title="咪咕·今天 10-24",13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 4号桌
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968421450
-#EXTINF:-1 tvg-id="event-b495e5f9be82623c" tvg-name="13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 5号桌" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/5/12/1000000002101068e190.png" group-title="咪咕·今天 10-24",13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 5号桌
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968421495
-#EXTINF:-1 tvg-id="event-6c52158c39d9d130" tvg-name="13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 6号桌" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/5/12/1000000002101068e190.png" group-title="咪咕·今天 10-24",13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 6号桌
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968421524
-#EXTINF:-1 tvg-id="event-536135cb7bbef27b" tvg-name="13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 7号桌" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/5/12/1000000002101068e190.png" group-title="咪咕·今天 10-24",13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 7号桌
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968421550
-#EXTINF:-1 tvg-id="event-22c2ee98ffe11191" tvg-name="13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 8号桌" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/5/12/1000000002101068e190.png" group-title="咪咕·今天 10-24",13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 8号桌
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968421579
-#EXTINF:-1 tvg-id="event-e678b483b4ca0d81" tvg-name="13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 9号桌" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/5/12/1000000002101068e190.png" group-title="咪咕·今天 10-24",13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 9号桌
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968691358
-#EXTINF:-1 tvg-id="event-5c7dea3fde8f6c9a" tvg-name="13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 徐儒叶" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/5/12/1000000002101068e190.png" group-title="咪咕·今天 10-24",13:00 乒乓球亚锦赛 闯进四强！石油组合3-1力克张本/篠塚 徐儒叶
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968421596
 #EXTINF:-1 tvg-id="event-7ca6330b91bce809" tvg-name="13:55 超三联赛 超三联赛 总决赛 小组赛Day2下午场 【回放】山东10:16南昌凯锆商贸" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2022/8/4/1000000005511065bb48.jpg" group-title="咪咕·今天 10-24",13:55 超三联赛 超三联赛 总决赛 小组赛Day2下午场 【回放】山东10:16南昌凯锆商贸
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://mi.dzpp.uk/968698367
@@ -838,7 +799,7 @@ http://139.224.44.53:1234/968607996
 http://139.224.44.53:1234/968545310
 #EXTINF:-1 tvg-id="event-7de8d6502c055547" tvg-name="19:00 CBA 广东东阳光VS宁波町渥 连睿 丁伟 丁彦雨航" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·今天 10-24",19:00 CBA 广东东阳光VS宁波町渥 连睿 丁伟 丁彦雨航
 #EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968600155
+http://mi.dzpp.uk/968600155
 #EXTINF:-1 tvg-id="event-40fda81096c21182" tvg-name="19:00 乒乓球亚锦赛 争进四强！李天阳PK向鹏 蒯曼战桥本帆乃香 1号桌" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/5/12/1000000002101068e190.png" group-title="咪咕·今天 10-24",19:00 乒乓球亚锦赛 争进四强！李天阳PK向鹏 蒯曼战桥本帆乃香 1号桌
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://mi.dzpp.uk/968421629
@@ -1439,12 +1400,6 @@ http://139.224.44.53:1234/968600375
 #EXTINF:-1 tvg-id="event-28c2da510e3dbe9b" tvg-name="19:25 CBA 北京首钢VS广州智都集团 广州主队解说" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·明天预告 10-25",19:25 CBA 北京首钢VS广州智都集团 广州主队解说
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://139.224.44.53:1234/968600390
-#EXTINF:-1 tvg-id="event-bbfbfc290b9f79b0" tvg-name="19:25 CBA 北京首钢VS广州智都集团 张泽欣" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·明天预告 10-25",19:25 CBA 北京首钢VS广州智都集团 张泽欣
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968600390
-#EXTINF:-1 tvg-id="event-d4ac1ecf0ee338b3" tvg-name="19:25 CBA 北京首钢VS广州智都集团 贾磊" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·明天预告 10-25",19:25 CBA 北京首钢VS广州智都集团 贾磊
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968600375
 #EXTINF:-1 tvg-id="event-69b77ddd0664ca47" tvg-name="19:25 CBA 北京首钢VS广州智都集团 赛场原声" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·明天预告 10-25",19:25 CBA 北京首钢VS广州智都集团 赛场原声
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://139.224.44.53:1234/968600369
@@ -1454,9 +1409,6 @@ http://139.224.44.53:1234/968600435
 #EXTINF:-1 tvg-id="event-abf2536ccedb176f" tvg-name="19:25 CBA 四川锦城VS浙江稠州金租 赛场原声" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·明天预告 10-25",19:25 CBA 四川锦城VS浙江稠州金租 赛场原声
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://139.224.44.53:1234/968600432
-#EXTINF:-1 tvg-id="event-0f2610d8695a6926" tvg-name="19:25 CBA 四川锦城VS浙江稠州金租 金哲豪" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·明天预告 10-25",19:25 CBA 四川锦城VS浙江稠州金租 金哲豪
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968600435
 #EXTINF:-1 tvg-id="event-8047f0be5704c12b" tvg-name="19:25 CBA 山东高速VS天津先行者 赛场原声" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·明天预告 10-25",19:25 CBA 山东高速VS天津先行者 赛场原声
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://139.224.44.53:1234/968600437
@@ -1466,33 +1418,18 @@ http://139.224.44.53:1234/968600257
 #EXTINF:-1 tvg-id="event-07937aa19106e738" tvg-name="19:25 CBA 山西汾酒VS江苏肯帝亚 江苏主队解说" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·明天预告 10-25",19:25 CBA 山西汾酒VS江苏肯帝亚 江苏主队解说
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://139.224.44.53:1234/968600263
-#EXTINF:-1 tvg-id="event-ef7893665755dafc" tvg-name="19:25 CBA 山西汾酒VS江苏肯帝亚 田宏强" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·明天预告 10-25",19:25 CBA 山西汾酒VS江苏肯帝亚 田宏强
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968600263
-#EXTINF:-1 tvg-id="event-ec7dd891c4260fd7" tvg-name="19:25 CBA 山西汾酒VS江苏肯帝亚 石楷文" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·明天预告 10-25",19:25 CBA 山西汾酒VS江苏肯帝亚 石楷文
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968600257
 #EXTINF:-1 tvg-id="event-9877f5feaca13419" tvg-name="19:25 CBA 山西汾酒VS江苏肯帝亚 赛场原声" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·明天预告 10-25",19:25 CBA 山西汾酒VS江苏肯帝亚 赛场原声
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://139.224.44.53:1234/968600225
 #EXTINF:-1 tvg-id="event-c4cf51a483f4286b" tvg-name="19:25 CBA 深圳马可波罗VS北京控股 北控主队解说" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·明天预告 10-25",19:25 CBA 深圳马可波罗VS北京控股 北控主队解说
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://139.224.44.53:1234/968600317
-#EXTINF:-1 tvg-id="event-677ace8b419312a9" tvg-name="19:25 CBA 深圳马可波罗VS北京控股 周赫" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·明天预告 10-25",19:25 CBA 深圳马可波罗VS北京控股 周赫
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968600317
 #EXTINF:-1 tvg-id="event-9888057ac2966701" tvg-name="19:25 CBA 深圳马可波罗VS北京控股 赛场原声" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·明天预告 10-25",19:25 CBA 深圳马可波罗VS北京控股 赛场原声
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://139.224.44.53:1234/968600309
-#EXTINF:-1 tvg-id="event-83398b01fd2dba27" tvg-name="19:25 CBA 辽宁本钢VS新疆广汇能源 哈秋" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·明天预告 10-25",19:25 CBA 辽宁本钢VS新疆广汇能源 哈秋
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968600315
 #EXTINF:-1 tvg-id="event-2c5c95c1be24639d" tvg-name="19:25 CBA 辽宁本钢VS新疆广汇能源 新疆主队解说" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·明天预告 10-25",19:25 CBA 辽宁本钢VS新疆广汇能源 新疆主队解说
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://139.224.44.53:1234/968600306
-#EXTINF:-1 tvg-id="event-bd0e921a674bb4a0" tvg-name="19:25 CBA 辽宁本钢VS新疆广汇能源 盛哲" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·明天预告 10-25",19:25 CBA 辽宁本钢VS新疆广汇能源 盛哲
-#EXTVLCOPT:http-user-agent=okhttp/3.15
-http://112.230.73.82:7788/968600306
 #EXTINF:-1 tvg-id="event-f2c5b528c28cc3bc" tvg-name="19:25 CBA 辽宁本钢VS新疆广汇能源 赛场原声" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/5a49fc90-e34e-4dfd-9556-3e3895a3fd78.png" group-title="咪咕·明天预告 10-25",19:25 CBA 辽宁本钢VS新疆广汇能源 赛场原声
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://139.224.44.53:1234/968600292
