@@ -212,13 +212,46 @@ class PipelineTests(unittest.TestCase):
     def test_invalid_playlist_does_not_overwrite_source_cache(self):
         with tempfile.TemporaryDirectory() as tmp:
             state = Path(tmp)
-            text = '#EXTM3U\n#EXTINF:-1,比赛\nhttps://example.com/live\n'
+            text = '#EXTM3U\n#EXTINF:-1 group-title="体育-今天10-24",比赛\nhttps://example.com/live\n'
             with patch("pipeline.fetch_playlist", return_value=text):
                 p.source_playlist(self.spec, self.config, state, self.now)
             with patch("pipeline.fetch_playlist", return_value="<html>error</html>"):
                 value, meta = p.source_playlist(self.spec, self.config, state, self.now)
             self.assertTrue(meta["cached"])
             self.assertEqual(value, text)
+
+    def test_tv_only_response_preserves_previous_sports_cache(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            state = Path(tmp)
+            text = '#EXTM3U\n#EXTINF:-1 group-title="体育-今天10-24",比赛\nhttps://example.com/live\n'
+            with patch("pipeline.fetch_playlist", return_value=text):
+                p.source_playlist(self.spec, self.config, state, self.now)
+            tv_only = '#EXTM3U\n#EXTINF:-1 group-title="央视",CCTV1\nhttps://example.com/tv\n'
+            with patch("pipeline.fetch_playlist", return_value=tv_only):
+                value, meta = p.source_playlist(self.spec, self.config, state, self.now)
+            self.assertTrue(meta["cached"])
+            self.assertEqual(meta["fetch_error"], "source_has_no_current_events")
+            self.assertEqual(value, text)
+
+    def test_cached_source_supplements_events_without_old_tv_candidates(self):
+        text = '#EXTM3U\n#EXTINF:-1 group-title="央视",CCTV1\nhttps://example.com/tv\n'
+        for word, suffix in [("昨天", "10-23"), ("今天", "10-24"), ("明天", "10-25")]:
+            text += f'#EXTINF:-1 group-title="体育-{word}{suffix}",比赛 00:01\nhttps://example.com/{word}\n'
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            cfg = dict(self.config, sources=[self.spec], minimum_channels=0)
+            with patch("pipeline.fetch_playlist", return_value=text):
+                p.source_playlist(self.spec, cfg, root / "state", self.now)
+            def probe(entry):
+                self.assertIsNotNone(entry.event_date, "cached TV entered the scan")
+                return {"ok": True, "reason": "decoded"}
+            with patch("pipeline.fetch_playlist", side_effect=ValueError("offline")), patch("builtins.print"):
+                code = p.run(cfg, root / "public", root / "report.json", self.now, probe=probe)
+            self.assertEqual(code, 0)
+            status = json.loads((root / "public/status.json").read_text())
+            self.assertEqual(status["channels"], 0)
+            self.assertTrue(status["sources"][0]["cached"])
+            self.assertIn("some_source_catalogues_from_cache", status["warnings"])
 
     def test_reformat_preserves_event_epg_identity(self):
         entry = p.Entry("CBA A VS B 19:25", "", "https://example.com/a", event_date=self.now.date())
@@ -382,17 +415,30 @@ class PipelineTests(unittest.TestCase):
                 return {"ok": False, "reason": "timeout"}
             with patch("pipeline.fetch_playlist", return_value=text), patch("builtins.print"):
                 code = p.run(cfg, out, root / "report.json", self.now,
-                             probe=probe, events_only=True, check_event="A VS B")
+                             probe=probe, events_only=True, check_event=["A VS B", "another match"])
             self.assertEqual(code, 0)
             report = json.loads((out / "status.json").read_text())
             self.assertEqual(report["channel_validation_at"], old_time)
             self.assertEqual(report["channels"], 1)
             self.assertEqual(set(checked), {"https://example.com/昨天", "https://example.com/今天"})
-            self.assertEqual(report["requested_event_check"], "A VS B")
+            self.assertEqual(report["requested_event_check"], ["A VS B", "another match"])
             self.assertEqual([day["listed"] for day in report["events"].values()], [1,1,1])
             self.assertTrue(all(day["verified"] == 0 for day in report["events"].values()))
             self.assertIn("sports_catalog_contains_unverified_entries", report["warnings"])
             self.assertIn("https://example.com/tv", (out / "channels.m3u").read_text())
+
+    def test_empty_requested_event_does_not_force_entire_catalogue(self):
+        text = '#EXTM3U\n'
+        for word, suffix in [("昨天", "10-23"), ("今天", "10-24"), ("明天", "10-25")]:
+            text += f'#EXTINF:-1 group-title="体育-{word}{suffix}",比赛 00:01\nhttps://example.com/{word}\n'
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            cfg = dict(self.config, sources=[self.spec], minimum_channels=0, event_samples_per_day=0)
+            with patch("pipeline.fetch_playlist", return_value=text), patch("builtins.print"):
+                code = p.run(cfg, root / "public", root / "report.json", self.now,
+                             probe=lambda e: self.fail("empty selector probed every match"), check_event=[""])
+            self.assertEqual(code, 0)
+            self.assertEqual(json.loads((root / "report.json").read_text())["requested_event_check"], [])
 
 
 if __name__ == "__main__":

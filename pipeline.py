@@ -242,15 +242,19 @@ def source_playlist(spec, config, state_dir, now):
     cache_path = state_dir / (hashlib.sha256(spec["url"].encode()).hexdigest()[:16] + ".json")
     try:
         text = fetch_playlist(spec, config["fetch_timeout"])
-        if not parse_playlist(text, spec["id"]):
+        parsed = parse_playlist(text, spec["id"])
+        if not parsed:
             raise ValueError("empty_playlist")
+        if spec.get("events") and not any(e.event_date for e in prepare(parsed, spec, config, now)):
+            raise ValueError("source_has_no_current_events")
     except (ValueError, OSError, subprocess.SubprocessError) as error:
         if spec.get("events"):
             try:
                 cached = json.loads(cache_path.read_text())
                 age = (now - datetime.fromisoformat(cached["fetched_at"])).total_seconds() / 3600
+                parsed = parse_playlist(cached["text"], spec["id"])
                 if (cached["url"] == spec["url"] and 0 <= age <= config.get("source_cache_hours", 24)
-                        and parse_playlist(cached["text"], spec["id"])):
+                        and any(e.event_date for e in prepare(parsed, spec, config, now))):
                     return cached["text"], {"cached": True, "cache_age_hours": round(age, 2),
                                             "fetch_error": source_error(error)}
             except (OSError, ValueError, TypeError, KeyError):
@@ -589,6 +593,10 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
             if not parsed:
                 raise ValueError("empty_playlist")
             selected = prepare(parsed, spec, config, now)
+            if source_meta.get("cached"):
+                # A catalogue fallback supplies sports only. Do not add old TV
+                # candidates from an unreachable source to the full scan.
+                selected = [entry for entry in selected if entry.event_date]
             candidates.extend(selected)
             sources.append({"id": spec["id"], "ok": True, "parsed": len(parsed), "selected": len(selected), **source_meta})
         except (ValueError, OSError, subprocess.SubprocessError) as error:
@@ -602,9 +610,11 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
     buckets, stats, finished = [], Counter(), 0
     ordered = sorted(grouped.values(), key=lambda b: rank(b[0]))
     samples = event_sample_keys(ordered, config.get("event_samples_per_day", 12), now)
-    if check_event:
+    requested_checks = [check_event] if isinstance(check_event, str) else (check_event or [])
+    requested_checks = [text for text in requested_checks if text]
+    if requested_checks:
         samples.update(b[0].identity for b in ordered if b[0].event_date and not b[0].upcoming
-                       and check_event in b[0].name)
+                       and any(text in b[0].name for text in requested_checks))
     ordered.sort(key=lambda b: (0 if b[0].identity in samples else 1 if b[0].event_date else 2, rank(b[0])))
     print(f"probe_start channels_and_events={len(ordered)}", flush=True)
     with ThreadPoolExecutor(max_workers=config["workers"]) as pool:
@@ -660,7 +670,7 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
               "errors": errors, "warnings": warnings, "sources": sources, "channels": sum(not b[0].event_date for b in buckets),
               "events": by_day, "probe": dict(stats), "max_lines": config["max_lines"],
               "event_policy": "complete_catalog_with_sampled_playback_checks", "competition_coverage": coverage,
-              "requested_event_check": check_event,
+              "requested_event_check": requested_checks,
               "mode": "events_only" if events_only else "full",
               "channel_validation_at": (previous.get("channel_validation_at") or previous.get("generated_at")) if events_only else now.isoformat(timespec="seconds"),
               "verification": "decoded_video_and_optional_audio_at_generator_location",
@@ -684,7 +694,7 @@ def main():
     parser.add_argument("--report", type=Path, default=ROOT / "reports/latest.json")
     parser.add_argument("--fixtures", type=Path, help="Use saved source lists, still decode actual streams")
     parser.add_argument("--events-only", action="store_true", help="Refresh the complete sports catalogue; reuse last accepted TV channels")
-    parser.add_argument("--check-event", help="Also test every started commentary whose title contains this text")
+    parser.add_argument("--check-event", action="append", help="Also test every started commentary containing this text; may be repeated")
     args = parser.parse_args()
     config = json.loads(args.config.read_text())
     if not 1 <= config["max_lines"] <= 2 or config["candidate_limit"] < config["max_lines"]:
