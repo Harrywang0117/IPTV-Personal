@@ -129,6 +129,18 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(output.attrs["tvg-id"], "CCTV1")
         self.assertEqual(p.epg_id(p.Entry("CCTV4欧洲", "央视", "https://example.com/b")), "CCTV4欧洲")
 
+    def test_events_sorted_numerically_and_unknown_time_last(self):
+        entries = [p.Entry(name, "", "https://example.com/a", event_date=self.now.date())
+                   for name in ["赛事C 23:30", "赛事B 10:00", "赛事A 9:55", "无时间"]]
+        ordered = sorted(entries, key=p.rank)
+        self.assertEqual([e.name for e in ordered], ["赛事A 9:55", "赛事B 10:00", "赛事C 23:30", "无时间"])
+        rendered = p.parse_playlist(p.render_m3u([[e] for e in entries], self.now, []))
+        self.assertEqual([e.name for e in rendered], ["09:55 赛事A", "10:00 赛事B", "23:30 赛事C", "无时间"])
+
+    def test_event_time_prefix_is_not_duplicated(self):
+        entry = p.Entry("09:55 赛事A", "", "https://example.com/a", event_date=self.now.date())
+        self.assertEqual(p.display_name(entry), entry.name)
+
     def test_redirect_or_headers_without_frames_never_pass(self):
         prober = object.__new__(p.Prober)
         prober.config = self.config

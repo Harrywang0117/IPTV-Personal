@@ -154,13 +154,21 @@ def event_date(group, today):
     return None
 
 
+def event_clock(name):
+    """Return a valid clock in minutes; source lists normally put it last."""
+    matches = re.findall(r"(?<!\d)(\d{1,2}):(\d{2})(?!\d)", name)
+    for hour, minute in reversed(matches):
+        hour, minute = int(hour), int(minute)
+        if hour < 24 and minute < 60:
+            return hour * 60 + minute
+    return None
+
+
 def kickoff(entry, timezone):
-    matches = re.findall(r"(?<!\d)(\d{1,2}):(\d{2})(?!\d)", entry.name)
-    if not matches:
+    clock = event_clock(entry.name)
+    if clock is None:
         return None
-    hour, minute = map(int, matches[-1])
-    if hour > 23 or minute > 59:
-        return None
+    hour, minute = divmod(clock, 60)
     return datetime.combine(entry.event_date, day_time(hour, minute), timezone)
 
 
@@ -324,9 +332,21 @@ def select_bucket(entries, config, probe):
 
 def rank(entry):
     if entry.event_date:
-        match = re.findall(r"\d{1,2}:\d{2}", entry.name)
-        return (0, entry.event_date.isoformat(), match[-1] if match else "", entry.name)
+        clock = event_clock(entry.name)
+        return (0, entry.event_date.isoformat(), clock if clock is not None else 1440, entry.name)
     return (1, entry.group, re.sub(r"\d+", lambda m: m[0].zfill(4), entry.name))
+
+
+def display_name(entry):
+    if not entry.event_date:
+        return entry.name
+    clock = event_clock(entry.name)
+    if clock is None:
+        return entry.name
+    hour, minute = divmod(clock, 60)
+    title = re.sub(r"\s*\d{1,2}:\d{2}\s*$", "", entry.name).strip()
+    title = re.sub(r"^\d{1,2}:\d{2}\s+", "", title)
+    return f"{hour:02d}:{minute:02d} {title}"
 
 
 def display_group(entry, now):
@@ -355,7 +375,8 @@ def render_m3u(buckets, now, epg, single=True):
     for bucket in sorted(buckets, key=lambda b: rank(b[0])):
         for entry in bucket[:1] if single else bucket:
             attrs = {k: v for k, v in entry.attrs.items() if k.startswith("tvg-") or k in CATCHUP}
-            attrs["tvg-name"] = entry.name
+            name = display_name(entry)
+            attrs["tvg-name"] = name
             attrs["group-title"] = display_group(entry, now)
             if entry.event_date:
                 attrs["tvg-id"] = "event-" + hashlib.sha256(repr(entry.identity).encode()).hexdigest()[:16]
@@ -365,7 +386,7 @@ def render_m3u(buckets, now, epg, single=True):
             options = entry.options.copy()
             if not any(o.startswith("#EXTVLCOPT:http-user-agent=") for o in options):
                 options.append("#EXTVLCOPT:http-user-agent=" + UA)
-            lines += [f"#EXTINF:-1 {meta},{safe_attr(entry.name)}", *options, entry.url]
+            lines += [f"#EXTINF:-1 {meta},{safe_attr(name)}", *options, entry.url]
     return "\n".join(lines) + "\n"
 
 
@@ -374,7 +395,7 @@ def render_txt(buckets, now):
     for bucket in sorted(buckets, key=lambda b: rank(b[0])):
         entry = bucket[0]
         # TXT cannot faithfully carry custom headers/catchup; M3U is recommended.
-        groups[display_group(entry, now)].append(f"{entry.name.replace(',', '，')},{entry.url}")
+        groups[display_group(entry, now)].append(f"{display_name(entry).replace(',', '，')},{entry.url}")
     return "\n".join(line for group, entries in groups.items()
                      for line in [group + ",#genre#", *entries]) + "\n"
 

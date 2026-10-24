@@ -5,6 +5,9 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+import urllib.error
+import urllib.request
+from urllib.parse import urlsplit, urlunsplit
 from zoneinfo import ZoneInfo
 
 import pipeline as p
@@ -41,10 +44,47 @@ def main():
 
     with ThreadPoolExecutor(max_workers=4) as pool:
         results = list(pool.map(test, samples))
+
+    class NoRedirect(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, *args, **kwargs):
+            return None
+
+    def transport_test(sample):
+        kind, entry = sample
+        opener = urllib.request.build_opener(NoRedirect)
+        try:
+            response = opener.open(urllib.request.Request(entry.url, headers={"User-Agent": p.UA}), timeout=5)
+            response.close()
+            return {"kind": kind, "error": "no_redirect"}
+        except urllib.error.HTTPError as response:
+            location = response.headers.get("Location", "")
+        except Exception as error:
+            return {"kind": kind, "error": type(error).__name__}
+        parsed = urlsplit(location)
+        if not (parsed.hostname or "").endswith(".miguvideo.com"):
+            return {"kind": kind, "error": "not_migu_cdn"}
+        checks = []
+        for scheme in ("http", "https"):
+            url = urlunsplit((scheme, parsed.netloc, parsed.path, parsed.query, parsed.fragment))
+            try:
+                with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": p.UA}), timeout=5) as response:
+                    head = response.read(128)
+                    is_media = head.lstrip().startswith(b"#EXTM3U") or head.startswith(b"FLV")
+                    item = {"scheme": scheme, "status": response.status, "media_prefix": is_media}
+                if is_media:
+                    item["decode"] = probe(p.replace(entry, url=url))
+                checks.append(item)
+            except Exception as error:
+                checks.append({"scheme": scheme, "error": type(error).__name__})
+        return {"kind": kind, "cdn_host": parsed.hostname, "checks": checks}
+
+    transport_samples = [s for s in samples if s[1].source == "migu-primary" and s[0] in ("yesterday", "cctv1")]
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        transports = list(pool.map(transport_test, transport_samples))
     ffmpeg = subprocess.run(["ffmpeg", "-version"], capture_output=True, text=True, timeout=5)
     report = {"at": now.isoformat(), "python": sys.version.split()[0],
               "ffmpeg": ffmpeg.stdout.splitlines()[0], "hls_options": probe.hls_options,
-              "sources": sources, "samples": results}
+              "sources": sources, "samples": results, "transports": transports}
     p.atomic_write(Path("reports/diagnostic.json"), json.dumps(report, ensure_ascii=False, indent=2) + "\n")
     print(json.dumps(report, ensure_ascii=False, indent=2))
 
