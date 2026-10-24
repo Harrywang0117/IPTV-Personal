@@ -205,7 +205,7 @@ def fetch_playlist(spec, timeout):
            "--max-filesize", str(8 * 1024 * 1024), "--user-agent", UA, spec["url"]]
     result = subprocess.run(cmd, capture_output=True, timeout=timeout + 2)
     if result.returncode:
-        raise ValueError("source_fetch_failed")
+        raise ValueError(f"source_fetch_failed_curl_{result.returncode}")
     body = result.stdout
     if len(body) > 8 * 1024 * 1024 or body.startswith((b"FLV", b"\x47")):
         raise ValueError("source_is_media_or_too_large")
@@ -279,7 +279,8 @@ class Prober:
                         reason = "http_" + code
                         break
             return {"ok": ok, "reason": reason, "frames": frames,
-                    "seconds": round(time.monotonic() - started, 2)}
+                    "seconds": round(time.monotonic() - started, 2),
+                    "diagnostic": "" if ok else re.sub(r"https?://[^\s]+", "[url]", result.stderr[-1200:])}
         except subprocess.TimeoutExpired:
             return {"ok": False, "reason": "timeout", "frames": 0}
 
@@ -327,13 +328,20 @@ def display_group(entry, now):
         return entry.group or "电视频道"
     delta = (entry.event_date - now.date()).days
     label = {-1: "昨天回放", 0: "今天", 1: "明天预告"}.get(delta, entry.event_date.isoformat())
-    if entry.upcoming and delta == 0:
-        label += "·待开赛"
     return f"咪咕·{label} {entry.event_date:%m-%d}"
 
 
 def safe_attr(value):
     return str(value).replace('"', "'").replace("\r", " ").replace("\n", " ")
+
+
+def epg_id(entry):
+    # The configured XMLTV service uses CCTV1, not Migu's CCTV1综合.
+    if entry.name == "CCTV16 4K":
+        return "CCTV16"
+    if re.fullmatch(r"CCTV(?:[1-9]|1[0-7]|5\+|4K|4欧洲|4美洲)", entry.name):
+        return entry.name
+    return entry.attrs.get("tvg-id", "")
 
 
 def render_m3u(buckets, now, epg, single=True):
@@ -345,6 +353,8 @@ def render_m3u(buckets, now, epg, single=True):
             attrs["group-title"] = display_group(entry, now)
             if entry.event_date:
                 attrs["tvg-id"] = "event-" + hashlib.sha256(repr(entry.identity).encode()).hexdigest()[:16]
+            elif epg_id(entry):
+                attrs["tvg-id"] = epg_id(entry)
             meta = " ".join(f'{k}="{safe_attr(v)}"' for k, v in attrs.items())
             options = entry.options.copy()
             if not any(o.startswith("#EXTVLCOPT:http-user-agent=") for o in options):
@@ -428,7 +438,12 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None):
             candidates.extend(selected)
             sources.append({"id": spec["id"], "ok": True, "parsed": len(parsed), "selected": len(selected)})
         except (ValueError, OSError, subprocess.SubprocessError) as error:
-            sources.append({"id": spec["id"], "ok": False, "error": type(error).__name__})
+            reason = type(error).__name__
+            if isinstance(error, ValueError) and re.fullmatch(r"[a-z_]+(?:\d+)?", str(error)):
+                reason = str(error)
+            elif isinstance(error, subprocess.TimeoutExpired):
+                reason = "source_total_timeout"
+            sources.append({"id": spec["id"], "ok": False, "error": reason})
         print(f"source_end id={spec['id']} ok={sources[-1]['ok']} seconds={time.monotonic()-started:.1f}", flush=True)
     grouped = defaultdict(list)
     for entry in candidates:
@@ -461,7 +476,8 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None):
         entries = [b[0] for b in buckets if b[0].event_date == day]
         by_day[day.isoformat()] = {"listed": len(entries), "verified": sum(e.verified for e in entries),
                                   "upcoming": sum(e.upcoming for e in entries)}
-    report = {"generated_at": now.isoformat(timespec="seconds"), "accepted": not errors,
+    report = {"generated_at": now.isoformat(timespec="seconds"),
+              "finished_at": datetime.now(now.tzinfo).isoformat(timespec="seconds"), "accepted": not errors,
               "errors": errors, "sources": sources, "channels": sum(not b[0].event_date for b in buckets),
               "events": by_day, "probe": dict(stats), "max_lines": config["max_lines"],
               "verification": "decoded_video_and_optional_audio_at_generator_location",

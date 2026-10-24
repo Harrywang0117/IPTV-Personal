@@ -1,9 +1,13 @@
 import copy
 from datetime import date, datetime
 import json
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+import shutil
 import subprocess
 import tempfile
+import threading
+import time
 import unittest
 from unittest.mock import patch
 from zoneinfo import ZoneInfo
@@ -57,7 +61,9 @@ class PipelineTests(unittest.TestCase):
         entry = p.prepare([entry], self.spec, self.config, self.now)[0]
         self.assertTrue(entry.upcoming)
         self.assertNotIn("catchup", entry.attrs)
-        self.assertIn("待开赛", p.display_group(entry, self.now))
+        started = p.replace(entry, upcoming=False)
+        self.assertEqual(p.display_group(entry, self.now), p.display_group(started, self.now))
+        self.assertEqual(p.display_group(entry, self.now), "咪咕·今天 10-24")
 
     def test_no_shared_event_tvg_id_merge(self):
         a = p.Entry("比赛A 回放", "", "https://example.com/a", {"tvg-id": "same"}, event_date=self.now.date())
@@ -117,6 +123,12 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(len(backup), 2)
         self.assertIn("#EXTVLCOPT:http-user-agent=" + p.UA, main[0].options)
 
+    def test_cctv_epg_id_matches_configured_xmltv_service(self):
+        entry = p.Entry("CCTV1", "央视", "https://example.com/a", {"tvg-id": "CCTV1综合"})
+        output = p.parse_playlist(p.render_m3u([[entry]], self.now, []))[0]
+        self.assertEqual(output.attrs["tvg-id"], "CCTV1")
+        self.assertEqual(p.epg_id(p.Entry("CCTV4欧洲", "央视", "https://example.com/b")), "CCTV4欧洲")
+
     def test_redirect_or_headers_without_frames_never_pass(self):
         prober = object.__new__(p.Prober)
         prober.config = self.config
@@ -160,6 +172,40 @@ class PipelineTests(unittest.TestCase):
         with patch("pipeline.subprocess.run", return_value=result):
             with self.assertRaisesRegex(ValueError, "media"):
                 p.fetch_playlist(self.spec, 1)
+
+    @unittest.skipUnless(shutil.which("curl"), "curl required")
+    def test_actual_continuous_response_has_total_deadline(self):
+        class Stream(BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+
+            def do_GET(self):
+                self.send_response(200)
+                self.send_header("Content-Type", "video/x-flv")
+                self.end_headers()
+                try:
+                    self.wfile.write(b"FLV")
+                    while True:
+                        self.wfile.write(b"x" * 4096)
+                        self.wfile.flush()
+                        time.sleep(0.02)
+                except (BrokenPipeError, ConnectionResetError):
+                    pass
+
+        server = ThreadingHTTPServer(("127.0.0.1", 0), Stream)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        started = time.monotonic()
+        try:
+            # Only the fixture's loopback URL bypasses the production URL guard.
+            with patch("pipeline.public_url", return_value=True):
+                with self.assertRaises(ValueError):
+                    p.fetch_playlist({"url": f"http://127.0.0.1:{server.server_port}"}, 0.4)
+            self.assertLess(time.monotonic() - started, 3)
+        finally:
+            server.shutdown()
+            server.server_close()
+            thread.join(timeout=3)
 
     def test_failed_run_preserves_accepted_subscription(self):
         with tempfile.TemporaryDirectory() as tmp:
