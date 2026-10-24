@@ -1,0 +1,61 @@
+name: 更新个人 IPTV 订阅
+
+on:
+  workflow_dispatch:
+  schedule:
+    # UTC -> 北京/台北 00:37、06:37、12:37、18:37。每日更新并刷新赛程。
+    - cron: '37 4,10,16,22 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: personal-iptv-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: 准备视频验证工具
+        run: |
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends ffmpeg
+          fi
+      - name: 检查工具并运行回归测试
+        run: |
+          command -v ffmpeg
+          command -v curl
+          python -m unittest discover -s tests -v
+      - name: 抓取和解码验收
+        id: generate
+        continue-on-error: true
+        run: python pipeline.py
+      - name: 保存本轮验收报告
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verification-${{ github.run_id }}
+          path: reports/latest.json
+          if-no-files-found: warn
+          retention-days: 14
+      - name: 发布通过验收的订阅
+        if: steps.generate.outcome == 'success'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public reports/latest.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'chore: refresh verified IPTV playlists [skip ci]'
+          git push origin HEAD:main
+      - name: 标记未通过验收
+        if: steps.generate.outcome != 'success'
+        run: |
+          echo '本次未发布，保留上次通过验收的订阅。请查看 verification 报告。'
+          exit 1

@@ -1,0 +1,55 @@
+{
+  "generated_at": "2026-10-24T17:37:45+08:00",
+  "accepted": true,
+  "errors": [],
+  "sources": [
+    {
+      "id": "migu-primary",
+      "ok": true,
+      "parsed": 633,
+      "selected": 627
+    },
+    {
+      "id": "migu-backup",
+      "ok": true,
+      "parsed": 631,
+      "selected": 625
+    },
+    {
+      "id": "base",
+      "ok": true,
+      "parsed": 5901,
+      "selected": 1761
+    }
+  ],
+  "channels": 296,
+  "events": {
+    "2026-10-23": {
+      "listed": 86,
+      "verified": 86,
+      "upcoming": 0
+    },
+    "2026-10-24": {
+      "listed": 99,
+      "verified": 14,
+      "upcoming": 85
+    },
+    "2026-10-25": {
+      "listed": 186,
+      "verified": 0,
+      "upcoming": 186
+    }
+  },
+  "probe": {
+    "decode_failed": 911,
+    "decoded": 548,
+    "upcoming_lines": 506,
+    "http_403": 65,
+    "http_500": 2,
+    "timeout": 24,
+    "http_404": 5
+  },
+  "max_lines": 2,
+  "verification": "decoded_video_and_optional_audio_3s_at_generator_location",
+  "upcoming_note": "赛前条目未验证可播；开赛后重测。解码成功不证明画面对应赛事或电视端持续播放。"
+}
