@@ -231,6 +231,37 @@ def fetch_playlist(spec, timeout):
     return text
 
 
+def source_error(error):
+    if isinstance(error, ValueError) and re.fullmatch(r"[a-z_]+(?:\d+)?", str(error)):
+        return str(error)
+    return "source_total_timeout" if isinstance(error, subprocess.TimeoutExpired) else type(error).__name__
+
+
+def source_playlist(spec, config, state_dir, now):
+    """Retain public source lists when the runner cannot reach a mirror."""
+    cache_path = state_dir / (hashlib.sha256(spec["url"].encode()).hexdigest()[:16] + ".json")
+    try:
+        text = fetch_playlist(spec, config["fetch_timeout"])
+        if not parse_playlist(text, spec["id"]):
+            raise ValueError("empty_playlist")
+    except (ValueError, OSError, subprocess.SubprocessError) as error:
+        if spec.get("events"):
+            try:
+                cached = json.loads(cache_path.read_text())
+                age = (now - datetime.fromisoformat(cached["fetched_at"])).total_seconds() / 3600
+                if (cached["url"] == spec["url"] and 0 <= age <= config.get("source_cache_hours", 24)
+                        and parse_playlist(cached["text"], spec["id"])):
+                    return cached["text"], {"cached": True, "cache_age_hours": round(age, 2),
+                                            "fetch_error": source_error(error)}
+            except (OSError, ValueError, TypeError, KeyError):
+                pass
+        raise
+    if spec.get("events"):
+        atomic_write(cache_path, json.dumps({"url": spec["url"], "fetched_at": now.isoformat(),
+                                            "text": text}, ensure_ascii=False) + "\n")
+    return text, {"cached": False}
+
+
 class Prober:
     def __init__(self, config):
         self.config = config
@@ -258,9 +289,9 @@ class Prober:
                 return {"ok": False, "reason": budget_reason, "frames": 0}
             result = self.decode(entry, min(self.config["probe_timeout"], remaining))
             if entry.event_date and result["reason"] == "decode_failed":
-                hint = membership_hint(entry.url, min(2, max(0, deadline-time.monotonic())))
+                hint = access_hint(entry.url, min(2, max(0, deadline-time.monotonic())))
                 if hint:
-                    result["reason"] = "membership_required"
+                    result["reason"] = hint
             return result
         finally:
             semaphore.release()
@@ -330,7 +361,7 @@ def candidate_order(entries, limit):
     return (first + rest)[:limit]
 
 
-def membership_hint(url, timeout):
+def access_hint(url, timeout):
     if timeout < 0.1:
         return False
     class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -342,13 +373,20 @@ def membership_hint(url, timeout):
             if "application/json" not in response.headers.get("Content-Type", ""):
                 return False
             text = response.read(1024).decode("utf-8", "replace")
-            return "会员" in text and any(word in text for word in ("开通", "订购", "购买"))
+            if "会员" in text and any(word in text for word in ("开通", "订购", "购买")):
+                return "membership_required"
+            if "登录" in text and any(word in text for word in ("请", "需要", "后观看")):
+                return "login_required"
+            return False
     except (OSError, urllib.error.URLError):
         return False
 
 
 def select_bucket(entries, config, probe, check_event=True):
     lines, fallback, stats = [], [], Counter()
+    if entries[0].event_date:
+        priority = {source: i for i, source in enumerate(config.get("event_source_priority", []))}
+        entries = sorted(entries, key=lambda e: priority.get(e.source, len(priority)))
     for entry in candidate_order(entries, config["candidate_limit"]):
         if entry.upcoming:
             lines.append(entry)
@@ -362,20 +400,19 @@ def select_bucket(entries, config, probe, check_event=True):
             if result["ok"]:
                 lines.append(replace(entry, verified=True, check_status="decoded"))
             elif entry.event_date:
-                fallback.append(replace(entry, check_status=result["reason"]))
+                status = "not_checked" if result["reason"] in ("event_budget", "budget") else result["reason"]
+                fallback.append(replace(entry, check_status=status))
         if len(lines) >= config["max_lines"]:
             break
     # A sports catalogue must not lose entire matches because a cloud runner
     # cannot reach the CDN. Preserve unverified entries, with separate status.
     if entries[0].event_date:
-        fallback.sort(key=lambda e: e.check_status == "membership_required")
+        fallback.sort(key=lambda e: e.check_status in ("membership_required", "login_required"))
         lines += fallback[:max(0, config["max_lines"]-len(lines))]
-        if stats["membership_required"] and not any(e.verified for e in lines):
-            lines = [replace(e, attrs={**e.attrs, "_membership_hint": True}) for e in lines]
     return lines, stats
 
 
-def event_sample_keys(ordered, limit_per_day):
+def event_sample_keys(ordered, limit_per_day, now=None):
     by_day = defaultdict(list)
     for entries in ordered:
         entry = entries[0]
@@ -384,16 +421,23 @@ def event_sample_keys(ordered, limit_per_day):
     selected = set()
     priorities = ("中超", "CBA", "NBA", "斯诺克")
     for entries in by_day.values():
-        entries.sort(key=lambda e: (next((i for i, league in enumerate(priorities)
+        def active(entry):
+            clock = event_clock(entry.name)
+            return bool(now and entry.event_date == now.date() and clock is not None
+                        and 0 <= now.hour*60+now.minute-clock <= 240)
+        entries.sort(key=lambda e: (0 if active(e) else 1, next((i for i, league in enumerate(priorities)
                                         if league in e.name), len(priorities)), rank(e)))
-        seen = set()
+        seen, primary, alternate = set(), [], []
         for entry in entries:
             match = entry.attrs.get("tvg-id") or entry.name
             if match not in seen:
-                selected.add(entry.identity)
+                primary.append(entry)
                 seen.add(match)
-            if len(seen) >= limit_per_day:
-                break
+            elif active(entry):
+                alternate.append(entry)
+        # Cover distinct active matches before spending slots on commentary.
+        choices = [e for e in primary if active(e)] + alternate + [e for e in primary if not active(e)]
+        selected.update(e.identity for e in choices[:limit_per_day])
     return selected
 
 
@@ -412,12 +456,13 @@ def display_name(entry):
         return entry.name
     hour, minute = divmod(clock, 60)
     membership = entry.check_status == "membership_required" or entry.attrs.get("_membership_hint", False)
+    suffix = ("（源提示需会员）" if membership else "（源提示需登录）" if entry.check_status == "login_required"
+              else "（本轮未测通）" if entry.check_status not in ("not_checked", "last_accepted", "decoded") else "")
     if re.match(r"^\s*\d{1,2}:\d{2}\s+", entry.name):
         name = re.sub(r"^\s*\d{1,2}:\d{2}", f"{hour:02d}:{minute:02d}", entry.name)
-        return name + ("（源提示需会员）" if membership and "源提示需会员" not in name else "")
+        return name + (suffix if suffix and suffix not in name else "")
     title = re.sub(r"\s*\d{1,2}:\d{2}\s*$", "", entry.name).strip()
     title = re.sub(r"^\d{1,2}:\d{2}\s+", "", title)
-    suffix = "（源提示需会员）" if membership else ""
     return f"{hour:02d}:{minute:02d} {title}{suffix}"
 
 
@@ -447,8 +492,7 @@ def render_m3u(buckets, now, epg, single=True):
     for bucket in sorted(buckets, key=lambda b: rank(b[0])):
         for entry in bucket[:1] if single else bucket:
             attrs = {k: v for k, v in entry.attrs.items() if k.startswith("tvg-") or k in CATCHUP}
-            membership = all(e.check_status == "membership_required" for e in bucket)
-            name = display_name(replace(entry, check_status="membership_required" if membership else "not_checked"))
+            name = display_name(entry)
             attrs["tvg-name"] = name
             attrs["group-title"] = display_group(entry, now)
             if entry.event_date:
@@ -522,7 +566,7 @@ def publish(out_dir, buckets, report, now, config):
             os.replace(Path(staging) / name, out_dir / name)
 
 
-def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_only=False):
+def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_only=False, check_event=None):
     previous = {}
     try:
         previous = json.loads((out_dir / "status.json").read_text())
@@ -537,21 +581,18 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
         started = time.monotonic()
         print(f"source_start id={spec['id']}", flush=True)
         try:
-            text = ((fixtures / (spec["id"] + ".m3u")).read_text(encoding="utf-8") if fixtures
-                    else fetch_playlist(spec, config["fetch_timeout"]))
+            if fixtures:
+                text, source_meta = (fixtures / (spec["id"] + ".m3u")).read_text(encoding="utf-8"), {"fixture": True}
+            else:
+                text, source_meta = source_playlist(spec, config, out_dir.parent / "state", now)
             parsed = parse_playlist(text, spec["id"])
             if not parsed:
                 raise ValueError("empty_playlist")
             selected = prepare(parsed, spec, config, now)
             candidates.extend(selected)
-            sources.append({"id": spec["id"], "ok": True, "parsed": len(parsed), "selected": len(selected)})
+            sources.append({"id": spec["id"], "ok": True, "parsed": len(parsed), "selected": len(selected), **source_meta})
         except (ValueError, OSError, subprocess.SubprocessError) as error:
-            reason = type(error).__name__
-            if isinstance(error, ValueError) and re.fullmatch(r"[a-z_]+(?:\d+)?", str(error)):
-                reason = str(error)
-            elif isinstance(error, subprocess.TimeoutExpired):
-                reason = "source_total_timeout"
-            sources.append({"id": spec["id"], "ok": False, "error": reason})
+            sources.append({"id": spec["id"], "ok": False, "error": source_error(error)})
         print(f"source_end id={spec['id']} ok={sources[-1]['ok']} seconds={time.monotonic()-started:.1f}", flush=True)
     grouped = defaultdict(list)
     for entry in candidates:
@@ -560,7 +601,10 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
     probe = probe or Prober(config)
     buckets, stats, finished = [], Counter(), 0
     ordered = sorted(grouped.values(), key=lambda b: rank(b[0]))
-    samples = event_sample_keys(ordered, config.get("event_samples_per_day", 12))
+    samples = event_sample_keys(ordered, config.get("event_samples_per_day", 12), now)
+    if check_event:
+        samples.update(b[0].identity for b in ordered if b[0].event_date and not b[0].upcoming
+                       and check_event in b[0].name)
     ordered.sort(key=lambda b: (0 if b[0].identity in samples else 1 if b[0].event_date else 2, rank(b[0])))
     print(f"probe_start channels_and_events={len(ordered)}", flush=True)
     with ThreadPoolExecutor(max_workers=config["workers"]) as pool:
@@ -591,6 +635,7 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
                                   "upcoming": sum(e.upcoming for e in entries),
                                   "not_checked": sum(e.check_status == "not_checked" and not e.upcoming for e in entries),
                                   "membership_required": sum(e.check_status == "membership_required" or e.attrs.get("_membership_hint", False) for e in entries),
+                                  "login_required": sum(e.check_status == "login_required" for e in entries),
                                   "failed_checks": sum(not e.verified and e.check_status not in ("not_checked", "last_accepted") for e in entries)}
     coverage = {}
     for league in ("CBA", "中超"):
@@ -606,11 +651,16 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
         warnings.append("sports_catalog_contains_unverified_entries")
     if stats["membership_required"]:
         warnings.append("some_sports_entries_require_membership")
+    if stats["login_required"]:
+        warnings.append("some_sports_entries_require_login")
+    if any(source.get("cached") for source in sources):
+        warnings.append("some_source_catalogues_from_cache")
     report = {"generated_at": now.isoformat(timespec="seconds"),
               "finished_at": datetime.now(now.tzinfo).isoformat(timespec="seconds"), "accepted": not errors,
               "errors": errors, "warnings": warnings, "sources": sources, "channels": sum(not b[0].event_date for b in buckets),
               "events": by_day, "probe": dict(stats), "max_lines": config["max_lines"],
               "event_policy": "complete_catalog_with_sampled_playback_checks", "competition_coverage": coverage,
+              "requested_event_check": check_event,
               "mode": "events_only" if events_only else "full",
               "channel_validation_at": (previous.get("channel_validation_at") or previous.get("generated_at")) if events_only else now.isoformat(timespec="seconds"),
               "verification": "decoded_video_and_optional_audio_at_generator_location",
@@ -634,6 +684,7 @@ def main():
     parser.add_argument("--report", type=Path, default=ROOT / "reports/latest.json")
     parser.add_argument("--fixtures", type=Path, help="Use saved source lists, still decode actual streams")
     parser.add_argument("--events-only", action="store_true", help="Refresh the complete sports catalogue; reuse last accepted TV channels")
+    parser.add_argument("--check-event", help="Also test every started commentary whose title contains this text")
     args = parser.parse_args()
     config = json.loads(args.config.read_text())
     if not 1 <= config["max_lines"] <= 2 or config["candidate_limit"] < config["max_lines"]:
@@ -642,7 +693,7 @@ def main():
         if not shutil.which(name):
             parser.error(name + " is required")
     return run(config, args.out, args.report, datetime.now(ZoneInfo(config["timezone"])), args.fixtures,
-               events_only=args.events_only)
+               events_only=args.events_only, check_event=args.check_event)
 
 
 if __name__ == "__main__":

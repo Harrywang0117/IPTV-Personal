@@ -6,6 +6,7 @@
     {"id": "migu-backup", "url": "http://mi.dzpp.uk", "events": true},
     {"id": "base", "url": "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u", "events": false}
   ],
+  "event_source_priority": ["migu-backup", "migu-alt", "migu-primary"],
   "base_groups": ["央视", "央视付费", "卫视", "央视体育", "咪咕体育", "地方体育", "港澳台体育", "香港", "澳门", "台湾", "少儿频道"],
   "max_lines": 2,
   "candidate_limit": 6,
@@ -14,6 +15,7 @@
   "decode_seconds": 3,
   "probe_timeout": 18,
   "fetch_timeout": 18,
+  "source_cache_hours": 24,
   "budget_seconds": 2100,
   "event_probe_budget_seconds": 180,
   "event_samples_per_day": 12,

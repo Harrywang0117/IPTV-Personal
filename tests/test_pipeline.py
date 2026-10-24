@@ -118,6 +118,13 @@ class PipelineTests(unittest.TestCase):
         self.assertFalse(kept[0].verified)
         self.assertEqual(kept[0].check_status, "timeout")
         self.assertEqual(stats["timeout"], 1)
+        self.assertIn("本轮未测通", p.display_name(kept[0]))
+
+    def test_budget_skipped_sports_are_not_misreported_as_failed(self):
+        entry = p.Entry("英超 A VS B 19:00", "", "https://example.com/a", event_date=self.now.date())
+        kept, _ = p.select_bucket([entry], self.config, lambda e: {"ok": False, "reason": "event_budget"})
+        self.assertEqual(kept[0].check_status, "not_checked")
+        self.assertNotIn("本轮未测通", p.display_name(kept[0]))
 
     def test_unchecked_sports_catalogue_does_not_claim_decoded(self):
         entry = p.Entry("中超 A VS B 15:00", "", "https://example.com/a", event_date=self.now.date())
@@ -126,11 +133,92 @@ class PipelineTests(unittest.TestCase):
         self.assertFalse(kept[0].verified)
         self.assertEqual(stats["event_not_checked"], 1)
 
+    def test_event_source_priority_does_not_change_tv_priority(self):
+        entries = [p.Entry("比赛 19:00", "", f"https://{source}.example/a", source=source,
+                           event_date=self.now.date()) for source in ["migu-primary", "migu-backup"]]
+        kept, _ = p.select_bucket(entries, self.config, None, check_event=False)
+        self.assertEqual(kept[0].source, "migu-backup")
+        tv = [p.replace(e, name="CCTV1", event_date=None) for e in entries]
+        kept, _ = p.select_bucket(tv, self.config, lambda e: {"ok": True, "reason": "decoded"})
+        self.assertEqual(kept[0].source, "migu-primary")
+
     def test_membership_failure_is_visible_in_event_title(self):
         entry = p.Entry("CBA A VS B 19:25", "", "https://example.com/a", event_date=self.now.date())
         kept, _ = p.select_bucket([entry], self.config, lambda e: {"ok": False, "reason": "membership_required"})
         self.assertIn("源提示需会员", p.display_name(kept[0]))
         self.assertFalse(kept[0].verified)
+
+    def test_login_failure_is_visible_and_does_not_imply_membership(self):
+        entry = p.Entry("英超 A VS B 19:00", "", "https://example.com/a", event_date=self.now.date())
+        kept, _ = p.select_bucket([entry], self.config, lambda e: {"ok": False, "reason": "login_required"})
+        rendered = p.render_m3u([kept], self.now, [])
+        self.assertIn("源提示需登录", rendered)
+        self.assertNotIn("源提示需会员", rendered)
+
+    def test_restricted_candidate_does_not_taint_working_backup(self):
+        entries = [p.Entry("英超 A VS B 19:00", "", f"https://source{i}.example/a", event_date=self.now.date()) for i in range(2)]
+        kept, _ = p.select_bucket(entries, self.config, lambda e: {"ok": "source1" in e.url,
+                               "reason": "decoded" if "source1" in e.url else "login_required"})
+        self.assertTrue(kept[0].verified)
+        self.assertIn("source1", kept[0].url)
+        self.assertNotIn("源提示需登录", p.parse_playlist(p.render_m3u([kept], self.now, []))[0].name)
+
+    def test_active_match_commentaries_are_sampled_before_old_leagues(self):
+        entries = [p.Entry(name, "", f"https://example.com/{i}", {"tvg-id": match}, event_date=self.now.date())
+                   for i, (name, match) in enumerate([("中超 C VS D 10:00", "old"),
+                         ("英超 A VS B 中文 16:00", "live"), ("英超 A VS B 原声 16:15", "live")])]
+        keys = p.event_sample_keys([[e] for e in entries], 2, self.now)
+        self.assertEqual(keys, {entries[1].identity, entries[2].identity})
+
+    def test_distinct_active_matches_before_repeated_commentary(self):
+        entries = [p.Entry(name, "", f"https://example.com/{i}", {"tvg-id": match}, event_date=self.now.date())
+                   for i, (name, match) in enumerate([("CBA A VS B 中文 16:00", "one"),
+                         ("CBA A VS B 原声 16:00", "one"), ("英超 C VS D 16:15", "two")])]
+        keys = p.event_sample_keys([[e] for e in entries], 2, self.now)
+        self.assertEqual(keys, {entries[0].identity, entries[2].identity})
+
+    def test_access_hint_does_not_follow_video_redirect(self):
+        opener = unittest.mock.MagicMock()
+        response = opener.open.return_value.__enter__.return_value
+        response.headers = {"Content-Type": "application/json;charset=UTF-8"}
+        with patch("pipeline.urllib.request.build_opener", return_value=opener):
+            response.read.return_value = "由于版权原因，请登录后观看".encode()
+            self.assertEqual(p.access_hint("https://example.com/a", 1), "login_required")
+            response.read.return_value = "开通钻石会员即可免费畅看哦".encode()
+            self.assertEqual(p.access_hint("https://example.com/a", 1), "membership_required")
+            response.headers = {"Content-Type": "video/mp2t"}
+            response.read.reset_mock()
+            self.assertFalse(p.access_hint("https://example.com/a", 1))
+            response.read.assert_not_called()
+
+    def test_recent_public_source_cache_survives_fetch_failure(self):
+        text = '#EXTM3U\n#EXTINF:-1 group-title="体育-今天10-24",比赛 19:00\nhttps://example.com/live\n'
+        with tempfile.TemporaryDirectory() as tmp:
+            state = Path(tmp)
+            with patch("pipeline.fetch_playlist", return_value=text):
+                _, meta = p.source_playlist(self.spec, self.config, state, self.now)
+            self.assertFalse(meta["cached"])
+            cache = next(state.glob("*.json"))
+            original = cache.read_bytes()
+            with patch("pipeline.fetch_playlist", side_effect=ValueError("offline")):
+                value, meta = p.source_playlist(self.spec, self.config, state, self.now+p.timedelta(hours=2))
+                self.assertEqual(value, text)
+                self.assertTrue(meta["cached"])
+                self.assertEqual(meta["fetch_error"], "offline")
+                with self.assertRaises(ValueError):
+                    p.source_playlist(self.spec, self.config, state, self.now+p.timedelta(hours=25))
+            self.assertEqual(cache.read_bytes(), original)
+
+    def test_invalid_playlist_does_not_overwrite_source_cache(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            state = Path(tmp)
+            text = '#EXTM3U\n#EXTINF:-1,比赛\nhttps://example.com/live\n'
+            with patch("pipeline.fetch_playlist", return_value=text):
+                p.source_playlist(self.spec, self.config, state, self.now)
+            with patch("pipeline.fetch_playlist", return_value="<html>error</html>"):
+                value, meta = p.source_playlist(self.spec, self.config, state, self.now)
+            self.assertTrue(meta["cached"])
+            self.assertEqual(value, text)
 
     def test_reformat_preserves_event_epg_identity(self):
         entry = p.Entry("CBA A VS B 19:25", "", "https://example.com/a", event_date=self.now.date())
@@ -281,20 +369,26 @@ class PipelineTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             out = root / "public"
-            cfg = dict(self.config, sources=[self.spec], minimum_channels=1)
+            cfg = dict(self.config, sources=[self.spec], minimum_channels=1, event_samples_per_day=0)
             old_time = "2026-10-24T08:00:00+08:00"
             tv = p.Entry("CCTV1", "央视", "https://example.com/tv", verified=True)
             p.publish(out, [[tv]], {"accepted": True, "channels": 1, "generated_at": old_time}, self.now, cfg)
             text = '#EXTM3U\n'
             for word, suffix in [("昨天", "10-23"), ("今天", "10-24"), ("明天", "10-25")]:
                 text += f'#EXTINF:-1 group-title="体育-{word}{suffix}" tvg-id="A VS B",CBA A VS B 全场回放 00:01\nhttps://example.com/{word}\n'
+            checked = []
+            def probe(entry):
+                checked.append(entry.url)
+                return {"ok": False, "reason": "timeout"}
             with patch("pipeline.fetch_playlist", return_value=text), patch("builtins.print"):
                 code = p.run(cfg, out, root / "report.json", self.now,
-                             probe=lambda e: {"ok": False, "reason": "timeout"}, events_only=True)
+                             probe=probe, events_only=True, check_event="A VS B")
             self.assertEqual(code, 0)
             report = json.loads((out / "status.json").read_text())
             self.assertEqual(report["channel_validation_at"], old_time)
             self.assertEqual(report["channels"], 1)
+            self.assertEqual(set(checked), {"https://example.com/昨天", "https://example.com/今天"})
+            self.assertEqual(report["requested_event_check"], "A VS B")
             self.assertEqual([day["listed"] for day in report["events"].values()], [1,1,1])
             self.assertTrue(all(day["verified"] == 0 for day in report["events"].values()))
             self.assertIn("sports_catalog_contains_unverified_entries", report["warnings"])

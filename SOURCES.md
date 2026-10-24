@@ -13,3 +13,5 @@
 [develop202/migu_video](https://github.com/develop202/migu_video)、[akiralereal/iptv](https://github.com/akiralereal/iptv)、[showlo0327/migu-m3u](https://github.com/showlo0327/migu-m3u) 是可自托管的软件项目，不能把它们当成另一个现成、可匿名稳定使用的赛事源。本轮没有为它们部署服务或配置个人账号。
 
 赛事时刻取自源中的标注，未逐场替换为官方开球时间。完整清单不保证上游没有漏赛；后续发现具体缺场应继续比较原始源与发布结果。
+
+今晚维拉对曼城的原默认源明确要求登录，两组备用源曾输出正确赛前画面；22:00 后复查旧、新入口均未测通，部分提示会员或登录。现优先尝试两个备用源，但不能据此保证无会员观看这场正赛或回放。
