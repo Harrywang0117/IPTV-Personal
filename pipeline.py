@@ -269,6 +269,12 @@ class Prober:
                 if remaining <= 0:
                     return {"ok": False, "reason": "timeout", "frames": 0}
                 result = subprocess.run(cmd + tail, capture_output=True, text=True, timeout=remaining)
+            if "Not detecting m3u8/hls with non standard extension" in result.stderr:
+                remaining = timeout - (time.monotonic() - started)
+                if remaining <= 0:
+                    return {"ok": False, "reason": "timeout", "frames": 0}
+                result = subprocess.run(cmd + self.hls_options + ["-f", "hls"] + tail,
+                                        capture_output=True, text=True, timeout=remaining)
             frames = max([int(v) for v in re.findall(r"^frame=(\d+)$", result.stdout, re.M)] or [0])
             micros = max([int(v) for v in re.findall(r"^out_time_us=(\d+)$", result.stdout, re.M)] or [0])
             ok = result.returncode == 0 and frames >= 5 and micros >= (self.config["decode_seconds"] - 0.25) * 1e6

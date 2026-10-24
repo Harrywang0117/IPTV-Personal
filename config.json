@@ -1,6 +1,7 @@
 {
   "timezone": "Asia/Shanghai",
   "sources": [
+    {"id": "migu-alt", "url": "http://112.230.73.82:7788", "events": true},
     {"id": "migu-primary", "url": "http://139.224.44.53:1234", "events": true},
     {"id": "migu-backup", "url": "http://117.72.81.53:3000", "events": true},
     {"id": "base", "url": "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u", "events": false}

@@ -167,6 +167,18 @@ class PipelineTests(unittest.TestCase):
         self.assertNotIn("-allowed_extensions", run.call_args_list[1].args[0])
         self.assertLessEqual(run.call_args_list[1].kwargs["timeout"], 18)
 
+    def test_hls_probe_mime_rejection_gets_explicit_hls_retry(self):
+        prober = object.__new__(p.Prober)
+        prober.config = self.config
+        prober.hls_options = ["-allowed_extensions", "ALL"]
+        failed = subprocess.CompletedProcess([], 1, "", "Not detecting m3u8/hls with non standard extension and non standard mime type")
+        passed = subprocess.CompletedProcess([], 0, "frame=75\nout_time_us=3000000\n", "")
+        with patch("pipeline.subprocess.run", side_effect=[failed, passed]) as run:
+            result = prober.decode(p.Entry("回放", "", "https://example.com/a"), 18)
+        self.assertTrue(result["ok"])
+        self.assertIn("hls", run.call_args_list[1].args[0])
+        self.assertLessEqual(run.call_args_list[1].kwargs["timeout"], 18)
+
     def test_continuous_flv_is_not_playlist(self):
         result = subprocess.CompletedProcess([], 0, b"FLV" + b"x"*100, b"")
         with patch("pipeline.subprocess.run", return_value=result):
