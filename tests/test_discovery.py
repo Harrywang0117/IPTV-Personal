@@ -119,6 +119,17 @@ class DiscoveryAndPublicationTests(unittest.TestCase):
         with patch('pipeline.subprocess.run',return_value=long),patch.object(prober,'decode',side_effect=[{'ok':True},{'ok':False,'reason':'http_403'}]):
             self.assertFalse(prober.event_check(self.event(),45)['ok'])
 
+    def test_hls_duration_retry_and_unknown_replay_cannot_downgrade_to_live(self):
+        prober=object.__new__(p.Prober);prober.config=self.config;prober.hls_options=['-allowed_extensions','ALL']
+        failed=subprocess.CompletedProcess([],1,'{}','Not detecting m3u8/hls with non standard extension')
+        passed=subprocess.CompletedProcess([],0,'{"format":{"duration":"7200"}}','')
+        with patch('pipeline.subprocess.run',side_effect=[failed,passed]) as run,patch.object(prober,'decode',return_value={'ok':True}):
+            self.assertEqual(prober.event_check(self.event(),45)['kind'],'vod')
+            self.assertIn('hls',run.call_args_list[1].args[0])
+        with patch('pipeline.subprocess.run',return_value=failed),patch.object(prober,'decode') as decode:
+            self.assertEqual(prober.event_check(self.event(),45)['reason'],'vod_duration_unknown')
+            decode.assert_not_called()
+
     def test_trial_hidden_behind_second_redirect_is_rejected(self):
         opener=unittest.mock.MagicMock()
         opener.open.side_effect=[p.urllib.error.HTTPError('https://source.example',302,'',{'Location':'https://redirect.example/stream'},None),

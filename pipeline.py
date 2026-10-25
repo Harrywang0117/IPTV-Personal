@@ -332,6 +332,8 @@ class Prober:
         except (ValueError, TypeError, subprocess.SubprocessError):
             duration = 0
         offsets = [0]
+        if not duration and "回放" in entry.name:
+            return {"ok": False, "reason": "vod_duration_unknown", "frames": 0}
         if duration > 0:
             if duration < self.config.get("event_min_vod_seconds", 1200):
                 return {"ok": False, "reason": "short_vod", "duration_seconds": round(duration)}
@@ -345,7 +347,7 @@ class Prober:
                                   self.config.get("event_live_sample_seconds", 15))
             if not checked["ok"]:
                 return checked
-        return {"ok": True, "reason": "decoded", "kind": "vod" if duration else "live",
+        return {"ok": True, "reason": "decoded", "kind": "vod" if duration else "unconfirmed_duration",
                 "duration_seconds": round(duration), "sample_offsets": offsets,
                 "sample_seconds": self.config.get("event_vod_sample_seconds", 5) if duration else
                 self.config.get("event_live_sample_seconds", 15)}
@@ -589,6 +591,7 @@ def qualify_events(buckets, previous_evidence, now, config):
 def catalogue_json(buckets, now):
     labels = {"decoded": "本轮检测通过", "not_checked": "未完成检测", "trial_stream": "仅试看",
               "membership_required": "需会员", "login_required": "需登录", "short_vod": "短片段，未按正赛收录",
+              "vod_duration_unknown": "回放时长未核实",
               "observation_pending": "等待第二次直播检测"}
     return {"generated_at": now.isoformat(), "note": "完整赛程目录；限制或待测条目不进入主订阅。",
             "events": [{"id": event_key(bucket[0]), "name": display_name(bucket[0]),
@@ -880,7 +883,7 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
                                   "login_required": sum(e.check_status == "login_required" for e in entries),
                                   "trial_stream": sum(e.check_status == "trial_stream" for e in entries),
                                   "observation_pending": sum(e.check_status == "observation_pending" for e in entries),
-                                  "failed_checks": sum(not e.verified and e.check_status not in ("not_checked", "last_accepted") for e in entries)}
+                                  "failed_checks": sum(not e.verified and e.check_status not in ("not_checked", "last_accepted", "observation_pending") for e in entries)}
     coverage = {}
     for league in ("CBA", "中超"):
         matches = [b[0] for b in catalogue if b[0].event_date and b[0].name.startswith(league+" ")]
