@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-10-25T09:29:24.102106+08:00",
+  "feeds": [
+    {
+      "url": "https://tonkiang.us/iptvsports.php",
+      "ok": false,
+      "error": "discovery_feed_unavailable"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u",
+      "ok": false,
+      "error": "discovery_feed_unavailable"
+    }
+  ],
+  "checked": 3,
+  "registered": 3,
+  "status_counts": {
+    "degraded": 3
+  },
+  "changes": [
+    {
+      "source": "migu-alt",
+      "from": "seed",
+      "to": "degraded",
+      "reason": "failed_validation"
+    },
+    {
+      "source": "migu-primary",
+      "from": "seed",
+      "to": "degraded",
+      "reason": "failed_validation"
+    },
+    {
+      "source": "migu-backup",
+      "from": "seed",
+      "to": "degraded",
+      "reason": "failed_validation"
+    }
+  ],
+  "note": "发现不等于可播；新源至少两次相隔六小时通过三天目录和两条媒体检测才入池。节目仍须逐条通过发布验收。"
+}
