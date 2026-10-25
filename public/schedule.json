@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T14:42:32+08:00",
+  "generated_at": "2026-10-25T15:50:56+08:00",
   "note": "完整赛程目录；限制或待测条目不进入主订阅。",
   "events": [
     {
@@ -16,8 +16,8 @@
       "name": "02:00 斯诺克 马克·威廉姆斯6-4吉尔伯特 杰克·琼斯6-5唐纳森 【回放】大卫·吉尔伯特4-6马克·威廉姆斯（杨江浩）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 120,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -25,8 +25,8 @@
       "name": "02:00 斯诺克 马克·威廉姆斯6-4吉尔伯特 杰克·琼斯6-5唐纳森 【回放】大卫·吉尔伯特4-6马克·威廉姆斯（赛场原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 120,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -34,107 +34,107 @@
       "name": "02:00 斯诺克 马克·威廉姆斯6-4吉尔伯特 杰克·琼斯6-5唐纳森 【回放】杰克·琼斯6-5斯科特·唐纳森（赛场原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 120,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "485e2a84ed1345e528f5",
-      "name": "02:25 德甲 斯图加特VS门兴格拉德巴赫 全场回放（AI智慧观赛）",
+      "name": "02:25 德甲 斯图加特VS门兴格拉德巴赫 全场回放（AI智慧观赛）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 145,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "0ea0ae83f4b581d488dd",
-      "name": "02:25 德甲 斯图加特VS门兴格拉德巴赫 全场回放（AI智能解说）",
+      "name": "02:25 德甲 斯图加特VS门兴格拉德巴赫 全场回放（AI智能解说）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 145,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "d667a6d58139c0b07998",
-      "name": "02:25 德甲 斯图加特VS门兴格拉德巴赫 全场回放（李霄）",
+      "name": "02:25 德甲 斯图加特VS门兴格拉德巴赫 全场回放（李霄）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 145,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "bb806c998cfd34052c1d",
-      "name": "02:40 意甲 都灵VS蒙扎 全场回放（张昊泽）",
+      "name": "02:40 意甲 都灵VS蒙扎 全场回放（张昊泽）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 160,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "96555dd8b86757dd2311",
-      "name": "02:40 法甲 布雷斯特VS尼斯 全场回放（刘一臻）",
+      "name": "02:40 法甲 布雷斯特VS尼斯 全场回放（刘一臻）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 160,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "231f88fb8779bfe0a207",
-      "name": "02:45 西甲 阿拉维斯VS马拉加 全场回放（洪宇青）",
+      "name": "02:45 西甲 阿拉维斯VS马拉加 全场回放（洪宇青）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 165,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "248e527c73d151afbe0d",
-      "name": "02:55 英超 伊普斯维奇VS诺丁汉森林 全场回放",
+      "name": "02:55 英超 伊普斯维奇VS诺丁汉森林 全场回放（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 175,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "61f21b4104c83cca0188",
-      "name": "02:55 英超 伊普斯维奇VS诺丁汉森林 全场回放（AI智慧观赛）",
+      "name": "02:55 英超 伊普斯维奇VS诺丁汉森林 全场回放（AI智慧观赛）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 175,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "231703134e89fb11cf3a",
-      "name": "02:55 英超 伊普斯维奇VS诺丁汉森林 全场回放（AI智能解说）",
+      "name": "02:55 英超 伊普斯维奇VS诺丁汉森林 全场回放（AI智能解说）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 175,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "b0181fce3fe67d89c966",
-      "name": "02:55 英超 伊普斯维奇VS诺丁汉森林 全场回放（刘焕）",
+      "name": "02:55 英超 伊普斯维奇VS诺丁汉森林 全场回放（刘焕）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 175,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "9c260f50f70559b6cbad",
       "name": "03:55 NBA 雄鹿VS公牛 全场回放（宋俊潼）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 235,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -142,44 +142,44 @@
       "name": "03:55 NBA 雄鹿VS公牛 全场回放（英文原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 235,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "23b30f926c9594696495",
-      "name": "05:30 莫干山跑山赛 莫干山跑山赛 2026莫干山跑山赛Day2全场回放（官方解说）（一）",
+      "name": "05:30 莫干山跑山赛 莫干山跑山赛 2026莫干山跑山赛Day2全场回放（官方解说）（一）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 330,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "3f5e2a85ab51e01520f0",
-      "name": "05:30 莫干山跑山赛 莫干山跑山赛 2026莫干山跑山赛Day2全场回放（官方解说）（二）",
+      "name": "05:30 莫干山跑山赛 莫干山跑山赛 2026莫干山跑山赛Day2全场回放（官方解说）（二）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 330,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "f1db1b9dcff25b9eb276",
-      "name": "06:00 UFC前瞻与回顾 激战前夜：终极三番战！梅拉布再战彼得严 激战前夜全场回放：梅拉布VS彼得严特辑（赛场原声）",
+      "name": "06:00 UFC前瞻与回顾 激战前夜：终极三番战！梅拉布再战彼得严 激战前夜全场回放：梅拉布VS彼得严特辑（赛场原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 360,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "71e3589020716e469f6e",
       "name": "06:00 UFC前瞻与回顾 激战前夜：终极三番战！梅拉布再战彼得严 激战前夜全场回放：梅拉布VS彼得严特辑（陈瑞阳）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 360,
-      "status": "timeout",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -187,8 +187,8 @@
       "name": "06:55 NBA 凯尔特人VS尼克斯 全场回放（王冠证）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -196,8 +196,8 @@
       "name": "06:55 NBA 凯尔特人VS尼克斯 全场回放（英文原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -205,8 +205,8 @@
       "name": "06:55 NBA 奇才VS猛龙 全场回放（王凯）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -214,8 +214,8 @@
       "name": "06:55 NBA 奇才VS猛龙 全场回放（英文原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -223,8 +223,8 @@
       "name": "06:55 NBA 步行者VS独行侠 全场回放（罗森）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -232,8 +232,8 @@
       "name": "06:55 NBA 步行者VS独行侠 全场回放（英文原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -241,8 +241,8 @@
       "name": "06:55 NBA 魔术VS森林狼 全场回放（盛哲）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -250,8 +250,8 @@
       "name": "06:55 NBA 魔术VS森林狼 全场回放（英文原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -259,8 +259,8 @@
       "name": "06:55 NBA 黄蜂VS老鹰 全场回放（英文原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -268,44 +268,44 @@
       "name": "06:55 NBA 黄蜂VS老鹰 全场回放（贾磊）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "94ed1db5d1df8b109354",
-      "name": "07:50 中国自行车运动协会系列赛 中国泵道自行车联赛北京门头沟站 2026中国泵道自行车联赛北京门头沟站Day1全场回放（官方解说）（一）",
+      "name": "07:50 中国自行车运动协会系列赛 中国泵道自行车联赛北京门头沟站 2026中国泵道自行车联赛北京门头沟站Day1全场回放（官方解说）（一）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 470,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "bf2bf3f62ca2663b90f5",
-      "name": "07:50 中国自行车运动协会系列赛 中国泵道自行车联赛北京门头沟站 2026中国泵道自行车联赛北京门头沟站Day1全场回放（官方解说）（三）",
+      "name": "07:50 中国自行车运动协会系列赛 中国泵道自行车联赛北京门头沟站 2026中国泵道自行车联赛北京门头沟站Day1全场回放（官方解说）（三）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 470,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "3ea3408997f40ccaefe5",
-      "name": "07:50 中国自行车运动协会系列赛 中国泵道自行车联赛北京门头沟站 2026中国泵道自行车联赛北京门头沟站Day1全场回放（官方解说）（二）",
+      "name": "07:50 中国自行车运动协会系列赛 中国泵道自行车联赛北京门头沟站 2026中国泵道自行车联赛北京门头沟站Day1全场回放（官方解说）（二）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 470,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "3a95fdc559d54f12ed12",
       "name": "07:55 NBA 热火VS活塞 全场回放（徐秦威）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 475,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -313,62 +313,98 @@
       "name": "07:55 NBA 热火VS活塞 全场回放（英文原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 475,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "e05566542a7dcfd02d5c",
-      "name": "08:00 全国垂钓俱乐部挑战赛 2026“武昌鱼”杯全国垂钓俱乐部挑战赛（鄂城 · 鄂州） 2026“武昌鱼”杯全国垂钓俱乐部挑战赛（鄂州鄂城站）Day2全场回放（官方解说）（一）",
+      "name": "08:00 全国垂钓俱乐部挑战赛 2026“武昌鱼”杯全国垂钓俱乐部挑战赛（鄂城 · 鄂州） 2026“武昌鱼”杯全国垂钓俱乐部挑战赛（鄂州鄂城站）Day2全场回放（官方解说）（一）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 480,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
+    },
+    {
+      "id": "8e3c0352807362aa47fc",
+      "name": "08:00 全国垂钓俱乐部挑战赛 2026“武昌鱼”杯全国垂钓俱乐部挑战赛（鄂城 · 鄂州） 2026“武昌鱼”杯全国垂钓俱乐部挑战赛（鄂州鄂城站）Day2全场回放（官方解说）（二）（本轮未测通）",
+      "date": "2026-10-24",
+      "time_minutes": 480,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "2071c7172dacdb816085",
-      "name": "09:00 PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day5 2026PPA香港1500大满贯赛事Day5全场回放（赛场原声）（一）",
+      "name": "09:00 PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day5 2026PPA香港1500大满贯赛事Day5全场回放（赛场原声）（一）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 540,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "5898623e540cf6989973",
-      "name": "09:00 PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day5 2026PPA香港1500大满贯赛事Day5全场回放（赛场原声）（三）",
+      "name": "09:00 PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day5 2026PPA香港1500大满贯赛事Day5全场回放（赛场原声）（三）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 540,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "e8b831065dd0e5afaeaa",
-      "name": "09:00 PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day5 2026PPA香港1500大满贯赛事Day5全场回放（赛场原声）（二）",
+      "name": "09:00 PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day5 2026PPA香港1500大满贯赛事Day5全场回放（赛场原声）（二）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 540,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
+    },
+    {
+      "id": "1a898cbed45a810788c9",
+      "name": "09:00 PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day5 全场回放（赛场原声）（一）（本轮未测通）",
+      "date": "2026-10-24",
+      "time_minutes": 540,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
+    },
+    {
+      "id": "9e7d0fcd5410c3b701e1",
+      "name": "09:00 PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day5 全场回放（赛场原声）（三）（本轮未测通）",
+      "date": "2026-10-24",
+      "time_minutes": 540,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
+    },
+    {
+      "id": "aacf1e7bf3b615b4eeab",
+      "name": "09:00 PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day5 全场回放（赛场原声）（二）（本轮未测通）",
+      "date": "2026-10-24",
+      "time_minutes": 540,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "9ac897ed908d369ae01a",
-      "name": "09:00 全国游泳锦标赛 潘展乐100米自由泳预赛小组第一晋级 全场回放（赛场原声）",
+      "name": "09:00 全国游泳锦标赛 潘展乐100米自由泳预赛小组第一晋级 全场回放（赛场原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 540,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "577e3acb84483042a7bc",
       "name": "09:25 NBA 爵士VS鹈鹕 全场回放（刘沛元）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 565,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -376,8 +412,8 @@
       "name": "09:25 NBA 爵士VS鹈鹕 全场回放（英文原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 565,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -385,8 +421,26 @@
       "name": "09:25 NBA 马刺VS火箭 全场回放（杨健、丁彦雨航、周鹏、拜月宁）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 565,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
+    },
+    {
+      "id": "a0f41db7252bfec9b6f2",
+      "name": "09:25 NBA 马刺VS火箭 全场回放（王晓晨）（本轮未测通）",
+      "date": "2026-10-24",
+      "time_minutes": 565,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
+    },
+    {
+      "id": "8e34dbddebe0c6226394",
+      "name": "09:25 NBA 马刺VS火箭 全场回放（英文原声）（本轮未测通）",
+      "date": "2026-10-24",
+      "time_minutes": 565,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -394,8 +448,8 @@
       "name": "09:45 NBA 勇士VS灰熊 全场回放（AI字幕）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 585,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -403,8 +457,8 @@
       "name": "09:45 NBA 勇士VS灰熊 全场回放（孙博、巩晓彬、闫宇峰、小七）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 585,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -412,8 +466,8 @@
       "name": "09:45 NBA 勇士VS灰熊 全场回放（英文原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 585,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -421,8 +475,8 @@
       "name": "09:45 NBA 勇士VS灰熊 全场回放（董倡硕）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 585,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -430,8 +484,8 @@
       "name": "09:45 NBA 湖人VS快船 全场回放（AI字幕）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 585,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -439,8 +493,8 @@
       "name": "09:45 NBA 湖人VS快船 全场回放（李天宇、徐咏、陈正昊、廖昕阳）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 585,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -448,8 +502,8 @@
       "name": "09:45 NBA 湖人VS快船 全场回放（英文原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 585,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -457,8 +511,8 @@
       "name": "09:55 NBA 国王VS开拓者 全场回放（英文原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 595,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -466,8 +520,8 @@
       "name": "09:55 NBA 国王VS开拓者 全场回放（邢晨）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 595,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -475,81 +529,81 @@
       "name": "09:55 NBA 国王VS开拓者 全场回放（邵化谦、季孟年）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 595,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "8e9a85410cdb5bda41b8",
-      "name": "10:30 ITF世界网球巡回赛 马卡洛娃止步 孙心然晋级决赛 【回放】塞斯科2-0汉斯（官方解说）",
+      "name": "10:30 ITF世界网球巡回赛 马卡洛娃止步 孙心然晋级决赛 【回放】塞斯科2-0汉斯（官方解说）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 630,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "3242c9aab61d95c580d4",
-      "name": "10:30 ITF世界网球巡回赛 马卡洛娃止步 孙心然晋级决赛 【回放】塞斯科2-0汉斯（赛场原声）",
+      "name": "10:30 ITF世界网球巡回赛 马卡洛娃止步 孙心然晋级决赛 【回放】塞斯科2-0汉斯（赛场原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 630,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "166b49d498a5ae48299f",
-      "name": "10:30 ITF世界网球巡回赛 马卡洛娃止步 孙心然晋级决赛 【回放】孙心然2-0科瓦奇科娃（官方解说）",
+      "name": "10:30 ITF世界网球巡回赛 马卡洛娃止步 孙心然晋级决赛 【回放】孙心然2-0科瓦奇科娃（官方解说）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 630,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "ce813161110f3b1387d9",
-      "name": "10:30 ITF世界网球巡回赛 马卡洛娃止步 孙心然晋级决赛 【回放】孙心然2-0科瓦奇科娃（赛场原声）",
+      "name": "10:30 ITF世界网球巡回赛 马卡洛娃止步 孙心然晋级决赛 【回放】孙心然2-0科瓦奇科娃（赛场原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 630,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "351e7d6053de73a3c093",
-      "name": "10:30 ITF世界网球巡回赛 马卡洛娃止步 孙心然晋级决赛 【回放】莱萨赫0-2乔丹・李（官方解说）",
+      "name": "10:30 ITF世界网球巡回赛 马卡洛娃止步 孙心然晋级决赛 【回放】莱萨赫0-2乔丹・李（官方解说）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 630,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "1e3c9413c2036767d0f4",
-      "name": "10:30 ITF世界网球巡回赛 马卡洛娃止步 孙心然晋级决赛 【回放】莱萨赫0-2乔丹・李（赛场原声）",
+      "name": "10:30 ITF世界网球巡回赛 马卡洛娃止步 孙心然晋级决赛 【回放】莱萨赫0-2乔丹・李（赛场原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 630,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "64f1c857dea012d174cf",
-      "name": "10:30 ITF世界网球巡回赛 马卡洛娃止步 孙心然晋级决赛 【回放】马卡洛娃0-2普什卡列娃（官方解说）",
+      "name": "10:30 ITF世界网球巡回赛 马卡洛娃止步 孙心然晋级决赛 【回放】马卡洛娃0-2普什卡列娃（官方解说）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 630,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "ceddd3c5583bb9fdb0a4",
-      "name": "10:30 ITF世界网球巡回赛 马卡洛娃止步 孙心然晋级决赛 【回放】马卡洛娃0-2普什卡列娃（赛场原声）",
+      "name": "10:30 ITF世界网球巡回赛 马卡洛娃止步 孙心然晋级决赛 【回放】马卡洛娃0-2普什卡列娃（赛场原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 630,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "d45cfc5a7193dff79fd4",
@@ -562,102 +616,102 @@
     },
     {
       "id": "a6a2db401c19f5e69ec5",
-      "name": "11:00 WTA 西尼亚科娃、克鲁格会师决赛 【回放】博尔特0-2西尼亚科娃（英文原声）",
+      "name": "11:00 WTA 西尼亚科娃、克鲁格会师决赛 【回放】博尔特0-2西尼亚科娃（英文原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 660,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "8dd94a5ce9f792a4ab29",
-      "name": "11:00 WTA 西尼亚科娃、克鲁格会师决赛 【回放】博尔特0-2西尼亚科娃（赛场原声）",
+      "name": "11:00 WTA 西尼亚科娃、克鲁格会师决赛 【回放】博尔特0-2西尼亚科娃（赛场原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 660,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "f2795f02c32fc8de584c",
-      "name": "11:00 WTA 西尼亚科娃、克鲁格会师决赛 【回放】李吉妮1-2克鲁格（英文原声）",
+      "name": "11:00 WTA 西尼亚科娃、克鲁格会师决赛 【回放】李吉妮1-2克鲁格（英文原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 660,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "01f5b213af49386dc456",
-      "name": "11:00 WTA 西尼亚科娃、克鲁格会师决赛 【回放】李吉妮1-2克鲁格（赛场原声）",
+      "name": "11:00 WTA 西尼亚科娃、克鲁格会师决赛 【回放】李吉妮1-2克鲁格（赛场原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 660,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "228ac00913a2469e0d91",
-      "name": "12:00 UFC前瞻与回顾 激战前夜：38岁大帝迎战不败强敌埃夫洛耶夫 激战前夜全场回放：沃尔卡诺夫斯基vs埃夫洛耶夫特辑（王琰博）",
+      "name": "12:00 UFC前瞻与回顾 激战前夜：38岁大帝迎战不败强敌埃夫洛耶夫 激战前夜全场回放：沃尔卡诺夫斯基vs埃夫洛耶夫特辑（王琰博）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 720,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "d4b28a2480120af59b93",
-      "name": "12:00 UFC前瞻与回顾 激战前夜：38岁大帝迎战不败强敌埃夫洛耶夫 激战前夜全场回放：沃尔卡诺夫斯基vs埃夫洛耶夫特辑（赛场原声）",
+      "name": "12:00 UFC前瞻与回顾 激战前夜：38岁大帝迎战不败强敌埃夫洛耶夫 激战前夜全场回放：沃尔卡诺夫斯基vs埃夫洛耶夫特辑（赛场原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 720,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "bab11869101af47d5069",
-      "name": "13:00 WTA 克劳茨克/斯朵拉闯入女双决赛 【回放】克劳茨克/斯朵拉2-0艾克里/格里森（赛场原声）",
+      "name": "13:00 WTA 克劳茨克/斯朵拉闯入女双决赛 【回放】克劳茨克/斯朵拉2-0艾克里/格里森（赛场原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 780,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "78d14e6a8bc204d078bc",
-      "name": "13:00 WTA 克劳茨克/斯朵拉闯入女双决赛 【回放】莱巴金娜2-0施耐德（赛场原声）",
+      "name": "13:00 WTA 克劳茨克/斯朵拉闯入女双决赛 【回放】莱巴金娜2-0施耐德（赛场原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 780,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "8fe9b3c69aee282d2e2d",
-      "name": "13:00 WTA 克劳茨克/斯朵拉闯入女双决赛 【回放】莱巴金娜2-0施耐德（邱超）",
+      "name": "13:00 WTA 克劳茨克/斯朵拉闯入女双决赛 【回放】莱巴金娜2-0施耐德（邱超）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 780,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "5664dbb742f473919ed6",
-      "name": "13:00 WTA 克劳茨克/斯朵拉闯入女双决赛 【回放】费尔南德斯2-0布兹科娃（李宁）",
+      "name": "13:00 WTA 克劳茨克/斯朵拉闯入女双决赛 【回放】费尔南德斯2-0布兹科娃（李宁）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 780,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "fec1a81262a74c82f85d",
-      "name": "13:00 WTA 克劳茨克/斯朵拉闯入女双决赛 【回放】费尔南德斯2-0布兹科娃（赛场原声）",
+      "name": "13:00 WTA 克劳茨克/斯朵拉闯入女双决赛 【回放】费尔南德斯2-0布兹科娃（赛场原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 780,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "e919b754bcd878172cab",
@@ -670,83 +724,83 @@
     },
     {
       "id": "06bbae19c9f16b76887c",
-      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（一号桌）",
+      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（一号桌）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 780,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "ad16e0db7f1b47f4ccab",
-      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（七号桌）",
+      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（七号桌）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 780,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "3cc7e383c7761f9a60bc",
-      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（三号桌）",
+      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（三号桌）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 780,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "ca1a0cdd2a71ed2a8896",
-      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（九号桌）",
+      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（九号桌）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 780,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "3ad583a29e6f172b50e0",
-      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（二号桌）",
+      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（二号桌）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 780,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "21f2e56d9e16b57ca8f2",
-      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（五号桌）",
+      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（五号桌）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 780,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "074586426e8c75790943",
-      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（八号桌）",
+      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（八号桌）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 780,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "ee1999dba5eecb9a5235",
-      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（六号桌）",
+      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（六号桌）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 780,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
     },
     {
       "id": "f47f2fedb881679312af",
       "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（四号桌）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 780,
-      "status": "timeout",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -754,8 +808,8 @@
       "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（徐儒叶）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 780,
-      "status": "timeout",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -763,395 +817,404 @@
       "name": "13:55 超三联赛 超三联赛 总决赛 小组赛Day2下午场 【回放】山东10:16南昌凯锆商贸（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 835,
-      "status": "timeout",
-      "status_text": "本轮未测通",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "52afab8772a3ecc45ae9",
-      "name": "13:55 超三联赛 超三联赛 总决赛 小组赛Day2下午场 【回放】广东光正教育12:21宁波海曙捷英",
+      "name": "13:55 超三联赛 超三联赛 总决赛 小组赛Day2下午场 【回放】广东光正教育12:21宁波海曙捷英（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 835,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "1020186b474f09423ffb",
-      "name": "13:55 超三联赛 超三联赛 总决赛 小组赛Day2下午场 【回放】成都和众14:21上海久事",
+      "name": "13:55 超三联赛 超三联赛 总决赛 小组赛Day2下午场 【回放】成都和众14:21上海久事（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 835,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "1efb05de9d8bca194264",
-      "name": "13:55 超三联赛 超三联赛 总决赛 小组赛Day2下午场 【回放】重庆瀚动13:21上海横沙誉民",
+      "name": "13:55 超三联赛 超三联赛 总决赛 小组赛Day2下午场 【回放】重庆瀚动13:21上海横沙誉民（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 835,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "bf55da368eb56f5a83e7",
-      "name": "13:55 超三联赛 超三联赛 总决赛 小组赛Day2下午场 全场回放（王冠证、李嘉伟）",
+      "name": "13:55 超三联赛 超三联赛 总决赛 小组赛Day2下午场 全场回放（王冠证、李嘉伟）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 835,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "ae1e559b6e469975a4c8",
-      "name": "13:55 超三联赛 超三联赛 总决赛 小组赛Day2下午场 全场回放（赛场原声）",
+      "name": "13:55 超三联赛 超三联赛 总决赛 小组赛Day2下午场 全场回放（赛场原声）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 835,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "8ef7f83300d580a72e96",
-      "name": "14:00 上海国际跳绳精英赛 上海国际跳绳精英赛 2026年上海国际跳绳精英赛Day1全场回放（官方解说）（一）",
+      "name": "14:00 上海国际跳绳精英赛 上海国际跳绳精英赛 2026年上海国际跳绳精英赛Day1全场回放（官方解说）（一）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 840,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "ce0311f20e3b670c0240",
-      "name": "14:00 上海国际跳绳精英赛 上海国际跳绳精英赛 2026年上海国际跳绳精英赛Day1全场回放（官方解说）（三）",
+      "name": "14:00 上海国际跳绳精英赛 上海国际跳绳精英赛 2026年上海国际跳绳精英赛Day1全场回放（官方解说）（三）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 840,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "c7bcc395626840449e31",
-      "name": "14:00 上海国际跳绳精英赛 上海国际跳绳精英赛 2026年上海国际跳绳精英赛Day1全场回放（官方解说）（二）",
+      "name": "14:00 上海国际跳绳精英赛 上海国际跳绳精英赛 2026年上海国际跳绳精英赛Day1全场回放（官方解说）（二）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 840,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "e68348134f85fdccd368",
-      "name": "14:00 辽超 朝阳队VS沈阳队 全场回放",
+      "name": "14:00 辽超 朝阳队VS沈阳队 全场回放（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 840,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "d7439a2f00752919a1e1",
-      "name": "14:50 中甲 大连鲲城VS广西恒宸 全场回放（官方解说）",
+      "name": "14:50 中甲 大连鲲城VS广西恒宸 全场回放（官方解说）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 890,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "c5d546ea9aa8ffa646a5",
-      "name": "15:00 WTA 费尔南德斯VS鲍兹科娃 全场回放",
+      "name": "15:00 WTA 费尔南德斯VS鲍兹科娃 全场回放（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 900,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "4403bc1dd540e226488d",
-      "name": "15:00 WTA 费尔南德斯VS鲍兹科娃 全场回放（李宁）",
+      "name": "15:00 WTA 费尔南德斯VS鲍兹科娃 全场回放（李宁）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 900,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "61a7ec1a68c35c88faff",
-      "name": "15:00 楚超 黄石美尔雅队VS宜昌东阳光队 全场回放",
+      "name": "15:00 楚超 黄石美尔雅队VS宜昌东阳光队 全场回放（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 900,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "9100759d5eb9ab2310ab",
-      "name": "15:00 湘超 株洲队VS湘潭队 全场回放",
+      "name": "15:00 湘超 株洲队VS湘潭队 全场回放（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 900,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "3395e1330bc09dbffb0f",
-      "name": "15:00 湘超 永州队VS怀化队 全场回放",
+      "name": "15:00 湘超 永州队VS怀化队 全场回放（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 900,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "d22b60f463ca9305cf54",
-      "name": "15:00 湘超 湘西队VS衡阳队 全场回放",
+      "name": "15:00 湘超 湘西队VS衡阳队 全场回放（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 900,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "c4c6bac7c66b9398533a",
-      "name": "15:00 湘超 益阳队VS娄底队 全场回放",
+      "name": "15:00 湘超 益阳队VS娄底队 全场回放（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 900,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "380f3303802772c21bdf",
-      "name": "15:00 湘超 邵阳队VS常德队 全场回放",
+      "name": "15:00 湘超 邵阳队VS常德队 全场回放（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 900,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "aedfb3507d77c4865f17",
-      "name": "15:00 湘超 郴州队VS岳阳队 全场回放",
+      "name": "15:00 湘超 郴州队VS岳阳队 全场回放（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 900,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "549054e08b5f42a649f0",
-      "name": "15:00 湘超 长沙队VS张家界队 全场回放",
+      "name": "15:00 湘超 长沙队VS张家界队 全场回放（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 900,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
+    },
+    {
+      "id": "4079fac0343c4dbe3d1e",
+      "name": "15:15 中超 成都蓉城VS大连英博海发 全场回放（3D）（本轮未测通）",
+      "date": "2026-10-24",
+      "time_minutes": 915,
+      "status": "vod_duration_unknown",
+      "status_text": "回放时长未核实",
       "published": false
     },
     {
       "id": "50ebf62908f3921680e5",
-      "name": "15:15 中超 成都蓉城VS大连英博海发 全场回放（乔迁）",
+      "name": "15:15 中超 成都蓉城VS大连英博海发 全场回放（乔迁）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 915,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "65f8699818e0a0ddbdbb",
-      "name": "15:15 中超 成都蓉城VS大连英博海发 全场回放（孙雨轩、董方卓、林梦鸽）",
+      "name": "15:15 中超 成都蓉城VS大连英博海发 全场回放（孙雨轩、董方卓、林梦鸽）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 915,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "faf99678d95e095331b8",
-      "name": "15:15 中超 成都蓉城VS大连英博海发 全场回放（苏东、孙雷、徐阳）",
+      "name": "15:15 中超 成都蓉城VS大连英博海发 全场回放（苏东、孙雷、徐阳）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 915,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "4629e205e94300934ebf",
-      "name": "15:15 中超 武汉三镇VS山东泰山 全场回放（李欣、徐云龙、郭小仙儿）",
+      "name": "15:15 中超 武汉三镇VS山东泰山 全场回放（李欣、徐云龙、郭小仙儿）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 915,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "bcb4c57836470dd1c907",
-      "name": "15:15 中超 深圳新鹏城VS上海申花 全场回放（AI智慧观赛）",
+      "name": "15:15 中超 深圳新鹏城VS上海申花 全场回放（AI智慧观赛）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 915,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "48552f4678476022cf05",
-      "name": "15:15 中超 深圳新鹏城VS上海申花 全场回放（智能解说）",
+      "name": "15:15 中超 深圳新鹏城VS上海申花 全场回放（智能解说）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 915,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "cf74df21b3f00b748b4e",
-      "name": "15:15 中超 深圳新鹏城VS上海申花 全场回放（袁甲、贺宇）",
+      "name": "15:15 中超 深圳新鹏城VS上海申花 全场回放（袁甲、贺宇）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 915,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "9f3bb8fe95e2b54ff845",
-      "name": "15:15 中超 重庆铜梁龙VS青岛海牛 全场回放（刘腾、王宇）",
+      "name": "15:15 中超 重庆铜梁龙VS青岛海牛 全场回放（刘腾、王宇）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 915,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "467de89a722aefc871b4",
-      "name": "15:15 中超 青岛西海岸VS云南玉昆 全场回放",
+      "name": "15:15 中超 青岛西海岸VS云南玉昆 全场回放（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 915,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "36f74d8eebd45fa2826f",
-      "name": "15:15 中超 青岛西海岸VS云南玉昆 全场回放（涂远、鹿中原）",
+      "name": "15:15 中超 青岛西海岸VS云南玉昆 全场回放（涂远、鹿中原）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 915,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "3caad104ff82c1fd45b1",
-      "name": "15:20 中乙 北京理工VS厦门飞鹭 全场回放(官方解说）",
+      "name": "15:20 中乙 北京理工VS厦门飞鹭 全场回放(官方解说）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 920,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "9eeeb0b3636749242a35",
-      "name": "15:20 中乙 青岛红狮VS赣州瑞狮 全场回放（官方解说）",
+      "name": "15:20 中乙 青岛红狮VS赣州瑞狮 全场回放（官方解说）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 920,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "c2898a0bb4872c788af8",
-      "name": "15:20 中甲 长春亚泰VS梅州客家 全场回放",
+      "name": "15:20 中甲 长春亚泰VS梅州客家 全场回放（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 920,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "ce2651f92aac0bfd7c54",
-      "name": "15:20 中甲 长春亚泰VS梅州客家 全场回放（官方解说）",
+      "name": "15:20 中甲 长春亚泰VS梅州客家 全场回放（官方解说）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 920,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "77f03ad9998172967c91",
-      "name": "15:25 中超 天津津门虎VS上海海港 全场回放（AI智慧观赛）",
+      "name": "15:25 中超 天津津门虎VS上海海港 全场回放（AI智慧观赛）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 925,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "2deb0533153e399ebe4d",
-      "name": "15:25 中超 天津津门虎VS上海海港 全场回放（智能解说）",
+      "name": "15:25 中超 天津津门虎VS上海海港 全场回放（智能解说）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 925,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "f849f963b4ceb31221e2",
-      "name": "15:25 中超 天津津门虎VS上海海港 全场回放（石庆圣、李彦、邵凌霄）",
+      "name": "15:25 中超 天津津门虎VS上海海港 全场回放（石庆圣、李彦、邵凌霄）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 925,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "b5b681ae406b0ace7350",
-      "name": "15:25 中超 河南俱乐部彩陶坊VS北京国安 全场回放（AI智慧观赛）",
+      "name": "15:25 中超 河南俱乐部彩陶坊VS北京国安 全场回放（AI智慧观赛）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 925,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "83af6e097d2df89a28c8",
-      "name": "15:25 中超 河南俱乐部彩陶坊VS北京国安 全场回放（娄一晨、刘越、姚安妮）",
+      "name": "15:25 中超 河南俱乐部彩陶坊VS北京国安 全场回放（娄一晨、刘越、姚安妮）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 925,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "e921f4c3e4cadf082a17",
-      "name": "15:25 中超 河南俱乐部彩陶坊VS北京国安 全场回放（智能解说）",
+      "name": "15:25 中超 河南俱乐部彩陶坊VS北京国安 全场回放（智能解说）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 925,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "76f0b6c16c1037fbbdb1",
-      "name": "15:25 中超 辽宁铁人楠波湾VS浙江俱乐部绿城 全场回放（AI智慧观赛）",
+      "name": "15:25 中超 辽宁铁人楠波湾VS浙江俱乐部绿城 全场回放（AI智慧观赛）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 925,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "037135b93205e8295102",
-      "name": "15:25 中超 辽宁铁人楠波湾VS浙江俱乐部绿城 全场回放（智能解说）",
+      "name": "15:25 中超 辽宁铁人楠波湾VS浙江俱乐部绿城 全场回放（智能解说）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 925,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "7482c0b705b542f054c2",
-      "name": "15:25 中超 辽宁铁人楠波湾VS浙江俱乐部绿城 全场回放（梁祥宇、鲁靖明）",
+      "name": "15:25 中超 辽宁铁人楠波湾VS浙江俱乐部绿城 全场回放（梁祥宇、鲁靖明）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 925,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -1174,74 +1237,74 @@
     },
     {
       "id": "795289309e291c0042eb",
-      "name": "15:50 中乙 广州蒲公英VS大连英博B队 全场回放（官方解说）",
+      "name": "15:50 中乙 广州蒲公英VS大连英博B队 全场回放（官方解说）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 950,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "f2cbdd537be0c6280f23",
-      "name": "15:50 中乙 泰安天贶VS成都蓉城希拉谷 全场回放（官方解说）",
+      "name": "15:50 中乙 泰安天贶VS成都蓉城希拉谷 全场回放（官方解说）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 950,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "3ce69afc806677bc4d46",
-      "name": "15:50 中乙 贵州贵阳竞技VS山西崇德荣海 全场回放（官方解说）",
+      "name": "15:50 中乙 贵州贵阳竞技VS山西崇德荣海 全场回放（官方解说）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 950,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "be2ba237c8b5fb68c44a",
-      "name": "17:30 BWF 胡哲安止步四强 凤凰组合晋级决赛 2026BWF法国羽毛球公开赛Day5一号场地全场回放（英文原声）（一）",
+      "name": "17:30 BWF 胡哲安止步四强 凤凰组合晋级决赛 2026BWF法国羽毛球公开赛Day5一号场地全场回放（英文原声）（一）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 1050,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "1beeee5615959c20557b",
-      "name": "17:30 BWF 胡哲安止步四强 凤凰组合晋级决赛 2026BWF法国羽毛球公开赛Day5一号场地全场回放（赛场原声）（一）",
+      "name": "17:30 BWF 胡哲安止步四强 凤凰组合晋级决赛 2026BWF法国羽毛球公开赛Day5一号场地全场回放（赛场原声）（一）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 1050,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "c4834a294acc9167d20e",
-      "name": "17:30 BWF 胡哲安止步四强 凤凰组合晋级决赛 【全场回放】一号场地（英文原声）（二）",
+      "name": "17:30 BWF 胡哲安止步四强 凤凰组合晋级决赛 【全场回放】一号场地（英文原声）（二）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 1050,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_timeout",
+      "status_text": "回放信息读取超时",
       "published": false
     },
     {
       "id": "df160ffd2e8e61f337a2",
-      "name": "17:30 BWF 胡哲安止步四强 凤凰组合晋级决赛 【全场回放】一号场地（赛场原声）（二）",
+      "name": "17:30 BWF 胡哲安止步四强 凤凰组合晋级决赛 【全场回放】一号场地（赛场原声）（二）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 1050,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "timeout",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "07b2460c448622fd902e",
-      "name": "17:30 BWF 胡哲安止步四强 凤凰组合晋级决赛 【回放】万炜聪/郑凯文2-0因陀罗/华金（孙宁智）",
+      "name": "17:30 BWF 胡哲安止步四强 凤凰组合晋级决赛 【回放】万炜聪/郑凯文2-0因陀罗/华金（孙宁智）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 1050,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "timeout",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
@@ -1364,6 +1427,24 @@
     {
       "id": "3f7864762adda14547fc",
       "name": "18:55 JCK 库尔班江一致判定胜 马科斯惨遭TKO JCK觉城之夜N124主赛全场回放（赛场原声）",
+      "date": "2026-10-24",
+      "time_minutes": 1135,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "published": false
+    },
+    {
+      "id": "15d26878f15d0709e276",
+      "name": "18:55 JCK 库尔班江一致判定胜 马科斯惨遭TKO 主赛（官方解说）",
+      "date": "2026-10-24",
+      "time_minutes": 1135,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "published": false
+    },
+    {
+      "id": "a789a7a683af5dd373fb",
+      "name": "18:55 JCK 库尔班江一致判定胜 马科斯惨遭TKO 主赛（英文解说）",
       "date": "2026-10-24",
       "time_minutes": 1135,
       "status": "not_checked",
@@ -1561,20 +1642,20 @@
     },
     {
       "id": "80854eb64395971151d4",
-      "name": "19:15 英超 阿斯顿维拉VS曼城 全场回放（任锴、梁柏翘）",
+      "name": "19:15 英超 阿斯顿维拉VS曼城 全场回放（任锴、梁柏翘）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 1155,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "8ebfcae83be3f84f8a7d",
-      "name": "19:15 英超 阿斯顿维拉VS曼城 全场回放（娄一晨、刘越、姚安妮）",
+      "name": "19:15 英超 阿斯顿维拉VS曼城 全场回放（娄一晨、刘越、姚安妮）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 1155,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -2073,6 +2154,78 @@
       "published": false
     },
     {
+      "id": "ba8cf3d4f9f21a9cb992",
+      "name": "21:30 UFC数字赛 彼得-严卫冕后点名宋亚东 大帝终结不败羽鹰 主赛（智能字幕）",
+      "date": "2026-10-24",
+      "time_minutes": 1290,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "published": false
+    },
+    {
+      "id": "1f8643f5ea85792481ee",
+      "name": "21:30 UFC数字赛 彼得-严卫冕后点名宋亚东 大帝终结不败羽鹰 主赛（王琰博、郝俊、李景亮）",
+      "date": "2026-10-24",
+      "time_minutes": 1290,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "published": false
+    },
+    {
+      "id": "85c1a1b04a3f01e1a316",
+      "name": "21:30 UFC数字赛 彼得-严卫冕后点名宋亚东 大帝终结不败羽鹰 主赛（英文原声）",
+      "date": "2026-10-24",
+      "time_minutes": 1290,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "published": false
+    },
+    {
+      "id": "0ec997d51781f3f45e6b",
+      "name": "21:30 UFC数字赛 彼得-严卫冕后点名宋亚东 大帝终结不败羽鹰 主赛（陈瑞阳、郑文祺、张名扬）",
+      "date": "2026-10-24",
+      "time_minutes": 1290,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "published": false
+    },
+    {
+      "id": "50ac05f71c97ba3389d3",
+      "name": "21:30 UFC数字赛 彼得-严卫冕后点名宋亚东 大帝终结不败羽鹰 副赛（智能字幕）",
+      "date": "2026-10-24",
+      "time_minutes": 1290,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "published": false
+    },
+    {
+      "id": "30d35cdea141d44f06df",
+      "name": "21:30 UFC数字赛 彼得-严卫冕后点名宋亚东 大帝终结不败羽鹰 副赛（王琰博、郝俊、李景亮）",
+      "date": "2026-10-24",
+      "time_minutes": 1290,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "published": false
+    },
+    {
+      "id": "2a6c3be85f9abf136d62",
+      "name": "21:30 UFC数字赛 彼得-严卫冕后点名宋亚东 大帝终结不败羽鹰 副赛（英文原声）",
+      "date": "2026-10-24",
+      "time_minutes": 1290,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "published": false
+    },
+    {
+      "id": "7d267a28d7b695c62744",
+      "name": "21:30 UFC数字赛 彼得-严卫冕后点名宋亚东 大帝终结不败羽鹰 副赛（陈瑞阳、郑文祺、张名扬）",
+      "date": "2026-10-24",
+      "time_minutes": 1290,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "published": false
+    },
+    {
       "id": "d6ec977bd0dac26d1af7",
       "name": "21:30 英超 阿森纳VS埃弗顿 全场回放",
       "date": "2026-10-24",
@@ -2182,749 +2335,1010 @@
     },
     {
       "id": "a0b57b96305a4e4e095e",
-      "name": "00:00 英女超 布莱顿女足VS西汉姆联女足 全场回放（林梦鸽）",
+      "name": "00:00 英女超 布莱顿女足VS西汉姆联女足 全场回放（林梦鸽）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 0,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "9cd7dd241d44b76519f3",
-      "name": "00:00 英超 切尔西VS托特纳姆热刺 詹俊 张路 郭小仙儿",
+      "name": "00:00 英超 切尔西VS托特纳姆热刺 詹俊 张路 郭小仙儿（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 0,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "b1b04cd5a9dbfa540a2d",
-      "name": "00:15 德甲 多特蒙德VS法兰克福 全场回放（AI观赛）",
+      "name": "00:15 德甲 多特蒙德VS法兰克福 全场回放（AI观赛）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "35b6d57234ec90af02d0",
-      "name": "00:15 德甲 多特蒙德VS法兰克福 全场回放（智能解说）",
+      "name": "00:15 德甲 多特蒙德VS法兰克福 全场回放（智能解说）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "1ca6c66efb4394e48978",
-      "name": "00:15 德甲 多特蒙德VS法兰克福 全场回放（沈云怡、秦游夏）",
+      "name": "00:15 德甲 多特蒙德VS法兰克福 全场回放（沈云怡、秦游夏）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "109197a44d4a800cc900",
-      "name": "00:15 德甲 多特蒙德VS法兰克福 沈云怡 秦游夏",
+      "name": "00:15 德甲 多特蒙德VS法兰克福 沈云怡 秦游夏（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "331b798936c8a8f22591",
-      "name": "00:15 德甲 多特蒙德VS法兰克福 赛场原声",
+      "name": "00:15 德甲 多特蒙德VS法兰克福 赛场原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "cabe06b49520b7c21b4f",
-      "name": "00:15 英超 切尔西VS托特纳姆热刺 4K赛场原声",
+      "name": "00:15 英超 切尔西VS托特纳姆热刺 4K赛场原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "f97647adac1592e0895c",
-      "name": "00:15 英超 切尔西VS托特纳姆热刺 全场回放（AI智慧观赛）",
+      "name": "00:15 英超 切尔西VS托特纳姆热刺 全场回放（AI智慧观赛）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "4b06a8240fbc713f4b23",
-      "name": "00:15 英超 切尔西VS托特纳姆热刺 全场回放（智能解说）",
+      "name": "00:15 英超 切尔西VS托特纳姆热刺 全场回放（智能解说）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "ed1756a57d33c75b2aea",
-      "name": "00:15 英超 切尔西VS托特纳姆热刺 全场回放（洪荒）",
+      "name": "00:15 英超 切尔西VS托特纳姆热刺 全场回放（洪荒）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "bf981bcae9a8e466495f",
-      "name": "00:15 英超 切尔西VS托特纳姆热刺 全场回放（詹俊、张路、郭小仙儿）",
+      "name": "00:15 英超 切尔西VS托特纳姆热刺 全场回放（詹俊、张路、郭小仙儿）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "bbdbeaa90e3691f7d56a",
-      "name": "00:15 英超 切尔西VS托特纳姆热刺 全场回放（陈凯冬、何辉）",
+      "name": "00:15 英超 切尔西VS托特纳姆热刺 全场回放（陈凯冬、何辉）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "9fe10ff7a378c628ea9a",
-      "name": "00:15 英超 切尔西VS托特纳姆热刺 洪荒",
+      "name": "00:15 英超 切尔西VS托特纳姆热刺 洪荒（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "f1b6dfbaa7fbedb6b5ef",
-      "name": "00:15 英超 切尔西VS托特纳姆热刺 英文原声",
+      "name": "00:15 英超 切尔西VS托特纳姆热刺 英文原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "124b6f70fd851cf30948",
-      "name": "00:15 英超 切尔西VS托特纳姆热刺 陈凯冬 何辉",
+      "name": "00:15 英超 切尔西VS托特纳姆热刺 陈凯冬 何辉（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "cc87c5a31b97b016b63f",
-      "name": "00:15 西甲 瓦伦西亚VS比利亚雷亚尔 全场回放（周楚雄）",
+      "name": "00:15 西甲 瓦伦西亚VS比利亚雷亚尔 全场回放（周楚雄）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "0e547bebf78e377256f9",
-      "name": "00:15 西甲 瓦伦西亚VS比利亚雷亚尔 周楚雄",
+      "name": "00:15 西甲 瓦伦西亚VS比利亚雷亚尔 周楚雄（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "e9cd7a8ede891013eb72",
-      "name": "00:15 西甲 瓦伦西亚VS比利亚雷亚尔 赛场原声",
+      "name": "00:15 西甲 瓦伦西亚VS比利亚雷亚尔 赛场原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "d1a9307006add9030390",
-      "name": "00:25 德甲 多特蒙德VS法兰克福 智能解说",
+      "name": "00:25 德甲 多特蒙德VS法兰克福 智能解说（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 25,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "e1bb3d6e8884c4853dbe",
-      "name": "00:25 英超 切尔西VS托特纳姆热刺 智能解说",
+      "name": "00:25 英超 切尔西VS托特纳姆热刺 智能解说（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 25,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "3a8e41f29c5068908e20",
-      "name": "02:00 斯诺克 马克·威廉姆斯VS杰克·琼斯 1号桌",
+      "name": "02:00 斯诺克 马克·威廉姆斯VS杰克·琼斯 1号桌（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 120,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "01ef9ad3e1949428d834",
-      "name": "02:00 斯诺克 马克·威廉姆斯VS杰克·琼斯 26/27赛季斯诺克北爱尔兰公开赛半决赛回放：马克·威廉姆斯5-6杰克·琼斯（AI观赛）",
+      "name": "02:00 斯诺克 马克·威廉姆斯VS杰克·琼斯 26/27赛季斯诺克北爱尔兰公开赛半决赛回放：马克·威廉姆斯5-6杰克·琼斯（AI观赛）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 120,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
+    },
+    {
+      "id": "0476a81e66615e4403f2",
+      "name": "02:00 斯诺克 马克·威廉姆斯VS杰克·琼斯 【回放】马克·威廉姆斯5-6杰克·琼斯（AI观赛）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 120,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "b0913336f15ceaaa7add",
-      "name": "02:00 斯诺克 马克·威廉姆斯VS杰克·琼斯 【回放】马克·威廉姆斯5-6杰克·琼斯（杨江源）",
+      "name": "02:00 斯诺克 马克·威廉姆斯VS杰克·琼斯 【回放】马克·威廉姆斯5-6杰克·琼斯（杨江源）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 120,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "5292b5e0073b48feace7",
-      "name": "02:00 斯诺克 马克·威廉姆斯VS杰克·琼斯 【回放】马克·威廉姆斯5-6杰克·琼斯（赛场原声）",
+      "name": "02:00 斯诺克 马克·威廉姆斯VS杰克·琼斯 【回放】马克·威廉姆斯5-6杰克·琼斯（赛场原声）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 120,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "14a56aef32bcc076820b",
-      "name": "02:00 斯诺克 马克·威廉姆斯VS杰克·琼斯 杨江源",
+      "name": "02:00 斯诺克 马克·威廉姆斯VS杰克·琼斯 杨江源（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 120,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "1bb1f9828a895be03e24",
-      "name": "02:30 意甲 拉齐奥VS帕尔马 全场回放（鲁靖明）",
+      "name": "02:30 意甲 拉齐奥VS帕尔马 全场回放（鲁靖明）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 150,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "e125bf9b9afc7953eaaa",
-      "name": "02:30 意甲 拉齐奥VS帕尔马 赛场原声",
+      "name": "02:30 意甲 拉齐奥VS帕尔马 赛场原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 150,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "d13b5ec9b752f26b9747",
-      "name": "02:30 意甲 拉齐奥VS帕尔马 鲁靖明",
+      "name": "02:30 意甲 拉齐奥VS帕尔马 鲁靖明（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 150,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "9f6b040d7d3b65f81d4a",
-      "name": "02:30 法甲 朗斯VS巴黎FC 全场回放（邵煊）",
+      "name": "02:30 法甲 朗斯VS巴黎FC 全场回放（邵煊）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 150,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "a8690c85ab5a838bb868",
-      "name": "02:30 法甲 朗斯VS巴黎FC 赛场原声",
+      "name": "02:30 法甲 朗斯VS巴黎FC 赛场原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 150,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "97391be752fdad1d4a00",
-      "name": "02:30 法甲 朗斯VS巴黎FC 邵煊",
+      "name": "02:30 法甲 朗斯VS巴黎FC 邵煊（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 150,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "eee634919e3b7cdddd36",
-      "name": "02:45 西甲 马德里竞技VS拉科鲁尼亚 张天翼 贺宇",
+      "name": "02:45 西甲 马德里竞技VS拉科鲁尼亚 张天翼 贺宇（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 165,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "37f2266d21129045300d",
-      "name": "02:45 西甲 马德里竞技VS拉科鲁尼亚 赛场原声",
+      "name": "02:45 西甲 马德里竞技VS拉科鲁尼亚 赛场原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 165,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "7680b8bf52ec322d7464",
-      "name": "02:55 西甲 马德里竞技VS拉科鲁尼亚 全场回放(智能解说）",
+      "name": "02:55 西甲 马德里竞技VS拉科鲁尼亚 全场回放(智能解说）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 175,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "a7a4a49313c2a56c0579",
-      "name": "02:55 西甲 马德里竞技VS拉科鲁尼亚 全场回放（AI观赛)",
+      "name": "02:55 西甲 马德里竞技VS拉科鲁尼亚 全场回放（AI观赛)（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 175,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "a7ef9bfbd8f96ee00eb5",
-      "name": "02:55 西甲 马德里竞技VS拉科鲁尼亚 全场回放（张天翼、贺宇）",
+      "name": "02:55 西甲 马德里竞技VS拉科鲁尼亚 全场回放（张天翼、贺宇）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 175,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "775962563f5e1c7bcfbb",
-      "name": "02:55 西甲 马德里竞技VS拉科鲁尼亚 智能解说",
+      "name": "02:55 西甲 马德里竞技VS拉科鲁尼亚 智能解说（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 175,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "97bbf7f87138040fb451",
+      "name": "05:50 莫干山跑山赛 莫干山跑山赛 2026莫干山跑山赛Day3全场回放（官方解说）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 350,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "bbfd5ddf7c27e093c6dd",
-      "name": "05:50 莫干山跑山赛 莫干山跑山赛 解说",
+      "name": "05:50 莫干山跑山赛 莫干山跑山赛 解说（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 350,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "3888622d955e4a606426",
-      "name": "05:55 NBA 黄蜂VS热火 全场回放",
+      "name": "05:55 NBA 黄蜂VS热火 全场回放（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 355,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "6aaae236f53836753133",
-      "name": "05:55 NBA 黄蜂VS热火 全场回放（张泽欣）",
+      "name": "05:55 NBA 黄蜂VS热火 全场回放（张泽欣）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 355,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
+    },
+    {
+      "id": "bd1784c775bf5d134756",
+      "name": "05:55 NBA 黄蜂VS热火 全场回放（英文原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 355,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "cf35af6a775e1bd34675",
-      "name": "05:55 NBA 黄蜂VS热火 张泽欣",
+      "name": "05:55 NBA 黄蜂VS热火 张泽欣（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 355,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "67482b8eb3b606898e9c",
-      "name": "05:55 NBA 黄蜂VS热火 英文原声",
+      "name": "05:55 NBA 黄蜂VS热火 英文原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 355,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "723557a2b690aa5e4b06",
+      "name": "06:45 马拉松系列赛 2026桐庐半程马拉松 2026桐庐半程马拉松全场回放（赛场原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 405,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "04b1ab53ab3288381093",
-      "name": "06:45 马拉松系列赛 2026桐庐半程马拉松 清流播出",
+      "name": "06:45 马拉松系列赛 2026桐庐半程马拉松 清流播出（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 405,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "bf5e2d020e3fa3794532",
-      "name": "07:00 铁人三项系列赛 黄山国际铁人三项赛 解说",
+      "name": "07:00 铁人三项系列赛 黄山国际铁人三项赛 解说（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 420,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "6a97557bb75de5eb5274",
+      "name": "07:15 NBA 76人VS雄鹿 全场回放（孙博、巩晓彬、闫宇峰、佳依）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
+    },
+    {
+      "id": "ce751850f7ef284f2f33",
+      "name": "07:15 NBA 76人VS雄鹿 全场回放（英文原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "77cd4d9af857888c8e95",
-      "name": "07:15 NBA 76人VS雄鹿 孙博 巩晓彬 闫宇峰",
+      "name": "07:15 NBA 76人VS雄鹿 孙博 巩晓彬 闫宇峰（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 435,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "f52bb7edecf61768e443",
-      "name": "07:15 NBA 76人VS雄鹿 智能字幕",
+      "name": "07:15 NBA 76人VS雄鹿 智能字幕（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 435,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "9fe7b345bf7bb43a2393",
-      "name": "07:15 逐马计划 2026恒丰银行济南泉城马拉松 2026恒丰银行济南泉城马拉松",
+      "name": "07:15 逐马计划 2026恒丰银行济南泉城马拉松 2026恒丰银行济南泉城马拉松（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 435,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "5b46da61824778bcabbb",
+      "name": "07:15 逐马计划 2026恒丰银行济南泉城马拉松 2026恒丰银行济南（泉城）马拉松全场回放（赛场原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "fa278df2bc7fc68d890f",
-      "name": "07:15 逐马计划 2026恒丰银行济南泉城马拉松 2026济南马拉松吴浩然视角",
+      "name": "07:15 逐马计划 2026恒丰银行济南泉城马拉松 2026济南马拉松吴浩然视角（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 435,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "58c7c5d01eec01baf630",
+      "name": "07:15 逐马计划 2026恒丰银行济南泉城马拉松 2026济南马拉松吴浩然视角全场回放（赛场原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "ccfbc47b8137c12529dd",
-      "name": "07:15 逐马计划 2026极氪汽车成都马拉松 2026极氪汽车成都马拉松",
+      "name": "07:15 逐马计划 2026极氪汽车成都马拉松 2026极氪汽车成都马拉松（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 435,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "ccd3cff6913740ab90b7",
+      "name": "07:15 逐马计划 2026极氪汽车成都马拉松 2026极氪汽车成都马拉松全场回放（赛场原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
+    },
+    {
+      "id": "79fa7b31c02f61399cae",
+      "name": "07:15 马拉松系列赛 2026临汾半程马拉松 2026临汾半程马拉松全场回放（赛场原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "b1814ebe7e5132a654bb",
-      "name": "07:15 马拉松系列赛 2026临汾半程马拉松 清流播出",
+      "name": "07:15 马拉松系列赛 2026临汾半程马拉松 清流播出（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 435,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "8d2c509289c956b1b574",
+      "name": "07:15 马拉松系列赛 2026北京昌平马拉松 2026北京昌平马拉松全场回放（赛场原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "a748fe29aba07475db41",
-      "name": "07:15 马拉松系列赛 2026北京昌平马拉松 清流播出",
+      "name": "07:15 马拉松系列赛 2026北京昌平马拉松 清流播出（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 435,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "c2e5f0356f7683c31227",
+      "name": "07:15 马拉松系列赛 2026天津银行天津马拉松 2026天津银行天津马拉松全场回放（赛场原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "1a339888736e9d4a9c0c",
-      "name": "07:15 马拉松系列赛 2026天津银行天津马拉松 清流播出",
+      "name": "07:15 马拉松系列赛 2026天津银行天津马拉松 清流播出（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 435,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "815372b9cda6d84c8fea",
+      "name": "07:15 马拉松系列赛 2026扬子江龙凤堂泰州马拉松 2026扬子江龙凤堂泰州马拉松（赛场原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "87f71d1c3cf99fc9f924",
-      "name": "07:15 马拉松系列赛 2026扬子江龙凤堂泰州马拉松 清流播出",
+      "name": "07:15 马拉松系列赛 2026扬子江龙凤堂泰州马拉松 清流播出（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 435,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "a9b81a5c733b773d93c3",
-      "name": "07:15 马拉松系列赛 2026泗洪农商银行泗洪马拉松 清流播出",
+      "name": "07:15 马拉松系列赛 2026泗洪农商银行泗洪马拉松 清流播出（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 435,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "de5ffdbc5f5e8c8a84e9",
-      "name": "07:25 NBA 76人VS雄鹿 英文原声",
+      "name": "07:25 NBA 76人VS雄鹿 英文原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 445,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "5812a8dc671e4feb3235",
+      "name": "07:25 NBA 骑士VS篮网 全场回放（姜帆）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 445,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
+    },
+    {
+      "id": "f65e9b12a89abd783e61",
+      "name": "07:25 NBA 骑士VS篮网 全场回放（英文原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 445,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "fbde0e238a3894f65155",
-      "name": "07:25 NBA 骑士VS篮网 姜帆",
+      "name": "07:25 NBA 骑士VS篮网 姜帆（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 445,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "0c4ded63efaf2af4a02b",
-      "name": "07:25 NBA 骑士VS篮网 英文原声",
+      "name": "07:25 NBA 骑士VS篮网 英文原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 445,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "3f5132f539378bd74f2e",
-      "name": "07:45 铁人三项系列赛 中国铁人三项联赛暨“她铁”粉色铁人三项挑战赛无锡站 解说",
+      "name": "07:45 铁人三项系列赛 中国铁人三项联赛暨“她铁”粉色铁人三项挑战赛无锡站 解说（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 465,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "256e8736f33cad48e609",
+      "name": "07:45 马拉松系列赛 2026北京房山良乡大学城半程马拉松 2026北京房山良乡大学城半程马拉松全场回放（赛场原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 465,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "f9b6b8a262bc430e60e8",
-      "name": "07:45 马拉松系列赛 2026北京房山良乡大学城半程马拉松 清流播出",
+      "name": "07:45 马拉松系列赛 2026北京房山良乡大学城半程马拉松 清流播出（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 465,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "8efc9c7c578f9285fd5f",
+      "name": "07:45 马拉松系列赛 2026华贵洪湖半程马拉松 2026华贵洪湖半程马拉松全场回放（赛场原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 465,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "05293cb23ea2d1047373",
-      "name": "07:45 马拉松系列赛 2026华贵洪湖半程马拉松 清流播出",
+      "name": "07:45 马拉松系列赛 2026华贵洪湖半程马拉松 清流播出（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 465,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "6169deeeaffd6507bb0b",
-      "name": "07:50 中国自行车运动协会系列赛 中国泵道自行车联赛北京门头沟站 解说",
+      "name": "07:50 中国自行车运动协会系列赛 中国泵道自行车联赛北京门头沟站 解说（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 470,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "df1a140bcdd9fc7eeff5",
+      "name": "07:55 NBA 公牛VS奇才 全场回放（刘芳宇）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 475,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
+    },
+    {
+      "id": "c2d8f8e91d84a644e8a8",
+      "name": "07:55 NBA 公牛VS奇才 全场回放（英文原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 475,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "bf702438b9a0c24d172e",
-      "name": "07:55 NBA 公牛VS奇才 刘芳宇",
+      "name": "07:55 NBA 公牛VS奇才 刘芳宇（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 475,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "6ea663cd8f0e74735afe",
-      "name": "07:55 NBA 公牛VS奇才 英文原声",
+      "name": "07:55 NBA 公牛VS奇才 英文原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 475,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "5047e537ec306612f176",
+      "name": "07:55 NBA 独行侠VS马刺 全场回放（徐秦威）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 475,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
+    },
+    {
+      "id": "409bf93ca25e7a603915",
+      "name": "07:55 NBA 独行侠VS马刺 全场回放（王晓晨）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 475,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
+    },
+    {
+      "id": "da12acada3b8680ed0a2",
+      "name": "07:55 NBA 独行侠VS马刺 全场回放（英文原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 475,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "1af5d0aa7804e8408993",
-      "name": "07:55 NBA 独行侠VS马刺 徐秦威",
+      "name": "07:55 NBA 独行侠VS马刺 徐秦威（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 475,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "e87d3b8b0fa2fbced50b",
-      "name": "07:55 NBA 独行侠VS马刺 王晓晨",
+      "name": "07:55 NBA 独行侠VS马刺 王晓晨（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 475,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "d7eae9340e310be1a8c7",
-      "name": "07:55 NBA 独行侠VS马刺 英文原声",
+      "name": "07:55 NBA 独行侠VS马刺 英文原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 475,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "d58d4f7bc007b5f3f32b",
-      "name": "08:00 全国垂钓俱乐部挑战赛 2026“武昌鱼”杯全国垂钓俱乐部挑战赛（鄂城 · 鄂州） 鄂州鄂城站",
+      "name": "08:00 全国垂钓俱乐部挑战赛 2026“武昌鱼”杯全国垂钓俱乐部挑战赛（鄂城 · 鄂州） 鄂州鄂城站（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 480,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "2e5e685a6e81584196f1",
-      "name": "08:00 咪咕体育日报 undefined 咪咕体育日报 第221期",
+      "name": "08:00 咪咕体育日报 undefined 咪咕体育日报 第221期（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 480,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
-    },
-    {
-      "id": "3d06a0bede92d24300d6",
-      "name": "08:15 NBA 76人VS雄鹿 火箭vs老鹰",
-      "date": "2026-10-25",
-      "time_minutes": 495,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "787c11f032269d726221",
-      "name": "08:15 NBA 独行侠VS马刺 火箭vs老鹰",
+      "name": "08:15 NBA 独行侠VS马刺 火箭vs老鹰（源提示需会员）",
       "date": "2026-10-25",
       "time_minutes": 495,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "membership_required",
+      "status_text": "需会员",
       "published": false
     },
     {
       "id": "14b46371f9bcc3a3151a",
-      "name": "08:15 NBA 老鹰VS火箭 连睿 刘铁 周鹏",
+      "name": "08:15 NBA 老鹰VS火箭 连睿 刘铁 周鹏（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 495,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "f0dea6e8d1283449712d",
+      "name": "08:25 NBA 老鹰VS火箭 全场回放（英文原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 505,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
+    },
+    {
+      "id": "a241eca1e4bb5a902ffa",
+      "name": "08:25 NBA 老鹰VS火箭 全场回放（连睿、刘铁、周鹏、秋童）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 505,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "0796708a718729c13622",
-      "name": "08:25 NBA 老鹰VS火箭 英文原声",
+      "name": "08:25 NBA 老鹰VS火箭 英文原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 505,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "1ad4f016309923374b74",
+      "name": "08:55 NBA 掘金VS鹈鹕 全场回放（周赫）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 535,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
+    },
+    {
+      "id": "9af0a45f5d8b5000db27",
+      "name": "08:55 NBA 掘金VS鹈鹕 全场回放（英文原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 535,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "1394587e1b78eba26f0a",
-      "name": "08:55 NBA 掘金VS鹈鹕 周赫",
+      "name": "08:55 NBA 掘金VS鹈鹕 周赫（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 535,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "0ca365dc3f9fcddfba9f",
-      "name": "08:55 NBA 掘金VS鹈鹕 英文原声",
+      "name": "08:55 NBA 掘金VS鹈鹕 英文原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 535,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "362ca7d9c8c39a6234d5",
-      "name": "08:55 NBA 独行侠VS马刺 鹈鹕vs掘金",
+      "name": "08:55 NBA 独行侠VS马刺 鹈鹕vs掘金（源提示需会员）",
       "date": "2026-10-25",
       "time_minutes": 535,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "membership_required",
+      "status_text": "需会员",
       "published": false
     },
     {
       "id": "c50055064b88fcde7aba",
-      "name": "08:55 NBA 老鹰VS火箭 鹈鹕vs掘金",
+      "name": "08:55 NBA 老鹰VS火箭 鹈鹕vs掘金（源提示需会员）",
       "date": "2026-10-25",
       "time_minutes": 535,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "membership_required",
+      "status_text": "需会员",
       "published": false
     },
     {
       "id": "a1ee24b61d7a52ece686",
-      "name": "09:00 上海国际跳绳精英赛 上海国际跳绳精英赛 解说",
+      "name": "09:00 上海国际跳绳精英赛 上海国际跳绳精英赛 解说（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 540,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "b8de2daf9cd3b682e884",
+      "name": "09:00 全国游泳锦标赛 张雨霏100米个人混合泳预赛第一晋级 2026全国游泳锦标赛Day3上午场全场回放（赛场原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 540,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "bf0f856327ebfc5c5b74",
-      "name": "09:00 全国游泳锦标赛 徐嘉余、潘展乐、于子迪、张雨霏出战 清流播出",
+      "name": "09:00 全国游泳锦标赛 徐嘉余、潘展乐、于子迪、张雨霏出战 清流播出（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 540,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "7fd0d421fd87b98ced82",
+      "name": "09:45 NBA 太阳VS勇士 全场回放（拜月宁）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 585,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "published": false
+    },
+    {
+      "id": "4dbab8fcac4af8b4ecfa",
+      "name": "09:45 NBA 太阳VS勇士 全场回放（李天宇、陈正昊、郭维盛、廖昕阳）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 585,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
       "id": "29a3c168c1bb9f4fcef8",
-      "name": "09:45 NBA 太阳VS勇士 智能字幕",
+      "name": "09:45 NBA 太阳VS勇士 智能字幕（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 585,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "38e7c794bf1ee058c849",
-      "name": "09:45 NBA 太阳VS勇士 李天宇 陈正昊 郭维盛",
+      "name": "09:45 NBA 太阳VS勇士 李天宇 陈正昊 郭维盛（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 585,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "53bf0f6e92c8c53cbe54",
-      "name": "09:55 NBA 太阳VS勇士 拜月宁",
+      "name": "09:55 NBA 太阳VS勇士 拜月宁（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 595,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "9a6007c46ceddd28a68a",
-      "name": "09:55 NBA 太阳VS勇士 英文原声",
+      "name": "09:55 NBA 太阳VS勇士 英文原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 595,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "b1fd7a48f571057adb64",
+      "name": "10:45 马拉松系列赛 2026哈密新星双城半程马拉松 2026哈密新星双城半程马拉松全场回放（赛场原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 645,
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
       "published": false
     },
     {
@@ -3027,6 +3441,42 @@
       "published": false
     },
     {
+      "id": "744ed08fc2b8ef160db0",
+      "name": "13:00 乒乓球亚锦赛 石油组合横扫晋级 蒯曼PK张本美和 1号桌（源提示需登录）",
+      "date": "2026-10-25",
+      "time_minutes": 780,
+      "status": "login_required",
+      "status_text": "需登录",
+      "published": false
+    },
+    {
+      "id": "1d1a9c562eb4c735474c",
+      "name": "13:00 乒乓球亚锦赛 石油组合横扫晋级 蒯曼PK张本美和 2号桌（源提示需登录）",
+      "date": "2026-10-25",
+      "time_minutes": 780,
+      "status": "login_required",
+      "status_text": "需登录",
+      "published": false
+    },
+    {
+      "id": "b975522ac1048ad6c577",
+      "name": "13:00 乒乓球亚锦赛 石油组合横扫晋级 蒯曼PK张本美和 马特（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 780,
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "12e65c0ec44591f99e7e",
+      "name": "13:45 上海国际跳绳精英赛 上海国际跳绳精英赛 解说（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 825,
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
       "id": "2cf547880d213ecc878a",
       "name": "13:50 青岛城市足球争霸赛 即墨区vs市北区 清流播出（本轮未测通）",
       "date": "2026-10-25",
@@ -3058,6 +3508,15 @@
       "name": "13:50 青岛城市足球争霸赛 西海岸新区vs市南区 清流播出（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 830,
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "published": false
+    },
+    {
+      "id": "963119f9b85e8a7530a7",
+      "name": "13:55 超三联赛 超三联赛 总决赛 四分之一决赛 2026赛季超三联赛总决赛: 超三联赛 总决赛 四分之一决赛(蔡凯臣,李嘉伟)（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 835,
       "status": "decode_failed",
       "status_text": "本轮未测通",
       "published": false
@@ -3099,6 +3558,15 @@
       "published": false
     },
     {
+      "id": "b5275004a092513c6b1d",
+      "name": "14:30 WTA 布克沙/梅里查尔冲击女双冠军 布克沙/梅里查尔-马丁内斯 VS 克劳茨克/斯朵拉（源提示需登录）",
+      "date": "2026-10-25",
+      "time_minutes": 870,
+      "status": "login_required",
+      "status_text": "需登录",
+      "published": false
+    },
+    {
       "id": "2a06ec8be3ac4691f177",
       "name": "14:30 WTA 布克沙/梅里查尔冲击女双冠军 鸿昆（仅试看）",
       "date": "2026-10-25",
@@ -3109,29 +3577,29 @@
     },
     {
       "id": "6d872e41ddb87c1c7e4c",
-      "name": "14:55 辽超 本溪队VS丹东队 赛场原声",
+      "name": "14:55 辽超 本溪队VS丹东队 赛场原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 895,
-      "status": "upcoming",
-      "status_text": "未开赛",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "a17a57b437ee3c1794b8",
-      "name": "15:30 琼超 乐东VS东方 赛场原声",
+      "name": "15:30 琼超 乐东VS东方 赛场原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 930,
-      "status": "upcoming",
-      "status_text": "未开赛",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
       "id": "80bea637318071c9bbdc",
-      "name": "15:30 琼超 定安VS儋州 赛场原声",
+      "name": "15:30 琼超 定安VS儋州 赛场原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 930,
-      "status": "upcoming",
-      "status_text": "未开赛",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
       "published": false
     },
     {
@@ -3164,6 +3632,15 @@
     {
       "id": "e1e2f32ab5fc6a5e7111",
       "name": "17:00 WTA 莱巴金娜VS费尔南德斯 邱超",
+      "date": "2026-10-25",
+      "time_minutes": 1020,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "5826de44b3c996f1861a",
+      "name": "17:00 乒乓球亚锦赛 争冠！林诗栋/黄友政vs温瑞博/袁励岑 蒯曼/王艺迪战日乒 周冠达 侯英超 程靖淇",
       "date": "2026-10-25",
       "time_minutes": 1020,
       "status": "upcoming",
@@ -3207,6 +3684,15 @@
       "published": false
     },
     {
+      "id": "0b3a5b53e83b6e6c9477",
+      "name": "18:00 BWF 安洗莹PK辛杜 凤凰组合冲击金牌 安洗莹VS辛杜",
+      "date": "2026-10-25",
+      "time_minutes": 1080,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
       "id": "1039b3b9a99fef2000cc",
       "name": "18:00 BWF 安洗莹PK辛杜 凤凰组合冲击金牌 金子嘉",
       "date": "2026-10-25",
@@ -3227,6 +3713,24 @@
     {
       "id": "6d630892ffe349ae29ca",
       "name": "18:00 BWF 法国羽毛球公开赛第六日 1号场地英文视角",
+      "date": "2026-10-25",
+      "time_minutes": 1080,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "5c503271ebbeb9830fae",
+      "name": "18:00 NBA经典赛事 NBA精彩重播：雄鹿vs76人 孙博 闫宇峰 佳依",
+      "date": "2026-10-25",
+      "time_minutes": 1080,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "c949f11eaad76fca19f5",
+      "name": "18:00 乒乓球亚锦赛 争冠！林诗栋/黄友政vs温瑞博/袁励岑 蒯曼/王艺迪战日乒 赛场原声",
       "date": "2026-10-25",
       "time_minutes": 1080,
       "status": "upcoming",
@@ -3270,6 +3774,15 @@
       "published": false
     },
     {
+      "id": "bb9fcd2c4ece26954164",
+      "name": "18:55 超三联赛 超三联赛 总决赛 半决赛及决赛 2026赛季超三联赛总决赛: 超三联赛 总决赛 半决赛及决赛(蔡凯臣,李嘉伟)",
+      "date": "2026-10-25",
+      "time_minutes": 1135,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
       "id": "0f6a30a0ede4e5d83c63",
       "name": "18:55 超三联赛 超三联赛 总决赛 半决赛及决赛 蔡凯臣 李嘉伟",
       "date": "2026-10-25",
@@ -3290,6 +3803,15 @@
     {
       "id": "59dff1d943ad6eb2083c",
       "name": "19:00 全国游泳锦标赛 全国游泳锦标赛Day 3 清流播出",
+      "date": "2026-10-25",
+      "time_minutes": 1140,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "5a6bdcf8c06a4f3b4131",
+      "name": "19:00 全国游泳锦标赛 潘展乐男子100米自由泳冲冠 清流播出",
       "date": "2026-10-25",
       "time_minutes": 1140,
       "status": "upcoming",
@@ -3747,8 +4269,44 @@
       "published": false
     },
     {
+      "id": "ac0d0e8b89e2496b35a3",
+      "name": "21:00 WTT 抽签仪式 抽签仪式",
+      "date": "2026-10-25",
+      "time_minutes": 1260,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
       "id": "dc7d5485f06b84b3bb2c",
       "name": "21:00 WTT 抽签仪式 现场原声",
+      "date": "2026-10-25",
+      "time_minutes": 1260,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "c5115640e88a2423a77b",
+      "name": "21:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 1号桌",
+      "date": "2026-10-25",
+      "time_minutes": 1260,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "3b38b80af507e86c1fba",
+      "name": "21:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 AI智慧观赛",
+      "date": "2026-10-25",
+      "time_minutes": 1260,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "c123f40f1ab3fcc2542b",
+      "name": "21:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 朱峰立",
       "date": "2026-10-25",
       "time_minutes": 1260,
       "status": "upcoming",
@@ -4323,6 +4881,33 @@
       "published": false
     },
     {
+      "id": "b8cc558f143867560e96",
+      "name": "03:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 1号桌",
+      "date": "2026-10-26",
+      "time_minutes": 180,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "15fba5d78593b4862337",
+      "name": "03:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 AI智慧观赛",
+      "date": "2026-10-26",
+      "time_minutes": 180,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "380dc19605e70b9f465c",
+      "name": "03:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 卢正浩",
+      "date": "2026-10-26",
+      "time_minutes": 180,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
       "id": "d804d6fd9a58ba5da727",
       "name": "03:30 意甲 乌迪内斯VSAC米兰 石庆圣 李彦",
       "date": "2026-10-26",
@@ -4386,10 +4971,136 @@
       "published": false
     },
     {
+      "id": "cc1caee8a2f49e4a8831",
+      "name": "04:55 NBA 爵士VS湖人 姜帆 季孟年",
+      "date": "2026-10-26",
+      "time_minutes": 295,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "523ded670f2f1f34b470",
+      "name": "04:55 NBA 爵士VS湖人 英文原声",
+      "date": "2026-10-26",
+      "time_minutes": 295,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "fe54db30b8574bdde418",
+      "name": "05:55 NBA 篮网VS步行者 刘芳宇",
+      "date": "2026-10-26",
+      "time_minutes": 355,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "80bb5bee5010645f7f04",
+      "name": "05:55 NBA 篮网VS步行者 英文原声",
+      "date": "2026-10-26",
+      "time_minutes": 355,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "e5d2ec18987ed03a8608",
+      "name": "06:55 NBA 尼克斯VS魔术 张泽欣",
+      "date": "2026-10-26",
+      "time_minutes": 415,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "ad9ec9b9bd43e11f7dca",
+      "name": "06:55 NBA 尼克斯VS魔术 英文原声",
+      "date": "2026-10-26",
+      "time_minutes": 415,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "2a45d38448627c248c87",
+      "name": "06:55 NBA 森林狼VS猛龙 盛哲",
+      "date": "2026-10-26",
+      "time_minutes": 415,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "5563f7416c7a3294a0c9",
+      "name": "06:55 NBA 森林狼VS猛龙 英文原声",
+      "date": "2026-10-26",
+      "time_minutes": 415,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "c4ae7b345aa9dc2fcf91",
+      "name": "06:55 NBA 雷霆VS快船 周赫",
+      "date": "2026-10-26",
+      "time_minutes": 415,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "5af1719d1ebfc4c353f3",
+      "name": "06:55 NBA 雷霆VS快船 英文原声",
+      "date": "2026-10-26",
+      "time_minutes": 415,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "ef5ae570bbf86eff58ca",
+      "name": "07:00 NBA 76人VS活塞 王冠证 陈正昊 王羽希",
+      "date": "2026-10-26",
+      "time_minutes": 420,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "1148a3287837d069c648",
+      "name": "07:25 NBA 76人VS活塞 英文原声",
+      "date": "2026-10-26",
+      "time_minutes": 445,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
       "id": "89957861df0815cfa45a",
       "name": "08:00 咪咕体育日报 undefined 咪咕体育日报 第222期",
       "date": "2026-10-26",
       "time_minutes": 480,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "52a96fc664e464731400",
+      "name": "08:55 NBA 国王VS灰熊 英文原声",
+      "date": "2026-10-26",
+      "time_minutes": 535,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "published": false
+    },
+    {
+      "id": "144f00b8a147ee2da6a1",
+      "name": "08:55 NBA 国王VS灰熊 贾磊",
+      "date": "2026-10-26",
+      "time_minutes": 535,
       "status": "upcoming",
       "status_text": "未开赛",
       "published": false
