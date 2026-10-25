@@ -1,0 +1,55 @@
+name: 每日探查公开上游源
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '13 20 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: personal-iptv-update
+  cancel-in-progress: false
+jobs:
+  discovery:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: 准备视频验证工具
+        run: |
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends ffmpeg
+          fi
+      - run: python -m unittest discover -s tests -v
+      - name: 发现候选并更新观察记录
+        id: discover
+        continue-on-error: true
+        run: python discover.py
+      - name: 保存探查结果和入池依据
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-discovery-${{ github.run_id }}
+          path: |
+            reports/discovery.json
+            state/upstreams.json
+          if-no-files-found: warn
+          retention-days: 30
+      - name: 保存巡检记录
+        if: always() && steps.discover.outcome != 'skipped'
+        run: |
+          if [ ! -f reports/discovery.json ]; then exit 1; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/discovery.json state/upstreams.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'chore: inspect public source candidates [skip ci]'
+          git push origin HEAD:main
+      - name: 标记索引读取故障
+        if: steps.discover.outcome != 'success'
+        run: exit 1

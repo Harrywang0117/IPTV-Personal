@@ -70,6 +70,54 @@ class PipelineTests(unittest.TestCase):
         b = p.Entry("比赛B 回放", "", "https://example.com/b", {"tvg-id": "same"}, event_date=self.now.date())
         self.assertNotEqual(a.identity, b.identity)
 
+    def test_migu_content_majority_repairs_wrong_fixture_without_changing_url(self):
+        correct = [p.Entry("UFC 正赛 21:30", "体育-昨天10-23", f"https://source{i}.example/968627135",
+                           {"tvg-id": "UFC333"}, source=source, event_date=date(2026,10,23))
+                   for i,source in enumerate(["migu-primary", "migu-alt", "migu-backup"])]
+        wrong = p.Entry("英超 A VS B 21:30", "体育-今天10-24", correct[1].url, {"tvg-id": "A VS B"},
+                        source="migu-alt", event_date=self.now.date(), upcoming=True)
+        fixed, changes = p.reconcile_migu_metadata(correct+[wrong])
+        self.assertEqual(fixed[-1].identity, correct[0].identity)
+        self.assertEqual(fixed[-1].url, wrong.url)
+        self.assertFalse(fixed[-1].upcoming)
+        self.assertEqual(fixed[-1].source, "migu-alt")
+        self.assertEqual(len(changes), 1)
+
+    def test_repeated_rows_from_one_source_do_not_outvote_another(self):
+        a = p.Entry("比赛A 19:00", "", "https://one.example/968627135", {"tvg-id": "A"},
+                    source="migu-primary", event_date=self.now.date())
+        b = p.replace(a, name="比赛B 19:00", source="migu-alt", attrs={"tvg-id": "B"})
+        original = [a]+[copy.deepcopy(b) for _ in range(5)]
+        fixed, changes = p.reconcile_migu_metadata(original)
+        self.assertEqual(changes, [])
+        self.assertEqual([e.identity for e in fixed], [e.identity for e in original])
+
+    def test_shared_schedule_id_does_not_merge_different_migu_content(self):
+        entries = [p.Entry(name, "", f"https://{source}.example/{content}", {"tvg-id": "same_schedule"},
+                           source=source, event_date=self.now.date())
+                   for content,name in [("968627135","斯诺克 比赛A 回放"),("968627136","斯诺克 比赛B 回放")]
+                   for source in ["migu-primary","migu-alt"]]
+        fixed, changes = p.reconcile_migu_metadata(entries)
+        self.assertEqual(changes, [])
+        self.assertEqual(len({e.identity for e in fixed}), 2)
+
+    def test_long_running_same_fixture_is_not_forced_to_majority_date(self):
+        yesterday = p.Entry("BWF 1号场地", "", "https://one.example/968627135", {"tvg-id": "BWF"},
+                            source="migu-primary", event_date=self.now.date()-p.timedelta(days=1))
+        today = p.replace(yesterday, source="migu-backup", event_date=self.now.date())
+        entries = [yesterday,p.replace(yesterday,source="migu-alt"),today]
+        fixed, changes = p.reconcile_migu_metadata(entries)
+        self.assertEqual(changes, [])
+        self.assertEqual(fixed[-1].event_date, self.now.date())
+
+    def test_same_competition_fresh_match_title_is_not_rewritten_by_stale_majority(self):
+        old = p.Entry("CBA A VS B 19:00", "", "https://one.example/968627135", {"tvg-id": "A VS B"},
+                      source="migu-primary", event_date=self.now.date())
+        new = p.replace(old, name="CBA C VS D 19:00", attrs={"tvg-id": "C VS D"}, source="migu-backup")
+        fixed, changes = p.reconcile_migu_metadata([old,p.replace(old,source="migu-alt"),new])
+        self.assertEqual(changes, [])
+        self.assertEqual(fixed[-1].name,new.name)
+
     def test_channel_normalization(self):
         a = p.Entry("CCTV-1 HD", "央视", "https://example.com/a")
         b = p.Entry("CCTV1综合", "央视", "https://example.com/b")
@@ -182,14 +230,51 @@ class PipelineTests(unittest.TestCase):
         response = opener.open.return_value.__enter__.return_value
         response.headers = {"Content-Type": "application/json;charset=UTF-8"}
         with patch("pipeline.urllib.request.build_opener", return_value=opener):
-            response.read.return_value = "由于版权原因，请登录后观看".encode()
+            response.read1.return_value = "由于版权原因，请登录后观看".encode()
             self.assertEqual(p.access_hint("https://example.com/a", 1), "login_required")
-            response.read.return_value = "开通钻石会员即可免费畅看哦".encode()
+            response.read1.return_value = "开通钻石会员即可免费畅看哦".encode()
             self.assertEqual(p.access_hint("https://example.com/a", 1), "membership_required")
             response.headers = {"Content-Type": "video/mp2t"}
-            response.read.reset_mock()
+            response.read1.reset_mock()
             self.assertFalse(p.access_hint("https://example.com/a", 1))
-            response.read.assert_not_called()
+            response.read1.assert_not_called()
+
+    def test_trial_redirect_is_not_treated_as_full_playback(self):
+        redirect = p.urllib.error.HTTPError("https://source.example/a", 302, "Found",
+                     {"Location": "http://gslbtrialmgsplive.miguvideo.com/stream"}, None)
+        opener = unittest.mock.MagicMock()
+        opener.open.side_effect = redirect
+        with patch("pipeline.urllib.request.build_opener", return_value=opener):
+            self.assertEqual(p.access_hint("https://source.example/a", 1), "trial_stream")
+        opener.open.assert_called_once()
+
+    def test_trial_domain_check_does_not_match_other_domains_or_paths(self):
+        self.assertTrue(p.trial_url("https://gslbtrialmgsplive.miguvideo.com/a"))
+        self.assertFalse(p.trial_url("https://gslbmgsplive.miguvideo.com/a"))
+        self.assertFalse(p.trial_url("https://gslbtrialmgsplive.miguvideo.com.example.org/a"))
+        self.assertFalse(p.trial_url("https://example.org/gslbtrialmgsplive.miguvideo.com"))
+
+    def test_trial_stream_is_rejected_before_short_decode_can_pass(self):
+        prober = object.__new__(p.Prober)
+        prober.config = self.config
+        prober.deadline = prober.event_deadline = time.monotonic()+10
+        prober.hosts = {"source.example": threading.Semaphore(1)}
+        prober.lock = threading.Lock()
+        prober.migu_hosts = set()
+        entry = p.Entry("NBA A VS B 07:00", "", "https://source.example/a", event_date=self.now.date())
+        with patch("pipeline.access_hint", return_value="trial_stream"), patch.object(prober, "decode") as decode:
+            decode.return_value = {"ok": True, "reason": "decoded", "frames": 75}
+            result = prober(entry)
+        self.assertFalse(result["ok"])
+        self.assertEqual(result["reason"], "trial_stream")
+        decode.assert_not_called()
+
+    def test_trial_fallback_is_labelled_and_not_verified(self):
+        entry = p.Entry("NBA A VS B 07:00", "", "https://source.example/a", event_date=self.now.date())
+        kept, _ = p.select_bucket([entry],self.config,lambda e:{"ok":False,"reason":"trial_stream"})
+        self.assertFalse(kept[0].verified)
+        self.assertIn("仅试看",p.display_name(kept[0]))
+        self.assertIn("仅试看",p.display_name(p.replace(kept[0],name="无时间赛事")))
 
     def test_recent_public_source_cache_survives_fetch_failure(self):
         text = '#EXTM3U\n#EXTINF:-1 group-title="体育-今天10-24",比赛 19:00\nhttps://example.com/live\n'
@@ -475,10 +560,12 @@ class PipelineTests(unittest.TestCase):
             self.assertEqual(report["requested_event_check"], ["A VS B", "another match"])
             self.assertEqual([day["listed"] for day in report["events"].values()], [1,1,1])
             self.assertTrue(all(day["verified"] == 0 for day in report["events"].values()))
-            self.assertIn("sports_catalog_contains_unverified_entries", report["warnings"])
+            self.assertIn("restricted_and_unverified_events_only_in_schedule", report["warnings"])
+            self.assertEqual(p.parse_playlist((out / "events.m3u").read_text()), [])
+            self.assertEqual(len(json.loads((out / "schedule.json").read_text())["events"]), 3)
             self.assertIn("https://example.com/tv", (out / "channels.m3u").read_text())
 
-    def test_empty_requested_event_does_not_force_entire_catalogue(self):
+    def test_empty_selector_still_checks_all_started_events_under_strict_policy(self):
         text = '#EXTM3U\n'
         for word, suffix in [("昨天", "10-23"), ("今天", "10-24"), ("明天", "10-25")]:
             text += f'#EXTINF:-1 group-title="体育-{word}{suffix}",比赛 00:01\nhttps://example.com/{word}\n'
@@ -487,7 +574,7 @@ class PipelineTests(unittest.TestCase):
             cfg = dict(self.config, sources=[self.spec], minimum_channels=0, event_samples_per_day=0)
             with patch("pipeline.fetch_playlist", return_value=text), patch("builtins.print"):
                 code = p.run(cfg, root / "public", root / "report.json", self.now,
-                             probe=lambda e: self.fail("empty selector probed every match"), check_event=[""])
+                             probe=lambda e: {"ok": True, "reason": "decoded", "kind": "vod"}, check_event=[""])
             self.assertEqual(code, 0)
             self.assertEqual(json.loads((root / "report.json").read_text())["requested_event_check"], [])
 

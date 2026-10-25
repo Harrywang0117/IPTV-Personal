@@ -20,7 +20,7 @@ import threading
 import time
 import urllib.error
 import urllib.request
-from urllib.parse import urlparse
+from urllib.parse import urljoin, urlparse
 from zoneinfo import ZoneInfo
 
 from vendor.upstream import channel_key, ADULT_RE, NOTICE_WORDS
@@ -53,6 +53,7 @@ class Entry:
     upcoming: bool = False
     verified: bool = False
     check_status: str = "not_checked"
+    evidence: dict = field(default_factory=dict)
 
     @property
     def identity(self):
@@ -63,7 +64,10 @@ class Entry:
 
     @property
     def fingerprint(self):
-        value = self.url + "\n" + "\n".join(self.options)
+        options = self.options.copy()
+        if not any(o.startswith("#EXTVLCOPT:http-user-agent=") for o in options):
+            options.append("#EXTVLCOPT:http-user-agent=" + UA)
+        value = self.url + "\n" + "\n".join(options)
         return hashlib.sha256(value.encode()).hexdigest()[:20]
 
 
@@ -241,14 +245,20 @@ def source_playlist(spec, config, state_dir, now):
     """Retain public source lists when the runner cannot reach a mirror."""
     cache_path = state_dir / (hashlib.sha256(spec["url"].encode()).hexdigest()[:16] + ".json")
     try:
-        text = fetch_playlist(spec, config["fetch_timeout"])
+        if spec.get("channels") is False:
+            from discover import read_feed, safe_root
+            if not safe_root(spec["url"], resolve=True):
+                raise ValueError("invalid_candidate_root")
+            text = read_feed(spec["url"], config["fetch_timeout"])
+        else:
+            text = fetch_playlist(spec, config["fetch_timeout"])
         parsed = parse_playlist(text, spec["id"])
         if not parsed:
             raise ValueError("empty_playlist")
         if spec.get("events") and not any(e.event_date for e in prepare(parsed, spec, config, now)):
             raise ValueError("source_has_no_current_events")
     except (ValueError, OSError, subprocess.SubprocessError) as error:
-        if spec.get("events"):
+        if spec.get("events") and spec.get("channels") is not False:
             try:
                 cached = json.loads(cache_path.read_text())
                 age = (now - datetime.fromisoformat(cached["fetched_at"])).total_seconds() / 3600
@@ -260,7 +270,7 @@ def source_playlist(spec, config, state_dir, now):
             except (OSError, ValueError, TypeError, KeyError):
                 pass
         raise
-    if spec.get("events"):
+    if spec.get("events") and spec.get("channels") is not False:
         atomic_write(cache_path, json.dumps({"url": spec["url"], "fetched_at": now.isoformat(),
                                             "text": text}, ensure_ascii=False) + "\n")
     return text, {"cached": False}
@@ -272,6 +282,7 @@ class Prober:
         self.deadline = time.monotonic() + config["budget_seconds"]
         self.event_deadline = time.monotonic() + config.get("event_probe_budget_seconds", 180)
         self.hosts = defaultdict(lambda: threading.Semaphore(config["per_host"]))
+        self.migu_hosts = {urlparse(s["url"]).netloc for s in config["sources"] if s["id"].startswith("migu-")}
         self.lock = threading.Lock()
         help_text = subprocess.run(["ffmpeg", "-hide_banner", "-h", "demuxer=hls"],
                                    capture_output=True, text=True, timeout=5).stdout
@@ -280,6 +291,8 @@ class Prober:
             self.hls_options += ["-extension_picky", "0"]
 
     def __call__(self, entry):
+        if trial_url(entry.url):
+            return {"ok": False, "reason": "trial_stream", "frames": 0}
         with self.lock:
             semaphore = self.hosts[urlparse(entry.url).hostname]
         deadline = min(self.deadline, self.event_deadline) if entry.event_date else self.deadline
@@ -291,16 +304,54 @@ class Prober:
             remaining = deadline - time.monotonic()
             if remaining < 1:
                 return {"ok": False, "reason": budget_reason, "frames": 0}
-            result = self.decode(entry, min(self.config["probe_timeout"], remaining))
-            if entry.event_date and result["reason"] == "decode_failed":
-                hint = access_hint(entry.url, min(2, max(0, deadline-time.monotonic())))
+            probe_deadline = min(deadline, time.monotonic() + self.config["probe_timeout"])
+            if entry.event_date or entry.source.startswith("migu-") or urlparse(entry.url).netloc in self.migu_hosts:
+                hint = access_hint(entry.url, min(2, max(0, probe_deadline-time.monotonic())))
                 if hint:
-                    result["reason"] = hint
-            return result
+                    return {"ok": False, "reason": hint, "frames": 0}
+            remaining = probe_deadline - time.monotonic()
+            if remaining <= 0:
+                return {"ok": False, "reason": "timeout", "frames": 0}
+            return self.event_check(entry, remaining) if entry.event_date else self.decode(entry, remaining)
         finally:
             semaphore.release()
 
-    def decode(self, entry, timeout):
+    def event_check(self, entry, timeout):
+        """Reject short VODs and sample distant positions; live needs later observation."""
+        started = time.monotonic()
+        cmd = ["ffprobe", "-v", "error", "-rw_timeout", "5000000",
+               "-protocol_whitelist", "http,https,tcp,tls,crypto", "-user_agent", UA]
+        tail = ["-show_entries", "format=duration", "-of", "json", entry.url]
+        try:
+            result = subprocess.run(cmd + tail, capture_output=True, text=True, timeout=min(10, timeout))
+            remaining = min(10, timeout)-(time.monotonic()-started)
+            if "Not detecting m3u8/hls with non standard extension" in result.stderr and remaining > .5:
+                result = subprocess.run(cmd + getattr(self, "hls_options", []) + ["-f", "hls"] + tail,
+                                        capture_output=True, text=True, timeout=remaining)
+            duration = float(json.loads(result.stdout).get("format", {}).get("duration", 0))
+        except (ValueError, TypeError, subprocess.SubprocessError):
+            duration = 0
+        offsets = [0]
+        if duration > 0:
+            if duration < self.config.get("event_min_vod_seconds", 1200):
+                return {"ok": False, "reason": "short_vod", "duration_seconds": round(duration)}
+            offsets += [int(duration * .5), int(duration * .8)]
+        for offset in offsets:
+            remaining = timeout - (time.monotonic()-started)
+            if remaining < 1:
+                return {"ok": False, "reason": "timeout", "frames": 0}
+            checked = self.decode(entry, remaining, offset=offset,
+                                  seconds=self.config.get("event_vod_sample_seconds", 5) if duration else
+                                  self.config.get("event_live_sample_seconds", 15))
+            if not checked["ok"]:
+                return checked
+        return {"ok": True, "reason": "decoded", "kind": "vod" if duration else "live",
+                "duration_seconds": round(duration), "sample_offsets": offsets,
+                "sample_seconds": self.config.get("event_vod_sample_seconds", 5) if duration else
+                self.config.get("event_live_sample_seconds", 15)}
+
+    def decode(self, entry, timeout, offset=0, seconds=None):
+        seconds = self.config["decode_seconds"] if seconds is None else seconds
         user_agent, referer = UA, None
         for option in entry.options:
             if option.startswith("#EXTVLCOPT:http-user-agent="):
@@ -314,7 +365,7 @@ class Prober:
                "-user_agent", user_agent]
         if referer:
             cmd += ["-referer", referer]
-        tail = ["-threads", "1", "-i", entry.url, "-t", str(self.config["decode_seconds"]),
+        tail = (["-ss", str(offset)] if offset else []) + ["-threads", "1", "-i", entry.url, "-t", str(seconds),
                 "-map", "0:v:0", "-map", "0:a:0?", "-sn", "-dn", "-threads", "1",
                 "-f", "null", "-progress", "pipe:1", "-"]
         started = time.monotonic()
@@ -336,7 +387,7 @@ class Prober:
                                         capture_output=True, text=True, timeout=remaining)
             frames = max([int(v) for v in re.findall(r"^frame=(\d+)$", result.stdout, re.M)] or [0])
             micros = max([int(v) for v in re.findall(r"^out_time_us=(\d+)$", result.stdout, re.M)] or [0])
-            ok = result.returncode == 0 and frames >= 5 and micros >= (self.config["decode_seconds"] - 0.25) * 1e6
+            ok = result.returncode == 0 and frames >= 5 and micros >= (seconds - 0.25) * 1e6
             reason = "decoded" if ok else "decode_failed"
             if not ok:
                 for code in ("403", "404", "410", "451", "500", "502", "503"):
@@ -365,7 +416,14 @@ def candidate_order(entries, limit):
     return (first + rest)[:limit]
 
 
-def access_hint(url, timeout):
+def trial_url(url):
+    host = (urlparse(url).hostname or "").lower()
+    return host.startswith("gslbtrial") and host.endswith(".miguvideo.com")
+
+
+def access_hint(url, timeout, redirects=4):
+    if trial_url(url):
+        return "trial_stream"
     if timeout < 0.1:
         return False
     class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -376,21 +434,38 @@ def access_hint(url, timeout):
                 urllib.request.Request(url, headers={"User-Agent": UA}), timeout=timeout) as response:
             if "application/json" not in response.headers.get("Content-Type", ""):
                 return False
-            text = response.read(1024).decode("utf-8", "replace")
+            # A single buffered read avoids waiting for a slowly trickling JSON
+            # body to fill 1024 bytes. Full media reads have process deadlines.
+            text = response.read1(1024).decode("utf-8", "replace")
             if "会员" in text and any(word in text for word in ("开通", "订购", "购买")):
                 return "membership_required"
             if "登录" in text and any(word in text for word in ("请", "需要", "后观看")):
                 return "login_required"
             return False
+    except urllib.error.HTTPError as response:
+        try:
+            if 300 <= response.code < 400:
+                target = urljoin(url, response.headers.get("Location", ""))
+                if trial_url(target):
+                    return "trial_stream"
+                # Never retain the signed target. Bound this inspection as well
+                # as FFmpeg's later media read.
+                if redirects and public_url(target):
+                    return access_hint(target, timeout / 2, redirects-1)
+        finally:
+            response.close()
+        return False
     except (OSError, urllib.error.URLError):
         return False
 
 
-def select_bucket(entries, config, probe, check_event=True):
+def select_bucket(entries, config, probe, check_event=True, preferred=()):
     lines, fallback, stats = [], [], Counter()
     if entries[0].event_date:
         priority = {source: i for i, source in enumerate(config.get("event_source_priority", []))}
         entries = sorted(entries, key=lambda e: priority.get(e.source, len(priority)))
+    entries = sorted(entries, key=lambda e: (0 if e.fingerprint in preferred else 1,
+                                             preferred.index(e.fingerprint) if e.fingerprint in preferred else 0))
     for entry in candidate_order(entries, config["candidate_limit"]):
         if entry.upcoming:
             lines.append(entry)
@@ -402,7 +477,8 @@ def select_bucket(entries, config, probe, check_event=True):
             result = probe(entry)
             stats[result["reason"]] += 1
             if result["ok"]:
-                lines.append(replace(entry, verified=True, check_status="decoded"))
+                lines.append(replace(entry, verified=True, check_status="decoded", evidence={
+                    k: v for k, v in result.items() if k in ("kind", "duration_seconds", "sample_offsets", "sample_seconds")}))
             elif entry.event_date:
                 status = "not_checked" if result["reason"] in ("event_budget", "budget") else result["reason"]
                 fallback.append(replace(entry, check_status=status))
@@ -411,7 +487,7 @@ def select_bucket(entries, config, probe, check_event=True):
     # A sports catalogue must not lose entire matches because a cloud runner
     # cannot reach the CDN. Preserve unverified entries, with separate status.
     if entries[0].event_date:
-        fallback.sort(key=lambda e: e.check_status in ("membership_required", "login_required"))
+        fallback.sort(key=lambda e: e.check_status in ("membership_required", "login_required", "trial_stream"))
         lines += fallback[:max(0, config["max_lines"]-len(lines))]
     return lines, stats
 
@@ -455,19 +531,72 @@ def rank(entry):
 def display_name(entry):
     if not entry.event_date:
         return entry.name
-    clock = event_clock(entry.name)
-    if clock is None:
-        return entry.name
-    hour, minute = divmod(clock, 60)
     membership = entry.check_status == "membership_required" or entry.attrs.get("_membership_hint", False)
     suffix = ("（源提示需会员）" if membership else "（源提示需登录）" if entry.check_status == "login_required"
+              else "（仅试看）" if entry.check_status == "trial_stream"
               else "（本轮未测通）" if entry.check_status not in ("not_checked", "last_accepted", "decoded") else "")
+    clock = event_clock(entry.name)
+    if clock is None:
+        return entry.name + (suffix if suffix and suffix not in entry.name else "")
+    hour, minute = divmod(clock, 60)
     if re.match(r"^\s*\d{1,2}:\d{2}\s+", entry.name):
         name = re.sub(r"^\s*\d{1,2}:\d{2}", f"{hour:02d}:{minute:02d}", entry.name)
         return name + (suffix if suffix and suffix not in name else "")
     title = re.sub(r"\s*\d{1,2}:\d{2}\s*$", "", entry.name).strip()
     title = re.sub(r"^\d{1,2}:\d{2}\s+", "", title)
     return f"{hour:02d}:{minute:02d} {title}{suffix}"
+
+
+def event_key(entry):
+    return hashlib.sha256(repr(entry.identity).encode()).hexdigest()[:20]
+
+
+def qualify_events(buckets, previous_evidence, now, config):
+    """A live entry needs two time-separated checks, each of the same route."""
+    evidence, qualified = {}, []
+    for bucket in buckets:
+        if not bucket[0].event_date:
+            qualified.append(bucket)
+            continue
+        accepted = []
+        for entry in bucket:
+            key = event_key(entry) + ":" + entry.fingerprint
+            if not entry.verified:
+                continue
+            old = previous_evidence.get(key, {})
+            first = now
+            try:
+                last = datetime.fromisoformat(old["last_success_at"])
+                since = datetime.fromisoformat(old["first_success_at"])
+                if 0 <= (now-last).total_seconds() <= config.get("event_evidence_max_age_hours", 3)*3600:
+                    first = since
+            except (ValueError, TypeError, KeyError):
+                pass
+            enough = entry.evidence.get("kind") == "vod" or (now-first).total_seconds() >= config.get("event_live_observation_minutes", 20)*60
+            evidence[key] = {"first_success_at": first.isoformat(), "last_success_at": now.isoformat(),
+                             "qualified": enough, **entry.evidence}
+            if enough:
+                accepted.append(entry)
+            else:
+                entry.verified = False
+                entry.check_status = "observation_pending"
+        if accepted:
+            qualified.append(accepted)
+            bucket[:] = accepted + [e for e in bucket if e not in accepted]
+    return qualified, evidence
+
+
+def catalogue_json(buckets, now):
+    labels = {"decoded": "本轮检测通过", "not_checked": "未完成检测", "trial_stream": "仅试看",
+              "membership_required": "需会员", "login_required": "需登录", "short_vod": "短片段，未按正赛收录",
+              "observation_pending": "等待第二次直播检测"}
+    return {"generated_at": now.isoformat(), "note": "完整赛程目录；限制或待测条目不进入主订阅。",
+            "events": [{"id": event_key(bucket[0]), "name": display_name(bucket[0]),
+                        "date": bucket[0].event_date.isoformat(), "time_minutes": event_clock(bucket[0].name),
+                        "status": "upcoming" if bucket[0].upcoming else bucket[0].check_status,
+                        "status_text": "未开赛" if bucket[0].upcoming else labels.get(bucket[0].check_status, "本轮未测通"),
+                        "published": any(e.verified for e in bucket)}
+                       for bucket in sorted(buckets, key=lambda b: rank(b[0])) if bucket[0].event_date]}
 
 
 def display_group(entry, now):
@@ -528,6 +657,41 @@ def missing_event_days(entries, now):
             if now.date() + timedelta(days=delta) not in present]
 
 
+def reconcile_migu_metadata(entries):
+    """Repair clear cross-competition conflicts supported by other mirrors."""
+    by_content = defaultdict(list)
+    for entry in entries:
+        content = re.fullmatch(r"/(\d{9})", urlparse(entry.url).path)
+        if entry.event_date and entry.source.startswith("migu-") and content and entry.attrs.get("tvg-id"):
+            by_content[content[1]].append(entry)
+    replacements, corrections = {}, []
+    for content, group in by_content.items():
+        votes = defaultdict(set)
+        for entry in group:
+            votes[(entry.event_date, entry.attrs["tvg-id"])].add(entry.source)
+        ranked = sorted(votes, key=lambda key: len(votes[key]), reverse=True)
+        winner = ranked[0]
+        if len(votes[winner]) < 2 or (len(ranked) > 1 and len(votes[winner]) == len(votes[ranked[1]])):
+            continue
+        canonical = next(e for e in group if (e.event_date, e.attrs["tvg-id"]) == winner)
+        for entry in group:
+            if (entry.event_date, entry.attrs["tvg-id"]) == winner:
+                continue
+            # Date-only changes and same-competition updates can be legitimate
+            # for long-running streams; a stale majority must not rewrite them.
+            if entry.attrs["tvg-id"] == canonical.attrs["tvg-id"] or entry.name.split()[0] == canonical.name.split()[0]:
+                continue
+            replacements[id(entry)] = replace(entry, name=canonical.name, group=canonical.group,
+                                              event_date=canonical.event_date, upcoming=canonical.upcoming,
+                                              attrs={**entry.attrs, **{k: v for k, v in canonical.attrs.items()
+                                                                     if k.startswith("tvg-")}})
+            corrections.append({"source": entry.source, "content_id": content,
+                                "from_title": entry.name, "to_title": canonical.name,
+                                "from_date": entry.event_date.isoformat(), "to_date": canonical.event_date.isoformat(),
+                                "canonical_sources": sorted(votes[winner])})
+    return [replacements.get(id(entry), entry) for entry in entries], corrections
+
+
 def quality_errors(buckets, config, now, previous_channels=0):
     channels = sum(not bucket[0].event_date for bucket in buckets)
     errors = []
@@ -550,7 +714,7 @@ def atomic_write(path, content):
         temporary.unlink(missing_ok=True)
 
 
-def publish(out_dir, buckets, report, now, config):
+def publish(out_dir, buckets, report, now, config, catalogue=None):
     """Prepare every output before replacing any accepted subscription file."""
     events = [b for b in buckets if b[0].event_date]
     channels = [b for b in buckets if not b[0].event_date]
@@ -562,6 +726,12 @@ def publish(out_dir, buckets, report, now, config):
         "all.txt": render_txt(buckets, now),
         "status.json": json.dumps(report, ensure_ascii=False, indent=2) + "\n",
     }
+    if catalogue is not None:
+        data = catalogue_json(catalogue, now)
+        artifacts["schedule.json"] = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
+        # Keep the full schedule readable without offering unverified play links.
+        artifacts["schedule.md"] = "# 三天完整赛程\n\n更新：" + now.isoformat(timespec="seconds") + "\n\n|日期|赛事|状态|\n|---|---|---|\n" + "".join(
+            f"|{e['date']}|{e['name'].replace('|', '／')}|{e['status_text']}|\n" for e in data["events"])
     out_dir.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix=".staging-", dir=out_dir.parent) as staging:
         for name, content in artifacts.items():
@@ -572,6 +742,13 @@ def publish(out_dir, buckets, report, now, config):
 
 
 def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_only=False, check_event=None):
+    # Discovered sources join only after independent, time-separated probation.
+    config = dict(config)
+    try:
+        from discover import active_sources
+        config["sources"] = config["sources"] + active_sources(out_dir.parent / "state/upstreams.json", now, config)
+    except (OSError, ValueError, KeyError):
+        pass
     previous = {}
     try:
         previous = json.loads((out_dir / "status.json").read_text())
@@ -579,6 +756,18 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
         pass
     if events_only and not previous.get("accepted"):
         raise ValueError("events_only_requires_previous_accepted_channels")
+    preferred = defaultdict(list)
+    try:
+        for entry in parse_playlist((out_dir / "all-backup.m3u").read_text()):
+            key = entry.attrs.get("tvg-id") if entry.group.startswith("咪咕·") else entry.identity
+            preferred[key].append(entry.fingerprint)
+    except OSError:
+        pass
+    evidence_path = out_dir.parent / "state/event-evidence.json"
+    try:
+        previous_evidence = json.loads(evidence_path.read_text())
+    except (OSError, ValueError):
+        previous_evidence = {}
     candidates, sources = [], []
     for spec in config["sources"]:
         if events_only and not spec.get("events"):
@@ -594,6 +783,11 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
             if not parsed:
                 raise ValueError("empty_playlist")
             selected = prepare(parsed, spec, config, now)
+            if spec.get("channels") is False:
+                selected = [replace(entry, options=[], attrs={k:v for k,v in entry.attrs.items() if k in ("tvg-id", "tvg-name")})
+                            for entry in selected if entry.event_date and urlparse(entry.url).netloc == urlparse(spec["url"]).netloc
+                            and re.fullmatch(r"/\d{9}", urlparse(entry.url).path)
+                            and not urlparse(entry.url).query and not urlparse(entry.url).fragment]
             if source_meta.get("cached"):
                 # A catalogue fallback supplies sports only. Do not add old TV
                 # candidates from an unreachable source to the full scan.
@@ -603,6 +797,7 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
         except (ValueError, OSError, subprocess.SubprocessError) as error:
             sources.append({"id": spec["id"], "ok": False, "error": source_error(error)})
         print(f"source_end id={spec['id']} ok={sources[-1]['ok']} seconds={time.monotonic()-started:.1f}", flush=True)
+    candidates, metadata_corrections = reconcile_migu_metadata(candidates)
     grouped = defaultdict(list)
     for entry in candidates:
         if not events_only or entry.event_date:
@@ -616,7 +811,8 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
                   "accepted": False, "deferred": deferred, "phase": "catalogue_preflight",
                   "errors": [f"missing_events_{day}" for day in missing],
                   "warnings": ["upstream_tomorrow_catalogue_pending"] if deferred else [],
-                  "sources": sources, "channels": 0, "previous_channels_retained": previous.get("channels", 0),
+                  "sources": sources, "source_metadata_corrections": metadata_corrections,
+                  "channels": 0, "previous_channels_retained": previous.get("channels", 0),
                   "events": {(now.date()+timedelta(days=delta)).isoformat():
                              {"listed": counts[now.date()+timedelta(days=delta)], "verified": 0}
                              for delta in (-1, 0, 1)}, "probe": {},
@@ -626,20 +822,34 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
         atomic_write(report_path, json.dumps(report, ensure_ascii=False, indent=2) + "\n")
         print(("catalogue_deferred " if deferred else "quality_gate_rejected ") + ",".join(report["errors"]), flush=True)
         return 3 if deferred else 2
-    probe = probe or Prober(config)
+    media_probe = probe or Prober(config)
+    source_checks, check_lock = defaultdict(Counter), threading.Lock()
+    def probe(entry):
+        result = media_probe(entry)
+        with check_lock:
+            source_checks[entry.source][result["reason"]] += 1
+        return result
     buckets, stats, finished = [], Counter(), 0
     ordered = sorted(grouped.values(), key=lambda b: rank(b[0]))
-    samples = event_sample_keys(ordered, config.get("event_samples_per_day", 12), now)
+    samples = {b[0].identity for b in ordered if b[0].event_date and not b[0].upcoming}
     requested_checks = [check_event] if isinstance(check_event, str) else (check_event or [])
     requested_checks = [text for text in requested_checks if text]
     if requested_checks:
         samples.update(b[0].identity for b in ordered if b[0].event_date and not b[0].upcoming
                        and any(text in b[0].name for text in requested_checks))
-    ordered.sort(key=lambda b: (0 if b[0].identity in samples else 1 if b[0].event_date else 2, rank(b[0])))
+    def probe_priority(bucket):
+        entry = bucket[0]
+        start = kickoff(entry, now.tzinfo) if entry.event_date else None
+        active = start and 0 <= (now-start).total_seconds() <= 4*3600
+        return (0 if active else 1 if entry.identity in samples else 2 if entry.event_date else 3,
+                0 if "回放" in entry.name else 1, rank(entry))
+    ordered.sort(key=probe_priority)
     print(f"probe_start channels_and_events={len(ordered)}", flush=True)
     with ThreadPoolExecutor(max_workers=config["workers"]) as pool:
         futures = [pool.submit(select_bucket, entries, config, probe,
-                               not entries[0].event_date or entries[0].identity in samples) for entries in ordered]
+                               not entries[0].event_date or entries[0].identity in samples,
+                               preferred.get("event-" + event_key(entries[0])[:16] if entries[0].event_date else entries[0].identity, ()))
+                   for entries in ordered]
         for future in as_completed(futures):
             lines, counts = future.result()
             finished += 1
@@ -657,19 +867,23 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
     errors = quality_errors(buckets, config, now, previous.get("channels", 0))
     if stats["budget"]:
         errors.append("probe_budget_exhausted")
+    catalogue = buckets
+    buckets, evidence = qualify_events(catalogue, previous_evidence, now, config)
     by_day = {}
     for delta in (-1, 0, 1):
         day = now.date() + timedelta(days=delta)
-        entries = [b[0] for b in buckets if b[0].event_date == day]
+        entries = [b[0] for b in catalogue if b[0].event_date == day]
         by_day[day.isoformat()] = {"listed": len(entries), "verified": sum(e.verified for e in entries),
                                   "upcoming": sum(e.upcoming for e in entries),
                                   "not_checked": sum(e.check_status == "not_checked" and not e.upcoming for e in entries),
                                   "membership_required": sum(e.check_status == "membership_required" or e.attrs.get("_membership_hint", False) for e in entries),
                                   "login_required": sum(e.check_status == "login_required" for e in entries),
+                                  "trial_stream": sum(e.check_status == "trial_stream" for e in entries),
+                                  "observation_pending": sum(e.check_status == "observation_pending" for e in entries),
                                   "failed_checks": sum(not e.verified and e.check_status not in ("not_checked", "last_accepted") for e in entries)}
     coverage = {}
     for league in ("CBA", "中超"):
-        matches = [b[0] for b in buckets if b[0].event_date and b[0].name.startswith(league+" ")]
+        matches = [b[0] for b in catalogue if b[0].event_date and b[0].name.startswith(league+" ")]
         coverage[league] = {}
         for day in sorted(set(e.event_date for e in matches)):
             items = [e for e in matches if e.event_date == day]
@@ -677,32 +891,44 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
                 "matches": len(set(e.attrs.get("tvg-id") or e.name for e in items)),
                 "entries": len(items), "decoded_entries": sum(e.verified for e in items)}
     warnings = []
-    if any(not b[0].verified and not b[0].upcoming for b in buckets if b[0].event_date):
-        warnings.append("sports_catalog_contains_unverified_entries")
+    if any(not b[0].verified and not b[0].upcoming for b in catalogue if b[0].event_date):
+        warnings.append("restricted_and_unverified_events_only_in_schedule")
     if stats["membership_required"]:
         warnings.append("some_sports_entries_require_membership")
     if stats["login_required"]:
         warnings.append("some_sports_entries_require_login")
+    if stats["trial_stream"]:
+        warnings.append("trial_streams_not_counted_as_verified")
     if any(source.get("cached") for source in sources):
         warnings.append("some_source_catalogues_from_cache")
+    if metadata_corrections:
+        warnings.append("source_metadata_conflict_corrected")
     report = {"generated_at": now.isoformat(timespec="seconds"),
               "finished_at": datetime.now(now.tzinfo).isoformat(timespec="seconds"), "accepted": not errors,
-              "errors": errors, "warnings": warnings, "sources": sources, "channels": sum(not b[0].event_date for b in buckets),
+              "errors": errors, "warnings": warnings, "sources": sources, "source_metadata_corrections": metadata_corrections,
+              "channels": sum(not b[0].event_date for b in buckets),
               "events": by_day, "probe": dict(stats), "max_lines": config["max_lines"],
-              "event_policy": "complete_catalog_with_sampled_playback_checks", "competition_coverage": coverage,
+              "event_policy": "qualified_only_with_separate_complete_schedule", "competition_coverage": coverage,
+              "source_media_checks": {source: dict(counts) for source, counts in source_checks.items()},
+              "selection_policy": "recheck_previous_route_first_then_verified_backup",
+              "published_events": sum(bool(b[0].event_date) for b in buckets),
+              "source_discovery": {"registry": "state/upstreams.json", "schedule": "daily", "automatic_promotion": "two_qualified_observations_at_least_6_hours_apart"},
               "requested_event_check": requested_checks,
               "mode": "events_only" if events_only else "full",
               "channel_validation_at": (previous.get("channel_validation_at") or previous.get("generated_at")) if events_only else now.isoformat(timespec="seconds"),
               "verification": "decoded_video_and_optional_audio_at_generator_location",
               "decode_seconds": config["decode_seconds"],
-              "upcoming_note": "赛前条目未验证可播；开赛后重测。解码成功不证明画面对应赛事或电视端持续播放。"}
+              "event_validation": {"vod": "at_least_1200_seconds_and_decoded_at_start_midpoint_80_percent",
+                                   "live": "15_second_decode_twice_at_least_20_minutes_apart_same_route"},
+              "upcoming_note": "赛前、试看、受限及未通过检测条目只保留在 schedule.json / schedule.md。检测不证明画面与标题一致或用户端全场稳定。"}
     atomic_write(report_path, json.dumps(report, ensure_ascii=False, indent=2) + "\n")
     if errors:
         print("quality_gate_rejected " + ",".join(errors), flush=True)
         return 2
     for warning in warnings:
         print("::warning::" + warning, flush=True)
-    publish(out_dir, buckets, report, now, config)
+    publish(out_dir, buckets, report, now, config, catalogue=catalogue)
+    atomic_write(evidence_path, json.dumps(evidence, ensure_ascii=False, indent=2) + "\n")
     print(f"published channels={report['channels']} events={by_day}", flush=True)
     return 0
 
@@ -731,7 +957,7 @@ def main():
     config = json.loads(args.config.read_text())
     if not 1 <= config["max_lines"] <= 2 or config["candidate_limit"] < config["max_lines"]:
         parser.error("max_lines must be 1 or 2; candidate_limit must cover max_lines")
-    for name in ("ffmpeg", "curl"):
+    for name in ("ffmpeg", "ffprobe", "curl"):
         if not shutil.which(name):
             parser.error(name + " is required")
     now = datetime.now(ZoneInfo(config["timezone"]))

@@ -69,7 +69,7 @@ jobs:
           fi
           echo 'ready=true' >> "$GITHUB_OUTPUT"
           exit "$pipeline_status"
-      - name: 写入赛事完整性和抽测统计
+      - name: 写入赛程和实际通过检测的统计
         if: always()
         run: |
           python - <<'PY'
@@ -79,13 +79,14 @@ jobs:
           if path.exists():
               data = json.loads(path.read_text())
               with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as handle:
-                  handle.write('赛事清单完整性与线路抽测分别统计；未抽测或未测通不代表可播放。\n\n')
+                  handle.write('主订阅只发布通过检测的入口；完整赛程及受限状态见 public/schedule.md。\n\n')
                   if data.get('deferred'):
                       handle.write('本轮未发布：上游明日赛程未更新，保留原订阅，下次自动重试；未进行视频检测。\n\n')
                   handle.write('|赛事|日期|场次|解说条目|解码通过条目|\n|---|---|---:|---:|---:|\n')
                   for league, days in data.get('competition_coverage', {}).items():
                       for day, count in days.items():
                           handle.write(f"|{league}|{day}|{count['matches']}|{count['entries']}|{count['decoded_entries']}|\n")
+                  handle.write('\n主订阅赛事条目：' + str(data.get('published_events', 0)) + '\n')
                   handle.write('\n警告：' + ', '.join(data.get('warnings', [])) + '\n')
           PY
       - name: 保存本轮验收报告
@@ -96,6 +97,9 @@ jobs:
           path: reports/latest.json
           if-no-files-found: warn
           retention-days: 14
+      - name: 独立检查发布文件和逐条检测凭据
+        if: steps.generate.outcome == 'success' && steps.generate.outputs.ready == 'true'
+        run: python verify_publication.py
       - name: 发布通过验收的订阅
         if: steps.generate.outcome == 'success' && steps.generate.outputs.ready == 'true'
         run: |
