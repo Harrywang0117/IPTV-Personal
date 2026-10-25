@@ -59,3 +59,20 @@ class VodDiagnosticTests(unittest.TestCase):
             result=d.tcp_check('gslbmgspvod.miguvideo.com')
         self.assertFalse(result[0]['ok']);self.assertTrue(result[1]['ok'])
         self.assertEqual([x['timeout'] for x in result],[5,15])
+
+    def test_nba_diagnostic_targets_are_unsigned_and_cover_both_voices(self):
+        entries=d.validate_targets(json.loads((p.ROOT/'diagnostic-nba-targets.json').read_text()))
+        self.assertEqual(len(entries),6)
+        self.assertTrue(any('中文' in e.name for e in entries))
+        self.assertTrue(any('英文' in e.name for e in entries))
+
+    def test_encryption_diagnostic_keeps_flags_without_key_addresses(self):
+        def fake(cmd,**kwargs):
+            Path(cmd[cmd.index('--output')+1]).write_bytes(b'#EXTM3U\n#EXT-X-KEY:METHOD=SAMPLE-AES,KEYFORMAT="com.widevine",URI="https://key.example/?token=private"\n')
+            return subprocess.CompletedProcess(cmd,0,'200\napplication/vnd.apple.mpegurl\nhttps://cdn.example/video?token=private','')
+        with patch('diagnose_vod.subprocess.run',side_effect=fake):
+            report=d.transport('https://public.example/968123456')
+        self.assertTrue(report['hls_has_encryption_tag'])
+        self.assertTrue(report['hls_has_drm_keyformat'])
+        self.assertNotIn('private',json.dumps(report))
+        self.assertNotIn('key.example',json.dumps(report))

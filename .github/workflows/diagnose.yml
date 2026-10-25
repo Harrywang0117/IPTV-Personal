@@ -5,7 +5,7 @@ on:
       mode:
         description: 诊断范围
         type: choice
-        options: [standard, vod]
+        options: [standard, vod, nba]
         default: standard
 permissions:
   contents: read
@@ -28,7 +28,9 @@ jobs:
         env:
           DIAGNOSTIC_MODE: ${{ inputs.mode }}
         run: |
-          if [ "$DIAGNOSTIC_MODE" = 'vod' ]; then
+          if [ "$DIAGNOSTIC_MODE" = 'nba' ]; then
+            python diagnose_vod.py --environment github --targets diagnostic-nba-targets.json
+          elif [ "$DIAGNOSTIC_MODE" = 'vod' ]; then
             python diagnose_vod.py --environment github
           else
             python diagnose.py

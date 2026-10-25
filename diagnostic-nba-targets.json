@@ -1,0 +1,10 @@
+{
+  "targets": [
+    {"name": "76人VS雄鹿 回放 中文", "source": "migu-backup", "url": "http://mi.dzpp.uk/968743079"},
+    {"name": "76人VS雄鹿 回放 英文", "source": "migu-backup", "url": "http://mi.dzpp.uk/968743002"},
+    {"name": "骑士VS篮网 回放 中文", "source": "migu-backup", "url": "http://mi.dzpp.uk/968743156"},
+    {"name": "骑士VS篮网 回放 英文", "source": "migu-backup", "url": "http://mi.dzpp.uk/968745709"},
+    {"name": "76人VS雄鹿 回放 中文", "source": "migu-primary", "url": "http://139.224.44.53:1234/968743079"},
+    {"name": "骑士VS篮网 回放 中文", "source": "migu-primary", "url": "http://139.224.44.53:1234/968743156"}
+  ]
+}

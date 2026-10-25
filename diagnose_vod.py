@@ -22,13 +22,17 @@ def redact(text):
 
 def duration_result(result):
     duration = None
+    streams = []
     try:
-        value = float(json.loads(result.stdout).get('format', {}).get('duration', 0))
+        data = json.loads(result.stdout)
+        streams = [{k:v for k,v in item.items() if k in ('codec_name','codec_tag_string')}
+                   for item in data.get('streams', [])]
+        value = float(data.get('format', {}).get('duration', 0))
         if value > 0:
             duration = round(value, 3)
     except (ValueError, TypeError):
         pass
-    return {'returncode': result.returncode, 'duration_seconds': duration,
+    return {'returncode': result.returncode, 'duration_seconds': duration, 'streams': streams,
             'error': redact(result.stderr) if result.returncode or duration is None else ''}
 
 
@@ -40,7 +44,7 @@ def metadata(entry, profile, hls_options, timeout=10):
         cmd += hls_options
     if profile == 'forced_hls':
         cmd += ['-f', 'hls']
-    cmd += ['-show_entries', 'format=duration', '-of', 'json', entry.url]
+    cmd += ['-show_entries', 'format=duration:stream=codec_name,codec_tag_string', '-of', 'json', entry.url]
     started = time.monotonic()
     try:
         result = duration_result(subprocess.run(cmd, capture_output=True, text=True, timeout=timeout))
@@ -73,7 +77,9 @@ def transport(url, long_connect=False):
             result = {'returncode': response.returncode, 'status': values[0] if values else '',
                       'content_type': values[1] if len(values)>1 else '',
                       'final_host': urlparse(values[2]).hostname if len(values)>2 else None,
-                      'media_prefix': kind, 'error': redact(response.stderr)}
+                      'media_prefix': kind, 'error': redact(response.stderr),
+                      'hls_has_encryption_tag': bool(kind == 'hls' and re.search(rb'#EXT-X-KEY:[^\r\n]*METHOD=(?!NONE)', head)),
+                      'hls_has_drm_keyformat': bool(kind == 'hls' and re.search(rb'KEYFORMAT="(?!identity")', head))}
         except subprocess.TimeoutExpired:
             result = {'returncode': None, 'error': 'process_total_timeout', 'media_prefix': 'other'}
         return {'connect_timeout': 15 if long_connect else 5, 'seconds':round(time.monotonic()-started,2), **result}
