@@ -1,6 +1,12 @@
 name: 咪咕短时诊断
 on:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: 诊断范围
+        type: choice
+        options: [standard, vod]
+        default: standard
 permissions:
   contents: read
 jobs:
@@ -19,10 +25,19 @@ jobs:
             sudo apt-get install -y --no-install-recommends ffmpeg
           fi
       - name: 记录安全诊断信息
-        run: python diagnose.py
+        env:
+          DIAGNOSTIC_MODE: ${{ inputs.mode }}
+        run: |
+          if [ "$DIAGNOSTIC_MODE" = 'vod' ]; then
+            python diagnose_vod.py --environment github
+          else
+            python diagnose.py
+          fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: migu-diagnostic-${{ github.run_id }}
-          path: reports/diagnostic.json
+          path: |
+            reports/diagnostic.json
+            reports/vod-comparison.json
           retention-days: 7

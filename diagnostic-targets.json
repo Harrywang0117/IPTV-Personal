@@ -1,0 +1,34 @@
+{
+  "targets": [
+    {
+      "name": "维拉VS曼城 全场回放",
+      "source": "migu-primary",
+      "url": "http://139.224.44.53:1234/968721657"
+    },
+    {
+      "name": "维拉VS曼城 全场回放",
+      "source": "migu-alt",
+      "url": "http://112.230.73.82:7788/968721657"
+    },
+    {
+      "name": "维拉VS曼城 全场回放",
+      "source": "migu-backup",
+      "url": "http://mi.dzpp.uk/968721657"
+    },
+    {
+      "name": "CBA 广东VS宁波 全场回放",
+      "source": "migu-primary",
+      "url": "http://139.224.44.53:1234/968718176"
+    },
+    {
+      "name": "CBA 广东VS宁波 全场回放",
+      "source": "migu-alt",
+      "url": "http://112.230.73.82:7788/968718176"
+    },
+    {
+      "name": "CBA 广东VS宁波 全场回放",
+      "source": "migu-backup",
+      "url": "http://mi.dzpp.uk/968718176"
+    }
+  ]
+}
