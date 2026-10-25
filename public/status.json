@@ -1,15 +1,13 @@
 {
-  "generated_at": "2026-10-25T09:59:13+08:00",
-  "finished_at": "2026-10-25T10:16:02+08:00",
+  "generated_at": "2026-10-25T14:42:32+08:00",
+  "finished_at": "2026-10-25T14:59:20+08:00",
   "accepted": true,
   "errors": [],
   "warnings": [
     "restricted_and_unverified_events_only_in_schedule",
-    "some_sports_entries_require_membership",
     "some_sports_entries_require_login",
     "trial_streams_not_counted_as_verified",
-    "some_source_catalogues_from_cache",
-    "source_metadata_conflict_corrected"
+    "some_source_catalogues_from_cache"
   ],
   "sources": [
     {
@@ -25,54 +23,41 @@
       "parsed": 565,
       "selected": 437,
       "cached": true,
-      "cache_age_hours": 2.18,
+      "cache_age_hours": 6.91,
       "fetch_error": "source_fetch_failed_curl_28"
     },
     {
       "id": "migu-backup",
       "ok": true,
-      "parsed": 565,
-      "selected": 559,
+      "parsed": 585,
+      "selected": 579,
       "cached": false
     }
   ],
-  "source_metadata_corrections": [
-    {
-      "source": "migu-alt",
-      "content_id": "968627135",
-      "from_title": "英超 切尔西VS托特纳姆热刺 UFC333双冠军战 21:30",
-      "to_title": "UFC数字赛 UFC第333期：亚东现场观战！梅严三番大战 大帝VS羽鹰 王琰博 郝俊 李景亮 21:30",
-      "from_date": "2026-10-25",
-      "to_date": "2026-10-24",
-      "canonical_sources": [
-        "migu-alt",
-        "migu-backup"
-      ]
-    }
-  ],
+  "source_metadata_corrections": [],
   "channels": 433,
   "events": {
     "2026-10-24": {
-      "listed": 239,
-      "verified": 0,
+      "listed": 242,
+      "verified": 48,
       "upcoming": 0,
-      "not_checked": 0,
+      "not_checked": 160,
       "membership_required": 0,
       "login_required": 0,
       "trial_stream": 0,
       "observation_pending": 0,
-      "failed_checks": 239
+      "failed_checks": 34
     },
     "2026-10-25": {
-      "listed": 201,
+      "listed": 212,
       "verified": 0,
-      "upcoming": 119,
-      "not_checked": 10,
+      "upcoming": 109,
+      "not_checked": 83,
       "membership_required": 0,
-      "login_required": 4,
-      "trial_stream": 0,
+      "login_required": 0,
+      "trial_stream": 2,
       "observation_pending": 0,
-      "failed_checks": 72
+      "failed_checks": 20
     },
     "2026-10-26": {
       "listed": 53,
@@ -87,14 +72,14 @@
     }
   },
   "probe": {
-    "trial_stream": 18,
-    "decode_failed": 107,
-    "login_required": 22,
-    "vod_duration_unknown": 627,
-    "membership_required": 5,
-    "timeout": 8,
-    "event_budget": 24,
-    "upcoming_lines": 334
+    "trial_stream": 4,
+    "decode_failed": 106,
+    "login_required": 6,
+    "vod_duration_unknown": 80,
+    "decoded": 69,
+    "timeout": 32,
+    "event_budget": 579,
+    "upcoming_lines": 311
   },
   "max_lines": 2,
   "event_policy": "qualified_only_with_separate_complete_schedule",
@@ -126,29 +111,28 @@
   },
   "source_media_checks": {
     "migu-backup": {
-      "trial_stream": 18,
-      "decode_failed": 23,
-      "vod_duration_unknown": 211,
-      "membership_required": 5,
-      "event_budget": 8,
-      "timeout": 3
+      "decode_failed": 47,
+      "trial_stream": 4,
+      "decoded": 22,
+      "timeout": 30,
+      "event_budget": 191
     },
     "migu-alt": {
-      "decode_failed": 56,
-      "vod_duration_unknown": 194,
-      "event_budget": 15,
-      "timeout": 3
+      "decode_failed": 18,
+      "vod_duration_unknown": 79,
+      "event_budget": 190
     },
     "migu-primary": {
-      "login_required": 22,
-      "decode_failed": 28,
-      "vod_duration_unknown": 222,
+      "decode_failed": 41,
+      "login_required": 6,
+      "decoded": 47,
       "timeout": 2,
-      "event_budget": 1
+      "vod_duration_unknown": 1,
+      "event_budget": 198
     }
   },
   "selection_policy": "recheck_previous_route_first_then_verified_backup",
-  "published_events": 0,
+  "published_events": 48,
   "source_discovery": {
     "registry": "state/upstreams.json",
     "schedule": "daily",
@@ -163,9 +147,5 @@
     "vod": "at_least_1200_seconds_and_decoded_at_start_midpoint_80_percent",
     "live": "15_second_decode_twice_at_least_20_minutes_apart_same_route"
   },
-  "upcoming_note": "赛前、试看、受限及未通过检测条目只保留在 schedule.json / schedule.md。检测不证明画面与标题一致或用户端全场稳定。",
-  "publication_filters": {
-    "account_style_lines_removed": 8,
-    "applied_at": "2026-10-25T10:20:50+08:00"
-  }
+  "upcoming_note": "赛前、试看、受限及未通过检测条目只保留在 schedule.json / schedule.md。检测不证明画面与标题一致或用户端全场稳定。"
 }
