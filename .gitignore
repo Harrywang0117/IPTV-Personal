@@ -3,4 +3,5 @@ __pycache__/
 .DS_Store
 .cache/
 reports/local-*/
+reports/frames/
 .staging-*/

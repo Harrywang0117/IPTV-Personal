@@ -297,6 +297,10 @@ class Prober:
         self.hls_options = ["-allowed_extensions", "ALL"]
         if "extension_picky" in help_text:
             self.hls_options += ["-extension_picky", "0"]
+        filters = subprocess.run(["ffmpeg", "-hide_banner", "-filters"],
+                                 capture_output=True, text=True, timeout=5).stdout
+        self.black_detection = all(re.search(r"\b" + name + r"\s", filters)
+                                   for name in ("blackframe", "metadata"))
 
     def __call__(self, entry):
         if any(item["url"] == entry.url for item in self.config.get("blocked_event_routes", [])):
@@ -361,6 +365,7 @@ class Prober:
             if duration < self.config.get("event_min_vod_seconds", 1200):
                 return {"ok": False, "reason": "short_vod", "duration_seconds": round(duration)}
             offsets += [int(duration * .5), int(duration * .8)]
+        samples = []
         for offset in offsets:
             remaining = timeout - (time.monotonic()-started)
             if remaining < 1:
@@ -370,10 +375,13 @@ class Prober:
                                   self.config.get("event_live_sample_seconds", 15))
             if not checked["ok"]:
                 return checked
+            samples.append({"offset": offset, **checked.get("picture_quality", {})})
+        if samples and all(sample.get("almost_all_black") for sample in samples):
+            return {"ok": False, "reason": "black_video", "picture_samples": samples}
         return {"ok": True, "reason": "decoded", "kind": "vod" if duration else "unconfirmed_duration",
                 "duration_seconds": round(duration), "sample_offsets": offsets,
                 "sample_seconds": self.config.get("event_vod_sample_seconds", 5) if duration else
-                self.config.get("event_live_sample_seconds", 15)}
+                self.config.get("event_live_sample_seconds", 15), "picture_samples": samples}
 
     def decode(self, entry, timeout, offset=0, seconds=None):
         seconds = self.config["decode_seconds"] if seconds is None else seconds
@@ -390,9 +398,11 @@ class Prober:
                "-user_agent", user_agent]
         if referer:
             cmd += ["-referer", referer]
+        picture_check = bool(entry.event_date and getattr(self, "black_detection", False))
+        filters = ["-vf", "blackframe=amount=98:threshold=24,metadata=mode=print:key=lavfi.blackframe.pblack:file=-"] if picture_check else []
         tail = (["-ss", str(offset)] if offset else []) + ["-threads", "1", "-i", entry.url, "-t", str(seconds),
                 "-map", "0:v:0", "-map", "0:a:0?", "-sn", "-dn", "-threads", "1",
-                "-f", "null", "-progress", "pipe:1", "-"]
+                *filters, "-f", "null", "-progress", "pipe:1", "-"]
         started = time.monotonic()
         try:
             result = subprocess.run(cmd + self.hls_options + tail, capture_output=True,
@@ -419,7 +429,11 @@ class Prober:
                     if re.search(r"\b" + code + r"\b", result.stderr):
                         reason = "http_" + code
                         break
+            black_frames = len(re.findall(r"^lavfi.blackframe.pblack=", result.stdout, re.M))
             return {"ok": ok, "reason": reason, "frames": frames,
+                    "picture_quality": {"checked": picture_check, "decoded_frames": frames,
+                                        "black_frames": black_frames,
+                                        "almost_all_black": bool(picture_check and frames >= 5 and black_frames >= .98 * frames)},
                     "seconds": round(time.monotonic() - started, 2),
                     "diagnostic": "" if ok else redacted_diagnostic(result.stderr)}
         except subprocess.TimeoutExpired:
@@ -522,7 +536,7 @@ def select_bucket(entries, config, probe, check_event=True, preferred=()):
             stats[result["reason"]] += 1
             if result["ok"]:
                 lines.append(replace(entry, verified=True, check_status="decoded", evidence={
-                    k: v for k, v in result.items() if k in ("kind", "duration_seconds", "sample_offsets", "sample_seconds")}))
+                    k: v for k, v in result.items() if k in ("kind", "duration_seconds", "sample_offsets", "sample_seconds", "picture_samples")}))
             elif entry.event_date:
                 status = "not_checked" if result["reason"] in ("event_budget", "budget") else result["reason"]
                 fallback.append(replace(entry, check_status=status))
@@ -578,6 +592,7 @@ def display_name(entry):
     membership = entry.check_status == "membership_required" or entry.attrs.get("_membership_hint", False)
     suffix = ("（源提示需会员）" if membership else "（源提示需登录）" if entry.check_status == "login_required"
               else "（仅试看）" if entry.check_status == "trial_stream"
+              else "（沿用近期检测）" if entry.check_status == "recent_verified"
               else "（本轮未测通）" if entry.check_status not in ("not_checked", "last_accepted", "decoded") else "")
     clock = event_clock(entry.name)
     if clock is None:
@@ -595,6 +610,21 @@ def event_key(entry):
     return hashlib.sha256(repr(entry.identity).encode()).hexdigest()[:20]
 
 
+INCONCLUSIVE_EVENT_CHECKS = {"not_checked", "event_budget", "budget", "timeout", "metadata_timeout", "metadata_network_timeout"}
+
+
+def reusable_vod_evidence(proof, now, config):
+    try:
+        age = (now - datetime.fromisoformat(proof["last_success_at"])).total_seconds()
+        return (proof.get("qualified") and proof.get("kind") == "vod"
+                and 0 <= age <= min(24, config.get("event_vod_evidence_max_age_hours", 24))*3600
+                and proof.get("duration_seconds", 0) >= max(1200, config.get("event_min_vod_seconds", 1200))
+                and len(proof.get("sample_offsets", [])) == 3 and proof.get("sample_seconds", 0) >= 5
+                and not (proof.get("picture_samples") and all(s.get("almost_all_black") for s in proof["picture_samples"])))
+    except (ValueError, TypeError, KeyError):
+        return False
+
+
 def qualify_events(buckets, previous_evidence, now, config):
     """A live entry needs two time-separated checks, each of the same route."""
     evidence, qualified = {}, []
@@ -605,14 +635,23 @@ def qualify_events(buckets, previous_evidence, now, config):
         accepted = []
         for entry in bucket:
             key = event_key(entry) + ":" + entry.fingerprint
-            if not entry.verified:
-                continue
             old = previous_evidence.get(key, {})
+            if not entry.verified:
+                blocked = any(item["url"] == entry.url for item in config.get("blocked_event_routes", []))
+                if (not entry.upcoming and not blocked and not trial_url(entry.url)
+                        and entry.check_status in INCONCLUSIVE_EVENT_CHECKS and reusable_vod_evidence(old, now, config)):
+                    proof = {**old, "verification_reused": True, "last_attempt_at": now.isoformat(timespec="seconds"),
+                             "last_attempt_reason": entry.check_status}
+                    evidence[key] = proof
+                    entry.verified, entry.check_status, entry.evidence = True, "recent_verified", proof
+                    accepted.append(entry)
+                continue
             first = now
             try:
                 last = datetime.fromisoformat(old["last_success_at"])
                 since = datetime.fromisoformat(old["first_success_at"])
-                if 0 <= (now-last).total_seconds() <= config.get("event_evidence_max_age_hours", 3)*3600:
+                if (old.get("kind") == entry.evidence.get("kind") and
+                        0 <= (now-last).total_seconds() <= config.get("event_evidence_max_age_hours", 3)*3600):
                     first = since
             except (ValueError, TypeError, KeyError):
                 pass
@@ -625,13 +664,15 @@ def qualify_events(buckets, previous_evidence, now, config):
                 entry.verified = False
                 entry.check_status = "observation_pending"
         if accepted:
+            accepted.sort(key=lambda e: e.check_status == "recent_verified")
             qualified.append(accepted)
             bucket[:] = accepted + [e for e in bucket if e not in accepted]
     return qualified, evidence
 
 
-def catalogue_json(buckets, now):
-    labels = {"decoded": "本轮检测通过", "not_checked": "未完成检测", "trial_stream": "仅试看",
+def catalogue_json(buckets, now, blocked=()):
+    labels = {"decoded": "本轮检测通过", "recent_verified": "沿用24小时内的回放检测；本轮网络或预算未能复核", "black_video": "采样画面持续黑屏",
+              "not_checked": "未完成检测", "trial_stream": "仅试看",
               "membership_required": "需会员", "login_required": "需登录", "short_vod": "短片段，未按正赛收录",
               "vod_duration_unknown": "回放时长未核实",
               "metadata_timeout": "回放信息读取超时",
@@ -645,6 +686,8 @@ def catalogue_json(buckets, now):
                         "date": bucket[0].event_date.isoformat(), "time_minutes": event_clock(bucket[0].name),
                         "status": "upcoming" if bucket[0].upcoming else bucket[0].check_status,
                         "status_text": "未开赛" if bucket[0].upcoming else labels.get(bucket[0].check_status, "本轮未测通"),
+                        "last_success_at": bucket[0].evidence.get("last_success_at", now.isoformat(timespec="seconds") if bucket[0].verified else None),
+                        "player_entry_available": any(e.url not in blocked for e in bucket),
                         "published": any(e.verified for e in bucket)}
                        for bucket in sorted(buckets, key=lambda b: rank(b[0])) if bucket[0].event_date]}
 
@@ -655,6 +698,21 @@ def display_group(entry, now):
     delta = (entry.event_date - now.date()).days
     label = {-1: "昨天回放", 0: "今天", 1: "明天预告"}.get(delta, entry.event_date.isoformat())
     return f"咪咕·{label} {entry.event_date:%m-%d}"
+
+
+def catalogue_name(entry):
+    if entry.upcoming:
+        label = "未开赛"
+    elif entry.check_status == "recent_verified":
+        label = "近期验证"
+    elif entry.verified:
+        label = "已验证"
+    else:
+        label = {"trial_stream":"仅试看", "membership_required":"源提示需会员", "login_required":"源提示需登录",
+                 "not_checked":"待检测", "observation_pending":"待复测", "content_mismatch":"已封禁"}.get(entry.check_status,"未测通")
+    clean = display_name(replace(entry, check_status="decoded", attrs={k:v for k,v in entry.attrs.items() if k != "_membership_hint"}))
+    clock = re.match(r"^(\d{2}:\d{2}\s+)(.*)$", clean)
+    return f"{clock[1]}[{label}] {clock[2]}" if clock else f"[{label}] {clean}"
 
 
 def safe_attr(value):
@@ -670,17 +728,20 @@ def epg_id(entry):
     return entry.attrs.get("tvg-id", "")
 
 
-def render_m3u(buckets, now, epg, single=True):
+def render_m3u(buckets, now, epg, single=True, catalogue=False):
     lines = ['#EXTM3U x-tvg-url="' + ",".join(epg) + '"']
     for bucket in sorted(buckets, key=lambda b: rank(b[0])):
         for entry in bucket[:1] if single else bucket:
             attrs = {k: v for k, v in entry.attrs.items() if k.startswith("tvg-") or k in CATCHUP}
-            name = display_name(entry)
+            name = catalogue_name(entry) if catalogue else display_name(entry)
             attrs["tvg-name"] = name
             attrs["group-title"] = display_group(entry, now)
             if entry.event_date:
                 existing = entry.attrs.get("tvg-id", "")
                 attrs["tvg-id"] = existing if re.fullmatch(r"event-[0-9a-f]{16}", existing) else "event-" + hashlib.sha256(repr(entry.identity).encode()).hexdigest()[:16]
+                if catalogue:
+                    attrs["tvg-id"] = "schedule-"+attrs["tvg-id"][len("event-"):]
+                    attrs["group-title"] = attrs["group-title"].replace("咪咕·", "赛事目录·").replace("昨天回放", "昨天")
             elif epg_id(entry):
                 attrs["tvg-id"] = epg_id(entry)
             meta = " ".join(f'{k}="{safe_attr(v)}"' for k, v in attrs.items())
@@ -793,7 +854,11 @@ def publish(out_dir, buckets, report, now, config, catalogue=None):
         "status.json": json.dumps(report, ensure_ascii=False, indent=2) + "\n",
     }
     if catalogue is not None:
-        data = catalogue_json(catalogue, now)
+        blocked = {item["url"] for item in config.get("blocked_event_routes", [])}
+        data = catalogue_json(catalogue, now, blocked)
+        candidate_buckets = [[e for e in bucket if e.url not in blocked] for bucket in catalogue if bucket[0].event_date]
+        if config.get("publish_player_catalogue", False):
+            artifacts["events-catalogue.m3u"] = render_m3u([b for b in candidate_buckets if b], now, config["epg"], catalogue=True)
         artifacts["schedule.json"] = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
         # Keep the full schedule readable without offering unverified play links.
         artifacts["schedule.md"] = "# 三天完整赛程\n\n更新：" + now.isoformat(timespec="seconds") + "\n\n|日期|赛事|状态|\n|---|---|---|\n" + "".join(
@@ -938,6 +1003,8 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
         day = now.date() + timedelta(days=delta)
         entries = [b[0] for b in catalogue if b[0].event_date == day]
         by_day[day.isoformat()] = {"listed": len(entries), "verified": sum(e.verified for e in entries),
+                                  "fresh_verified": sum(e.verified and e.check_status == "decoded" for e in entries),
+                                  "recent_verified": sum(e.check_status == "recent_verified" for e in entries),
                                   "upcoming": sum(e.upcoming for e in entries),
                                   "not_checked": sum(e.check_status == "not_checked" and not e.upcoming for e in entries),
                                   "membership_required": sum(e.check_status == "membership_required" or e.attrs.get("_membership_hint", False) for e in entries),
@@ -955,6 +1022,8 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
                 "matches": len(set(e.attrs.get("tvg-id") or e.name for e in items)),
                 "entries": len(items), "decoded_entries": sum(e.verified for e in items)}
     warnings = []
+    if any(b[0].check_status == "recent_verified" for b in buckets if b[0].event_date):
+        warnings.append("some_vods_reuse_recent_evidence_with_original_timestamp")
     if any(not b[0].verified and not b[0].upcoming for b in catalogue if b[0].event_date):
         warnings.append("restricted_and_unverified_events_only_in_schedule")
     if stats["membership_required"]:
@@ -973,6 +1042,7 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
               "channels": sum(not b[0].event_date for b in buckets),
               "events": by_day, "probe": dict(stats), "max_lines": config["max_lines"],
               "event_policy": "qualified_only_with_separate_complete_schedule", "competition_coverage": coverage,
+              "catalogue_subscription": "events-catalogue.m3u" if config.get("publish_player_catalogue", False) else None,
               "source_media_checks": {source: dict(counts) for source, counts in source_checks.items()},
               "source_failure_examples": {source:items for source,items in failure_examples.items() if items},
               "probe_order": "requested_then_retained_then_live_then_today_then_older_unpublished",
@@ -985,8 +1055,12 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
               "verification": "decoded_video_and_optional_audio_at_generator_location",
               "decode_seconds": config["decode_seconds"],
               "event_validation": {"vod": "at_least_1200_seconds_and_decoded_at_start_midpoint_80_percent",
+                                   "reused_vod_max_age_hours": min(24, config.get("event_vod_evidence_max_age_hours", 24)),
                                    "live": "15_second_decode_twice_at_least_20_minutes_apart_same_route"},
               "upcoming_note": "赛前、试看、受限及未通过检测条目只保留在 schedule.json / schedule.md。检测不证明画面与标题一致或用户端全场稳定。"}
+    if hasattr(media_probe, "hls_options") and config.get("frame_audit", {}).get("enabled", False):
+        from frame_audit import audit_frames
+        report["frame_audit"] = audit_frames(catalogue, config, media_probe, report_path.parent / "frames", now, requested_checks)
     atomic_write(report_path, json.dumps(report, ensure_ascii=False, indent=2) + "\n")
     if errors:
         print("quality_gate_rejected " + ",".join(errors), flush=True)

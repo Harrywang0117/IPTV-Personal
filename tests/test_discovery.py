@@ -231,6 +231,21 @@ class DiscoveryAndPublicationTests(unittest.TestCase):
             p.publish(out,[[vod]],report,self.now,self.config,catalogue)
             self.assertEqual(v.verify(out)['published_events'],1)
 
+    def test_player_catalogue_keeps_future_and_restricted_entries_separate(self):
+        entries=[self.event(verified=True,check_status='decoded'),
+                 self.event(url='https://source.example/968123457',check_status='trial_stream'),
+                 self.event(url='https://source.example/968123458',upcoming=True)]
+        entries[1].name='CBA 另外比赛 08:15'
+        entries[2].name='明天比赛 18:00';entries[2].event_date+=timedelta(days=1)
+        rendered=p.parse_playlist(p.render_m3u([[e] for e in entries],self.now,[],catalogue=True))
+        self.assertEqual(len(rendered),3)
+        self.assertIn('[已验证]',rendered[0].name)
+        self.assertIn('[仅试看]',rendered[1].name)
+        self.assertIn('[未开赛]',rendered[2].name)
+        self.assertTrue(all(e.attrs['tvg-id'].startswith('schedule-') for e in rendered))
+        self.assertTrue(all(e.group.startswith('赛事目录·') for e in rendered))
+        self.assertTrue(rendered[1].name.startswith('08:15 '))
+
     def test_independent_verifier_rejects_unqualified_stream_injection(self):
         with tempfile.TemporaryDirectory() as tmp:
             out=Path(tmp)/'public'

@@ -37,7 +37,13 @@ def verify(out):
                       if key.startswith(prefix) and key.endswith(':'+entry.fingerprint)]
             assert proofs and proofs[0]['qualified'], 'missing_route_evidence'
             proof = proofs[0]
-            assert datetime.fromisoformat(proof['last_success_at']) == datetime.fromisoformat(status['generated_at']), 'stale_route_evidence'
+            generated = datetime.fromisoformat(status['generated_at'])
+            if proof.get('verification_reused'):
+                assert proof.get('last_attempt_reason') in p.INCONCLUSIVE_EVENT_CHECKS, 'unsafe_evidence_reuse'
+                assert datetime.fromisoformat(proof['last_attempt_at']) == generated, 'stale_reuse_attempt'
+                assert p.reusable_vod_evidence(proof, generated, config), 'expired_or_weak_reused_evidence'
+            else:
+                assert datetime.fromisoformat(proof['last_success_at']) == generated, 'stale_route_evidence'
             if proof.get('kind') == 'vod':
                 assert proof['duration_seconds'] >= 1200 and len(proof['sample_offsets']) == 3 and proof['sample_seconds'] >= 5, 'weak_vod_evidence'
             else:
@@ -48,6 +54,15 @@ def verify(out):
             assert not events and len(entries) == status['channels'], 'channel_count_mismatch'
     assert len(event_ids) == status['published_events'], 'status_count_mismatch'
     assert datetime.fromisoformat(schedule['generated_at']) == datetime.fromisoformat(status['generated_at']), 'stale_schedule'
+    catalogue_path = out/'events-catalogue.m3u'
+    if status.get('catalogue_subscription') or catalogue_path.exists():
+        raw = catalogue_path.read_text()
+        assert all(not p.credential_style_url(line.strip()) and line.strip() not in blocked
+                   for line in raw.splitlines() if line.startswith(('http://','https://'))), 'unsafe_catalogue_address'
+        entries = p.parse_playlist(raw)
+        expected = {'schedule-'+e['id'][:16] for e in schedule['events'] if e.get('player_entry_available',True)}
+        assert {e.attrs.get('tvg-id') for e in entries} == expected and len(entries) == len(expected), 'incomplete_player_catalogue'
+        assert all(e.group.startswith('赛事目录·') and '[' in e.name and ']' in e.name for e in entries), 'unlabelled_player_catalogue'
     return {'channels':status['channels'], 'published_events':len(event_ids), 'schedule_events':len(schedule['events'])}
 
 

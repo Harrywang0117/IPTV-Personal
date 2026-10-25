@@ -87,6 +87,10 @@ jobs:
                       for day, count in days.items():
                           handle.write(f"|{league}|{day}|{count['matches']}|{count['entries']}|{count['decoded_entries']}|\n")
                   handle.write('\n主订阅赛事条目：' + str(data.get('published_events', 0)) + '\n')
+                  recent = sum(day.get('recent_verified', 0) for day in data.get('events', {}).values())
+                  handle.write(f'\n其中沿用24小时内原检测记录：{recent} 条（保留实际检测时间）。\n')
+                  frames = data.get('frame_audit', {})
+                  handle.write(f"\n画面留档：{frames.get('captured', 0)}/{frames.get('attempted', 0)} 张；黑屏检测可用：{frames.get('black_detection_available', False)}。未自动核对球队和赛事内容。\n")
                   handle.write('\n警告：' + ', '.join(data.get('warnings', [])) + '\n')
           PY
       - name: 保存本轮验收报告
@@ -100,6 +104,14 @@ jobs:
             state/event-evidence.json
           if-no-files-found: warn
           retention-days: 14
+      - name: 保存有限赛事抽帧留档
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: frame-audit-${{ github.run_id }}
+          path: reports/frames/
+          if-no-files-found: ignore
+          retention-days: 2
       - name: 独立检查发布文件和逐条检测凭据
         if: steps.generate.outcome == 'success' && steps.generate.outputs.ready == 'true'
         run: python verify_publication.py

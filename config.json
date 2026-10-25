@@ -60,6 +60,9 @@
   "event_min_vod_seconds": 1200,
   "event_live_observation_minutes": 20,
   "event_evidence_max_age_hours": 3,
+  "event_vod_evidence_max_age_hours": 24,
+  "publish_player_catalogue": false,
+  "frame_audit": {"enabled": true, "max_entries": 6, "budget_seconds": 60},
   "discovery": {
     "feeds": [
       "https://tonkiang.us/iptvsports.php",
