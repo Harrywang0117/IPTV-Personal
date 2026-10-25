@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T09:37:52.207281+08:00",
+  "updated_at": "2026-10-25T10:16:35.611695+08:00",
   "sources": [
     {
       "url": "http://112.230.73.82:7788",
@@ -17,10 +17,15 @@
           "at": "2026-10-25T09:37:52.207281+08:00",
           "qualified": false,
           "error": "discovery_feed_curl_28"
+        },
+        {
+          "at": "2026-10-25T10:16:35.611695+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
         }
       ],
-      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
-      "consecutive_failures": 2
+      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
+      "consecutive_failures": 3
     },
     {
       "url": "http://mi.dzpp.uk",
@@ -90,19 +95,101 @@
           ],
           "capabilities_observed": {},
           "cached": false
+        },
+        {
+          "at": "2026-10-25T10:16:35.611695+08:00",
+          "qualified": false,
+          "catalogue_entries": 437,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "04b1ab53ab3288381093",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "bf5e2d020e3fa3794532",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": false,
+              "reason": "timeout",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
-      "consecutive_failures": 2
+      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
+      "consecutive_failures": 3
     },
     {
       "url": "http://58.210.97.102:1234",
       "id": "migu-discovered-0bd8bdc085",
       "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
-      "status": "new",
+      "status": "quarantined",
       "discovered_from": [
         "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
-      ]
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T10:16:35.611695+08:00",
+          "qualified": false,
+          "catalogue_entries": 439,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "04b1ab53ab3288381093",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "bf5e2d020e3fa3794532",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7264
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 1
+          },
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
+      "consecutive_failures": 1
     },
     {
       "url": "http://115.195.166.33:1234",
@@ -170,10 +257,54 @@
       "url": "http://47.104.178.59:3566",
       "id": "migu-discovered-2ed20de05d",
       "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
-      "status": "new",
+      "status": "quarantined",
       "discovered_from": [
         "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
-      ]
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T10:16:35.611695+08:00",
+          "qualified": false,
+          "catalogue_entries": 450,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "04b1ab53ab3288381093",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "bf5e2d020e3fa3794532",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7264
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 1
+          },
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
+      "consecutive_failures": 1
     },
     {
       "url": "http://123.113.205.253:3000",
@@ -215,10 +346,105 @@
       "url": "http://47.103.64.145:8014",
       "id": "migu-discovered-51bed89a2c",
       "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
-      "status": "new",
+      "status": "quarantined",
       "discovered_from": [
         "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
-      ]
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T10:16:35.611695+08:00",
+          "qualified": false,
+          "catalogue_entries": 440,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "04b1ab53ab3288381093",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "bf5e2d020e3fa3794532",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7264
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 1
+          },
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://124.222.67.241:1234",
+      "id": "migu-discovered-5b8f7d7335",
+      "first_seen_at": "2026-10-25T10:16:35.611695+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://tonkiang.us/iptvsports.php"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T10:16:35.611695+08:00",
+          "qualified": false,
+          "catalogue_entries": 457,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "04b1ab53ab3288381093",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "bf5e2d020e3fa3794532",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": false,
+              "reason": "timeout",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
+      "consecutive_failures": 1
     },
     {
       "url": "http://111.76.19.197:1234",
@@ -236,6 +462,57 @@
         }
       ],
       "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://223.247.25.230:1234",
+      "id": "migu-discovered-6a358e301b",
+      "first_seen_at": "2026-10-25T10:16:35.611695+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://tonkiang.us/iptvsports.php"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T10:16:35.611695+08:00",
+          "qualified": false,
+          "catalogue_entries": 450,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "04b1ab53ab3288381093",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "bf5e2d020e3fa3794532",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": false,
+              "reason": "timeout",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
       "consecutive_failures": 1
     },
     {
@@ -280,6 +557,112 @@
         }
       ],
       "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://114.228.118.166:7788",
+      "id": "migu-discovered-711e9aa79d",
+      "first_seen_at": "2026-10-25T10:16:35.611695+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://tonkiang.us/iptvsports.php"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T10:16:35.611695+08:00",
+          "qualified": false,
+          "catalogue_entries": 439,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "04b1ab53ab3288381093",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "bf5e2d020e3fa3794532",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7264
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 1
+          },
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://123.4.199.21:1234",
+      "id": "migu-discovered-7bd71dd857",
+      "first_seen_at": "2026-10-25T10:16:35.611695+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://tonkiang.us/iptvsports.php"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T10:16:35.611695+08:00",
+          "qualified": false,
+          "catalogue_entries": 448,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "04b1ab53ab3288381093",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "bf5e2d020e3fa3794532",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7264
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 1
+          },
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
       "consecutive_failures": 1
     },
     {
@@ -407,6 +790,57 @@
       "consecutive_failures": 1
     },
     {
+      "url": "http://221.198.14.226:1234",
+      "id": "migu-discovered-afd54e958b",
+      "first_seen_at": "2026-10-25T10:16:35.611695+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://tonkiang.us/iptvsports.php"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T10:16:35.611695+08:00",
+          "qualified": false,
+          "catalogue_entries": 434,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "04b1ab53ab3288381093",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "bf5e2d020e3fa3794532",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": false,
+              "reason": "timeout",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
+      "consecutive_failures": 1
+    },
+    {
       "url": "http://103.236.77.86:29824",
       "id": "migu-discovered-b0cad0fb83",
       "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
@@ -451,6 +885,59 @@
       "consecutive_failures": 1
     },
     {
+      "url": "http://113.205.56.76:1234",
+      "id": "migu-discovered-bbc4994af0",
+      "first_seen_at": "2026-10-25T10:16:35.611695+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://tonkiang.us/iptvsports.php"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T10:16:35.611695+08:00",
+          "qualified": false,
+          "catalogue_entries": 433,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "04b1ab53ab3288381093",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "bf5e2d020e3fa3794532",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7264
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 1
+          },
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
+      "consecutive_failures": 1
+    },
+    {
       "url": "http://mg.cttv.vip",
       "id": "migu-discovered-bf18b4058d",
       "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
@@ -458,6 +945,119 @@
       "discovered_from": [
         "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
       ]
+    },
+    {
+      "url": "http://113.224.105.142:1234",
+      "id": "migu-discovered-c166ab0071",
+      "first_seen_at": "2026-10-25T10:16:35.611695+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://tonkiang.us/iptvsports.php"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T10:16:35.611695+08:00",
+          "qualified": false,
+          "catalogue_entries": 457,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "04b1ab53ab3288381093",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "bf5e2d020e3fa3794532",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": false,
+              "reason": "timeout",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://58.38.21.236:12345",
+      "id": "migu-discovered-c954b0b713",
+      "first_seen_at": "2026-10-25T10:16:35.611695+08:00",
+      "status": "new",
+      "discovered_from": [
+        "https://tonkiang.us/iptvsports.php"
+      ]
+    },
+    {
+      "url": "http://114.240.111.57:7788",
+      "id": "migu-discovered-ca3c64168b",
+      "first_seen_at": "2026-10-25T10:16:35.611695+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://tonkiang.us/iptvsports.php"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T10:16:35.611695+08:00",
+          "qualified": false,
+          "catalogue_entries": 457,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "04b1ab53ab3288381093",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "bf5e2d020e3fa3794532",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7264
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 1
+          },
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
+      "consecutive_failures": 1
     },
     {
       "url": "http://115.190.247.176:1111",
@@ -478,12 +1078,127 @@
       "consecutive_failures": 1
     },
     {
+      "url": "http://113.124.186.195:7788",
+      "id": "migu-discovered-e3ae27a5be",
+      "first_seen_at": "2026-10-25T10:16:35.611695+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://tonkiang.us/iptvsports.php"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T10:16:35.611695+08:00",
+          "qualified": false,
+          "catalogue_entries": 435,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "04b1ab53ab3288381093",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "bf5e2d020e3fa3794532",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7264
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 1
+          },
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
+      "consecutive_failures": 1
+    },
+    {
       "url": "http://47.100.80.251:50001",
       "id": "migu-discovered-e9e8c0d2e3",
       "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
-      "status": "new",
+      "status": "quarantined",
       "discovered_from": [
         "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T10:16:35.611695+08:00",
+          "qualified": false,
+          "catalogue_entries": 437,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "04b1ab53ab3288381093",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "bf5e2d020e3fa3794532",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7264
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 1
+          },
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://60.163.101.239:1234",
+      "id": "migu-discovered-ec27036ee5",
+      "first_seen_at": "2026-10-25T10:16:35.611695+08:00",
+      "status": "new",
+      "discovered_from": [
+        "https://tonkiang.us/iptvsports.php"
+      ]
+    },
+    {
+      "url": "http://58.38.72.140:12345",
+      "id": "migu-discovered-edb4231b17",
+      "first_seen_at": "2026-10-25T10:16:35.611695+08:00",
+      "status": "new",
+      "discovered_from": [
+        "https://tonkiang.us/iptvsports.php"
       ]
     },
     {
@@ -572,10 +1287,50 @@
           ],
           "capabilities_observed": {},
           "cached": false
+        },
+        {
+          "at": "2026-10-25T10:16:35.611695+08:00",
+          "qualified": false,
+          "catalogue_entries": 450,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "04b1ab53ab3288381093",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "bf5e2d020e3fa3794532",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7264
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 1
+          },
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
-      "consecutive_failures": 2,
+      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
+      "consecutive_failures": 3,
       "discovered_from": [
         "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
       ]
