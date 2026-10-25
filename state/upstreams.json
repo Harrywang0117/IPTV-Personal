@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T10:25:40.746847+08:00",
+  "updated_at": "2026-10-25T16:08:18.478289+08:00",
   "sources": [
     {
       "url": "http://112.230.73.82:7788",
@@ -27,10 +27,15 @@
           "at": "2026-10-25T10:25:40.746847+08:00",
           "qualified": false,
           "error": "discovery_feed_curl_28"
+        },
+        {
+          "at": "2026-10-25T16:08:18.478289+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
         }
       ],
-      "last_checked_at": "2026-10-25T10:25:40.746847+08:00",
-      "consecutive_failures": 4
+      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
+      "consecutive_failures": 5
     },
     {
       "url": "http://mi.dzpp.uk",
@@ -176,10 +181,48 @@
           ],
           "capabilities_observed": {},
           "cached": false
+        },
+        {
+          "at": "2026-10-25T16:08:18.478289+08:00",
+          "qualified": false,
+          "catalogue_entries": 457,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "d44af6eb8697b3ff45da",
+              "ok": false,
+              "reason": "trial_stream",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "a11dfc6f3cb97e8228a5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": false,
+              "reason": "timeout",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T10:25:40.746847+08:00",
-      "consecutive_failures": 4
+      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
+      "consecutive_failures": 5
     },
     {
       "url": "http://58.210.97.102:1234",
@@ -428,10 +471,15 @@
           "at": "2026-10-25T09:37:52.207281+08:00",
           "qualified": false,
           "error": "discovery_feed_curl_28"
+        },
+        {
+          "at": "2026-10-25T16:08:18.478289+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
         }
       ],
-      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
+      "consecutive_failures": 2
     },
     {
       "url": "http://47.103.64.145:8014",
@@ -532,10 +580,48 @@
           ],
           "capabilities_observed": {},
           "cached": false
+        },
+        {
+          "at": "2026-10-25T16:08:18.478289+08:00",
+          "qualified": false,
+          "catalogue_entries": 466,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "a11dfc6f3cb97e8228a5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "4e9de5612320fee0a5eb",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": false,
+              "reason": "timeout",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
+      "consecutive_failures": 2
     },
     {
       "url": "http://111.76.19.197:1234",
@@ -606,10 +692,48 @@
           ],
           "capabilities_observed": {},
           "cached": false
+        },
+        {
+          "at": "2026-10-25T16:08:18.478289+08:00",
+          "qualified": false,
+          "catalogue_entries": 464,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "a11dfc6f3cb97e8228a5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "744ed08fc2b8ef160db0",
+              "ok": false,
+              "reason": "login_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": false,
+              "reason": "timeout",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
+      "consecutive_failures": 2
     },
     {
       "url": "http://106.52.119.159:1234",
@@ -741,10 +865,48 @@
             "vod": 1
           },
           "cached": false
+        },
+        {
+          "at": "2026-10-25T16:08:18.478289+08:00",
+          "qualified": false,
+          "catalogue_entries": 466,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "63bb24d2cf738aea0eaa",
+              "ok": false,
+              "reason": "login_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "a11dfc6f3cb97e8228a5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": false,
+              "reason": "timeout",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
+      "consecutive_failures": 2
     },
     {
       "url": "http://123.4.199.21:1234",
@@ -794,10 +956,48 @@
             "vod": 1
           },
           "cached": false
+        },
+        {
+          "at": "2026-10-25T16:08:18.478289+08:00",
+          "qualified": false,
+          "catalogue_entries": 466,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "63bb24d2cf738aea0eaa",
+              "ok": false,
+              "reason": "login_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "a11dfc6f3cb97e8228a5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": false,
+              "reason": "timeout",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
+      "consecutive_failures": 2
     },
     {
       "url": "http://222.213.105.65:7788",
@@ -838,10 +1038,48 @@
           ],
           "capabilities_observed": {},
           "cached": false
+        },
+        {
+          "at": "2026-10-25T16:08:18.478289+08:00",
+          "qualified": false,
+          "catalogue_entries": 453,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "63bb24d2cf738aea0eaa",
+              "ok": false,
+              "reason": "login_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "a11dfc6f3cb97e8228a5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": false,
+              "reason": "timeout",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
+      "consecutive_failures": 2
     },
     {
       "url": "http://112.80.137.135:1234",
@@ -879,10 +1117,15 @@
           "at": "2026-10-25T09:37:52.207281+08:00",
           "qualified": false,
           "error": "discovery_feed_curl_28"
+        },
+        {
+          "at": "2026-10-25T16:08:18.478289+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
         }
       ],
-      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
+      "consecutive_failures": 2
     },
     {
       "url": "http://117.146.74.202:1234",
@@ -1012,10 +1255,48 @@
           ],
           "capabilities_observed": {},
           "cached": false
+        },
+        {
+          "at": "2026-10-25T16:08:18.478289+08:00",
+          "qualified": false,
+          "catalogue_entries": 448,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "63bb24d2cf738aea0eaa",
+              "ok": false,
+              "reason": "login_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "a11dfc6f3cb97e8228a5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": false,
+              "reason": "timeout",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
+      "consecutive_failures": 2
     },
     {
       "url": "http://103.236.77.86:29824",
@@ -1147,10 +1428,50 @@
             "vod": 1
           },
           "cached": false
+        },
+        {
+          "at": "2026-10-25T16:08:18.478289+08:00",
+          "qualified": false,
+          "catalogue_entries": 446,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "63bb24d2cf738aea0eaa",
+              "ok": false,
+              "reason": "login_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "a11dfc6f3cb97e8228a5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7264
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 1
+          },
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
+      "consecutive_failures": 2
     },
     {
       "url": "http://mg.cttv.vip",
@@ -1224,10 +1545,48 @@
           ],
           "capabilities_observed": {},
           "cached": false
+        },
+        {
+          "at": "2026-10-25T16:08:18.478289+08:00",
+          "qualified": false,
+          "catalogue_entries": 467,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "a11dfc6f3cb97e8228a5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "4e9de5612320fee0a5eb",
+              "ok": false,
+              "reason": "login_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": false,
+              "reason": "timeout",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
+      "consecutive_failures": 2
     },
     {
       "url": "http://58.38.21.236:12345",
@@ -1328,10 +1687,15 @@
             "vod": 1
           },
           "cached": false
+        },
+        {
+          "at": "2026-10-25T16:08:18.478289+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
         }
       ],
-      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
+      "consecutive_failures": 2
     },
     {
       "url": "http://115.190.247.176:1111",
@@ -1404,10 +1768,48 @@
             "vod": 1
           },
           "cached": false
+        },
+        {
+          "at": "2026-10-25T16:08:18.478289+08:00",
+          "qualified": false,
+          "catalogue_entries": 445,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "63bb24d2cf738aea0eaa",
+              "ok": false,
+              "reason": "login_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "a11dfc6f3cb97e8228a5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": false,
+              "reason": "timeout",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
+      "consecutive_failures": 2
     },
     {
       "url": "http://47.100.80.251:50001",
@@ -1544,10 +1946,15 @@
           "at": "2026-10-25T09:37:52.207281+08:00",
           "qualified": false,
           "error": "discovery_feed_curl_28"
+        },
+        {
+          "at": "2026-10-25T16:08:18.478289+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
         }
       ],
-      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
+      "consecutive_failures": 2
     },
     {
       "url": "http://139.224.44.53:1234",
@@ -1695,10 +2102,48 @@
           ],
           "capabilities_observed": {},
           "cached": false
+        },
+        {
+          "at": "2026-10-25T16:08:18.478289+08:00",
+          "qualified": false,
+          "catalogue_entries": 464,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "a11dfc6f3cb97e8228a5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "744ed08fc2b8ef160db0",
+              "ok": false,
+              "reason": "login_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "485e2a84ed1345e528f5",
+              "ok": false,
+              "reason": "timeout",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T10:25:40.746847+08:00",
-      "consecutive_failures": 4,
+      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
+      "consecutive_failures": 5,
       "discovered_from": [
         "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
       ]
