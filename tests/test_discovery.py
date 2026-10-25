@@ -149,7 +149,7 @@ class DiscoveryAndPublicationTests(unittest.TestCase):
             self.assertEqual(prober.event_check(self.event(),45)['kind'],'vod')
             self.assertIn('hls',run.call_args_list[1].args[0])
         with patch('pipeline.subprocess.run',return_value=failed),patch.object(prober,'decode') as decode:
-            self.assertEqual(prober.event_check(self.event(),45)['reason'],'vod_duration_unknown')
+            self.assertEqual(prober.event_check(self.event(),45)['reason'],'metadata_format_rejected')
             decode.assert_not_called()
 
     def test_known_wrong_match_is_blocked_before_any_network_or_decode(self):
@@ -178,6 +178,37 @@ class DiscoveryAndPublicationTests(unittest.TestCase):
         entries[4].name='中超 G VS H 全场回放 00:01'
         selected=d.sample_entries(entries,self.now,4)
         self.assertEqual({e.attrs['tvg-id'] for e in selected},{'1','2','3','4'})
+
+    def test_existing_entries_and_today_are_checked_before_unpublished_old_replays(self):
+        kept=self.event(verified=True);kept.event_date=self.now.date()-timedelta(days=1)
+        old=p.replace(kept,name='早先的回放 00:01',verified=False,url='https://source.example/968123457')
+        today=self.event(url='https://source.example/968123458')
+        live=p.replace(today,name='NBA 正在直播 08:00')
+        future=p.replace(today,upcoming=True,name='未来赛事 20:00')
+        preferred={'event-'+p.event_key(kept)[:16]:[kept.fingerprint]}
+        ordered=sorted([[old],[future],[today],[live],[kept]],key=lambda b:p.probe_priority(b,preferred,self.now))
+        self.assertEqual([b[0] for b in ordered],[kept,live,today,old,future])
+        requested=sorted(ordered,key=lambda b:p.probe_priority(b,preferred,self.now,['早先的回放']))
+        self.assertEqual(requested[0],[old])
+
+    def test_metadata_network_errors_are_not_hidden_as_missing_duration(self):
+        prober=object.__new__(p.Prober);prober.config=self.config;prober.hls_options=[]
+        failed=subprocess.CompletedProcess([],1,'{}','Connection to tcp://cdn.example:80 failed: Connection timed out')
+        with patch('pipeline.subprocess.run',return_value=failed):
+            result=prober.event_check(self.event(),45)
+        self.assertEqual(result['reason'],'metadata_network_timeout')
+        self.assertIn('Connection timed out',result['diagnostic'])
+        with patch('pipeline.subprocess.run',side_effect=subprocess.TimeoutExpired('ffprobe',10)):
+            self.assertEqual(prober.event_check(self.event(),45)['reason'],'metadata_timeout')
+        self.assertEqual(p.metadata_failure('Protocol not on whitelist'),'metadata_protocol_rejected')
+        self.assertEqual(p.metadata_failure('HTTP error 403 Forbidden'),'http_403')
+
+    def test_long_signed_url_is_redacted_before_error_excerpt_is_truncated(self):
+        error='Cannot open https://cdn.example/video?token='+('private-token-'*400)+'\nConnection timed out'
+        result=p.redacted_diagnostic(error)
+        self.assertNotIn('private-token',result)
+        self.assertIn('Connection timed out',result)
+        self.assertIn('[url]',result)
 
     def test_trial_hidden_behind_second_redirect_is_rejected(self):
         opener=unittest.mock.MagicMock()

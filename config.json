@@ -24,8 +24,8 @@
   ],
   "event_source_priority": [
     "migu-backup",
-    "migu-alt",
-    "migu-primary"
+    "migu-primary",
+    "migu-alt"
   ],
   "base_groups": [
     "央视",

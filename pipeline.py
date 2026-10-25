@@ -332,6 +332,7 @@ class Prober:
         cmd = ["ffprobe", "-v", "error", "-rw_timeout", "5000000",
                "-protocol_whitelist", "http,https,tcp,tls,crypto", "-user_agent", UA]
         tail = ["-show_entries", "format=duration", "-of", "json", entry.url]
+        metadata_error, metadata_status = "", "vod_duration_unknown"
         try:
             result = subprocess.run(cmd + tail, capture_output=True, text=True, timeout=min(10, timeout))
             remaining = min(10, timeout)-(time.monotonic()-started)
@@ -339,11 +340,23 @@ class Prober:
                 result = subprocess.run(cmd + getattr(self, "hls_options", []) + ["-f", "hls"] + tail,
                                         capture_output=True, text=True, timeout=remaining)
             duration = float(json.loads(result.stdout).get("format", {}).get("duration", 0))
-        except (ValueError, TypeError, subprocess.SubprocessError):
+            if result.returncode:
+                metadata_error = redacted_diagnostic(result.stderr)
+                metadata_status = metadata_failure(result.stderr)
+        except subprocess.TimeoutExpired as error:
+            text = error.stderr or b""
+            if isinstance(text, bytes):
+                text = text.decode("utf-8", "replace")
+            metadata_error = redacted_diagnostic(text)
+            metadata_status = "metadata_timeout"
+            duration = 0
+        except (ValueError, TypeError):
+            metadata_error = redacted_diagnostic(result.stderr)
+            metadata_status = metadata_failure(result.stderr)
             duration = 0
         offsets = [0]
         if not duration and "回放" in entry.name:
-            return {"ok": False, "reason": "vod_duration_unknown", "frames": 0}
+            return {"ok": False, "reason": metadata_status, "frames": 0, "diagnostic": metadata_error}
         if duration > 0:
             if duration < self.config.get("event_min_vod_seconds", 1200):
                 return {"ok": False, "reason": "short_vod", "duration_seconds": round(duration)}
@@ -408,7 +421,7 @@ class Prober:
                         break
             return {"ok": ok, "reason": reason, "frames": frames,
                     "seconds": round(time.monotonic() - started, 2),
-                    "diagnostic": "" if ok else re.sub(r"https?://[^\s]+", "[url]", result.stderr[-1200:])}
+                    "diagnostic": "" if ok else redacted_diagnostic(result.stderr)}
         except subprocess.TimeoutExpired:
             return {"ok": False, "reason": "timeout", "frames": 0}
 
@@ -426,6 +439,25 @@ def candidate_order(entries, limit):
         (rest if host in hosts else first).append(entry)
         hosts.add(host)
     return (first + rest)[:limit]
+
+
+def redacted_diagnostic(text):
+    # Remove complete URLs before truncation, even when a signed URL is longer
+    # than the retained error excerpt.
+    return re.sub(r"https?://[^\s]+", "[url]", text)[-1200:]
+
+
+def metadata_failure(error):
+    for code in ("403", "404", "410", "451", "500", "502", "503"):
+        if re.search(r"\b"+code+r"\b", error):
+            return "http_"+code
+    if "timed out" in error.lower():
+        return "metadata_network_timeout"
+    if "not on whitelist" in error.lower():
+        return "metadata_protocol_rejected"
+    if "Not detecting m3u8/hls" in error or "allowed_extensions" in error:
+        return "metadata_format_rejected"
+    return "vod_duration_unknown"
 
 
 def trial_url(url):
@@ -602,6 +634,10 @@ def catalogue_json(buckets, now):
     labels = {"decoded": "本轮检测通过", "not_checked": "未完成检测", "trial_stream": "仅试看",
               "membership_required": "需会员", "login_required": "需登录", "short_vod": "短片段，未按正赛收录",
               "vod_duration_unknown": "回放时长未核实",
+              "metadata_timeout": "回放信息读取超时",
+              "metadata_network_timeout": "检测机器连接源站超时",
+              "metadata_protocol_rejected": "检测工具协议未兼容",
+              "metadata_format_rejected": "检测工具未识别视频格式",
               "content_mismatch": "画面与赛事标题不符，已封禁",
               "observation_pending": "等待第二次直播检测"}
     return {"generated_at": now.isoformat(timespec="seconds"), "note": "完整赛程目录；限制或待测条目不进入主订阅。",
@@ -669,6 +705,22 @@ def missing_event_days(entries, now):
     present = {entry.event_date for entry in entries if entry.event_date}
     return [now.date() + timedelta(days=delta) for delta in (-1, 0, 1)
             if now.date() + timedelta(days=delta) not in present]
+
+
+def probe_priority(bucket, preferred, now, requested=()):
+    entry = bucket[0]
+    if not entry.event_date:
+        return (6, 0, rank(entry))
+    if entry.upcoming:
+        return (5, 0, rank(entry))
+    if any(text in entry.name for text in requested):
+        return (0, 0, rank(entry))
+    if "event-"+event_key(entry)[:16] in preferred:
+        return (1, 0, rank(entry))
+    start = kickoff(entry, now.tzinfo)
+    active = start and "回放" not in entry.name and 0 <= (now-start).total_seconds() <= 4*3600
+    tier = 2 if active else 3 if entry.event_date == now.date() else 4
+    return (tier, 0 if "回放" in entry.name else 1, rank(entry))
 
 
 def reconcile_migu_metadata(entries):
@@ -837,11 +889,15 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
         print(("catalogue_deferred " if deferred else "quality_gate_rejected ") + ",".join(report["errors"]), flush=True)
         return 3 if deferred else 2
     media_probe = probe or Prober(config)
-    source_checks, check_lock = defaultdict(Counter), threading.Lock()
+    source_checks, failure_examples, check_lock = defaultdict(Counter), defaultdict(list), threading.Lock()
     def probe(entry):
         result = media_probe(entry)
         with check_lock:
             source_checks[entry.source][result["reason"]] += 1
+            examples = failure_examples[entry.source]
+            if (not result["ok"] and result.get("diagnostic") and len(examples) < 6
+                    and not any(item["reason"] == result["reason"] for item in examples)):
+                examples.append({"title":entry.name,"reason":result["reason"],"error":result["diagnostic"]})
         return result
     buckets, stats, finished = [], Counter(), 0
     ordered = sorted(grouped.values(), key=lambda b: rank(b[0]))
@@ -851,13 +907,7 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
     if requested_checks:
         samples.update(b[0].identity for b in ordered if b[0].event_date and not b[0].upcoming
                        and any(text in b[0].name for text in requested_checks))
-    def probe_priority(bucket):
-        entry = bucket[0]
-        start = kickoff(entry, now.tzinfo) if entry.event_date else None
-        active = start and 0 <= (now-start).total_seconds() <= 4*3600
-        return (0 if active else 1 if entry.identity in samples else 2 if entry.event_date else 3,
-                0 if "回放" in entry.name else 1, rank(entry))
-    ordered.sort(key=probe_priority)
+    ordered.sort(key=lambda b: probe_priority(b, preferred, now, requested_checks))
     print(f"probe_start channels_and_events={len(ordered)}", flush=True)
     with ThreadPoolExecutor(max_workers=config["workers"]) as pool:
         futures = [pool.submit(select_bucket, entries, config, probe,
@@ -924,6 +974,8 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
               "events": by_day, "probe": dict(stats), "max_lines": config["max_lines"],
               "event_policy": "qualified_only_with_separate_complete_schedule", "competition_coverage": coverage,
               "source_media_checks": {source: dict(counts) for source, counts in source_checks.items()},
+              "source_failure_examples": {source:items for source,items in failure_examples.items() if items},
+              "probe_order": "requested_then_retained_then_live_then_today_then_older_unpublished",
               "selection_policy": "recheck_previous_route_first_then_verified_backup",
               "published_events": sum(bool(b[0].event_date) for b in buckets),
               "source_discovery": {"registry": "state/upstreams.json", "schedule": "daily", "automatic_promotion": "two_qualified_observations_at_least_6_hours_apart"},
