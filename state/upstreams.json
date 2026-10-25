@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T16:08:18.478289+08:00",
+  "updated_at": "2026-10-26T06:31:15.848997+08:00",
   "sources": [
     {
       "url": "http://112.230.73.82:7788",
@@ -32,16 +32,21 @@
           "at": "2026-10-25T16:08:18.478289+08:00",
           "qualified": false,
           "error": "discovery_feed_curl_28"
+        },
+        {
+          "at": "2026-10-26T06:31:15.848997+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
         }
       ],
-      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
-      "consecutive_failures": 5
+      "last_checked_at": "2026-10-26T06:31:15.848997+08:00",
+      "consecutive_failures": 6
     },
     {
       "url": "http://mi.dzpp.uk",
       "id": "migu-backup",
       "first_seen_at": "2026-10-25T09:29:24.102106+08:00",
-      "status": "degraded",
+      "status": "active",
       "seed": true,
       "observations": [
         {
@@ -219,16 +224,57 @@
           ],
           "capabilities_observed": {},
           "cached": false
+        },
+        {
+          "at": "2026-10-26T06:31:15.848997+08:00",
+          "qualified": true,
+          "catalogue_entries": 326,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "d804d6fd9a58ba5da727",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "334c34243478f89ce3dd",
+              "ok": false,
+              "reason": "membership_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "a0b57b96305a4e4e095e",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7781
+            },
+            {
+              "event_id": "b1b04cd5a9dbfa540a2d",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 8205
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 2
+          },
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
-      "consecutive_failures": 5
+      "last_checked_at": "2026-10-26T06:31:15.848997+08:00",
+      "consecutive_failures": 0,
+      "last_qualified_at": "2026-10-26T06:31:15.848997+08:00"
     },
     {
       "url": "http://58.210.97.102:1234",
       "id": "migu-discovered-0bd8bdc085",
       "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
-      "status": "quarantined",
+      "status": "probation",
       "discovered_from": [
         "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
       ],
@@ -272,10 +318,51 @@
             "vod": 1
           },
           "cached": false
+        },
+        {
+          "at": "2026-10-26T06:31:15.848997+08:00",
+          "qualified": true,
+          "catalogue_entries": 326,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "d804d6fd9a58ba5da727",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "334c34243478f89ce3dd",
+              "ok": false,
+              "reason": "login_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "a0b57b96305a4e4e095e",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7781
+            },
+            {
+              "event_id": "b1b04cd5a9dbfa540a2d",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 8205
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 2
+          },
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-26T06:31:15.848997+08:00",
+      "consecutive_failures": 0,
+      "last_qualified_at": "2026-10-26T06:31:15.848997+08:00"
     },
     {
       "url": "http://115.195.166.33:1234",
@@ -295,16 +382,21 @@
           "at": "2026-10-25T10:25:40.746847+08:00",
           "qualified": false,
           "error": "discovery_feed_curl_28"
+        },
+        {
+          "at": "2026-10-26T06:31:15.848997+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_7"
         }
       ],
-      "last_checked_at": "2026-10-25T10:25:40.746847+08:00",
-      "consecutive_failures": 2
+      "last_checked_at": "2026-10-26T06:31:15.848997+08:00",
+      "consecutive_failures": 3
     },
     {
       "url": "http://106.12.29.154:5050",
       "id": "migu-discovered-1b9927c741",
       "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
-      "status": "quarantined",
+      "status": "probation",
       "discovered_from": [
         "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
       ],
@@ -377,16 +469,57 @@
           ],
           "capabilities_observed": {},
           "cached": false
+        },
+        {
+          "at": "2026-10-26T06:31:15.848997+08:00",
+          "qualified": true,
+          "catalogue_entries": 322,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "b8cc558f143867560e96",
+              "ok": false,
+              "reason": "login_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d804d6fd9a58ba5da727",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "a0b57b96305a4e4e095e",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7781
+            },
+            {
+              "event_id": "b1b04cd5a9dbfa540a2d",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 8205
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 2
+          },
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T10:25:40.746847+08:00",
-      "consecutive_failures": 2
+      "last_checked_at": "2026-10-26T06:31:15.848997+08:00",
+      "consecutive_failures": 0,
+      "last_qualified_at": "2026-10-26T06:31:15.848997+08:00"
     },
     {
       "url": "http://47.104.178.59:3566",
       "id": "migu-discovered-2ed20de05d",
       "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
-      "status": "quarantined",
+      "status": "probation",
       "discovered_from": [
         "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
       ],
@@ -430,10 +563,51 @@
             "vod": 1
           },
           "cached": false
+        },
+        {
+          "at": "2026-10-26T06:31:15.848997+08:00",
+          "qualified": true,
+          "catalogue_entries": 327,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "b8cc558f143867560e96",
+              "ok": false,
+              "reason": "login_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d804d6fd9a58ba5da727",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "a0b57b96305a4e4e095e",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7781
+            },
+            {
+              "event_id": "b1b04cd5a9dbfa540a2d",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 8205
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 2
+          },
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-26T06:31:15.848997+08:00",
+      "consecutive_failures": 0,
+      "last_qualified_at": "2026-10-26T06:31:15.848997+08:00"
     },
     {
       "url": "http://123.113.205.253:3000",
@@ -453,10 +627,15 @@
           "at": "2026-10-25T10:25:40.746847+08:00",
           "qualified": false,
           "error": "discovery_feed_curl_28"
+        },
+        {
+          "at": "2026-10-26T06:31:15.848997+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
         }
       ],
-      "last_checked_at": "2026-10-25T10:25:40.746847+08:00",
-      "consecutive_failures": 2
+      "last_checked_at": "2026-10-26T06:31:15.848997+08:00",
+      "consecutive_failures": 3
     },
     {
       "url": "http://2280.eu.org:1234",
@@ -529,10 +708,50 @@
             "vod": 1
           },
           "cached": false
+        },
+        {
+          "at": "2026-10-26T06:31:15.848997+08:00",
+          "qualified": false,
+          "catalogue_entries": 330,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "b8cc558f143867560e96",
+              "ok": false,
+              "reason": "login_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d804d6fd9a58ba5da727",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "a0b57b96305a4e4e095e",
+              "ok": false,
+              "reason": "timeout",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "b1b04cd5a9dbfa540a2d",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 8205
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 1
+          },
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-26T06:31:15.848997+08:00",
+      "consecutive_failures": 2
     },
     {
       "url": "http://124.222.67.241:1234",
@@ -641,10 +860,15 @@
           "at": "2026-10-25T10:25:40.746847+08:00",
           "qualified": false,
           "error": "discovery_feed_curl_28"
+        },
+        {
+          "at": "2026-10-26T06:31:15.848997+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
         }
       ],
-      "last_checked_at": "2026-10-25T10:25:40.746847+08:00",
-      "consecutive_failures": 2
+      "last_checked_at": "2026-10-26T06:31:15.848997+08:00",
+      "consecutive_failures": 3
     },
     {
       "url": "http://223.247.25.230:1234",
@@ -739,7 +963,7 @@
       "url": "http://106.52.119.159:1234",
       "id": "migu-discovered-6bf23eb974",
       "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
-      "status": "quarantined",
+      "status": "probation",
       "discovered_from": [
         "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
       ],
@@ -812,10 +1036,51 @@
           ],
           "capabilities_observed": {},
           "cached": false
+        },
+        {
+          "at": "2026-10-26T06:31:15.848997+08:00",
+          "qualified": true,
+          "catalogue_entries": 331,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "b8cc558f143867560e96",
+              "ok": false,
+              "reason": "login_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d804d6fd9a58ba5da727",
+              "ok": false,
+              "reason": "timeout",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "a0b57b96305a4e4e095e",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7781
+            },
+            {
+              "event_id": "b1b04cd5a9dbfa540a2d",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 8205
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 2
+          },
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T10:25:40.746847+08:00",
-      "consecutive_failures": 2
+      "last_checked_at": "2026-10-26T06:31:15.848997+08:00",
+      "consecutive_failures": 0,
+      "last_qualified_at": "2026-10-26T06:31:15.848997+08:00"
     },
     {
       "url": "http://114.228.118.166:7788",
@@ -1099,10 +1364,15 @@
           "at": "2026-10-25T10:25:40.746847+08:00",
           "qualified": false,
           "error": "discovery_feed_curl_28"
+        },
+        {
+          "at": "2026-10-26T06:31:15.848997+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
         }
       ],
-      "last_checked_at": "2026-10-25T10:25:40.746847+08:00",
-      "consecutive_failures": 2
+      "last_checked_at": "2026-10-26T06:31:15.848997+08:00",
+      "consecutive_failures": 3
     },
     {
       "url": "http://42.94.210.22:7788",
@@ -1131,7 +1401,7 @@
       "url": "http://117.146.74.202:1234",
       "id": "migu-discovered-9468ecf5ab",
       "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
-      "status": "quarantined",
+      "status": "probation",
       "discovered_from": [
         "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
       ],
@@ -1204,10 +1474,51 @@
           ],
           "capabilities_observed": {},
           "cached": false
+        },
+        {
+          "at": "2026-10-26T06:31:15.848997+08:00",
+          "qualified": true,
+          "catalogue_entries": 327,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "b8cc558f143867560e96",
+              "ok": false,
+              "reason": "login_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d804d6fd9a58ba5da727",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "a0b57b96305a4e4e095e",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7781
+            },
+            {
+              "event_id": "b1b04cd5a9dbfa540a2d",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 8205
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 2
+          },
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T10:25:40.746847+08:00",
-      "consecutive_failures": 2
+      "last_checked_at": "2026-10-26T06:31:15.848997+08:00",
+      "consecutive_failures": 0,
+      "last_qualified_at": "2026-10-26T06:31:15.848997+08:00"
     },
     {
       "url": "http://221.198.14.226:1234",
@@ -1302,7 +1613,7 @@
       "url": "http://103.236.77.86:29824",
       "id": "migu-discovered-b0cad0fb83",
       "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
-      "status": "quarantined",
+      "status": "probation",
       "discovered_from": [
         "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
       ],
@@ -1375,10 +1686,51 @@
           ],
           "capabilities_observed": {},
           "cached": false
+        },
+        {
+          "at": "2026-10-26T06:31:15.848997+08:00",
+          "qualified": true,
+          "catalogue_entries": 324,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "b8cc558f143867560e96",
+              "ok": false,
+              "reason": "login_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d804d6fd9a58ba5da727",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "a0b57b96305a4e4e095e",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7781
+            },
+            {
+              "event_id": "b1b04cd5a9dbfa540a2d",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 8205
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 2
+          },
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T10:25:40.746847+08:00",
-      "consecutive_failures": 2
+      "last_checked_at": "2026-10-26T06:31:15.848997+08:00",
+      "consecutive_failures": 0,
+      "last_qualified_at": "2026-10-26T06:31:15.848997+08:00"
     },
     {
       "url": "http://113.205.56.76:1234",
@@ -1715,10 +2067,15 @@
           "at": "2026-10-25T10:25:40.746847+08:00",
           "qualified": false,
           "error": "discovery_feed_curl_28"
+        },
+        {
+          "at": "2026-10-26T06:31:15.848997+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
         }
       ],
-      "last_checked_at": "2026-10-25T10:25:40.746847+08:00",
-      "consecutive_failures": 2
+      "last_checked_at": "2026-10-26T06:31:15.848997+08:00",
+      "consecutive_failures": 3
     },
     {
       "url": "http://113.124.186.195:7788",
@@ -1815,7 +2172,7 @@
       "url": "http://47.100.80.251:50001",
       "id": "migu-discovered-e9e8c0d2e3",
       "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
-      "status": "quarantined",
+      "status": "probation",
       "discovered_from": [
         "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
       ],
@@ -1859,10 +2216,51 @@
             "vod": 1
           },
           "cached": false
+        },
+        {
+          "at": "2026-10-26T06:31:15.848997+08:00",
+          "qualified": true,
+          "catalogue_entries": 327,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "d804d6fd9a58ba5da727",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "334c34243478f89ce3dd",
+              "ok": false,
+              "reason": "login_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "a0b57b96305a4e4e095e",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7781
+            },
+            {
+              "event_id": "b1b04cd5a9dbfa540a2d",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 8205
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 2
+          },
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T10:16:35.611695+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-26T06:31:15.848997+08:00",
+      "consecutive_failures": 0,
+      "last_qualified_at": "2026-10-26T06:31:15.848997+08:00"
     },
     {
       "url": "http://60.163.101.239:1234",
@@ -1960,7 +2358,7 @@
       "url": "http://139.224.44.53:1234",
       "id": "migu-primary",
       "first_seen_at": "2026-10-25T09:29:24.102106+08:00",
-      "status": "degraded",
+      "status": "active",
       "seed": true,
       "observations": [
         {
@@ -2140,13 +2538,54 @@
           ],
           "capabilities_observed": {},
           "cached": false
+        },
+        {
+          "at": "2026-10-26T06:31:15.848997+08:00",
+          "qualified": true,
+          "catalogue_entries": 327,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "b8cc558f143867560e96",
+              "ok": false,
+              "reason": "login_required",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "d804d6fd9a58ba5da727",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "a0b57b96305a4e4e095e",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 7781
+            },
+            {
+              "event_id": "b1b04cd5a9dbfa540a2d",
+              "ok": true,
+              "reason": "decoded",
+              "kind": "vod",
+              "duration_seconds": 8205
+            }
+          ],
+          "capabilities_observed": {
+            "vod": 2
+          },
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T16:08:18.478289+08:00",
-      "consecutive_failures": 5,
+      "last_checked_at": "2026-10-26T06:31:15.848997+08:00",
+      "consecutive_failures": 0,
       "discovered_from": [
         "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
-      ]
+      ],
+      "last_qualified_at": "2026-10-26T06:31:15.848997+08:00"
     }
   ]
 }

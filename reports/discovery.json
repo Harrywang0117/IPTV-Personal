@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T16:08:18.478289+08:00",
+  "generated_at": "2026-10-26T06:31:15.848997+08:00",
   "feeds": [
     {
       "url": "https://tonkiang.us/iptvsports.php",
@@ -15,9 +15,66 @@
   "checked": 16,
   "registered": 33,
   "status_counts": {
-    "degraded": 3,
-    "quarantined": 30
+    "degraded": 1,
+    "active": 2,
+    "probation": 7,
+    "quarantined": 23
   },
-  "changes": [],
+  "changes": [
+    {
+      "source": "migu-primary",
+      "from": "degraded",
+      "to": "active",
+      "reason": "qualified_observation"
+    },
+    {
+      "source": "migu-backup",
+      "from": "degraded",
+      "to": "active",
+      "reason": "qualified_observation"
+    },
+    {
+      "source": "migu-discovered-e9e8c0d2e3",
+      "from": "quarantined",
+      "to": "probation",
+      "reason": "qualified_observation"
+    },
+    {
+      "source": "migu-discovered-2ed20de05d",
+      "from": "quarantined",
+      "to": "probation",
+      "reason": "qualified_observation"
+    },
+    {
+      "source": "migu-discovered-0bd8bdc085",
+      "from": "quarantined",
+      "to": "probation",
+      "reason": "qualified_observation"
+    },
+    {
+      "source": "migu-discovered-b0cad0fb83",
+      "from": "quarantined",
+      "to": "probation",
+      "reason": "qualified_observation"
+    },
+    {
+      "source": "migu-discovered-1b9927c741",
+      "from": "quarantined",
+      "to": "probation",
+      "reason": "qualified_observation"
+    },
+    {
+      "source": "migu-discovered-6bf23eb974",
+      "from": "quarantined",
+      "to": "probation",
+      "reason": "qualified_observation"
+    },
+    {
+      "source": "migu-discovered-9468ecf5ab",
+      "from": "quarantined",
+      "to": "probation",
+      "reason": "qualified_observation"
+    }
+  ],
   "note": "发现不等于可播；新源至少两次相隔六小时通过三天目录和两条媒体检测才入池。节目仍须逐条通过发布验收。"
 }
