@@ -425,6 +425,8 @@ class Prober:
             ok = result.returncode == 0 and frames >= 5 and micros >= (seconds - 0.25) * 1e6
             reason = "decoded" if ok else "decode_failed"
             if not ok:
+                if "timed out" in result.stderr.lower():
+                    reason = "network_timeout"
                 for code in ("403", "404", "410", "451", "500", "502", "503"):
                     if re.search(r"\b" + code + r"\b", result.stderr):
                         reason = "http_" + code
@@ -610,7 +612,7 @@ def event_key(entry):
     return hashlib.sha256(repr(entry.identity).encode()).hexdigest()[:20]
 
 
-INCONCLUSIVE_EVENT_CHECKS = {"not_checked", "event_budget", "budget", "timeout", "metadata_timeout", "metadata_network_timeout"}
+INCONCLUSIVE_EVENT_CHECKS = {"not_checked", "event_budget", "budget", "timeout", "network_timeout", "metadata_timeout", "metadata_network_timeout"}
 
 
 def reusable_vod_evidence(proof, now, config):
@@ -733,7 +735,8 @@ def render_m3u(buckets, now, epg, single=True, catalogue=False):
     for bucket in sorted(buckets, key=lambda b: rank(b[0])):
         for entry in bucket[:1] if single else bucket:
             attrs = {k: v for k, v in entry.attrs.items() if k.startswith("tvg-") or k in CATCHUP}
-            name = catalogue_name(entry) if catalogue else display_name(entry)
+            # Keep backup routes grouped under the same player-facing name.
+            name = catalogue_name(entry) if catalogue else display_name(bucket[0] if entry.event_date else entry)
             attrs["tvg-name"] = name
             attrs["group-title"] = display_group(entry, now)
             if entry.event_date:
@@ -1022,7 +1025,7 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
                 "matches": len(set(e.attrs.get("tvg-id") or e.name for e in items)),
                 "entries": len(items), "decoded_entries": sum(e.verified for e in items)}
     warnings = []
-    if any(b[0].check_status == "recent_verified" for b in buckets if b[0].event_date):
+    if any(e.check_status == "recent_verified" for b in buckets if b[0].event_date for e in b):
         warnings.append("some_vods_reuse_recent_evidence_with_original_timestamp")
     if any(not b[0].verified and not b[0].upcoming for b in catalogue if b[0].event_date):
         warnings.append("restricted_and_unverified_events_only_in_schedule")
@@ -1048,6 +1051,7 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
               "probe_order": "requested_then_retained_then_live_then_today_then_older_unpublished",
               "selection_policy": "recheck_previous_route_first_then_verified_backup",
               "published_events": sum(bool(b[0].event_date) for b in buckets),
+              "reused_event_routes": sum(e.check_status == "recent_verified" for b in buckets if b[0].event_date for e in b),
               "source_discovery": {"registry": "state/upstreams.json", "schedule": "daily", "automatic_promotion": "two_qualified_observations_at_least_6_hours_apart"},
               "requested_event_check": requested_checks,
               "mode": "events_only" if events_only else "full",

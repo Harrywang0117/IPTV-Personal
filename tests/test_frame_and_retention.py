@@ -54,6 +54,9 @@ class RetentionTests(unittest.TestCase):
         fresh = p.replace(self.entry, url='https://fresh.example/968123456')
         accepted, _ = p.qualify_events([[retained, fresh]], self.proof, self.now + timedelta(hours=1), self.config)
         self.assertEqual(accepted[0][0].url, fresh.url)
+        rendered = p.parse_playlist(p.render_m3u(accepted, self.now, [], single=False))
+        self.assertEqual(len(rendered), 2)
+        self.assertEqual(rendered[0].name, rendered[1].name)
 
     def test_vod_observation_cannot_instantly_qualify_new_live_stream(self):
         live = p.replace(self.entry, evidence={'kind': 'live', 'sample_seconds': 15})
@@ -97,6 +100,15 @@ class RetentionTests(unittest.TestCase):
                 self.assertEqual(prober.event_check(self.entry, 45)['reason'], 'black_video')
             with patch.object(prober, 'decode', side_effect=[black, visible, visible]):
                 self.assertTrue(prober.event_check(self.entry, 45)['ok'])
+
+    def test_decode_connection_timeout_is_inconclusive_and_http_failure_is_specific(self):
+        prober = object.__new__(p.Prober)
+        prober.config, prober.hls_options = self.config, []
+        for stderr, reason in [('Connection to tcp://public.example:80 failed: Connection timed out', 'network_timeout'),
+                               ('HTTP error 404 Not Found', 'http_404')]:
+            result = subprocess.CompletedProcess([], 1, '', stderr)
+            with patch('pipeline.subprocess.run', return_value=result):
+                self.assertEqual(prober.decode(self.entry, 10)['reason'], reason)
 
 
 class QuietHandler(SimpleHTTPRequestHandler):
