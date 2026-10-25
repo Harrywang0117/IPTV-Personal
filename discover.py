@@ -102,6 +102,33 @@ def observe(item, observation, now, settings):
     return item
 
 
+def sample_entries(entries, now, limit):
+    """Cover both active matches and VOD; one restricted league cannot dominate."""
+    active, vod, other = [], [], []
+    for entry in entries:
+        start = p.kickoff(entry, now.tzinfo)
+        if start and 0 <= (now-start).total_seconds() <= 4*3600 and '回放' not in entry.name:
+            active.append(entry)
+        elif '回放' in entry.name:
+            vod.append(entry)
+        else:
+            other.append(entry)
+    selected, seen = [], set()
+    # Try two distinct ongoing matches and two replays before broadening.
+    for group in (active, vod):
+        matches = set()
+        for entry in sorted(group, key=p.rank):
+            match = entry.attrs.get('tvg-id') or entry.name
+            if entry.url not in seen and match not in matches:
+                selected.append(entry); seen.add(entry.url); matches.add(match)
+            if len(matches) == 2:
+                break
+    for entry in sorted(active+vod+other, key=p.rank):
+        if entry.url not in seen:
+            selected.append(entry); seen.add(entry.url)
+    return selected[:limit]
+
+
 def check_source(item, config, now):
     spec = {'id': item['id'], 'url': item['url'], 'events': True}
     try:
@@ -115,15 +142,9 @@ def check_source(item, config, now):
         missing = p.missing_event_days(events, now)
         started = [e for e in events if not e.upcoming and urlparse(e.url).netloc == urlparse(item['url']).netloc
                    and not urlparse(e.url).query and re.fullmatch(r'/\d{9}', urlparse(e.url).path)]
-        started.sort(key=lambda e: ('回放' not in e.name, e.event_date != now.date()-timedelta(days=1), p.rank(e)))
-        unique, seen = [], set()
-        for entry in started:
-            if entry.url not in seen:
-                unique.append(entry)
-                seen.add(entry.url)
         prober = p.Prober(dict(config, budget_seconds=150, event_probe_budget_seconds=150, per_host=1))
         results = []
-        for entry in unique[:config.get('discovery', {}).get('samples_per_source', 3)]:
+        for entry in sample_entries(started, now, config.get('discovery', {}).get('samples_per_source', 4)):
             result = prober(entry)
             results.append({'event_id': p.event_key(entry), 'ok': result['ok'], 'reason': result['reason'],
                             'kind': result.get('kind'), 'duration_seconds': result.get('duration_seconds')})
@@ -147,6 +168,17 @@ def run(config, registry_path, report_path, now, feeds=None, checker=None):
             by_url.setdefault(spec['url'].rstrip('/'), {'url': spec['url'].rstrip('/'), 'id': spec['id'],
                                                       'first_seen_at': now.isoformat(), 'status': 'seed', 'seed': True})
     feed_reports = []
+    # Public candidates found outside the runner remain candidates only. This
+    # lets a blocked index recover without pretending its current fetch worked.
+    candidate_file = settings.get('candidate_file')
+    if candidate_file:
+        for candidate in json.loads((p.ROOT/candidate_file).read_text()).get('candidates', []):
+            root = candidate['url'].rstrip('/')
+            if not safe_root(root) or (root not in by_url and len(by_url) >= settings.get('max_registry',100)):
+                continue
+            item = by_url.setdefault(root, {'url':root, 'id':'migu-discovered-'+hashlib.sha256(root.encode()).hexdigest()[:10],
+                                            'first_seen_at':now.isoformat(), 'status':'new'})
+            item['discovered_from'] = sorted(set(item.get('discovered_from', [])+[candidate['found_in']]))
     for url in settings.get('feeds', []):
         try:
             text = feeds[url] if feeds is not None else read_feed(url)

@@ -1,7 +1,7 @@
 name: 回归测试
 on:
   push:
-    paths: ['pipeline.py', 'discover.py', 'verify_publication.py', 'config.json', 'vendor/**', 'tests/**', '.github/workflows/**']
+    paths: ['pipeline.py', 'discover.py', 'verify_publication.py', 'config.json', 'candidate-sources.json', 'vendor/**', 'tests/**', '.github/workflows/**']
   pull_request:
 permissions:
   contents: read

@@ -1,0 +1,54 @@
+{
+  "observed_at": "2026-10-25T08:57:00+08:00",
+  "note": "人工读取公开索引得到的候选；尚未通过云端观察期，不等于入池。",
+  "candidates": [
+    {
+      "url": "http://113.124.186.195:7788",
+      "found_in": "https://tonkiang.us/iptvsports.php"
+    },
+    {
+      "url": "http://113.205.56.76:1234",
+      "found_in": "https://tonkiang.us/iptvsports.php"
+    },
+    {
+      "url": "http://113.224.105.142:1234",
+      "found_in": "https://tonkiang.us/iptvsports.php"
+    },
+    {
+      "url": "http://114.228.118.166:7788",
+      "found_in": "https://tonkiang.us/iptvsports.php"
+    },
+    {
+      "url": "http://114.240.111.57:7788",
+      "found_in": "https://tonkiang.us/iptvsports.php"
+    },
+    {
+      "url": "http://123.4.199.21:1234",
+      "found_in": "https://tonkiang.us/iptvsports.php"
+    },
+    {
+      "url": "http://124.222.67.241:1234",
+      "found_in": "https://tonkiang.us/iptvsports.php"
+    },
+    {
+      "url": "http://221.198.14.226:1234",
+      "found_in": "https://tonkiang.us/iptvsports.php"
+    },
+    {
+      "url": "http://223.247.25.230:1234",
+      "found_in": "https://tonkiang.us/iptvsports.php"
+    },
+    {
+      "url": "http://58.38.21.236:12345",
+      "found_in": "https://tonkiang.us/iptvsports.php"
+    },
+    {
+      "url": "http://58.38.72.140:12345",
+      "found_in": "https://tonkiang.us/iptvsports.php"
+    },
+    {
+      "url": "http://60.163.101.239:1234",
+      "found_in": "https://tonkiang.us/iptvsports.php"
+    }
+  ]
+}

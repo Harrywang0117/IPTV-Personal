@@ -66,11 +66,12 @@
       "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
     ],
     "checks_per_run": 16,
-    "samples_per_source": 3,
+    "samples_per_source": 4,
     "promotion_hours": 6,
     "active_max_age_hours": 72,
     "max_registry": 100,
-    "max_active": 6
+    "max_active": 6,
+    "candidate_file": "candidate-sources.json"
   },
   "blocked_event_routes": [
     {

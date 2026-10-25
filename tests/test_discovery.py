@@ -59,7 +59,7 @@ class DiscoveryAndPublicationTests(unittest.TestCase):
     def test_failed_feeds_preserve_registry_without_promoting(self):
         with tempfile.TemporaryDirectory() as tmp:
             path=Path(tmp)/'registry.json';report=Path(tmp)/'report.json'
-            cfg=copy.deepcopy(self.config);cfg['sources']=[];cfg['discovery']['feeds']=['https://feed.example/list']
+            cfg=copy.deepcopy(self.config);cfg['sources']=[];cfg['discovery']['feeds']=['https://feed.example/list'];cfg['discovery'].pop('candidate_file',None)
             item={'url':'https://old.example','id':'migu-old','status':'probation','first_seen_at':self.now.isoformat()}
             path.write_text(json.dumps({'sources':[item]}))
             with patch('builtins.print'):
@@ -68,6 +68,19 @@ class DiscoveryAndPublicationTests(unittest.TestCase):
             result=json.loads(path.read_text())['sources']
             self.assertEqual(len(result),1)
             self.assertNotEqual(result[0]['status'],'active')
+
+    def test_saved_public_candidates_do_not_bypass_probation_when_index_is_blocked(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            cfg=copy.deepcopy(self.config);cfg['sources']=[];cfg['discovery']['feeds']=['https://blocked.example/feed']
+            path=Path(tmp)/'registry.json';report=Path(tmp)/'report.json'
+            with patch('builtins.print'):
+                d.run(cfg,path,report,self.now,feeds={},checker=lambda *a:{'qualified':True})
+            sources=json.loads(path.read_text())['sources']
+            self.assertEqual(len(sources),12)
+            self.assertTrue(all(s['status']=='probation' for s in sources))
+            with patch('builtins.print'):
+                d.run(cfg,path,report,self.now+timedelta(hours=1),feeds={},checker=lambda *a:{'qualified':True})
+            self.assertTrue(all(s['status']=='probation' for s in json.loads(path.read_text())['sources']))
 
     def test_previous_good_route_is_retained_before_new_priority(self):
         old=self.event(source='migu-primary');new=p.replace(old,url='https://better.example/968123456',source='migu-backup')
@@ -145,6 +158,17 @@ class DiscoveryAndPublicationTests(unittest.TestCase):
         with patch('discover.subprocess.run',return_value=subprocess.CompletedProcess([],28,b'',b'')):
             with self.assertRaisesRegex(ValueError,'curl_28'):
                 d.read_feed('https://public.example/feed')
+
+    def test_source_samples_cover_distinct_active_matches_and_replays(self):
+        entries=[self.event(url='https://source.example/'+str(968123450+i),
+                           attrs={'tvg-id':str(match)}) for i,match in enumerate([1,1,2,3,4])]
+        entries[0].name='NBA A VS B 中文 08:00'
+        entries[1].name='NBA A VS B 原声 08:00'
+        entries[2].name='NBA C VS D 08:00'
+        entries[3].name='CBA E VS F 全场回放 00:01'
+        entries[4].name='中超 G VS H 全场回放 00:01'
+        selected=d.sample_entries(entries,self.now,4)
+        self.assertEqual({e.attrs['tvg-id'] for e in selected},{'1','2','3','4'})
 
     def test_trial_hidden_behind_second_redirect_is_rejected(self):
         opener=unittest.mock.MagicMock()
