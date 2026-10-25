@@ -37,6 +37,8 @@ def verify(out):
                       if key.startswith(prefix) and key.endswith(':'+entry.fingerprint)]
             assert proofs and proofs[0]['qualified'], 'missing_route_evidence'
             proof = proofs[0]
+            if route := proof.get('route'):
+                assert route['url'] == entry.url and p.replace(entry, options=route['options']).fingerprint == entry.fingerprint, 'route_record_mismatch'
             generated = datetime.fromisoformat(status['generated_at'])
             if proof.get('verification_reused'):
                 assert proof.get('last_attempt_reason') in p.INCONCLUSIVE_EVENT_CHECKS, 'unsafe_evidence_reuse'

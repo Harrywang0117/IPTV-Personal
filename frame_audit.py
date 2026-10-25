@@ -1,5 +1,6 @@
 """Bounded picture samples for Actions artifacts; no semantic match recognition."""
 from concurrent.futures import ThreadPoolExecutor
+from collections import defaultdict
 from datetime import datetime
 import html
 import json
@@ -61,12 +62,24 @@ def audit_frames(buckets, config, prober, directory, now, requested=()):
     directory.mkdir(parents=True, exist_ok=True)
     entries = [b[0] for b in buckets if b[0].event_date and not b[0].upcoming
                and (b[0].verified or b[0].check_status == 'observation_pending')]
-    entries.sort(key=lambda e: (not any(t in e.name for t in requested),
-                                e.event_date != now.date(), not e.verified, p.rank(e)))
+    entries.sort(key=lambda e: (e.event_date != now.date(), not e.verified, p.rank(e)))
+    explicit = [e for e in entries if any(t in e.name for t in requested)]
+    groups = defaultdict(list)
+    for entry in entries:
+        if entry not in explicit:
+            groups[(entry.event_date, entry.name.split()[0])].append(entry)
+    priorities = {'CBA': 0, 'NBA': 1, '中超': 2}
+    keys = sorted(groups, key=lambda k: (priorities.get(k[1], 3), k[0] != now.date(), k))
+    # Rotate diagnostics, without changing the playlist or its selected route.
+    for key in keys:
+        shift = int(now.timestamp() // 3600) % len(groups[key])
+        groups[key] = groups[key][shift:] + groups[key][:shift]
+    entries = explicit + [groups[key][i] for i in range(max((len(v) for v in groups.values()), default=0))
+                          for key in keys if i < len(groups[key])]
     # One route per match; cap work rather than multiplying every commentary.
     selected, seen = [], set()
     for entry in entries:
-        match = (entry.event_date, entry.attrs.get('tvg-id') or entry.name)
+        match = (entry.event_date, entry.name.split()[0], entry.attrs.get('tvg-id') or entry.name)
         if match not in seen:
             seen.add(match)
             selected.append(entry)

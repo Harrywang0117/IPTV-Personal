@@ -3738,5 +3738,125 @@
         "almost_all_black": false
       }
     ]
+  },
+  "e8b831065dd0e5afaeaa:16e9133d835694544c54": {
+    "first_success_at": "2026-10-25T14:42:32+08:00",
+    "last_success_at": "2026-10-25T14:42:32+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 9042,
+    "sample_offsets": [
+      0,
+      4521,
+      7233
+    ],
+    "sample_seconds": 5,
+    "route": {
+      "url": "http://mi.dzpp.uk/968713051",
+      "options": [
+        "#EXTVLCOPT:http-user-agent=okhttp/3.15"
+      ]
+    },
+    "recovered_from_commit": "ac5bc36"
+  },
+  "e8b831065dd0e5afaeaa:3276e1a30b7fc12b37ac": {
+    "first_success_at": "2026-10-25T14:42:32+08:00",
+    "last_success_at": "2026-10-25T14:42:32+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 9042,
+    "sample_offsets": [
+      0,
+      4521,
+      7233
+    ],
+    "sample_seconds": 5,
+    "route": {
+      "url": "http://139.224.44.53:1234/968713051",
+      "options": [
+        "#EXTVLCOPT:http-user-agent=okhttp/3.15"
+      ]
+    },
+    "recovered_from_commit": "ac5bc36"
+  },
+  "2071c7172dacdb816085:52d70928683fbfde0b79": {
+    "first_success_at": "2026-10-25T14:42:32+08:00",
+    "last_success_at": "2026-10-25T14:42:32+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 11603,
+    "sample_offsets": [
+      0,
+      5801,
+      9282
+    ],
+    "sample_seconds": 5,
+    "route": {
+      "url": "http://mi.dzpp.uk/968698108",
+      "options": [
+        "#EXTVLCOPT:http-user-agent=okhttp/3.15"
+      ]
+    },
+    "recovered_from_commit": "ac5bc36"
+  },
+  "2071c7172dacdb816085:3e4774e6d4baff9a9046": {
+    "first_success_at": "2026-10-25T14:42:32+08:00",
+    "last_success_at": "2026-10-25T14:42:32+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 11603,
+    "sample_offsets": [
+      0,
+      5801,
+      9282
+    ],
+    "sample_seconds": 5,
+    "route": {
+      "url": "http://139.224.44.53:1234/968698108",
+      "options": [
+        "#EXTVLCOPT:http-user-agent=okhttp/3.15"
+      ]
+    },
+    "recovered_from_commit": "ac5bc36"
+  },
+  "5898623e540cf6989973:177442b5012f81e87210": {
+    "first_success_at": "2026-10-25T14:42:32+08:00",
+    "last_success_at": "2026-10-25T14:42:32+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 13612,
+    "sample_offsets": [
+      0,
+      6806,
+      10889
+    ],
+    "sample_seconds": 5,
+    "route": {
+      "url": "http://mi.dzpp.uk/968719487",
+      "options": [
+        "#EXTVLCOPT:http-user-agent=okhttp/3.15"
+      ]
+    },
+    "recovered_from_commit": "ac5bc36"
+  },
+  "5898623e540cf6989973:b51ecbd9a5c5329a0768": {
+    "first_success_at": "2026-10-25T14:42:32+08:00",
+    "last_success_at": "2026-10-25T14:42:32+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 13612,
+    "sample_offsets": [
+      0,
+      6806,
+      10889
+    ],
+    "sample_seconds": 5,
+    "route": {
+      "url": "http://139.224.44.53:1234/968719487",
+      "options": [
+        "#EXTVLCOPT:http-user-agent=okhttp/3.15"
+      ]
+    },
+    "recovered_from_commit": "ac5bc36"
   }
 }

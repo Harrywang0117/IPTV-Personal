@@ -627,6 +627,47 @@ def reusable_vod_evidence(proof, now, config):
         return False
 
 
+def reusable_route_record(entry, config):
+    parsed = urlparse(entry.url)
+    roots = {urlparse(s["url"]).netloc for s in config["sources"] if s.get("events")}
+    if (parsed.netloc in roots and public_url(entry.url) and re.fullmatch(r"/\d{9}", parsed.path)
+            and not parsed.query and not parsed.fragment):
+        return {"url": entry.url, "options": entry.options}
+    return None
+
+
+def supplement_retained_routes(grouped, previous_entries, previous_evidence, now, config):
+    """An omitted catalogue row is not an observed failure of its play route."""
+    events = {event_key(b[0]): b for b in grouped.values() if b[0].event_date and not b[0].upcoming}
+    saved = {(e.attrs.get("tvg-id"), e.fingerprint): e for e in previous_entries}
+    roots = {urlparse(s["url"]).netloc: s["id"] for s in config["sources"] if s.get("events")}
+    added = 0
+    for key, proof in previous_evidence.items():
+        if not re.fullmatch(r"[0-9a-f]{20}:[0-9a-f]{20}", key) or not reusable_vod_evidence(proof, now, config):
+            continue
+        event_id, fingerprint = key.split(":")
+        bucket = events.get(event_id)
+        if not bucket or any(e.fingerprint == fingerprint for e in bucket):
+            continue
+        route = proof.get("route")
+        old = saved.get(("event-" + event_id[:16], fingerprint))
+        if not route and old:
+            route = {"url": old.url, "options": old.options}
+        if (not isinstance(route, dict) or not isinstance(route.get("url"), str)
+                or not isinstance(route.get("options", []), list)
+                or not all(isinstance(option, str) for option in route.get("options", []))):
+            continue
+        candidate = replace(bucket[0], url=route["url"], options=route.get("options", []),
+                            source=roots.get(urlparse(route["url"]).netloc, ""),
+                            verified=False, check_status="not_checked", evidence={})
+        if (not reusable_route_record(candidate, config) or candidate.fingerprint != fingerprint
+                or any(item["url"] == candidate.url for item in config.get("blocked_event_routes", []))):
+            continue
+        bucket.append(candidate)
+        added += 1
+    return added
+
+
 def qualify_events(buckets, previous_evidence, now, config):
     """A live entry needs two time-separated checks, each of the same route."""
     evidence, qualified = {}, []
@@ -644,6 +685,8 @@ def qualify_events(buckets, previous_evidence, now, config):
                         and entry.check_status in INCONCLUSIVE_EVENT_CHECKS and reusable_vod_evidence(old, now, config)):
                     proof = {**old, "verification_reused": True, "last_attempt_at": now.isoformat(timespec="seconds"),
                              "last_attempt_reason": entry.check_status}
+                    if route := reusable_route_record(entry, config):
+                        proof["route"] = route
                     evidence[key] = proof
                     entry.verified, entry.check_status, entry.evidence = True, "recent_verified", proof
                     accepted.append(entry)
@@ -660,6 +703,8 @@ def qualify_events(buckets, previous_evidence, now, config):
             enough = entry.evidence.get("kind") == "vod" or (now-first).total_seconds() >= config.get("event_live_observation_minutes", 20)*60
             evidence[key] = {"first_success_at": first.isoformat(timespec="seconds"), "last_success_at": now.isoformat(timespec="seconds"),
                              "qualified": enough, **entry.evidence}
+            if route := reusable_route_record(entry, config):
+                evidence[key]["route"] = route
             if enough:
                 accepted.append(entry)
             else:
@@ -787,6 +832,65 @@ def probe_priority(bucket, preferred, now, requested=()):
     return (tier, 0 if "回放" in entry.name else 1, rank(entry))
 
 
+def order_probes(buckets, preferred, previous_evidence, now, requested=()):
+    """Cover distinct fixtures, dates and competitions before extra commentaries."""
+    requested_rows, future, channels = [], [], []
+    fixtures = defaultdict(list)
+    def fixture(entry):
+        league = entry.name.split()[0]
+        match = entry.attrs.get("tvg-id") or re.sub(r"\s*全场回放.*", "", entry.name)
+        return entry.event_date, league, match
+    def saved_time(bucket):
+        entry = bucket[0]
+        prefix = event_key(entry) + ":"
+        times = [p.get("last_success_at", "") for key, p in previous_evidence.items() if key.startswith(prefix)]
+        return min(times) if times else ""
+    for bucket in sorted(buckets, key=lambda b: rank(b[0])):
+        entry = bucket[0]
+        if not entry.event_date:
+            channels.append(bucket)
+        elif entry.upcoming:
+            future.append(bucket)
+        elif any(text in entry.name for text in requested):
+            requested_rows.append(bucket)
+        else:
+            fixtures[fixture(entry)].append(bucket)
+    seen = {fixture(b[0]) for b in requested_rows}
+    lanes = defaultdict(lambda: defaultdict(list))
+    extras = []
+    for key, rows in fixtures.items():
+        def commentary(bucket):
+            entry = bucket[0]
+            known = "event-" + event_key(entry)[:16] in preferred
+            voice = 0 if "赛场原声" in entry.name else 1 if "英文原声" in entry.name else 2
+            return not known, saved_time(bucket), voice, rank(entry)
+        rows.sort(key=commentary)
+        first, *rest = rows
+        if key in seen:
+            extras.extend(rows)
+            continue
+        entry = first[0]
+        tier = probe_priority(first, preferred, now)[0]
+        lane = 0 if tier == 2 else 1 if tier == 1 else 2 if "回放" in entry.name else 3
+        lanes[lane][key[:2]].append(first)
+        extras.extend(rest)
+    def balanced(groups):
+        result = []
+        priorities = {"CBA": 0, "NBA": 1, "中超": 2}
+        keys = sorted(groups, key=lambda k: (priorities.get(k[1], 3), k[0] != now.date(), k))
+        for i in range(max((len(groups[k]) for k in keys), default=0)):
+            result.extend(groups[k][i] for k in keys if i < len(groups[k]))
+        return result
+    primary = {lane: balanced(groups) for lane, groups in lanes.items()}
+    ordered = list(requested_rows)
+    # Current live, retained routes and new replays share the first pass.
+    for i in range(max((len(primary.get(lane, [])) for lane in (0, 1, 2)), default=0)):
+        ordered.extend(primary[lane][i] for lane in (0, 1, 2) if i < len(primary.get(lane, [])))
+    ordered += primary.get(3, [])
+    ordered += sorted(extras, key=lambda b: ("event-" + event_key(b[0])[:16] not in preferred, saved_time(b), rank(b[0])))
+    return ordered + future + channels
+
+
 def reconcile_migu_metadata(entries):
     """Repair clear cross-competition conflicts supported by other mirrors."""
     by_content = defaultdict(list)
@@ -891,8 +995,10 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
     if events_only and not previous.get("accepted"):
         raise ValueError("events_only_requires_previous_accepted_channels")
     preferred = defaultdict(list)
+    previous_entries = []
     try:
-        for entry in parse_playlist((out_dir / "all-backup.m3u").read_text()):
+        previous_entries = parse_playlist((out_dir / "all-backup.m3u").read_text())
+        for entry in previous_entries:
             key = entry.attrs.get("tvg-id") if entry.group.startswith("咪咕·") else entry.identity
             preferred[key].append(entry.fingerprint)
     except OSError:
@@ -936,6 +1042,7 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
     for entry in candidates:
         if not events_only or entry.event_date:
             grouped[entry.identity].append(entry)
+    restored_route_count = supplement_retained_routes(grouped, previous_entries, previous_evidence, now, config)
     missing = missing_event_days(candidates, now)
     if missing:
         deferred = missing == [now.date() + timedelta(days=1)]
@@ -958,10 +1065,15 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
         return 3 if deferred else 2
     media_probe = probe or Prober(config)
     source_checks, failure_examples, check_lock = defaultdict(Counter), defaultdict(list), threading.Lock()
+    event_attempts = []
     def probe(entry):
         result = media_probe(entry)
         with check_lock:
             source_checks[entry.source][result["reason"]] += 1
+            if entry.event_date and result["reason"] not in ("event_budget", "budget"):
+                event_attempts.append({"event_id": event_key(entry), "date": entry.event_date.isoformat(),
+                                       "source": entry.source, "route_fingerprint": entry.fingerprint,
+                                       "result": result["reason"]})
             examples = failure_examples[entry.source]
             if (not result["ok"] and result.get("diagnostic") and len(examples) < 6
                     and not any(item["reason"] == result["reason"] for item in examples)):
@@ -975,7 +1087,7 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
     if requested_checks:
         samples.update(b[0].identity for b in ordered if b[0].event_date and not b[0].upcoming
                        and any(text in b[0].name for text in requested_checks))
-    ordered.sort(key=lambda b: probe_priority(b, preferred, now, requested_checks))
+    ordered = order_probes(ordered, preferred, previous_evidence, now, requested_checks)
     print(f"probe_start channels_and_events={len(ordered)}", flush=True)
     with ThreadPoolExecutor(max_workers=config["workers"]) as pool:
         futures = [pool.submit(select_bucket, entries, config, probe,
@@ -1016,14 +1128,16 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
                                   "observation_pending": sum(e.check_status == "observation_pending" for e in entries),
                                   "failed_checks": sum(not e.verified and e.check_status not in ("not_checked", "last_accepted", "observation_pending") for e in entries)}
     coverage = {}
-    for league in ("CBA", "中超"):
+    attempted_ids = {item["event_id"] for item in event_attempts}
+    for league in ("CBA", "NBA", "中超"):
         matches = [b[0] for b in catalogue if b[0].event_date and b[0].name.startswith(league+" ")]
         coverage[league] = {}
         for day in sorted(set(e.event_date for e in matches)):
             items = [e for e in matches if e.event_date == day]
             coverage[league][day.isoformat()] = {
                 "matches": len(set(e.attrs.get("tvg-id") or e.name for e in items)),
-                "entries": len(items), "decoded_entries": sum(e.verified for e in items)}
+                "entries": len(items), "checked_entries": sum(event_key(e) in attempted_ids for e in items),
+                "decoded_entries": sum(e.verified for e in items)}
     warnings = []
     if any(e.check_status == "recent_verified" for b in buckets if b[0].event_date for e in b):
         warnings.append("some_vods_reuse_recent_evidence_with_original_timestamp")
@@ -1048,7 +1162,9 @@ def run(config, out_dir, report_path, now, fixtures=None, probe=None, events_onl
               "catalogue_subscription": "events-catalogue.m3u" if config.get("publish_player_catalogue", False) else None,
               "source_media_checks": {source: dict(counts) for source, counts in source_checks.items()},
               "source_failure_examples": {source:items for source,items in failure_examples.items() if items},
-              "probe_order": "requested_then_retained_then_live_then_today_then_older_unpublished",
+              "event_attempts": event_attempts,
+              "probe_order": "requested_then_distinct_fixtures_balanced_by_competition_and_date_before_extra_commentaries",
+              "restored_recent_routes_omitted_by_catalogues": restored_route_count,
               "selection_policy": "recheck_previous_route_first_then_verified_backup",
               "published_events": sum(bool(b[0].event_date) for b in buckets),
               "reused_event_routes": sum(e.check_status == "recent_verified" for b in buckets if b[0].event_date for e in b),

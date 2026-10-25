@@ -82,10 +82,10 @@ jobs:
                   handle.write('主订阅只发布通过检测的入口；完整赛程及受限状态见 public/schedule.md。\n\n')
                   if data.get('deferred'):
                       handle.write('本轮未发布：上游明日赛程未更新，保留原订阅，下次自动重试；未进行视频检测。\n\n')
-                  handle.write('|赛事|日期|场次|解说条目|解码通过条目|\n|---|---|---:|---:|---:|\n')
+                  handle.write('|赛事|日期|场次|解说条目|本轮已检查|已发布条目|\n|---|---|---:|---:|---:|---:|\n')
                   for league, days in data.get('competition_coverage', {}).items():
                       for day, count in days.items():
-                          handle.write(f"|{league}|{day}|{count['matches']}|{count['entries']}|{count['decoded_entries']}|\n")
+                          handle.write(f"|{league}|{day}|{count['matches']}|{count['entries']}|{count.get('checked_entries', 0)}|{count['decoded_entries']}|\n")
                   handle.write('\n主订阅赛事条目：' + str(data.get('published_events', 0)) + '\n')
                   recent = sum(day.get('recent_verified', 0) for day in data.get('events', {}).values())
                   handle.write(f'\n其中沿用24小时内原检测记录：{recent} 条（保留实际检测时间）。\n')
