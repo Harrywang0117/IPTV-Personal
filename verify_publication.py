@@ -16,12 +16,15 @@ def verify(out):
     assert status['event_policy'] == 'qualified_only_with_separate_complete_schedule', 'wrong_policy'
     event_ids = {'event-'+e['id'][:16] for e in schedule['events'] if e['published']}
     expected_dates = set(status['events'])
+    config = json.loads((p.ROOT/'config.json').read_text())
+    blocked = {item['url'] for item in config.get('blocked_event_routes', [])}
     assert {e['date'] for e in schedule['events']} == expected_dates, 'schedule_date_gap'
     for name, limit in [('all.m3u',1), ('all-backup.m3u',2), ('events.m3u',1), ('channels.m3u',1)]:
         entries = p.parse_playlist((out/name).read_text())
         keys = Counter((e.group,e.name) for e in entries)
         assert max(keys.values(), default=0) <= limit, 'too_many_lines_'+name
         assert all(not p.trial_url(e.url) for e in entries), 'trial_url_'+name
+        assert all(e.url not in blocked for e in entries), 'blocked_content_mismatch_'+name
         events = [e for e in entries if e.group.startswith('咪咕·')]
         assert all(e.attrs.get('tvg-id') in event_ids for e in events), 'unqualified_event_'+name
         assert all('预告' not in e.group for e in events), 'upcoming_in_main_'+name

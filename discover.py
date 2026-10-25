@@ -53,9 +53,13 @@ def read_feed(url, timeout=18):
     # follow redirects to unknown hosts. The byte and total-time limits apply.
     result = subprocess.run(['curl', '--silent', '--show-error', '--fail', '--max-redirs', '0',
                              '--proto', '=http,https', '--connect-timeout', '5', '--max-time', str(timeout),
-                             '--max-filesize', str(2*1024*1024), url], capture_output=True, timeout=timeout+2)
-    if result.returncode or not result.stdout or len(result.stdout) > 2*1024*1024:
-        raise ValueError('discovery_feed_unavailable')
+                             '--max-filesize', str(8*1024*1024), '--user-agent', p.UA, url], capture_output=True, timeout=timeout+2)
+    if result.returncode:
+        raise ValueError('discovery_feed_curl_'+str(result.returncode))
+    if not result.stdout:
+        raise ValueError('discovery_feed_empty')
+    if len(result.stdout) > 8*1024*1024:
+        raise ValueError('discovery_feed_too_large')
     return result.stdout.decode('utf-8', 'replace')
 
 

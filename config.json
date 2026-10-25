@@ -71,5 +71,14 @@
     "active_max_age_hours": 72,
     "max_registry": 100,
     "max_active": 6
-  }
+  },
+  "blocked_event_routes": [
+    {
+      "url": "http://124.222.67.241:1234/968572967",
+      "reason": "content_mismatch",
+      "observed_date": "2026-10-25",
+      "expected": "雄鹿VS76人",
+      "observed": "独行侠VS步行者"
+    }
+  ]
 }

@@ -130,6 +130,22 @@ class DiscoveryAndPublicationTests(unittest.TestCase):
             self.assertEqual(prober.event_check(self.event(),45)['reason'],'vod_duration_unknown')
             decode.assert_not_called()
 
+    def test_known_wrong_match_is_blocked_before_any_network_or_decode(self):
+        prober=object.__new__(p.Prober);prober.config=self.config
+        bad=self.event(url=self.config['blocked_event_routes'][0]['url'])
+        with patch('pipeline.access_hint') as hint,patch.object(prober,'decode') as decode:
+            self.assertEqual(prober(bad)['reason'],'content_mismatch')
+            hint.assert_not_called();decode.assert_not_called()
+
+    def test_public_feed_with_more_than_two_megabytes_is_bounded_but_accepted(self):
+        result=subprocess.CompletedProcess([],0,b'x'*(3*1024*1024),b'')
+        with patch('discover.subprocess.run',return_value=result) as run:
+            self.assertEqual(len(d.read_feed('https://public.example/feed')),3*1024*1024)
+            self.assertIn(str(8*1024*1024),run.call_args.args[0])
+        with patch('discover.subprocess.run',return_value=subprocess.CompletedProcess([],28,b'',b'')):
+            with self.assertRaisesRegex(ValueError,'curl_28'):
+                d.read_feed('https://public.example/feed')
+
     def test_trial_hidden_behind_second_redirect_is_rejected(self):
         opener=unittest.mock.MagicMock()
         opener.open.side_effect=[p.urllib.error.HTTPError('https://source.example',302,'',{'Location':'https://redirect.example/stream'},None),

@@ -291,6 +291,8 @@ class Prober:
             self.hls_options += ["-extension_picky", "0"]
 
     def __call__(self, entry):
+        if any(item["url"] == entry.url for item in self.config.get("blocked_event_routes", [])):
+            return {"ok": False, "reason": "content_mismatch", "frames": 0}
         if trial_url(entry.url):
             return {"ok": False, "reason": "trial_stream", "frames": 0}
         with self.lock:
@@ -592,6 +594,7 @@ def catalogue_json(buckets, now):
     labels = {"decoded": "本轮检测通过", "not_checked": "未完成检测", "trial_stream": "仅试看",
               "membership_required": "需会员", "login_required": "需登录", "short_vod": "短片段，未按正赛收录",
               "vod_duration_unknown": "回放时长未核实",
+              "content_mismatch": "画面与赛事标题不符，已封禁",
               "observation_pending": "等待第二次直播检测"}
     return {"generated_at": now.isoformat(), "note": "完整赛程目录；限制或待测条目不进入主订阅。",
             "events": [{"id": event_key(bucket[0]), "name": display_name(bucket[0]),
