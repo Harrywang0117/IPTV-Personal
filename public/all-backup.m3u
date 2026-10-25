@@ -419,9 +419,6 @@ http://38.64.72.148:80/hls/modn/list/4005/chunklist1.m3u8
 #EXTINF:-1 tvg-name="TVBS" tvg-id="TVBS" tvg-logo="https://logo.catvod.com/TVBS.png" group-title="台湾",TVBS
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://38.64.72.148/hls/modn/list/4005/chunklist1.m3u8
-#EXTINF:-1 tvg-name="TVBSASIA" tvg-logo="https://i.imgur.com/4S1rkhm.png" tvg-id="TVBSAsia.tw@SD" group-title="台湾",TVBSASIA
-#EXTVLCOPT:http-user-agent=okhttp
-http://mtayeh.ottb.xyz/live/774710333494/659822672281/58590.ts
 #EXTINF:-1 tvg-name="TVBS亚洲" tvg-id="TVBS亚洲" tvg-logo="https://www.xn--rgv465a.top/tvlogo/TVBS亚洲.png" group-title="台湾",TVBS亚洲
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://38.64.72.148:80/hls/modn/list/4005/playlist.m3u8?
@@ -470,9 +467,6 @@ http://38.64.72.148:80/hls/modn/list/2015/playlist.m3u8
 #EXTINF:-1 tvg-name="东森中国台" group-title="台湾",东森中国台
 #EXTVLCOPT:http-user-agent=okhttp/5.3.2
 http://38.64.72.148/hls/modn/list/2003/chunklist1.m3u8
-#EXTINF:-1 tvg-name="东森中国台" group-title="台湾",东森中国台
-#EXTVLCOPT:http-user-agent=okhttp
-http://mtayeh.ottb.xyz/live/774710333494/659822672281/59156.ts
 #EXTINF:-1 tvg-name="东森幼幼台" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/东森幼幼台.png" group-title="台湾",东森幼幼台
 #EXTVLCOPT:http-user-agent=okhttp
 http://zby.lskk.top/cdnlive.php?mode=play&id=70905dac749b7d3fa4c7e4858f0a470f&token=wUJLMUpsYJOdEdkpd5OwyC27t69vzy3W
@@ -509,9 +503,6 @@ http://zby.lskk.top/cdnlive.php?mode=play&id=d8addab13f0194673777b66628b99461&to
 #EXTINF:-1 tvg-name="东森美洲" group-title="台湾",东森美洲
 #EXTVLCOPT:http-user-agent=okhttp/5.3.2
 http://38.64.72.148/hls/modn/list/2016/chunklist0.m3u8
-#EXTINF:-1 tvg-name="东森美洲" group-title="台湾",东森美洲
-#EXTVLCOPT:http-user-agent=okhttp
-http://mtayeh.ottb.xyz/live/774710333494/659822672281/59160.ts
 #EXTINF:-1 tvg-name="东森财经新闻" group-title="台湾",东森财经新闻
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://4gtv.cnlive.club/channel/57ce2e74/index.m3u8?q=1782639885837
@@ -623,9 +614,6 @@ http://38.64.72.148/hls/modn/list/4013/chunklist1.m3u8
 #EXTINF:-1 tvg-name="台视综合" tvg-logo="https://logo.catvod.com/台视综合.png" group-title="台湾",台视综合
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://45.192.97.170:8880/play/495.m3u8
-#EXTINF:-1 tvg-name="台视综合" tvg-logo="https://logo.catvod.com/台视综合.png" group-title="台湾",台视综合
-#EXTVLCOPT:http-user-agent=okhttp
-http://mtayeh.ottb.xyz/live/774710333494/659822672281/59166.ts
 #EXTINF:-1 tvg-name="台视财经" tvg-logo="https://logo.catvod.com/台视财经.png" group-title="台湾",台视财经
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://45.192.97.170:8880/play/496.m3u8
@@ -1121,9 +1109,6 @@ http://38.75.136.137:98/gslb/dsdqpub/nxss.m3u8?auth=testpub
 #EXTINF:-1 tvg-name="CCTV女性时尚" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/女性时尚.png" tvg-id="CCTV女性时尚" group-title="央视",CCTV女性时尚
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=nxss
-#EXTINF:-1 tvg-name="CCTV娱乐" group-title="央视",CCTV娱乐
-#EXTVLCOPT:http-user-agent=okhttp
-http://mtayeh.ottb.xyz/live/774710333494/659822672281/58618.ts
 #EXTINF:-1 tvg-name="CCTV怀旧剧场" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/怀旧剧场.png" tvg-id="CCTV怀旧剧场" group-title="央视",CCTV怀旧剧场
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hjjc
@@ -1538,9 +1523,6 @@ https://lightning-now90s-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-lightning
 #EXTINF:-1 tvg-name="NOW新闻台" tvg-logo="https://logo.catvod.com/NOW新闻台.png" tvg-id="stream-e99bd9b2-cd09-4f71-9e22-7965694c3c3e" group-title="香港",NOW新闻台
 #EXTVLCOPT:http-user-agent=okhttp
 http://173.208.234.146/live/nowxw.m3u8
-#EXTINF:-1 tvg-name="NOW新闻台" tvg-logo="https://logo.catvod.com/NOW新闻台.png" tvg-id="stream-e99bd9b2-cd09-4f71-9e22-7965694c3c3e" group-title="香港",NOW新闻台
-#EXTVLCOPT:http-user-agent=okhttp
-http://psyl11.dyndns.tv:35451/live/axdynowtream/fSlawNmh15/23.ts
 #EXTINF:-1 tvg-name="NOW爆谷" group-title="香港",NOW爆谷
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 https://www.goodiptv.club/douyu/323876
@@ -1632,12 +1614,6 @@ http://45.192.97.170:8880/play/405.m3u8
 #EXTINF:-1 tvg-name="TVBAHIA" tvg-id="TVBahia.br@HD" tvg-logo="https://i.imgur.com/sJOrvHg.png" group-title="香港",TVBAHIA
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 http://hls1.sua.tv/live/globotvbahiafhdbr2/s.m3u8
-#EXTINF:-1 tvg-name="TVBDRAMA" tvg-id="TVB Drama" tvg-logo="https://iptv.yang-1989.xyz/logo/TVB%20Drama.webp" group-title="香港",TVBDRAMA
-#EXTVLCOPT:http-user-agent=okhttp
-http://ysift55.xyz:80/live/WJ74AC4SRKQQYR7/pahruAQRs8/269830.ts
-#EXTINF:-1 tvg-name="TVBDRAMA" tvg-id="TVB Drama" tvg-logo="https://iptv.yang-1989.xyz/logo/TVB%20Drama.webp" group-title="香港",TVBDRAMA
-#EXTVLCOPT:http-user-agent=okhttp
-http://mtayeh.ottb.xyz/live/774710333494/659822672281/58591.ts
 #EXTINF:-1 tvg-name="TVBJ1" tvg-id="TVBJ1" tvg-logo="https://gitee.com/suxuang/logo/raw/master/logo/TVBJ1.png" group-title="香港",TVBJ1
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 https://cdn.qd.je/163189/j1

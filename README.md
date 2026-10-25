@@ -39,6 +39,8 @@ https://raw.githubusercontent.com/Harrywang0117/IPTV-Personal/main/public/events
 | `state/upstreams.json` / `reports/discovery.json` | 上游发现、观察期、入池和退出依据 |
 | `public/status.json` | 最近一次成功发布的时间与验证统计 |
 
+严格模式下若生成机器未测通赛事，体育订阅可能为空；完整赛程仍保留，实际数量见 `status.json`。本机与 GitHub 网络不同，不能把云端未测通当作你家也不能看。
+
 只添加推荐订阅或备用版其中之一，避免重复导入。播放器也需要开启订阅自动刷新。
 
 ## 验收范围
@@ -49,7 +51,7 @@ https://raw.githubusercontent.com/Harrywang0117/IPTV-Personal/main/public/events
 
 `status.json` 分开记录三天列出数量、已验证、待观察、试看、会员、登录和失败数量；`state/event-evidence.json` 保存入口指纹与检测位置、时间，不保存跳转后的签名地址。`--events-only` 复用上次通过的普通频道并保留原 `channel_validation_at`。普通频道目前仍按三秒实际解码验收，每天重测一次。
 
-新源“入池”只表示有资格提供候选，不代表它每场比赛都可播。`candidate-sources.json` 另外保留已从公开索引查到的候选，索引临时被云端拒绝访问时仍可继续验证，不能跳过观察期。两个公开索引不是全网搜索引擎，发现范围和每轮检查数量有限；索引可在 `config.json` 的 `discovery.feeds` 增补。候选只提取公开根入口加九位内容编号的格式，不扫描 IP 段、不使用带账号密码或令牌的地址，也不部署新的转播服务。
+新源“入池”只表示有资格提供候选，不代表它每场比赛都可播。`candidate-sources.json` 另外保留已从公开索引查到的候选，索引临时被云端拒绝访问时仍可继续验证，不能跳过观察期。两个公开索引不是全网搜索引擎，发现范围和每轮检查数量有限；索引可在 `config.json` 的 `discovery.feeds` 增补。新候选只提取公开根入口加九位内容编号的格式；所有播放列表另拒绝用户名、密码形式的播放地址。不扫描 IP 段、不使用带账号密码或令牌的地址，也不部署新的转播服务。
 
 当前默认电视频道候选包含咪咕普通频道，以及原项目的央视、卫视、体育、港澳台和少儿分类。更多地方台 / 轮播可在 `config.json` 的 `base_groups` 中按需加入。没有通过解码的普通频道不进入新发布文件。
 

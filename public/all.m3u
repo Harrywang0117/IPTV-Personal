@@ -239,9 +239,6 @@ https://5ce9406b73c33.streamlock.net/RSD/ngrp:livestream_all/playlist.m3u8
 #EXTINF:-1 tvg-name="TVBS" tvg-id="TVBS" tvg-logo="https://logo.catvod.com/TVBS.png" group-title="台湾",TVBS
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://38.64.72.148:80/hls/modn/list/4005/chunklist1.m3u8
-#EXTINF:-1 tvg-name="TVBSASIA" tvg-logo="https://i.imgur.com/4S1rkhm.png" tvg-id="TVBSAsia.tw@SD" group-title="台湾",TVBSASIA
-#EXTVLCOPT:http-user-agent=okhttp
-http://mtayeh.ottb.xyz/live/774710333494/659822672281/58590.ts
 #EXTINF:-1 tvg-name="TVBS亚洲" tvg-id="TVBS亚洲" tvg-logo="https://www.xn--rgv465a.top/tvlogo/TVBS亚洲.png" group-title="台湾",TVBS亚洲
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://38.64.72.148:80/hls/modn/list/4005/playlist.m3u8?
@@ -716,9 +713,6 @@ http://38.75.136.137:98/gslb/dsdqpub/ystq.m3u8?auth=testpub
 #EXTINF:-1 tvg-name="CCTV女性时尚" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/女性时尚.png" tvg-id="CCTV女性时尚" group-title="央视",CCTV女性时尚
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://38.75.136.137:98/gslb/dsdqpub/nxss.m3u8?auth=testpub
-#EXTINF:-1 tvg-name="CCTV娱乐" group-title="央视",CCTV娱乐
-#EXTVLCOPT:http-user-agent=okhttp
-http://mtayeh.ottb.xyz/live/774710333494/659822672281/58618.ts
 #EXTINF:-1 tvg-name="CCTV怀旧剧场" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/怀旧剧场.png" tvg-id="CCTV怀旧剧场" group-title="央视",CCTV怀旧剧场
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hjjc
@@ -1056,9 +1050,6 @@ https://cdn.qd.je/163189.php?id=tvb1
 #EXTINF:-1 tvg-name="TVBAHIA" tvg-id="TVBahia.br@HD" tvg-logo="https://i.imgur.com/sJOrvHg.png" group-title="香港",TVBAHIA
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 http://hls1.sua.tv/live/globotvbahiafhdbr2/s.m3u8
-#EXTINF:-1 tvg-name="TVBDRAMA" tvg-id="TVB Drama" tvg-logo="https://iptv.yang-1989.xyz/logo/TVB%20Drama.webp" group-title="香港",TVBDRAMA
-#EXTVLCOPT:http-user-agent=okhttp
-http://ysift55.xyz:80/live/WJ74AC4SRKQQYR7/pahruAQRs8/269830.ts
 #EXTINF:-1 tvg-name="TVBJ1" tvg-id="TVBJ1" tvg-logo="https://gitee.com/suxuang/logo/raw/master/logo/TVBJ1.png" group-title="香港",TVBJ1
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 https://cdn.qd.je/163189/j1

@@ -80,7 +80,6 @@ DELTATVCANAL50,https://fox.hostlagarto.com:8081/deltatv50/tracks-v1a1/mono.m3u8
 MOMO亲子,http://4gtv.cnlive.club/channel/n33a56e39/index.m3u8?q=1782639885837
 RADIOSTUDIODELTATV,https://5ce9406b73c33.streamlock.net/RSD/ngrp:livestream_all/playlist.m3u8
 TVBS,http://38.64.72.148:80/hls/modn/list/4005/chunklist1.m3u8
-TVBSASIA,http://mtayeh.ottb.xyz/live/774710333494/659822672281/58590.ts
 TVBS亚洲,http://38.64.72.148:80/hls/modn/list/4005/playlist.m3u8?
 TVBS新聞台,http://38.64.72.148/hls/modn/list/4027/playlist.m3u8
 TVBS新闻,http://4gtv.cnlive.club/channel/n1ea96b20/index.m3u8?q=1782639885837
@@ -241,7 +240,6 @@ CCTV卫生健康,http://198.204.228.26/live/wsjk.m3u8
 CCTV发现之旅,http://38.75.136.137:98/gslb/dsdqpub/fxzl.m3u8?auth=testpub
 CCTV央视台球,http://38.75.136.137:98/gslb/dsdqpub/ystq.m3u8?auth=testpub
 CCTV女性时尚,http://38.75.136.137:98/gslb/dsdqpub/nxss.m3u8?auth=testpub
-CCTV娱乐,http://mtayeh.ottb.xyz/live/774710333494/659822672281/58618.ts
 CCTV怀旧剧场,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hjjc
 CCTV文化精品,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=ysjp
 CCTV电视指南,http://107.150.60.122/live/dszn.m3u8
@@ -357,7 +355,6 @@ STARATVBOJONEGORO,https://bojonegoro.staratv.id/hls/stream.m3u8
 TVB,http://120.238.94.82:9901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
 TVB1,https://cdn.qd.je/163189.php?id=tvb1
 TVBAHIA,http://hls1.sua.tv/live/globotvbahiafhdbr2/s.m3u8
-TVBDRAMA,http://ysift55.xyz:80/live/WJ74AC4SRKQQYR7/pahruAQRs8/269830.ts
 TVBJ1,https://cdn.qd.je/163189/j1
 TVBJ2,http://php.jdshipin.com/TVOD/iptv.php?id=tvbp
 TVBPLUS,https://cdn3.indevs.in/stream/tvb/tvbp/

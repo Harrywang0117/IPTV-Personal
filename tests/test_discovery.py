@@ -27,6 +27,15 @@ class DiscoveryAndPublicationTests(unittest.TestCase):
                          'http://public.example/968123456?token=private', 'http://public.example/968123456789'])
         self.assertEqual(d.extract_roots(text), ['http://8.8.8.8:7788'])
 
+    def test_account_style_addresses_are_rejected_without_dropping_public_media_parameters(self):
+        for url in ['https://public.example/live/example-user/example-password/1234.ts',
+                    'https://public.example/movie/example-user/example-password/1234.mp4',
+                    'https://public.example/1234?username=example&password=example']:
+            self.assertFalse(p.public_url(url))
+            self.assertEqual(p.parse_playlist('#EXTM3U\n#EXTINF:-1,Example\n'+url),[])
+        self.assertTrue(p.public_url('https://public.example/968123456'))
+        self.assertTrue(p.public_url('https://public.example/itv/1234.m3u8?cdn=PublicCDN'))
+
     def test_candidate_dns_cannot_resolve_to_lan(self):
         with patch('discover.socket.getaddrinfo', return_value=[(2,1,6,'',('192.168.1.2',80))]):
             self.assertFalse(d.safe_root('http://public.example', resolve=True))

@@ -50,7 +50,7 @@
       ]
     }
   ],
-  "channels": 436,
+  "channels": 433,
   "events": {
     "2026-10-24": {
       "listed": 239,
@@ -163,5 +163,9 @@
     "vod": "at_least_1200_seconds_and_decoded_at_start_midpoint_80_percent",
     "live": "15_second_decode_twice_at_least_20_minutes_apart_same_route"
   },
-  "upcoming_note": "赛前、试看、受限及未通过检测条目只保留在 schedule.json / schedule.md。检测不证明画面与标题一致或用户端全场稳定。"
+  "upcoming_note": "赛前、试看、受限及未通过检测条目只保留在 schedule.json / schedule.md。检测不证明画面与标题一致或用户端全场稳定。",
+  "publication_filters": {
+    "account_style_lines_removed": 8,
+    "applied_at": "2026-10-25T10:20:50+08:00"
+  }
 }

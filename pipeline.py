@@ -20,7 +20,7 @@ import threading
 import time
 import urllib.error
 import urllib.request
-from urllib.parse import urljoin, urlparse
+from urllib.parse import parse_qs, urljoin, urlparse
 from zoneinfo import ZoneInfo
 
 from vendor.upstream import channel_key, ADULT_RE, NOTICE_WORDS
@@ -71,11 +71,19 @@ class Entry:
         return hashlib.sha256(value.encode()).hexdigest()[:20]
 
 
+def credential_style_url(url):
+    """Do not redistribute account/password-style playlist addresses."""
+    parsed = urlparse(url)
+    return bool(parsed.username or parsed.password or
+                re.search(r"/(?:live|movie|series)/[^/]+/[^/]+/\d+(?:\.|/|$)", parsed.path, re.I) or
+                {"username", "password", "passwd", "access_token"} & {k.lower() for k in parse_qs(parsed.query)})
+
+
 def public_url(url):
     try:
         parsed = urlparse(url)
         host = (parsed.hostname or "").lower()
-        if parsed.scheme not in ("http", "https") or not host or parsed.username or parsed.password:
+        if parsed.scheme not in ("http", "https") or not host or credential_style_url(url):
             return False
         if host == "localhost" or host.endswith((".local", ".localhost")):
             return False

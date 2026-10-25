@@ -20,7 +20,10 @@ def verify(out):
     blocked = {item['url'] for item in config.get('blocked_event_routes', [])}
     assert {e['date'] for e in schedule['events']} == expected_dates, 'schedule_date_gap'
     for name, limit in [('all.m3u',1), ('all-backup.m3u',2), ('events.m3u',1), ('channels.m3u',1)]:
-        entries = p.parse_playlist((out/name).read_text())
+        text = (out/name).read_text()
+        assert all(not p.credential_style_url(line.strip()) for line in text.splitlines()
+                   if line.startswith(('http://','https://'))), 'account_style_address_'+name
+        entries = p.parse_playlist(text)
         keys = Counter((e.group,e.name) for e in entries)
         assert max(keys.values(), default=0) <= limit, 'too_many_lines_'+name
         assert all(not p.trial_url(e.url) for e in entries), 'trial_url_'+name
