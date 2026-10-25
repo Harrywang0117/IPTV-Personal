@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T10:16:35.611695+08:00",
+  "generated_at": "2026-10-25T10:25:40.746847+08:00",
   "feeds": [
     {
       "url": "https://tonkiang.us/iptvsports.php",
@@ -16,84 +16,29 @@
   "registered": 33,
   "status_counts": {
     "degraded": 3,
-    "quarantined": 26,
-    "new": 4
+    "quarantined": 30
   },
   "changes": [
     {
-      "source": "migu-discovered-e3ae27a5be",
+      "source": "migu-discovered-c954b0b713",
       "from": "new",
       "to": "quarantined",
       "reason": "failed_validation"
     },
     {
-      "source": "migu-discovered-bbc4994af0",
+      "source": "migu-discovered-edb4231b17",
       "from": "new",
       "to": "quarantined",
       "reason": "failed_validation"
     },
     {
-      "source": "migu-discovered-c166ab0071",
+      "source": "migu-discovered-ec27036ee5",
       "from": "new",
       "to": "quarantined",
       "reason": "failed_validation"
     },
     {
-      "source": "migu-discovered-711e9aa79d",
-      "from": "new",
-      "to": "quarantined",
-      "reason": "failed_validation"
-    },
-    {
-      "source": "migu-discovered-ca3c64168b",
-      "from": "new",
-      "to": "quarantined",
-      "reason": "failed_validation"
-    },
-    {
-      "source": "migu-discovered-7bd71dd857",
-      "from": "new",
-      "to": "quarantined",
-      "reason": "failed_validation"
-    },
-    {
-      "source": "migu-discovered-5b8f7d7335",
-      "from": "new",
-      "to": "quarantined",
-      "reason": "failed_validation"
-    },
-    {
-      "source": "migu-discovered-afd54e958b",
-      "from": "new",
-      "to": "quarantined",
-      "reason": "failed_validation"
-    },
-    {
-      "source": "migu-discovered-6a358e301b",
-      "from": "new",
-      "to": "quarantined",
-      "reason": "failed_validation"
-    },
-    {
-      "source": "migu-discovered-e9e8c0d2e3",
-      "from": "new",
-      "to": "quarantined",
-      "reason": "failed_validation"
-    },
-    {
-      "source": "migu-discovered-51bed89a2c",
-      "from": "new",
-      "to": "quarantined",
-      "reason": "failed_validation"
-    },
-    {
-      "source": "migu-discovered-2ed20de05d",
-      "from": "new",
-      "to": "quarantined",
-      "reason": "failed_validation"
-    },
-    {
-      "source": "migu-discovered-0bd8bdc085",
+      "source": "migu-discovered-bf18b4058d",
       "from": "new",
       "to": "quarantined",
       "reason": "failed_validation"
