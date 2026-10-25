@@ -577,7 +577,7 @@ def qualify_events(buckets, previous_evidence, now, config):
             except (ValueError, TypeError, KeyError):
                 pass
             enough = entry.evidence.get("kind") == "vod" or (now-first).total_seconds() >= config.get("event_live_observation_minutes", 20)*60
-            evidence[key] = {"first_success_at": first.isoformat(), "last_success_at": now.isoformat(),
+            evidence[key] = {"first_success_at": first.isoformat(timespec="seconds"), "last_success_at": now.isoformat(timespec="seconds"),
                              "qualified": enough, **entry.evidence}
             if enough:
                 accepted.append(entry)
@@ -596,7 +596,7 @@ def catalogue_json(buckets, now):
               "vod_duration_unknown": "回放时长未核实",
               "content_mismatch": "画面与赛事标题不符，已封禁",
               "observation_pending": "等待第二次直播检测"}
-    return {"generated_at": now.isoformat(), "note": "完整赛程目录；限制或待测条目不进入主订阅。",
+    return {"generated_at": now.isoformat(timespec="seconds"), "note": "完整赛程目录；限制或待测条目不进入主订阅。",
             "events": [{"id": event_key(bucket[0]), "name": display_name(bucket[0]),
                         "date": bucket[0].event_date.isoformat(), "time_minutes": event_clock(bucket[0].name),
                         "status": "upcoming" if bucket[0].upcoming else bucket[0].check_status,

@@ -94,7 +94,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: verification-${{ github.run_id }}
-          path: reports/latest.json
+          path: |
+            reports/latest.json
+            public/
+            state/event-evidence.json
           if-no-files-found: warn
           retention-days: 14
       - name: 独立检查发布文件和逐条检测凭据

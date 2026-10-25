@@ -177,6 +177,20 @@ class DiscoveryAndPublicationTests(unittest.TestCase):
         with patch('pipeline.urllib.request.build_opener',return_value=opener):
             self.assertEqual(p.access_hint('https://source.example',2),'trial_stream')
 
+    def test_real_clock_microseconds_do_not_look_like_stale_publication(self):
+        self.now=self.now.replace(microsecond=987654)
+        with tempfile.TemporaryDirectory() as tmp:
+            out=Path(tmp)/'public'
+            vod=self.event(verified=True,check_status='decoded',evidence={'kind':'vod','duration_seconds':7200,'sample_offsets':[0,3600,5760],'sample_seconds':5})
+            _,proof=p.qualify_events([[vod]],{},self.now,self.config)
+            p.atomic_write(out.parent/'state/event-evidence.json',json.dumps(proof))
+            today=self.now.date()
+            catalogue=[[vod]]+[[p.replace(vod,event_date=today+timedelta(days=d),verified=False,upcoming=True)] for d in [-1,1]]
+            report={'accepted':True,'channels':0,'generated_at':self.now.isoformat(timespec='seconds'),'event_policy':'qualified_only_with_separate_complete_schedule',
+                    'events':{str(today+timedelta(days=d)):{} for d in [-1,0,1]},'published_events':1}
+            p.publish(out,[[vod]],report,self.now,self.config,catalogue)
+            self.assertEqual(v.verify(out)['published_events'],1)
+
     def test_independent_verifier_rejects_unqualified_stream_injection(self):
         with tempfile.TemporaryDirectory() as tmp:
             out=Path(tmp)/'public'
