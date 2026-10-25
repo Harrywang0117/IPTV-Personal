@@ -1,10 +1,12 @@
 {
-  "generated_at": "2026-10-25T07:48:12+08:00",
-  "finished_at": "2026-10-25T07:49:00+08:00",
+  "generated_at": "2026-10-25T07:52:25+08:00",
+  "finished_at": "2026-10-25T08:09:39+08:00",
   "accepted": true,
   "errors": [],
   "warnings": [
-    "sports_catalog_contains_unverified_entries"
+    "sports_catalog_contains_unverified_entries",
+    "some_sports_entries_require_login",
+    "some_source_catalogues_from_cache"
   ],
   "sources": [
     {
@@ -18,8 +20,10 @@
       "id": "migu-alt",
       "ok": true,
       "parsed": 565,
-      "selected": 559,
-      "cached": false
+      "selected": 437,
+      "cached": true,
+      "cache_age_hours": 0.07,
+      "fetch_error": "source_fetch_failed_curl_28"
     },
     {
       "id": "migu-backup",
@@ -27,27 +31,34 @@
       "parsed": 565,
       "selected": 559,
       "cached": false
+    },
+    {
+      "id": "base",
+      "ok": true,
+      "parsed": 12104,
+      "selected": 3107,
+      "cached": false
     }
   ],
-  "channels": 545,
+  "channels": 436,
   "events": {
     "2026-10-24": {
       "listed": 226,
-      "verified": 25,
+      "verified": 0,
       "upcoming": 0,
-      "not_checked": 201,
+      "not_checked": 212,
       "membership_required": 0,
       "login_required": 0,
-      "failed_checks": 0
+      "failed_checks": 14
     },
     "2026-10-25": {
       "listed": 183,
-      "verified": 12,
-      "upcoming": 134,
-      "not_checked": 37,
+      "verified": 0,
+      "upcoming": 133,
+      "not_checked": 38,
       "membership_required": 0,
       "login_required": 0,
-      "failed_checks": 0
+      "failed_checks": 12
     },
     "2026-10-26": {
       "listed": 50,
@@ -60,10 +71,15 @@
     }
   },
   "probe": {
-    "decoded": 74,
-    "event_not_checked": 434,
-    "upcoming_lines": 364,
-    "decode_failed": 1
+    "decode_failed": 1458,
+    "login_required": 3,
+    "event_not_checked": 458,
+    "upcoming_lines": 362,
+    "decoded": 664,
+    "http_403": 96,
+    "timeout": 89,
+    "http_404": 14,
+    "http_500": 6
   },
   "max_lines": 2,
   "event_policy": "complete_catalog_with_sampled_playback_checks",
@@ -72,7 +88,7 @@
       "2026-10-24": {
         "matches": 3,
         "entries": 6,
-        "decoded_entries": 3
+        "decoded_entries": 0
       },
       "2026-10-25": {
         "matches": 7,
@@ -89,16 +105,15 @@
       "2026-10-24": {
         "matches": 8,
         "entries": 19,
-        "decoded_entries": 19
+        "decoded_entries": 0
       }
     }
   },
   "requested_event_check": [
-    "阿斯顿维拉VS曼城",
-    "中超"
+    "阿斯顿维拉VS曼城"
   ],
-  "mode": "events_only",
-  "channel_validation_at": "2026-10-24T22:11:46+08:00",
+  "mode": "full",
+  "channel_validation_at": "2026-10-25T07:52:25+08:00",
   "verification": "decoded_video_and_optional_audio_at_generator_location",
   "decode_seconds": 3,
   "upcoming_note": "赛前条目未验证可播；开赛后重测。解码成功不证明画面对应赛事或电视端持续播放。"
