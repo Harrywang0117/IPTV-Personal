@@ -5,6 +5,7 @@ import tempfile
 from zoneinfo import ZoneInfo
 import unittest
 from unittest.mock import patch
+from unittest.mock import MagicMock
 
 import frame_audit as f
 import pipeline as p
@@ -108,3 +109,19 @@ class EventCoverageTests(unittest.TestCase):
         leagues = {record['title'].split()[0] for record in report['records']}
         self.assertTrue({'CBA', 'NBA', '中超'} <= leagues)
         self.assertLessEqual(report['attempted'], 18)
+
+    def test_known_upstream_message_clips_are_not_sports_and_need_no_media_read(self):
+        for name in ['hyqx.mp4', 'dlsx.mp4', 'qtcw.mp4']:
+            url = 'https://migu.lifit.uk/' + name
+            with patch('pipeline.urllib.request.build_opener') as opener:
+                self.assertEqual(p.access_hint(url, 2), 'source_error_video')
+                opener.assert_not_called()
+        self.assertFalse(p.source_error_video('https://migu.lifit.uk.example.com/hyqx.mp4'))
+        self.assertFalse(p.source_error_video('https://other.example/hyqx.mp4'))
+
+    def test_redirect_to_known_message_clip_is_rejected_before_decoding(self):
+        opener = MagicMock()
+        opener.open.side_effect = p.urllib.error.HTTPError('https://source.example', 302, '',
+                                   {'Location': 'https://migu.lifit.uk/hyqx.mp4'}, None)
+        with patch('pipeline.urllib.request.build_opener', return_value=opener):
+            self.assertEqual(p.access_hint('https://source.example/968123456', 2), 'source_error_video')

@@ -27,6 +27,7 @@ def verify(out):
         keys = Counter((e.group,e.name) for e in entries)
         assert max(keys.values(), default=0) <= limit, 'too_many_lines_'+name
         assert all(not p.trial_url(e.url) for e in entries), 'trial_url_'+name
+        assert all(not p.source_error_video(e.url) for e in entries), 'source_error_video_'+name
         assert all(e.url not in blocked for e in entries), 'blocked_content_mismatch_'+name
         events = [e for e in entries if e.group.startswith('咪咕·')]
         assert all(e.attrs.get('tvg-id') in event_ids for e in events), 'unqualified_event_'+name

@@ -307,6 +307,8 @@ class Prober:
             return {"ok": False, "reason": "content_mismatch", "frames": 0}
         if trial_url(entry.url):
             return {"ok": False, "reason": "trial_stream", "frames": 0}
+        if source_error_video(entry.url):
+            return {"ok": False, "reason": "source_error_video", "frames": 0}
         with self.lock:
             semaphore = self.hosts[urlparse(entry.url).hostname]
         deadline = min(self.deadline, self.event_deadline) if entry.event_date else self.deadline
@@ -481,9 +483,18 @@ def trial_url(url):
     return host.startswith("gslbtrial") and host.endswith(".miguvideo.com")
 
 
+def source_error_video(url):
+    # Public miguevent error handling redirects to these fixed message clips.
+    parsed = urlparse(url)
+    return ((parsed.hostname or "").lower() == "migu.lifit.uk"
+            and parsed.path.rsplit("/", 1)[-1] in ("hyqx.mp4", "dlsx.mp4", "qtcw.mp4"))
+
+
 def access_hint(url, timeout, redirects=4):
     if trial_url(url):
         return "trial_stream"
+    if source_error_video(url):
+        return "source_error_video"
     if timeout < 0.1:
         return False
     class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -726,7 +737,7 @@ def catalogue_json(buckets, now, blocked=()):
               "metadata_network_timeout": "检测机器连接源站超时",
               "metadata_protocol_rejected": "检测工具协议未兼容",
               "metadata_format_rejected": "检测工具未识别视频格式",
-              "content_mismatch": "画面与赛事标题不符，已封禁",
+              "content_mismatch": "画面与赛事标题不符，已封禁", "source_error_video": "源返回固定提示视频",
               "observation_pending": "等待第二次直播检测"}
     return {"generated_at": now.isoformat(timespec="seconds"), "note": "完整赛程目录；限制或待测条目不进入主订阅。",
             "events": [{"id": event_key(bucket[0]), "name": display_name(bucket[0]),
