@@ -929,7 +929,7 @@ http://74.91.26.218:82/live/cctv15hd.m3u8
 #EXTINF:-1 tvg-name="CCTV16" tvg-id="CCTV16" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-16.png" group-title="央视",CCTV16
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://173.208.234.146/live/cctv16.m3u8
-#EXTINF:-1 tvg-name="CCTV16 4K" group-title="央视" tvg-id="CCTV16",CCTV16 4K
+#EXTINF:-1 tvg-name="CCTV16 4K" tvg-id="CCTV16" group-title="央视",CCTV16 4K
 #EXTVLCOPT:http-user-agent=okhttp/3.15
 http://192.187.124.34:81/live/cctv164k.m3u8
 #EXTINF:-1 tvg-name="CCTV17" tvg-id="CCTV17" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-17.png" group-title="央视",CCTV17

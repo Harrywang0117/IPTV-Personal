@@ -1,47 +1,7 @@
 {
-  "208a7f00975539531677:a7ee6a9b1b66e0821a0f": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 7540,
-    "sample_offsets": [
-      0,
-      3769,
-      6031
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3769,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 6031,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968765880",
-      "options": []
-    }
-  },
   "6e8873f1b04ae012f94e:b0aa53aa2d760b9154ad": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 5983,
@@ -81,7 +41,7 @@
   },
   "6e8873f1b04ae012f94e:03f17c3e9a8d2137766d": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 5983,
@@ -119,16 +79,56 @@
       "options": []
     }
   },
-  "1ca6c66efb4394e48978:733d3d6aa5417a11deeb": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+  "a4ed792e85f9b33e9536:a0e19063fed08b21c674": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 8204,
+    "duration_seconds": 21793,
     "sample_offsets": [
       0,
-      4102,
-      6563
+      10896,
+      17434
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 10896,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 17434,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968775003",
+      "options": []
+    }
+  },
+  "58e43be623476ce59a21:74ca4c9ac5c560e059af": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7965,
+    "sample_offsets": [
+      0,
+      3982,
+      6371
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -140,35 +140,35 @@
         "almost_all_black": false
       },
       {
-        "offset": 4102,
+        "offset": 3982,
         "checked": true,
-        "decoded_frames": 249,
+        "decoded_frames": 250,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 6563,
+        "offset": 6371,
         "checked": true,
-        "decoded_frames": 249,
+        "decoded_frames": 250,
         "black_frames": 0,
         "almost_all_black": false
       }
     ],
     "route": {
-      "url": "http://mi.dzpp.uk/968729858",
+      "url": "http://mi.dzpp.uk/968764429",
       "options": []
     }
   },
-  "1ca6c66efb4394e48978:ba49bd61e8d39371b563": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+  "58e43be623476ce59a21:9b28991cef6b5a96db7b": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 8204,
+    "duration_seconds": 7965,
     "sample_offsets": [
       0,
-      4102,
-      6563
+      3982,
+      6371
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -180,14 +180,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 4102,
+        "offset": 3982,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 6563,
+        "offset": 6371,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -195,179 +195,13 @@
       }
     ],
     "route": {
-      "url": "http://139.224.44.53:1234/968729858",
-      "options": []
-    }
-  },
-  "9f6b040d7d3b65f81d4a:5d24d9abad4654b7c602": {
-    "first_success_at": "2026-10-25T20:43:40+08:00",
-    "last_success_at": "2026-10-25T20:43:40+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 7480,
-    "sample_offsets": [
-      0,
-      3740,
-      5984
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 123,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3740,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 5984,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968732159",
-      "options": []
-    },
-    "verification_reused": true,
-    "last_attempt_at": "2026-10-26T03:54:59+08:00",
-    "last_attempt_reason": "timeout"
-  },
-  "9f6b040d7d3b65f81d4a:78f06a4b8f23b69057e2": {
-    "first_success_at": "2026-10-25T20:43:40+08:00",
-    "last_success_at": "2026-10-25T20:43:40+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 7480,
-    "sample_offsets": [
-      0,
-      3740,
-      5984
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 123,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3740,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 5984,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968732159",
-      "options": []
-    },
-    "verification_reused": true,
-    "last_attempt_at": "2026-10-26T03:54:59+08:00",
-    "last_attempt_reason": "timeout"
-  },
-  "1bb1f9828a895be03e24:8c39ec0de05fd9c0ee2b": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 7228,
-    "sample_offsets": [
-      0,
-      3614,
-      5782
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 123,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3614,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 5782,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968731760",
-      "options": []
-    }
-  },
-  "1bb1f9828a895be03e24:6c8b7e4465d5ad29c8bc": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 7228,
-    "sample_offsets": [
-      0,
-      3614,
-      5782
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 123,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3614,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 5782,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968731760",
+      "url": "http://139.224.44.53:1234/968764429",
       "options": []
     }
   },
   "190b827f02904080a3a2:790aca113d911e237446": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 11778,
@@ -407,7 +241,7 @@
   },
   "190b827f02904080a3a2:ca2c6fab207404e74e62": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 11778,
@@ -445,102 +279,16 @@
       "options": []
     }
   },
-  "a0b57b96305a4e4e095e:044ff79c7905705f4a50": {
-    "first_success_at": "2026-10-25T20:43:40+08:00",
-    "last_success_at": "2026-10-25T20:43:40+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 7781,
-    "sample_offsets": [
-      0,
-      3890,
-      6224
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3890,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 6224,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968728413",
-      "options": []
-    },
-    "verification_reused": true,
-    "last_attempt_at": "2026-10-26T03:54:59+08:00",
-    "last_attempt_reason": "timeout"
-  },
-  "a0b57b96305a4e4e095e:7c0f43bff5a2d142e134": {
-    "first_success_at": "2026-10-25T20:43:40+08:00",
-    "last_success_at": "2026-10-25T20:43:40+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 7781,
-    "sample_offsets": [
-      0,
-      3890,
-      6224
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3890,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 6224,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968728413",
-      "options": []
-    },
-    "verification_reused": true,
-    "last_attempt_at": "2026-10-26T03:54:59+08:00",
-    "last_attempt_reason": "timeout"
-  },
-  "97bbf7f87138040fb451:e61eda40b265d0e0a71d": {
+  "08813105357d89804a79:d08384f3ade6bf658c16": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 15989,
+    "duration_seconds": 6094,
     "sample_offsets": [
       0,
-      7994,
-      12791
+      3047,
+      4875
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -552,14 +300,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 7994,
+        "offset": 3047,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 12791,
+        "offset": 4875,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -567,20 +315,20 @@
       }
     ],
     "route": {
-      "url": "http://mi.dzpp.uk/968751055",
+      "url": "http://mi.dzpp.uk/968753385",
       "options": []
     }
   },
-  "97bbf7f87138040fb451:5aae5f004a7b9cae9504": {
+  "08813105357d89804a79:5f45f2515fef10de9067": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 15989,
+    "duration_seconds": 6094,
     "sample_offsets": [
       0,
-      7994,
-      12791
+      3047,
+      4875
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -592,14 +340,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 7994,
+        "offset": 3047,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 12791,
+        "offset": 4875,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -607,20 +355,20 @@
       }
     ],
     "route": {
-      "url": "http://139.224.44.53:1234/968751055",
+      "url": "http://139.224.44.53:1234/968753385",
       "options": []
     }
   },
-  "ed1756a57d33c75b2aea:a3154d1fd26bf03a27f4": {
+  "208a7f00975539531677:a7ee6a9b1b66e0821a0f": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 7516,
+    "duration_seconds": 7540,
     "sample_offsets": [
       0,
-      3757,
-      6012
+      3769,
+      6031
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -632,14 +380,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 3757,
+        "offset": 3769,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 6012,
+        "offset": 6031,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -647,20 +395,20 @@
       }
     ],
     "route": {
-      "url": "http://139.224.44.53:1234/968729583",
+      "url": "http://139.224.44.53:1234/968765880",
       "options": []
     }
   },
-  "ed1756a57d33c75b2aea:b84e0d336d2892ee969e": {
-    "first_success_at": "2026-10-25T16:52:32+08:00",
-    "last_success_at": "2026-10-25T16:52:32+08:00",
+  "208a7f00975539531677:841e81d11c3e80f4e463": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 7516,
+    "duration_seconds": 7540,
     "sample_offsets": [
       0,
-      3757,
-      6012
+      3769,
+      6031
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -672,31 +420,28 @@
         "almost_all_black": false
       },
       {
-        "offset": 3757,
+        "offset": 3769,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 6012,
+        "offset": 6031,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       }
     ],
-    "verification_reused": true,
-    "last_attempt_at": "2026-10-26T03:54:59+08:00",
-    "last_attempt_reason": "timeout",
     "route": {
-      "url": "http://mi.dzpp.uk/968729583",
+      "url": "http://mi.dzpp.uk/968765880",
       "options": []
     }
   },
   "0ecedc5cf47cd030843a:8d28251b96c26335c099": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 14123,
@@ -736,7 +481,7 @@
   },
   "0ecedc5cf47cd030843a:9fba1cc4f2a11ef5e5e6": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 14123,
@@ -776,7 +521,7 @@
   },
   "e5fd3c9fe356e748d406:335311c76d8573647374": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 10756,
@@ -816,7 +561,7 @@
   },
   "e5fd3c9fe356e748d406:b84c492f1b3921beed25": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 10756,
@@ -854,102 +599,16 @@
       "options": []
     }
   },
-  "cc87c5a31b97b016b63f:dbe656da914996303400": {
-    "first_success_at": "2026-10-25T20:43:40+08:00",
-    "last_success_at": "2026-10-25T20:43:40+08:00",
+  "08ae445018b786e1b320:e26373e64be51bb548fb": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 7475,
+    "duration_seconds": 8424,
     "sample_offsets": [
       0,
-      3737,
-      5980
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 123,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3737,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 5980,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968729954",
-      "options": []
-    },
-    "verification_reused": true,
-    "last_attempt_at": "2026-10-26T03:54:59+08:00",
-    "last_attempt_reason": "timeout"
-  },
-  "cc87c5a31b97b016b63f:5e9adc1c3608ce7e2df6": {
-    "first_success_at": "2026-10-25T20:43:40+08:00",
-    "last_success_at": "2026-10-25T20:43:40+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 7475,
-    "sample_offsets": [
-      0,
-      3737,
-      5980
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 123,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3737,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 5980,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968729954",
-      "options": []
-    },
-    "verification_reused": true,
-    "last_attempt_at": "2026-10-26T03:54:59+08:00",
-    "last_attempt_reason": "timeout"
-  },
-  "e14ca557e28a41c13421:3cbf57f7533b0349496f": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 21253,
-    "sample_offsets": [
-      0,
-      10626,
-      17002
+      4211,
+      6738
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -961,14 +620,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 10626,
+        "offset": 4211,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 17002,
+        "offset": 6738,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -976,20 +635,20 @@
       }
     ],
     "route": {
-      "url": "http://mi.dzpp.uk/968751973",
+      "url": "http://mi.dzpp.uk/968729669",
       "options": []
     }
   },
-  "e14ca557e28a41c13421:71ad003818faa39b78c4": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+  "08ae445018b786e1b320:41667fbdc76b72281a15": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 21253,
+    "duration_seconds": 8424,
     "sample_offsets": [
       0,
-      10626,
-      17002
+      4211,
+      6738
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -1001,14 +660,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 10626,
+        "offset": 4211,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 17002,
+        "offset": 6738,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -1016,333 +675,13 @@
       }
     ],
     "route": {
-      "url": "http://139.224.44.53:1234/968751973",
-      "options": []
-    }
-  },
-  "189fb0e1459f937bcf27:bfe0bc6083c2340a8698": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 6398,
-    "sample_offsets": [
-      0,
-      3198,
-      5118
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 123,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3198,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 5118,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968757930",
-      "options": []
-    }
-  },
-  "5b46da61824778bcabbb:02d6ed7a91b6a5479983": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 10242,
-    "sample_offsets": [
-      0,
-      5120,
-      8193
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 5120,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 8193,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968746194",
-      "options": []
-    }
-  },
-  "5b46da61824778bcabbb:46a3bbc655cacbf6c6ee": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 10242,
-    "sample_offsets": [
-      0,
-      5120,
-      8193
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 5120,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 8193,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968746194",
-      "options": []
-    }
-  },
-  "723557a2b690aa5e4b06:b57efeb6aa6afa6b4bf0": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 9318,
-    "sample_offsets": [
-      0,
-      4658,
-      7454
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 4658,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 7454,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968743159",
-      "options": []
-    }
-  },
-  "723557a2b690aa5e4b06:1697674f96dfd46c5702": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 9318,
-    "sample_offsets": [
-      0,
-      4658,
-      7454
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 4658,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 7454,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968743159",
-      "options": []
-    }
-  },
-  "266e6797cc9f8ba1b696:75c1236c2fa0a46fd7c0": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 8543,
-    "sample_offsets": [
-      0,
-      4271,
-      6834
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 4271,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 6834,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968768029",
-      "options": []
-    }
-  },
-  "a7ef9bfbd8f96ee00eb5:6142482e58b4c5315ea9": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 8365,
-    "sample_offsets": [
-      0,
-      4182,
-      6691
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 250,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 4182,
-        "checked": true,
-        "decoded_frames": 250,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 6691,
-        "checked": true,
-        "decoded_frames": 250,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968732896",
-      "options": []
-    }
-  },
-  "a7ef9bfbd8f96ee00eb5:980d69b8d0da912a66c2": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 8365,
-    "sample_offsets": [
-      0,
-      4182,
-      6691
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 123,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 4182,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 6691,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968732896",
+      "url": "http://139.224.44.53:1234/968729669",
       "options": []
     }
   },
   "e9c00a57bea7a65eb34e:96d2ba1f8e98b53b1df1": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 10311,
@@ -1382,7 +721,7 @@
   },
   "e9c00a57bea7a65eb34e:de21b34cd6ab85d2bb43": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 10311,
@@ -1420,16 +759,16 @@
       "options": []
     }
   },
-  "ccd3cff6913740ab90b7:4128e57efc1deb1f037e": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+  "597847cb39a9454d91bd:60214352d29961c2cfbb": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 11481,
+    "duration_seconds": 7474,
     "sample_offsets": [
       0,
-      5740,
-      9184
+      3737,
+      5979
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -1441,14 +780,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 5740,
+        "offset": 3737,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 9184,
+        "offset": 5979,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -1456,20 +795,20 @@
       }
     ],
     "route": {
-      "url": "http://mi.dzpp.uk/968746429",
+      "url": "http://mi.dzpp.uk/968754622",
       "options": []
     }
   },
-  "ccd3cff6913740ab90b7:6855aba64c97a8e17779": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+  "597847cb39a9454d91bd:9d3a5bf81b22e1228242": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 11481,
+    "duration_seconds": 7474,
     "sample_offsets": [
       0,
-      5740,
-      9184
+      3737,
+      5979
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -1481,14 +820,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 5740,
+        "offset": 3737,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 9184,
+        "offset": 5979,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -1496,13 +835,93 @@
       }
     ],
     "route": {
-      "url": "http://139.224.44.53:1234/968746429",
+      "url": "http://139.224.44.53:1234/968754622",
+      "options": []
+    }
+  },
+  "35b6d57234ec90af02d0:6c50a56a7d23c6ce52e0": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7655,
+    "sample_offsets": [
+      0,
+      3827,
+      6123
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3827,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6123,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968728948",
+      "options": []
+    }
+  },
+  "35b6d57234ec90af02d0:b3eaeb594b4a615716be": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7655,
+    "sample_offsets": [
+      0,
+      3827,
+      6123
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3827,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6123,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968728948",
       "options": []
     }
   },
   "1f09e1c9012e2a84b1aa:5cdf7a6e999574d6c830": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 14439,
@@ -1542,7 +961,7 @@
   },
   "1f09e1c9012e2a84b1aa:bbf04e6b98173ff3ba1f": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 14439,
@@ -1580,35 +999,35 @@
       "options": []
     }
   },
-  "6065445f1e60bc53d47c:ee88a6e61bc7fb9dbf68": {
+  "1bb1f9828a895be03e24:8c39ec0de05fd9c0ee2b": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 15978,
+    "duration_seconds": 7228,
     "sample_offsets": [
       0,
-      7988,
-      12782
+      3614,
+      5782
     ],
     "sample_seconds": 5,
     "picture_samples": [
       {
         "offset": 0,
         "checked": true,
-        "decoded_frames": 125,
+        "decoded_frames": 123,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 7988,
+        "offset": 3614,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 12782,
+        "offset": 5782,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -1616,39 +1035,39 @@
       }
     ],
     "route": {
-      "url": "http://mi.dzpp.uk/968752328",
+      "url": "http://139.224.44.53:1234/968731760",
       "options": []
     }
   },
-  "6065445f1e60bc53d47c:9eae0a378bdb7528951d": {
+  "1bb1f9828a895be03e24:6c8b7e4465d5ad29c8bc": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 15978,
+    "duration_seconds": 7228,
     "sample_offsets": [
       0,
-      7988,
-      12782
+      3614,
+      5782
     ],
     "sample_seconds": 5,
     "picture_samples": [
       {
         "offset": 0,
         "checked": true,
-        "decoded_frames": 125,
+        "decoded_frames": 123,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 7988,
+        "offset": 3614,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 12782,
+        "offset": 5782,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -1656,13 +1075,13 @@
       }
     ],
     "route": {
-      "url": "http://139.224.44.53:1234/968752328",
+      "url": "http://mi.dzpp.uk/968731760",
       "options": []
     }
   },
   "dd209236dc8e251c378e:2ac37c1f31866361bbf8": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 13718,
@@ -1702,7 +1121,7 @@
   },
   "dd209236dc8e251c378e:5bf32a516fa1a2a0cb50": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 13718,
@@ -1740,9 +1159,1129 @@
       "options": []
     }
   },
+  "266e6797cc9f8ba1b696:75c1236c2fa0a46fd7c0": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 8543,
+    "sample_offsets": [
+      0,
+      4271,
+      6834
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4271,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6834,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968768029",
+      "options": []
+    }
+  },
+  "266e6797cc9f8ba1b696:6ee39c7c29be39a64544": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 8543,
+    "sample_offsets": [
+      0,
+      4271,
+      6834
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4271,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6834,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968768029",
+      "options": []
+    }
+  },
+  "870e3e73e827bce99eae:f1824704fc5f5567cff2": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7960,
+    "sample_offsets": [
+      0,
+      3980,
+      6368
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 250,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3980,
+        "checked": true,
+        "decoded_frames": 250,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6368,
+        "checked": true,
+        "decoded_frames": 250,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968764034",
+      "options": []
+    }
+  },
+  "870e3e73e827bce99eae:a38f36954d8048033a50": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7960,
+    "sample_offsets": [
+      0,
+      3980,
+      6368
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 123,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3980,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6368,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968764034",
+      "options": []
+    }
+  },
+  "a0b57b96305a4e4e095e:044ff79c7905705f4a50": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7781,
+    "sample_offsets": [
+      0,
+      3890,
+      6224
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3890,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6224,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968728413",
+      "options": []
+    }
+  },
+  "a0b57b96305a4e4e095e:7c0f43bff5a2d142e134": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7781,
+    "sample_offsets": [
+      0,
+      3890,
+      6224
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3890,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6224,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968728413",
+      "options": []
+    }
+  },
+  "9f6b040d7d3b65f81d4a:5d24d9abad4654b7c602": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7480,
+    "sample_offsets": [
+      0,
+      3740,
+      5984
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 123,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3740,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 5984,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968732159",
+      "options": []
+    }
+  },
+  "9f6b040d7d3b65f81d4a:78f06a4b8f23b69057e2": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7480,
+    "sample_offsets": [
+      0,
+      3740,
+      5984
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 123,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3740,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 5984,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968732159",
+      "options": []
+    }
+  },
+  "ac3c76115d5172ad0d4c:4713f1fdd6deb554dffd": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7457,
+    "sample_offsets": [
+      0,
+      3728,
+      5965
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3728,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 5965,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968755265",
+      "options": []
+    }
+  },
+  "ac3c76115d5172ad0d4c:606bf506ddabe80d7100": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7457,
+    "sample_offsets": [
+      0,
+      3728,
+      5965
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3728,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 5965,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968755265",
+      "options": []
+    }
+  },
+  "ac084d8acf4f94f5c04f:866c15dc46af7263ba2d": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7286,
+    "sample_offsets": [
+      0,
+      3643,
+      5829
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3643,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 5829,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968756442",
+      "options": []
+    }
+  },
+  "ac084d8acf4f94f5c04f:d9a512ff920256fae491": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7286,
+    "sample_offsets": [
+      0,
+      3643,
+      5829
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3643,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 5829,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968756442",
+      "options": []
+    }
+  },
+  "97bbf7f87138040fb451:e61eda40b265d0e0a71d": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 15989,
+    "sample_offsets": [
+      0,
+      7994,
+      12791
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7994,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 12791,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968751055",
+      "options": []
+    }
+  },
+  "97bbf7f87138040fb451:5aae5f004a7b9cae9504": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 15989,
+    "sample_offsets": [
+      0,
+      7994,
+      12791
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7994,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 12791,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968751055",
+      "options": []
+    }
+  },
+  "ed1756a57d33c75b2aea:a3154d1fd26bf03a27f4": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7516,
+    "sample_offsets": [
+      0,
+      3757,
+      6012
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3757,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6012,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968729583",
+      "options": []
+    }
+  },
+  "ed1756a57d33c75b2aea:b84e0d336d2892ee969e": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7516,
+    "sample_offsets": [
+      0,
+      3757,
+      6012
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3757,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6012,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968729583",
+      "options": []
+    }
+  },
+  "5b46da61824778bcabbb:02d6ed7a91b6a5479983": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 10242,
+    "sample_offsets": [
+      0,
+      5120,
+      8193
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 5120,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 8193,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968746194",
+      "options": []
+    }
+  },
+  "5b46da61824778bcabbb:46a3bbc655cacbf6c6ee": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 10242,
+    "sample_offsets": [
+      0,
+      5120,
+      8193
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 5120,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 8193,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968746194",
+      "options": []
+    }
+  },
+  "79d1fc779c1dcd619feb:870454c52c5503d01c31": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7237,
+    "sample_offsets": [
+      0,
+      3618,
+      5789
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3618,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 5789,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968754684",
+      "options": []
+    }
+  },
+  "79d1fc779c1dcd619feb:cd0f89fb64bf22c10ea7": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7237,
+    "sample_offsets": [
+      0,
+      3618,
+      5789
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3618,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 5789,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968754684",
+      "options": []
+    }
+  },
+  "cc87c5a31b97b016b63f:dbe656da914996303400": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7475,
+    "sample_offsets": [
+      0,
+      3737,
+      5980
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 123,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3737,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 5980,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968729954",
+      "options": []
+    }
+  },
+  "cc87c5a31b97b016b63f:5e9adc1c3608ce7e2df6": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7475,
+    "sample_offsets": [
+      0,
+      3737,
+      5980
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 123,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3737,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 5980,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968729954",
+      "options": []
+    }
+  },
+  "2122ce4d8d2cd988f257:ded24f094e0d857dd163": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 1772,
+    "sample_offsets": [
+      0,
+      886,
+      1417
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 250,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 886,
+        "checked": true,
+        "decoded_frames": 250,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 1417,
+        "checked": true,
+        "decoded_frames": 250,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968759700",
+      "options": []
+    }
+  },
+  "2122ce4d8d2cd988f257:cb088a1b2ed5e38facd1": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 1773,
+    "sample_offsets": [
+      0,
+      886,
+      1418
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 123,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 886,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 1418,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968759700",
+      "options": []
+    }
+  },
+  "e14ca557e28a41c13421:3cbf57f7533b0349496f": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 21253,
+    "sample_offsets": [
+      0,
+      10626,
+      17002
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 10626,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 17002,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968751973",
+      "options": []
+    }
+  },
+  "e14ca557e28a41c13421:71ad003818faa39b78c4": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 21253,
+    "sample_offsets": [
+      0,
+      10626,
+      17002
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 10626,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 17002,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968751973",
+      "options": []
+    }
+  },
+  "c6867e02852402631744:35c48757dbc34924b9de": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 9282,
+    "sample_offsets": [
+      0,
+      4640,
+      7425
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4640,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7425,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968767601",
+      "options": []
+    }
+  },
+  "c6867e02852402631744:b5c8f7f775c5c10a1d53": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 9282,
+    "sample_offsets": [
+      0,
+      4640,
+      7425
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4640,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7425,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968767601",
+      "options": []
+    }
+  },
   "7a23fe4e3fe261712d5f:1d21e3bc067ca656129f": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 7058,
@@ -1780,9 +2319,929 @@
       "options": []
     }
   },
+  "7a23fe4e3fe261712d5f:3a4b922c8967eac5040e": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7058,
+    "sample_offsets": [
+      0,
+      3528,
+      5646
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 250,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3528,
+        "checked": true,
+        "decoded_frames": 250,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 5646,
+        "checked": true,
+        "decoded_frames": 250,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968767204",
+      "options": []
+    }
+  },
+  "723557a2b690aa5e4b06:b57efeb6aa6afa6b4bf0": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 9318,
+    "sample_offsets": [
+      0,
+      4658,
+      7454
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4658,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7454,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968743159",
+      "options": []
+    }
+  },
+  "723557a2b690aa5e4b06:1697674f96dfd46c5702": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 9318,
+    "sample_offsets": [
+      0,
+      4658,
+      7454
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4658,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7454,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968743159",
+      "options": []
+    }
+  },
+  "5f6fc03cb36609070dd2:6de965df28059411f46e": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 9419,
+    "sample_offsets": [
+      0,
+      4709,
+      7534
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4709,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7534,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968756477",
+      "options": []
+    }
+  },
+  "5f6fc03cb36609070dd2:8da434f4d84d4249e97e": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 9419,
+    "sample_offsets": [
+      0,
+      4709,
+      7534
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4709,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7534,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968756477",
+      "options": []
+    }
+  },
+  "7636843166c3e23c2efe:25f4f792b57df05be8df": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7715,
+    "sample_offsets": [
+      0,
+      3857,
+      6171
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3857,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6171,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968769896",
+      "options": []
+    }
+  },
+  "7636843166c3e23c2efe:78ffd2b8ebb7b398b9a2": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7715,
+    "sample_offsets": [
+      0,
+      3857,
+      6171
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3857,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6171,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968769896",
+      "options": []
+    }
+  },
+  "5af8e350a668671d6869:38893e1ed69fba3e2d4f": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7313,
+    "sample_offsets": [
+      0,
+      3656,
+      5850
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3656,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 5850,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968755072",
+      "options": []
+    }
+  },
+  "5af8e350a668671d6869:dbe1d860d28644fcc268": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7313,
+    "sample_offsets": [
+      0,
+      3656,
+      5850
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3656,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 5850,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968755072",
+      "options": []
+    }
+  },
+  "7680b8bf52ec322d7464:9121543b95f741544486": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7788,
+    "sample_offsets": [
+      0,
+      3893,
+      6230
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3893,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6230,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968733238",
+      "options": []
+    }
+  },
+  "7680b8bf52ec322d7464:faedec999bc8b149fa70": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7788,
+    "sample_offsets": [
+      0,
+      3893,
+      6230
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3893,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6230,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968733238",
+      "options": []
+    }
+  },
+  "09383f3f55bef776da76:3c493bb14955a71cbcf1": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 14113,
+    "sample_offsets": [
+      0,
+      7056,
+      11290
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7056,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 11290,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968757887",
+      "options": []
+    }
+  },
+  "09383f3f55bef776da76:0a5a9048e0deaa6f8d46": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 14113,
+    "sample_offsets": [
+      0,
+      7056,
+      11290
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7056,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 11290,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968757887",
+      "options": []
+    }
+  },
+  "e1c44b162ee67d88942c:857d59510aeccd8f8d39": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 9654,
+    "sample_offsets": [
+      0,
+      4827,
+      7723
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4827,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7723,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968765677",
+      "options": []
+    }
+  },
+  "e1c44b162ee67d88942c:c30d17a72d7caffa9707": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 9654,
+    "sample_offsets": [
+      0,
+      4827,
+      7723
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4827,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7723,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968765677",
+      "options": []
+    }
+  },
+  "c2e5f0356f7683c31227:34f1b72258ec3da75c9c": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 9796,
+    "sample_offsets": [
+      0,
+      4898,
+      7837
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4898,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7837,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968746843",
+      "options": []
+    }
+  },
+  "c2e5f0356f7683c31227:e66a59a1f86b0755cab3": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 9796,
+    "sample_offsets": [
+      0,
+      4898,
+      7837
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4898,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7837,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968746843",
+      "options": []
+    }
+  },
+  "4095d567b6b02b077c6b:8ee4079f09914d7bf4dc": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7526,
+    "sample_offsets": [
+      0,
+      3763,
+      6020
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 250,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3763,
+        "checked": true,
+        "decoded_frames": 250,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6020,
+        "checked": true,
+        "decoded_frames": 250,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968763570",
+      "options": []
+    }
+  },
+  "4095d567b6b02b077c6b:bc69ad852ed973252672": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7526,
+    "sample_offsets": [
+      0,
+      3763,
+      6020
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 123,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3763,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6020,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968763570",
+      "options": []
+    }
+  },
+  "f6b53c509445572534f6:8cea24cca42c800ba45a": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 17360,
+    "sample_offsets": [
+      0,
+      8680,
+      13888
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 8680,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 13888,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968752949",
+      "options": []
+    }
+  },
+  "f6b53c509445572534f6:ad6bf8be29d62970014e": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 17360,
+    "sample_offsets": [
+      0,
+      8680,
+      13888
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 8680,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 13888,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968752949",
+      "options": []
+    }
+  },
+  "8d2c509289c956b1b574:9698812adb3f11b77007": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 14682,
+    "sample_offsets": [
+      0,
+      7340,
+      11745
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7340,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 11745,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968747429",
+      "options": []
+    }
+  },
+  "8d2c509289c956b1b574:3bbae8776b0750dcc860": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 14682,
+    "sample_offsets": [
+      0,
+      7340,
+      11745
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7340,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 11745,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968747429",
+      "options": []
+    }
+  },
   "79fa7b31c02f61399cae:b5b61c698a429c900330": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 9904,
@@ -1860,19 +3319,19 @@
       "options": []
     },
     "verification_reused": true,
-    "last_attempt_at": "2026-10-26T03:54:59+08:00",
+    "last_attempt_at": "2026-10-26T06:46:14+08:00",
     "last_attempt_reason": "timeout"
   },
-  "c6867e02852402631744:35c48757dbc34924b9de": {
+  "815372b9cda6d84c8fea:389fcf03d1c4c87576f2": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 9282,
+    "duration_seconds": 14466,
     "sample_offsets": [
       0,
-      4640,
-      7425
+      7233,
+      11572
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -1884,14 +3343,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 4640,
+        "offset": 7233,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 7425,
+        "offset": 11572,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -1899,20 +3358,20 @@
       }
     ],
     "route": {
-      "url": "http://139.224.44.53:1234/968767601",
+      "url": "http://mi.dzpp.uk/968748707",
       "options": []
     }
   },
-  "c2e5f0356f7683c31227:34f1b72258ec3da75c9c": {
+  "815372b9cda6d84c8fea:ea96d045ac647bb0365f": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 9796,
+    "duration_seconds": 14466,
     "sample_offsets": [
       0,
-      4898,
-      7837
+      7233,
+      11572
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -1924,14 +3383,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 4898,
+        "offset": 7233,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 7837,
+        "offset": 11572,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -1939,20 +3398,20 @@
       }
     ],
     "route": {
-      "url": "http://mi.dzpp.uk/968746843",
+      "url": "http://139.224.44.53:1234/968748707",
       "options": []
     }
   },
-  "c2e5f0356f7683c31227:e66a59a1f86b0755cab3": {
+  "ccd3cff6913740ab90b7:4128e57efc1deb1f037e": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 9796,
+    "duration_seconds": 11481,
     "sample_offsets": [
       0,
-      4898,
-      7837
+      5740,
+      9184
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -1964,14 +3423,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 4898,
+        "offset": 5740,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 7837,
+        "offset": 9184,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -1979,20 +3438,20 @@
       }
     ],
     "route": {
-      "url": "http://139.224.44.53:1234/968746843",
+      "url": "http://mi.dzpp.uk/968746429",
       "options": []
     }
   },
-  "12d9b81b18607cb5afc0:60214352d29961c2cfbb": {
+  "ccd3cff6913740ab90b7:6855aba64c97a8e17779": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 7474,
+    "duration_seconds": 11481,
     "sample_offsets": [
       0,
-      3737,
-      5979
+      5740,
+      9184
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -2004,14 +3463,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 3737,
+        "offset": 5740,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 5979,
+        "offset": 9184,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -2019,20 +3478,20 @@
       }
     ],
     "route": {
-      "url": "http://mi.dzpp.uk/968754622",
+      "url": "http://139.224.44.53:1234/968746429",
       "options": []
     }
   },
-  "e1c44b162ee67d88942c:857d59510aeccd8f8d39": {
+  "788bd1a914ca1d91a1f2:161605860f4a25c44ce2": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 9654,
+    "duration_seconds": 7622,
     "sample_offsets": [
       0,
-      4827,
-      7723
+      3810,
+      6097
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -2044,14 +3503,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 4827,
+        "offset": 3810,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 7723,
+        "offset": 6097,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -2059,20 +3518,20 @@
       }
     ],
     "route": {
-      "url": "http://139.224.44.53:1234/968765677",
+      "url": "http://139.224.44.53:1234/968769483",
       "options": []
     }
   },
-  "79d1fc779c1dcd619feb:870454c52c5503d01c31": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+  "788bd1a914ca1d91a1f2:d32c7307ec15bdce4b6f": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 7237,
+    "duration_seconds": 7622,
     "sample_offsets": [
       0,
-      3618,
-      5789
+      3810,
+      6097
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -2084,14 +3543,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 3618,
+        "offset": 3810,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 5789,
+        "offset": 6097,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -2099,20 +3558,20 @@
       }
     ],
     "route": {
-      "url": "http://mi.dzpp.uk/968754684",
+      "url": "http://mi.dzpp.uk/968769483",
       "options": []
     }
   },
-  "79d1fc779c1dcd619feb:cd0f89fb64bf22c10ea7": {
+  "6065445f1e60bc53d47c:ee88a6e61bc7fb9dbf68": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 7237,
+    "duration_seconds": 15978,
     "sample_offsets": [
       0,
-      3618,
-      5789
+      7988,
+      12782
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -2124,14 +3583,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 3618,
+        "offset": 7988,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 5789,
+        "offset": 12782,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -2139,20 +3598,20 @@
       }
     ],
     "route": {
-      "url": "http://139.224.44.53:1234/968754684",
+      "url": "http://mi.dzpp.uk/968752328",
       "options": []
     }
   },
-  "7636843166c3e23c2efe:25f4f792b57df05be8df": {
+  "6065445f1e60bc53d47c:9eae0a378bdb7528951d": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 7715,
+    "duration_seconds": 15978,
     "sample_offsets": [
       0,
-      3857,
-      6171
+      7988,
+      12782
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -2164,14 +3623,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 3857,
+        "offset": 7988,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 6171,
+        "offset": 12782,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -2179,39 +3638,39 @@
       }
     ],
     "route": {
-      "url": "http://139.224.44.53:1234/968769896",
+      "url": "http://139.224.44.53:1234/968752328",
       "options": []
     }
   },
-  "8d2c509289c956b1b574:9698812adb3f11b77007": {
+  "189fb0e1459f937bcf27:bfe0bc6083c2340a8698": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 14682,
+    "duration_seconds": 6398,
     "sample_offsets": [
       0,
-      7340,
-      11745
+      3198,
+      5118
     ],
     "sample_seconds": 5,
     "picture_samples": [
       {
         "offset": 0,
         "checked": true,
-        "decoded_frames": 125,
+        "decoded_frames": 123,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 7340,
+        "offset": 3198,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 11745,
+        "offset": 5118,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -2219,39 +3678,39 @@
       }
     ],
     "route": {
-      "url": "http://mi.dzpp.uk/968747429",
+      "url": "http://139.224.44.53:1234/968757930",
       "options": []
     }
   },
-  "8d2c509289c956b1b574:3bbae8776b0750dcc860": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+  "189fb0e1459f937bcf27:0bc6eff67693b031e137": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 14682,
+    "duration_seconds": 6398,
     "sample_offsets": [
       0,
-      7340,
-      11745
+      3198,
+      5118
     ],
     "sample_seconds": 5,
     "picture_samples": [
       {
         "offset": 0,
         "checked": true,
-        "decoded_frames": 125,
+        "decoded_frames": 123,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 7340,
+        "offset": 3198,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 11745,
+        "offset": 5118,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -2259,133 +3718,13 @@
       }
     ],
     "route": {
-      "url": "http://139.224.44.53:1234/968747429",
-      "options": []
-    }
-  },
-  "f6b53c509445572534f6:8cea24cca42c800ba45a": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 17360,
-    "sample_offsets": [
-      0,
-      8680,
-      13888
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 8680,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 13888,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968752949",
-      "options": []
-    }
-  },
-  "f6b53c509445572534f6:ad6bf8be29d62970014e": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 17360,
-    "sample_offsets": [
-      0,
-      8680,
-      13888
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 8680,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 13888,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968752949",
-      "options": []
-    }
-  },
-  "8a0ff35ab35f63e2577b:38893e1ed69fba3e2d4f": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 7313,
-    "sample_offsets": [
-      0,
-      3656,
-      5850
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3656,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 5850,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968755072",
+      "url": "http://mi.dzpp.uk/968757930",
       "options": []
     }
   },
   "256e8736f33cad48e609:6686d7f162f0b91f094b": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 10496,
@@ -2425,7 +3764,7 @@
   },
   "256e8736f33cad48e609:5a0ec94fb32f4e907646": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 10496,
@@ -2465,7 +3804,7 @@
   },
   "8efc9c7c578f9285fd5f:c1e62bb029627600ca3e": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 9983,
@@ -2543,212 +3882,12 @@
       "options": []
     },
     "verification_reused": true,
-    "last_attempt_at": "2026-10-26T03:54:59+08:00",
+    "last_attempt_at": "2026-10-26T06:46:14+08:00",
     "last_attempt_reason": "timeout"
-  },
-  "788bd1a914ca1d91a1f2:161605860f4a25c44ce2": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 7622,
-    "sample_offsets": [
-      0,
-      3810,
-      6097
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3810,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 6097,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968769483",
-      "options": []
-    }
-  },
-  "4771e1f745ca19101682:4713f1fdd6deb554dffd": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 7457,
-    "sample_offsets": [
-      0,
-      3728,
-      5965
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3728,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 5965,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968755265",
-      "options": []
-    }
-  },
-  "09383f3f55bef776da76:3c493bb14955a71cbcf1": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 14113,
-    "sample_offsets": [
-      0,
-      7056,
-      11290
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 7056,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 11290,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968757887",
-      "options": []
-    }
-  },
-  "09383f3f55bef776da76:0a5a9048e0deaa6f8d46": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 14113,
-    "sample_offsets": [
-      0,
-      7056,
-      11290
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 7056,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 11290,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968757887",
-      "options": []
-    }
-  },
-  "8a875526dc1139ad73ac:866c15dc46af7263ba2d": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 7286,
-    "sample_offsets": [
-      0,
-      3643,
-      5829
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3643,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 5829,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968756442",
-      "options": []
-    }
   },
   "b1fd7a48f571057adb64:e083efca8789510d0f1d": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 8536,
@@ -2788,7 +3927,7 @@
   },
   "b1fd7a48f571057adb64:68f6b0f0c5284ff85c06": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 8536,
@@ -2826,56 +3965,16 @@
       "options": []
     }
   },
-  "4095d567b6b02b077c6b:8ee4079f09914d7bf4dc": {
+  "b1b04cd5a9dbfa540a2d:2d82d4c64f49df88fc1c": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 7526,
+    "duration_seconds": 8205,
     "sample_offsets": [
       0,
-      3763,
-      6020
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 250,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3763,
-        "checked": true,
-        "decoded_frames": 250,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 6020,
-        "checked": true,
-        "decoded_frames": 250,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968763570",
-      "options": []
-    }
-  },
-  "08813105357d89804a79:d08384f3ade6bf658c16": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 6094,
-    "sample_offsets": [
-      0,
-      3047,
-      4875
+      4102,
+      6563
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -2887,14 +3986,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 3047,
+        "offset": 4102,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 4875,
+        "offset": 6563,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -2902,20 +4001,20 @@
       }
     ],
     "route": {
-      "url": "http://mi.dzpp.uk/968753385",
+      "url": "http://mi.dzpp.uk/968728780",
       "options": []
     }
   },
-  "08813105357d89804a79:5f45f2515fef10de9067": {
+  "b1b04cd5a9dbfa540a2d:8688be2ede8b2d13de93": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 6094,
+    "duration_seconds": 8205,
     "sample_offsets": [
       0,
-      3047,
-      4875
+      4102,
+      6563
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -2927,14 +4026,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 3047,
+        "offset": 4102,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 4875,
+        "offset": 6563,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -2942,220 +4041,60 @@
       }
     ],
     "route": {
-      "url": "http://139.224.44.53:1234/968753385",
+      "url": "http://139.224.44.53:1234/968728780",
       "options": []
     }
   },
-  "815372b9cda6d84c8fea:389fcf03d1c4c87576f2": {
+  "1ca6c66efb4394e48978:733d3d6aa5417a11deeb": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 14466,
+    "duration_seconds": 8204,
     "sample_offsets": [
       0,
-      7233,
-      11572
+      4102,
+      6563
     ],
     "sample_seconds": 5,
     "picture_samples": [
       {
         "offset": 0,
         "checked": true,
-        "decoded_frames": 125,
+        "decoded_frames": 249,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 7233,
+        "offset": 4102,
         "checked": true,
-        "decoded_frames": 125,
+        "decoded_frames": 249,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 11572,
+        "offset": 6563,
         "checked": true,
-        "decoded_frames": 125,
+        "decoded_frames": 249,
         "black_frames": 0,
         "almost_all_black": false
       }
     ],
     "route": {
-      "url": "http://mi.dzpp.uk/968748707",
+      "url": "http://mi.dzpp.uk/968729858",
       "options": []
     }
   },
-  "815372b9cda6d84c8fea:ea96d045ac647bb0365f": {
+  "1ca6c66efb4394e48978:ba49bd61e8d39371b563": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 14466,
+    "duration_seconds": 8204,
     "sample_offsets": [
       0,
-      7233,
-      11572
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 7233,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 11572,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968748707",
-      "options": []
-    }
-  },
-  "5f6fc03cb36609070dd2:6de965df28059411f46e": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 9419,
-    "sample_offsets": [
-      0,
-      4709,
-      7534
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 4709,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 7534,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968756477",
-      "options": []
-    }
-  },
-  "5f6fc03cb36609070dd2:8da434f4d84d4249e97e": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 9419,
-    "sample_offsets": [
-      0,
-      4709,
-      7534
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 4709,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 7534,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968756477",
-      "options": []
-    }
-  },
-  "2122ce4d8d2cd988f257:ded24f094e0d857dd163": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 1772,
-    "sample_offsets": [
-      0,
-      886,
-      1417
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 250,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 886,
-        "checked": true,
-        "decoded_frames": 250,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 1417,
-        "checked": true,
-        "decoded_frames": 250,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968759700",
-      "options": []
-    }
-  },
-  "2122ce4d8d2cd988f257:cb088a1b2ed5e38facd1": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 1773,
-    "sample_offsets": [
-      0,
-      886,
-      1418
+      4102,
+      6563
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -3167,14 +4106,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 886,
+        "offset": 4102,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 1418,
+        "offset": 6563,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -3182,13 +4121,93 @@
       }
     ],
     "route": {
-      "url": "http://139.224.44.53:1234/968759700",
+      "url": "http://139.224.44.53:1234/968729858",
+      "options": []
+    }
+  },
+  "4b06a8240fbc713f4b23:acc95e34589d973204e6": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 8092,
+    "sample_offsets": [
+      0,
+      4045,
+      6473
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4045,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6473,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968729502",
+      "options": []
+    }
+  },
+  "4b06a8240fbc713f4b23:a4ba0eec178508212a65": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 8092,
+    "sample_offsets": [
+      0,
+      4045,
+      6473
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4045,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6473,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968729502",
       "options": []
     }
   },
   "bbdbeaa90e3691f7d56a:56611bdf8241830e2072": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 8099,
@@ -3228,7 +4247,7 @@
   },
   "bbdbeaa90e3691f7d56a:15b620de85da07ea6803": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 8099,
@@ -3266,9 +4285,329 @@
       "options": []
     }
   },
+  "a7ef9bfbd8f96ee00eb5:6142482e58b4c5315ea9": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 8365,
+    "sample_offsets": [
+      0,
+      4182,
+      6691
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 250,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4182,
+        "checked": true,
+        "decoded_frames": 250,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6691,
+        "checked": true,
+        "decoded_frames": 250,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968732896",
+      "options": []
+    }
+  },
+  "a7ef9bfbd8f96ee00eb5:980d69b8d0da912a66c2": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 8365,
+    "sample_offsets": [
+      0,
+      4182,
+      6691
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 123,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4182,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6691,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968732896",
+      "options": []
+    }
+  },
+  "f97647adac1592e0895c:cb7c8dc0d77f726eacff": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 9548,
+    "sample_offsets": [
+      0,
+      4773,
+      7638
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4773,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7638,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968729809",
+      "options": []
+    }
+  },
+  "f97647adac1592e0895c:a06c2b7116077c6f1484": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 9548,
+    "sample_offsets": [
+      0,
+      4773,
+      7638
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4773,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7638,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968729809",
+      "options": []
+    }
+  },
+  "58c7c5d01eec01baf630:cff15e3b750ac59d5f0e": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 9275,
+    "sample_offsets": [
+      0,
+      4637,
+      7420
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4637,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7420,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968745440",
+      "options": []
+    }
+  },
+  "58c7c5d01eec01baf630:36ed5b82ae8fc8f23907": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 9275,
+    "sample_offsets": [
+      0,
+      4637,
+      7420
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 4637,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 7420,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968745440",
+      "options": []
+    }
+  },
+  "daabbd0dd95a6ea676ce:58cd7f13f7f91373e461": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7583,
+    "sample_offsets": [
+      0,
+      3791,
+      6066
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3791,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6066,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://mi.dzpp.uk/968756469",
+      "options": []
+    }
+  },
+  "daabbd0dd95a6ea676ce:d1fd0fc1b89826c6e92d": {
+    "first_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
+    "qualified": true,
+    "kind": "vod",
+    "duration_seconds": 7583,
+    "sample_offsets": [
+      0,
+      3791,
+      6066
+    ],
+    "sample_seconds": 5,
+    "picture_samples": [
+      {
+        "offset": 0,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 3791,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      },
+      {
+        "offset": 6066,
+        "checked": true,
+        "decoded_frames": 125,
+        "black_frames": 0,
+        "almost_all_black": false
+      }
+    ],
+    "route": {
+      "url": "http://139.224.44.53:1234/968756469",
+      "options": []
+    }
+  },
   "bf981bcae9a8e466495f:f1090b98137bd0507038": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 9548,
@@ -3342,265 +4681,16 @@
       }
     ],
     "verification_reused": true,
-    "last_attempt_at": "2026-10-26T03:54:59+08:00",
+    "last_attempt_at": "2026-10-26T06:46:14+08:00",
     "last_attempt_reason": "timeout",
     "route": {
       "url": "http://mi.dzpp.uk/968729184",
       "options": []
     }
   },
-  "b1b04cd5a9dbfa540a2d:2d82d4c64f49df88fc1c": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 8205,
-    "sample_offsets": [
-      0,
-      4102,
-      6563
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 4102,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 6563,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968728780",
-      "options": []
-    }
-  },
-  "b1b04cd5a9dbfa540a2d:8688be2ede8b2d13de93": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 8205,
-    "sample_offsets": [
-      0,
-      4102,
-      6563
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 4102,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 6563,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968728780",
-      "options": []
-    }
-  },
-  "f97647adac1592e0895c:cb7c8dc0d77f726eacff": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 9548,
-    "sample_offsets": [
-      0,
-      4773,
-      7638
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 4773,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 7638,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968729809",
-      "options": []
-    }
-  },
-  "f97647adac1592e0895c:a06c2b7116077c6f1484": {
-    "first_success_at": "2026-10-25T16:52:32+08:00",
-    "last_success_at": "2026-10-25T17:27:16+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 9548,
-    "sample_offsets": [
-      0,
-      4773,
-      7638
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 4773,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 7638,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968729809",
-      "options": []
-    },
-    "verification_reused": true,
-    "last_attempt_at": "2026-10-26T03:54:59+08:00",
-    "last_attempt_reason": "timeout"
-  },
-  "7680b8bf52ec322d7464:9121543b95f741544486": {
-    "first_success_at": "2026-10-25T16:52:32+08:00",
-    "last_success_at": "2026-10-25T17:27:16+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 7788,
-    "sample_offsets": [
-      0,
-      3893,
-      6230
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3893,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 6230,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968733238",
-      "options": []
-    },
-    "verification_reused": true,
-    "last_attempt_at": "2026-10-26T03:54:59+08:00",
-    "last_attempt_reason": "timeout"
-  },
-  "7680b8bf52ec322d7464:faedec999bc8b149fa70": {
-    "first_success_at": "2026-10-25T17:27:16+08:00",
-    "last_success_at": "2026-10-25T17:27:16+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 7788,
-    "sample_offsets": [
-      0,
-      3893,
-      6230
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3893,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 6230,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968733238",
-      "options": []
-    },
-    "verification_reused": true,
-    "last_attempt_at": "2026-10-26T03:54:59+08:00",
-    "last_attempt_reason": "timeout"
-  },
   "a7a4a49313c2a56c0579:1d8f7de1a9080322cb8f": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 8364,
@@ -3638,16 +4728,16 @@
       "options": []
     }
   },
-  "35b6d57234ec90af02d0:6c50a56a7d23c6ce52e0": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+  "a7a4a49313c2a56c0579:3adf09c987e8fba1e9ec": {
+    "first_success_at": "2026-10-26T06:46:14+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
-    "duration_seconds": 7655,
+    "duration_seconds": 8364,
     "sample_offsets": [
       0,
-      3827,
-      6123
+      4182,
+      6691
     ],
     "sample_seconds": 5,
     "picture_samples": [
@@ -3659,14 +4749,14 @@
         "almost_all_black": false
       },
       {
-        "offset": 3827,
+        "offset": 4182,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
         "almost_all_black": false
       },
       {
-        "offset": 6123,
+        "offset": 6691,
         "checked": true,
         "decoded_frames": 125,
         "black_frames": 0,
@@ -3674,296 +4764,13 @@
       }
     ],
     "route": {
-      "url": "http://139.224.44.53:1234/968728948",
-      "options": []
-    }
-  },
-  "35b6d57234ec90af02d0:b3eaeb594b4a615716be": {
-    "first_success_at": "2026-10-25T20:43:40+08:00",
-    "last_success_at": "2026-10-25T20:43:40+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 7655,
-    "sample_offsets": [
-      0,
-      3827,
-      6123
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3827,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 6123,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968728948",
-      "options": []
-    },
-    "verification_reused": true,
-    "last_attempt_at": "2026-10-26T03:54:59+08:00",
-    "last_attempt_reason": "timeout"
-  },
-  "4b06a8240fbc713f4b23:acc95e34589d973204e6": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 8092,
-    "sample_offsets": [
-      0,
-      4045,
-      6473
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 4045,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 6473,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968729502",
-      "options": []
-    }
-  },
-  "4b06a8240fbc713f4b23:a4ba0eec178508212a65": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 8092,
-    "sample_offsets": [
-      0,
-      4045,
-      6473
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 4045,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 6473,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968729502",
-      "options": []
-    }
-  },
-  "58c7c5d01eec01baf630:cff15e3b750ac59d5f0e": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 9275,
-    "sample_offsets": [
-      0,
-      4637,
-      7420
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 4637,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 7420,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968745440",
-      "options": []
-    }
-  },
-  "58c7c5d01eec01baf630:36ed5b82ae8fc8f23907": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 9275,
-    "sample_offsets": [
-      0,
-      4637,
-      7420
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 4637,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 7420,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968745440",
-      "options": []
-    }
-  },
-  "daabbd0dd95a6ea676ce:58cd7f13f7f91373e461": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 7583,
-    "sample_offsets": [
-      0,
-      3791,
-      6066
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3791,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 6066,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://mi.dzpp.uk/968756469",
-      "options": []
-    }
-  },
-  "daabbd0dd95a6ea676ce:d1fd0fc1b89826c6e92d": {
-    "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
-    "qualified": true,
-    "kind": "vod",
-    "duration_seconds": 7583,
-    "sample_offsets": [
-      0,
-      3791,
-      6066
-    ],
-    "sample_seconds": 5,
-    "picture_samples": [
-      {
-        "offset": 0,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 3791,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      },
-      {
-        "offset": 6066,
-        "checked": true,
-        "decoded_frames": 125,
-        "black_frames": 0,
-        "almost_all_black": false
-      }
-    ],
-    "route": {
-      "url": "http://139.224.44.53:1234/968756469",
+      "url": "http://mi.dzpp.uk/968732996",
       "options": []
     }
   },
   "5ad79141d8d6c0aca856:e22101ebad101d74ff99": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 17171,
@@ -4003,7 +4810,7 @@
   },
   "5ad79141d8d6c0aca856:49fd562e2dfb02e031f4": {
     "first_success_at": "2026-10-26T03:54:59+08:00",
-    "last_success_at": "2026-10-26T03:54:59+08:00",
+    "last_success_at": "2026-10-26T06:46:14+08:00",
     "qualified": true,
     "kind": "vod",
     "duration_seconds": 17171,
