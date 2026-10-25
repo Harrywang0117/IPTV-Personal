@@ -1,0 +1,105 @@
+{
+  "updated_at": "2026-10-25T09:29:24.102106+08:00",
+  "sources": [
+    {
+      "url": "http://112.230.73.82:7788",
+      "id": "migu-alt",
+      "first_seen_at": "2026-10-25T09:29:24.102106+08:00",
+      "status": "degraded",
+      "seed": true,
+      "observations": [
+        {
+          "at": "2026-10-25T09:29:24.102106+08:00",
+          "qualified": false,
+          "error": "discovery_feed_unavailable"
+        }
+      ],
+      "last_checked_at": "2026-10-25T09:29:24.102106+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://mi.dzpp.uk",
+      "id": "migu-backup",
+      "first_seen_at": "2026-10-25T09:29:24.102106+08:00",
+      "status": "degraded",
+      "seed": true,
+      "observations": [
+        {
+          "at": "2026-10-25T09:29:24.102106+08:00",
+          "qualified": false,
+          "catalogue_entries": 437,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "cc6610ad7cc4ecedfc1d",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "27619411aa57a2dc1e0e",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T09:29:24.102106+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://139.224.44.53:1234",
+      "id": "migu-primary",
+      "first_seen_at": "2026-10-25T09:29:24.102106+08:00",
+      "status": "degraded",
+      "seed": true,
+      "observations": [
+        {
+          "at": "2026-10-25T09:29:24.102106+08:00",
+          "qualified": false,
+          "catalogue_entries": 450,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "cc6610ad7cc4ecedfc1d",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "27619411aa57a2dc1e0e",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T09:29:24.102106+08:00",
+      "consecutive_failures": 1
+    }
+  ]
+}
