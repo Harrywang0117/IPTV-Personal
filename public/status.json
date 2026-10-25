@@ -1,12 +1,13 @@
 {
-  "generated_at": "2026-10-25T17:27:16+08:00",
-  "finished_at": "2026-10-25T17:44:04+08:00",
+  "generated_at": "2026-10-25T20:43:40+08:00",
+  "finished_at": "2026-10-25T21:00:30+08:00",
   "accepted": true,
   "errors": [],
   "warnings": [
     "some_vods_reuse_recent_evidence_with_original_timestamp",
     "restricted_and_unverified_events_only_in_schedule",
     "some_sports_entries_require_login",
+    "trial_streams_not_counted_as_verified",
     "some_source_catalogues_from_cache"
   ],
   "sources": [
@@ -23,7 +24,7 @@
       "parsed": 565,
       "selected": 437,
       "cached": true,
-      "cache_age_hours": 9.65,
+      "cache_age_hours": 12.92,
       "fetch_error": "source_fetch_failed_curl_28"
     },
     {
@@ -39,29 +40,29 @@
   "events": {
     "2026-10-24": {
       "listed": 251,
-      "verified": 88,
-      "fresh_verified": 54,
-      "recent_verified": 34,
+      "verified": 100,
+      "fresh_verified": 44,
+      "recent_verified": 56,
       "upcoming": 0,
-      "not_checked": 146,
+      "not_checked": 122,
       "membership_required": 0,
       "login_required": 0,
       "trial_stream": 0,
       "observation_pending": 0,
-      "failed_checks": 17
+      "failed_checks": 29
     },
     "2026-10-25": {
       "listed": 257,
-      "verified": 29,
-      "fresh_verified": 21,
-      "recent_verified": 8,
-      "upcoming": 104,
-      "not_checked": 100,
+      "verified": 30,
+      "fresh_verified": 16,
+      "recent_verified": 14,
+      "upcoming": 46,
+      "not_checked": 141,
       "membership_required": 0,
-      "login_required": 0,
-      "trial_stream": 0,
+      "login_required": 1,
+      "trial_stream": 1,
       "observation_pending": 0,
-      "failed_checks": 24
+      "failed_checks": 40
     },
     "2026-10-26": {
       "listed": 68,
@@ -78,16 +79,17 @@
     }
   },
   "probe": {
-    "decode_failed": 45,
-    "login_required": 2,
-    "network_timeout": 12,
-    "decoded": 130,
+    "decode_failed": 75,
+    "trial_stream": 10,
+    "login_required": 11,
+    "network_timeout": 23,
     "vod_duration_unknown": 2,
-    "metadata_network_timeout": 29,
-    "timeout": 16,
-    "event_budget": 627,
-    "metadata_timeout": 2,
-    "upcoming_lines": 327
+    "decoded": 101,
+    "metadata_network_timeout": 42,
+    "timeout": 24,
+    "metadata_timeout": 4,
+    "event_budget": 736,
+    "upcoming_lines": 219
   },
   "max_lines": 2,
   "event_policy": "qualified_only_with_separate_complete_schedule",
@@ -96,13 +98,13 @@
       "2026-10-24": {
         "matches": 3,
         "entries": 6,
-        "checked_entries": 3,
+        "checked_entries": 2,
         "decoded_entries": 3
       },
       "2026-10-25": {
         "matches": 7,
         "entries": 22,
-        "checked_entries": 0,
+        "checked_entries": 7,
         "decoded_entries": 0
       },
       "2026-10-26": {
@@ -116,13 +118,13 @@
       "2026-10-24": {
         "matches": 12,
         "entries": 29,
-        "checked_entries": 4,
+        "checked_entries": 12,
         "decoded_entries": 0
       },
       "2026-10-25": {
         "matches": 8,
         "entries": 37,
-        "checked_entries": 4,
+        "checked_entries": 7,
         "decoded_entries": 0
       },
       "2026-10-26": {
@@ -136,42 +138,43 @@
       "2026-10-24": {
         "matches": 8,
         "entries": 20,
-        "checked_entries": 4,
-        "decoded_entries": 2
+        "checked_entries": 8,
+        "decoded_entries": 4
       }
     }
   },
   "catalogue_subscription": null,
   "source_media_checks": {
     "migu-backup": {
-      "decode_failed": 22,
-      "decoded": 62,
+      "trial_stream": 10,
+      "decode_failed": 39,
+      "decoded": 45,
       "vod_duration_unknown": 1,
-      "timeout": 14,
-      "event_budget": 205,
+      "timeout": 19,
+      "event_budget": 242,
       "metadata_timeout": 1
     },
     "migu-primary": {
-      "decode_failed": 23,
-      "login_required": 2,
-      "decoded": 68,
+      "login_required": 11,
+      "decode_failed": 36,
       "vod_duration_unknown": 1,
-      "event_budget": 204,
-      "timeout": 2,
-      "metadata_timeout": 1
+      "decoded": 56,
+      "timeout": 5,
+      "metadata_timeout": 3,
+      "event_budget": 242
     },
     "migu-alt": {
-      "network_timeout": 12,
-      "metadata_network_timeout": 29,
-      "event_budget": 218
+      "network_timeout": 23,
+      "metadata_network_timeout": 42,
+      "event_budget": 252
     }
   },
   "source_failure_examples": {
     "migu-backup": [
       {
-        "title": "WTA 布克沙/梅里查尔冲击女双冠军 中心球场 14:30",
+        "title": "BWF 安洗莹PK辛杜 凤凰组合冲击金牌 1号场地 18:00",
         "reason": "decode_failed",
-        "error": "[in#0 @ 0x55ea648a8400] Error opening input: Invalid data found when processing input\nError opening input file [url]\nError opening input files: Invalid data found when processing input\n"
+        "error": "[in#0 @ 0x55a2b8c42400] Error opening input: Invalid data found when processing input\nError opening input file [url]\nError opening input files: Invalid data found when processing input\n"
       },
       {
         "title": "中超 成都蓉城VS大连英博海发 全场回放（3D） 15:15",
@@ -181,9 +184,9 @@
     ],
     "migu-primary": [
       {
-        "title": "乒乓球亚锦赛 争冠！林诗栋/黄友政vs温瑞博/袁励岑 蒯曼/王艺迪战日乒 周冠达 侯英超 程靖淇 17:00",
+        "title": "BWF 安洗莹PK辛杜 凤凰组合冲击金牌 1号场地 18:00",
         "reason": "decode_failed",
-        "error": "[in#0 @ 0x55cb19dc2400] Error opening input: Invalid data found when processing input\nError opening input file [url]\nError opening input files: Invalid data found when processing input\n"
+        "error": "[in#0 @ 0x556fe35b0400] Error opening input: Invalid data found when processing input\nError opening input file [url]\nError opening input files: Invalid data found when processing input\n"
       },
       {
         "title": "中超 成都蓉城VS大连英博海发 全场回放（3D） 15:15",
@@ -193,149 +196,51 @@
     ],
     "migu-alt": [
       {
-        "title": "WTA 布克沙/梅里查尔冲击女双冠军 中心球场 14:30",
+        "title": "CBA 辽宁本钢VS新疆广汇能源 赛场原声 19:25",
         "reason": "network_timeout",
-        "error": "[tcp @ 0x55fea9aeff40] Connection to tcp://112.230.73.82:7788 failed: Connection timed out\n[in#0 @ 0x55fea9b37400] Error opening input: Connection timed out\nError opening input file [url]\nError opening input files: Connection timed out\n"
+        "error": "[tcp @ 0x55c9c8055f40] Connection to tcp://112.230.73.82:7788 failed: Connection timed out\n[in#0 @ 0x55c9c809d400] Error opening input: Connection timed out\nError opening input file [url]\nError opening input files: Connection timed out\n"
       },
       {
-        "title": "NBA 雄鹿VS公牛 全场回放（英文原声） 03:55",
+        "title": "JCK 库尔班江一致判定胜 马科斯惨遭TKO JCK觉城之夜N124主赛全场回放（赛场原声） 18:55",
         "reason": "metadata_network_timeout",
-        "error": "[tcp @ 0x56120fcb6f40] Connection to tcp://112.230.73.82:7788 failed: Connection timed out\n[url] Connection timed out\n"
+        "error": "[tcp @ 0x558298659f40] Connection to tcp://112.230.73.82:7788 failed: Connection timed out\n[url] Connection timed out\n"
       }
     ]
   },
   "event_attempts": [
     {
-      "event_id": "c6125b78bb33c81a7b14",
+      "event_id": "f2c5b528c28cc3bc2679",
       "date": "2026-10-25",
       "source": "migu-backup",
-      "route_fingerprint": "9837c7206437dbcdc1a9",
-      "result": "decode_failed"
+      "route_fingerprint": "b06066d975bfcacfaf61",
+      "result": "trial_stream"
     },
     {
-      "event_id": "5826de44b3c996f1861a",
+      "event_id": "f2c5b528c28cc3bc2679",
       "date": "2026-10-25",
       "source": "migu-primary",
-      "route_fingerprint": "03df998e5ccbd69f123f",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "c6125b78bb33c81a7b14",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "aab8f95cf5d0ee0099ac",
+      "route_fingerprint": "d5741696662bcfa1610c",
       "result": "login_required"
     },
     {
-      "event_id": "931b7c325d16525d83cb",
+      "event_id": "029530f8a7ba97cd81c3",
       "date": "2026-10-25",
       "source": "migu-backup",
-      "route_fingerprint": "efa704d034df0bc7fcbd",
+      "route_fingerprint": "ca6ed1c56b455fc06642",
       "result": "decode_failed"
     },
     {
-      "event_id": "c6125b78bb33c81a7b14",
+      "event_id": "029530f8a7ba97cd81c3",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "b4c2d8053515c474d33c",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "f2c5b528c28cc3bc2679",
       "date": "2026-10-25",
       "source": "migu-alt",
-      "route_fingerprint": "6adaf7d6a5ac84eb5f06",
-      "result": "network_timeout"
-    },
-    {
-      "event_id": "6ce45f6a45eaff664a01",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "02fece8d20cdb6e5cd18",
-      "result": "decoded"
-    },
-    {
-      "event_id": "d5b27163cfbc091dc241",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "2252893a1042f69e9b31",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "1bb1f9828a895be03e24",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "8c39ec0de05fd9c0ee2b",
-      "result": "decoded"
-    },
-    {
-      "event_id": "a0b57b96305a4e4e095e",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "044ff79c7905705f4a50",
-      "result": "decoded"
-    },
-    {
-      "event_id": "d5b27163cfbc091dc241",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "9b3bc0bac88c68d906cc",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "b1b04cd5a9dbfa540a2d",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "2d82d4c64f49df88fc1c",
-      "result": "decoded"
-    },
-    {
-      "event_id": "f97647adac1592e0895c",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "a06c2b7116077c6f1484",
-      "result": "decoded"
-    },
-    {
-      "event_id": "4079fac0343c4dbe3d1e",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "b66b431fe234fa79d3ac",
-      "result": "vod_duration_unknown"
-    },
-    {
-      "event_id": "d5b27163cfbc091dc241",
-      "date": "2026-10-25",
-      "source": "migu-alt",
-      "route_fingerprint": "9573e4a0deb558416b61",
-      "result": "network_timeout"
-    },
-    {
-      "event_id": "6ce45f6a45eaff664a01",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "f12d91512623025af2f8",
-      "result": "decoded"
-    },
-    {
-      "event_id": "4079fac0343c4dbe3d1e",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "cea3e7465017a16acab0",
-      "result": "vod_duration_unknown"
-    },
-    {
-      "event_id": "713c5f43d521d13429f7",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "8309b354f463cbd5ae1d",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "713c5f43d521d13429f7",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "3c6da7ce40eb591e8104",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "713c5f43d521d13429f7",
-      "date": "2026-10-25",
-      "source": "migu-alt",
-      "route_fingerprint": "81e63116f10a57154d3a",
+      "route_fingerprint": "63b2abb00c5580d8b8d5",
       "result": "network_timeout"
     },
     {
@@ -346,221 +251,39 @@
       "result": "decode_failed"
     },
     {
-      "event_id": "e1cf40d9473b79def908",
+      "event_id": "6ce45f6a45eaff664a01",
       "date": "2026-10-24",
       "source": "migu-backup",
-      "route_fingerprint": "fda15fd74846b4e70e44",
-      "result": "decode_failed"
+      "route_fingerprint": "02fece8d20cdb6e5cd18",
+      "result": "decoded"
     },
     {
-      "event_id": "963119f9b85e8a7530a7",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "be92eaa2ec5ea87b30bf",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "9f6b040d7d3b65f81d4a",
+      "event_id": "5c503271ebbeb9830fae",
       "date": "2026-10-25",
       "source": "migu-backup",
-      "route_fingerprint": "5d24d9abad4654b7c602",
-      "result": "decoded"
+      "route_fingerprint": "c975808c59ad2cd7bb68",
+      "result": "trial_stream"
     },
     {
-      "event_id": "b1b04cd5a9dbfa540a2d",
+      "event_id": "5c503271ebbeb9830fae",
       "date": "2026-10-25",
       "source": "migu-primary",
-      "route_fingerprint": "8688be2ede8b2d13de93",
-      "result": "decoded"
+      "route_fingerprint": "8121ff5fe6c7fcd8faf2",
+      "result": "login_required"
     },
     {
-      "event_id": "f97647adac1592e0895c",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "cb7c8dc0d77f726eacff",
-      "result": "decoded"
-    },
-    {
-      "event_id": "e1cf40d9473b79def908",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "679dd1601fe17bb5bd58",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "e1cf40d9473b79def908",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "6bef224daded317a432e",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "82a600b7d16ec0846459",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "125d40cdf2ae8e7982cf",
-      "result": "decoded"
-    },
-    {
-      "event_id": "bd1784c775bf5d134756",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "444d14fde0a30fa50274",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "2cf547880d213ecc878a",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "122570c33e5d4a99d0c7",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "1bb1f9828a895be03e24",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "6c8b7e4465d5ad29c8bc",
-      "result": "decoded"
-    },
-    {
-      "event_id": "a0b57b96305a4e4e095e",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "7c0f43bff5a2d142e134",
-      "result": "decoded"
-    },
-    {
-      "event_id": "cc87c5a31b97b016b63f",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "dbe656da914996303400",
-      "result": "decoded"
-    },
-    {
-      "event_id": "2cf547880d213ecc878a",
-      "date": "2026-10-25",
-      "source": "migu-alt",
-      "route_fingerprint": "8c2d129a3bdbb78e4423",
-      "result": "network_timeout"
-    },
-    {
-      "event_id": "9f6b040d7d3b65f81d4a",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "78f06a4b8f23b69057e2",
-      "result": "decoded"
-    },
-    {
-      "event_id": "e14ca557e28a41c13421",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "3cbf57f7533b0349496f",
-      "result": "decoded"
-    },
-    {
-      "event_id": "6065445f1e60bc53d47c",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "ee88a6e61bc7fb9dbf68",
-      "result": "decoded"
-    },
-    {
-      "event_id": "6d872e41ddb87c1c7e4c",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "f916433c7491280159f1",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "707f8d8c84b2631bbb31",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "03df998e5ccbd69f123f",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "6d872e41ddb87c1c7e4c",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "f39c3f48640bcae39e5f",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "8d2c509289c956b1b574",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "9698812adb3f11b77007",
-      "result": "decoded"
-    },
-    {
-      "event_id": "a17a57b437ee3c1794b8",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "1b7bb18668d36eeeb78d",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "6d872e41ddb87c1c7e4c",
-      "date": "2026-10-25",
-      "source": "migu-alt",
-      "route_fingerprint": "816929a00dc333419e0f",
-      "result": "network_timeout"
-    },
-    {
-      "event_id": "a17a57b437ee3c1794b8",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "492f71a8df92b2b8cf70",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "3242c9aab61d95c580d4",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "de7222d172fdde909f66",
-      "result": "decoded"
-    },
-    {
-      "event_id": "3f7864762adda14547fc",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "4283c65b4bff31e9220b",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "1beeee5615959c20557b",
+      "event_id": "4629e205e94300934ebf",
       "date": "2026-10-24",
       "source": "migu-backup",
-      "route_fingerprint": "ca04c2d7b853b87c51eb",
+      "route_fingerprint": "0bb4dd304180e9f37fc1",
       "result": "decoded"
     },
     {
-      "event_id": "a17a57b437ee3c1794b8",
-      "date": "2026-10-25",
-      "source": "migu-alt",
-      "route_fingerprint": "b52a8e5bf4abe3a6eba7",
-      "result": "network_timeout"
-    },
-    {
-      "event_id": "5b46da61824778bcabbb",
-      "date": "2026-10-25",
+      "event_id": "4079fac0343c4dbe3d1e",
+      "date": "2026-10-24",
       "source": "migu-backup",
-      "route_fingerprint": "02d6ed7a91b6a5479983",
-      "result": "decoded"
-    },
-    {
-      "event_id": "8d2c509289c956b1b574",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "3bbae8776b0750dcc860",
-      "result": "decoded"
-    },
-    {
-      "event_id": "97bbf7f87138040fb451",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "e61eda40b265d0e0a71d",
-      "result": "decoded"
+      "route_fingerprint": "b66b431fe234fa79d3ac",
+      "result": "vod_duration_unknown"
     },
     {
       "event_id": "d4784ab0ffc343da15d5",
@@ -570,10 +293,24 @@
       "result": "decode_failed"
     },
     {
-      "event_id": "1beeee5615959c20557b",
+      "event_id": "bd1784c775bf5d134756",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "444d14fde0a30fa50274",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "4079fac0343c4dbe3d1e",
       "date": "2026-10-24",
       "source": "migu-primary",
-      "route_fingerprint": "f64896e4fb145c620d0e",
+      "route_fingerprint": "cea3e7465017a16acab0",
+      "result": "vod_duration_unknown"
+    },
+    {
+      "event_id": "6ce45f6a45eaff664a01",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "f12d91512623025af2f8",
       "result": "decoded"
     },
     {
@@ -584,17 +321,24 @@
       "result": "login_required"
     },
     {
-      "event_id": "5b46da61824778bcabbb",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "46a3bbc655cacbf6c6ee",
-      "result": "decoded"
+      "event_id": "e1cf40d9473b79def908",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "fda15fd74846b4e70e44",
+      "result": "decode_failed"
     },
     {
-      "event_id": "97bbf7f87138040fb451",
-      "date": "2026-10-25",
+      "event_id": "3f7864762adda14547fc",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "4283c65b4bff31e9220b",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "4629e205e94300934ebf",
+      "date": "2026-10-24",
       "source": "migu-primary",
-      "route_fingerprint": "5aae5f004a7b9cae9504",
+      "route_fingerprint": "36d5b12dee0038138918",
       "result": "decoded"
     },
     {
@@ -605,31 +349,80 @@
       "result": "decoded"
     },
     {
-      "event_id": "8dd94a5ce9f792a4ab29",
+      "event_id": "82a600b7d16ec0846459",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "125d40cdf2ae8e7982cf",
+      "result": "decoded"
+    },
+    {
+      "event_id": "931b7c325d16525d83cb",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "efa704d034df0bc7fcbd",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "e1cf40d9473b79def908",
       "date": "2026-10-24",
       "source": "migu-primary",
-      "route_fingerprint": "165cce74dbc978203e70",
-      "result": "decoded"
+      "route_fingerprint": "679dd1601fe17bb5bd58",
+      "result": "decode_failed"
     },
     {
-      "event_id": "723557a2b690aa5e4b06",
+      "event_id": "c949f11eaad76fca19f5",
       "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "b57efeb6aa6afa6b4bf0",
-      "result": "decoded"
-    },
-    {
-      "event_id": "cc87c5a31b97b016b63f",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "5e9adc1c3608ce7e2df6",
-      "result": "decoded"
+      "source": "migu-primary",
+      "route_fingerprint": "013976d521f53efcb459",
+      "result": "login_required"
     },
     {
       "event_id": "5292b5e0073b48feace7",
       "date": "2026-10-25",
       "source": "migu-backup",
       "route_fingerprint": "96d8a639d3b6ed662a69",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "1bb1f9828a895be03e24",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "8c39ec0de05fd9c0ee2b",
+      "result": "decoded"
+    },
+    {
+      "event_id": "d5b27163cfbc091dc241",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "2252893a1042f69e9b31",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "e1cf40d9473b79def908",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "6bef224daded317a432e",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "d2f8c902abf76e5c701b",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "55d0cd370a9dec4dfd47",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "59dff1d943ad6eb2083c",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "56f076918823f7bb8bd2",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "5292b5e0073b48feace7",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "1098986747bb1f0ac41a",
       "result": "decode_failed"
     },
     {
@@ -640,123 +433,81 @@
       "result": "decoded"
     },
     {
-      "event_id": "5292b5e0073b48feace7",
+      "event_id": "d5b27163cfbc091dc241",
       "date": "2026-10-25",
       "source": "migu-primary",
-      "route_fingerprint": "1098986747bb1f0ac41a",
+      "route_fingerprint": "9b3bc0bac88c68d906cc",
       "result": "decode_failed"
     },
     {
-      "event_id": "723557a2b690aa5e4b06",
+      "event_id": "d2f8c902abf76e5c701b",
       "date": "2026-10-25",
       "source": "migu-primary",
-      "route_fingerprint": "1697674f96dfd46c5702",
-      "result": "decoded"
-    },
-    {
-      "event_id": "eb04ccc0b00a0208fd0e",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "07eee50ce354b984ab06",
+      "route_fingerprint": "45825c76226c72a7c6c6",
       "result": "decode_failed"
     },
     {
-      "event_id": "94ed1db5d1df8b109354",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "9361ecdf771ffbc2eee4",
-      "result": "decoded"
-    },
-    {
-      "event_id": "eb04ccc0b00a0208fd0e",
-      "date": "2026-10-25",
-      "source": "migu-alt",
-      "route_fingerprint": "15ed34ac6595ce6baac8",
-      "result": "network_timeout"
-    },
-    {
-      "event_id": "f1db1b9dcff25b9eb276",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "3bc68eb8c4322e23c1f2",
-      "result": "decoded"
-    },
-    {
-      "event_id": "3242c9aab61d95c580d4",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "e4d54ac0438b50e37bbb",
-      "result": "timeout"
-    },
-    {
-      "event_id": "70f42871ee0f11806dad",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "85b179446d7b12905a6c",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "80bea637318071c9bbdc",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "2408c6e18df75fe1827c",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "06bbae19c9f16b76887c",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "b74ef28e3cbeb5b19c1e",
-      "result": "decoded"
-    },
-    {
-      "event_id": "3242c9aab61d95c580d4",
+      "event_id": "c2898a0bb4872c788af8",
       "date": "2026-10-24",
       "source": "migu-alt",
-      "route_fingerprint": "e6d6af0e4da8eac10bde",
+      "route_fingerprint": "a9229d6e1484ffa1e78d",
       "result": "metadata_network_timeout"
     },
     {
-      "event_id": "70f42871ee0f11806dad",
+      "event_id": "b1fd7a48f571057adb64",
       "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "5075f7c8cbfb17761852",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "80bea637318071c9bbdc",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "9b3d55e1c20a050df49d",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "b7eb13dfda7f4b6b83fa",
-      "date": "2026-10-25",
-      "source": "migu-alt",
-      "route_fingerprint": "d6ad5d944378c1763d03",
-      "result": "network_timeout"
-    },
-    {
-      "event_id": "94ed1db5d1df8b109354",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "02e5acfe3178a4bcb04c",
+      "source": "migu-backup",
+      "route_fingerprint": "e083efca8789510d0f1d",
       "result": "decoded"
     },
     {
-      "event_id": "f1db1b9dcff25b9eb276",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "391f3e86e7192adeca3c",
+      "event_id": "35b6d57234ec90af02d0",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "b3eaeb594b4a615716be",
       "result": "decoded"
     },
     {
-      "event_id": "70f42871ee0f11806dad",
+      "event_id": "d5b27163cfbc091dc241",
       "date": "2026-10-25",
       "source": "migu-alt",
-      "route_fingerprint": "be6a61a5b974e8cba22b",
+      "route_fingerprint": "9573e4a0deb558416b61",
       "result": "network_timeout"
+    },
+    {
+      "event_id": "a0b57b96305a4e4e095e",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "044ff79c7905705f4a50",
+      "result": "decoded"
+    },
+    {
+      "event_id": "d2f8c902abf76e5c701b",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "cc24038628140a4b29ea",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "9f6b040d7d3b65f81d4a",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "5d24d9abad4654b7c602",
+      "result": "decoded"
+    },
+    {
+      "event_id": "6a2ff3bc2317f1d5521a",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "5c2299efc85497e18992",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "b1fd7a48f571057adb64",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "68f6b0f0c5284ff85c06",
+      "result": "decoded"
     },
     {
       "event_id": "d4271f474e15a1e4a7f3",
@@ -766,46 +517,67 @@
       "result": "decode_failed"
     },
     {
-      "event_id": "80bea637318071c9bbdc",
-      "date": "2026-10-25",
-      "source": "migu-alt",
-      "route_fingerprint": "f4fda7ca575ded9764be",
-      "result": "network_timeout"
-    },
-    {
-      "event_id": "7efcd8a666097394e7ef",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "efa704d034df0bc7fcbd",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "8686100cb7a8ddffc216",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "1a668d8cc15b89b69f40",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "1a898cbed45a810788c9",
+      "event_id": "f2cbdd537be0c6280f23",
       "date": "2026-10-24",
       "source": "migu-backup",
-      "route_fingerprint": "52d70928683fbfde0b79",
+      "route_fingerprint": "2dd27bedc6d448860600",
       "result": "decoded"
     },
     {
-      "event_id": "8686100cb7a8ddffc216",
+      "event_id": "ee1839b7b6a92478acaf",
       "date": "2026-10-25",
-      "source": "migu-alt",
-      "route_fingerprint": "4eae36c214f8386c9550",
-      "result": "network_timeout"
+      "source": "migu-backup",
+      "route_fingerprint": "4026412299013edd07ce",
+      "result": "trial_stream"
     },
     {
-      "event_id": "8dd94a5ce9f792a4ab29",
-      "date": "2026-10-24",
+      "event_id": "35b6d57234ec90af02d0",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "6c50a56a7d23c6ce52e0",
+      "result": "decoded"
+    },
+    {
+      "event_id": "9f6b040d7d3b65f81d4a",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "78f06a4b8f23b69057e2",
+      "result": "decoded"
+    },
+    {
+      "event_id": "1bb1f9828a895be03e24",
+      "date": "2026-10-25",
       "source": "migu-backup",
-      "route_fingerprint": "a5cad9a56fe4c1786502",
-      "result": "timeout"
+      "route_fingerprint": "6c8b7e4465d5ad29c8bc",
+      "result": "decoded"
+    },
+    {
+      "event_id": "97bbf7f87138040fb451",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "e61eda40b265d0e0a71d",
+      "result": "decoded"
+    },
+    {
+      "event_id": "4b06a8240fbc713f4b23",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "acc95e34589d973204e6",
+      "result": "decoded"
+    },
+    {
+      "event_id": "cc87c5a31b97b016b63f",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "dbe656da914996303400",
+      "result": "decoded"
+    },
+    {
+      "event_id": "ee1839b7b6a92478acaf",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "b828160286bfbaa63c0f",
+      "result": "login_required"
     },
     {
       "event_id": "d4271f474e15a1e4a7f3",
@@ -815,20 +587,6 @@
       "result": "decode_failed"
     },
     {
-      "event_id": "8dd94a5ce9f792a4ab29",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "32ff07c5283b88e19a4a",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "1a898cbed45a810788c9",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "3e4774e6d4baff9a9046",
-      "result": "decoded"
-    },
-    {
       "event_id": "d4271f474e15a1e4a7f3",
       "date": "2026-10-24",
       "source": "migu-alt",
@@ -836,347 +594,32 @@
       "result": "metadata_network_timeout"
     },
     {
-      "event_id": "8ef7f83300d580a72e96",
+      "event_id": "f2cbdd537be0c6280f23",
       "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "c616a76baef886907762",
+      "source": "migu-primary",
+      "route_fingerprint": "57042451d818ee3967a9",
       "result": "decoded"
     },
     {
-      "event_id": "fd2eed19ff194d70e14a",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "0dee6d3b2cba8dde09da",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "c5d546ea9aa8ffa646a5",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "bfc601ee20c303fa0c51",
-      "result": "timeout"
-    },
-    {
-      "event_id": "fd2eed19ff194d70e14a",
+      "event_id": "ee1839b7b6a92478acaf",
       "date": "2026-10-25",
       "source": "migu-alt",
-      "route_fingerprint": "c24263b1ecb6c1223dbe",
+      "route_fingerprint": "bfb2af788a2a4df23fbd",
       "result": "network_timeout"
     },
     {
-      "event_id": "8ef7f83300d580a72e96",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "dba72aec0e1bf45f9371",
-      "result": "decoded"
-    },
-    {
-      "event_id": "e05566542a7dcfd02d5c",
+      "event_id": "c4c6bac7c66b9398533a",
       "date": "2026-10-24",
       "source": "migu-backup",
-      "route_fingerprint": "c1cb02c77db85509e9d8",
+      "route_fingerprint": "e5b0054954975a42965d",
       "result": "decoded"
     },
     {
-      "event_id": "89e9e97849656898d3ac",
+      "event_id": "8e048335c6af1e1da5f8",
       "date": "2026-10-25",
       "source": "migu-backup",
-      "route_fingerprint": "0e9fc727f63b1cc83f6b",
+      "route_fingerprint": "361e7e1e4d18c210e5a2",
       "result": "decode_failed"
-    },
-    {
-      "event_id": "06bbae19c9f16b76887c",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "3ee6544f7f16a3bda2ff",
-      "result": "timeout"
-    },
-    {
-      "event_id": "bb806c998cfd34052c1d",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "a1a62dee2a52e892a96c",
-      "result": "decoded"
-    },
-    {
-      "event_id": "c5d546ea9aa8ffa646a5",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "f04593df7c6925c78803",
-      "result": "decoded"
-    },
-    {
-      "event_id": "e9106f37c8d10285a151",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "42c3c0e715efe64df1d4",
-      "result": "decoded"
-    },
-    {
-      "event_id": "06bbae19c9f16b76887c",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "6ab836746ab172522622",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "c5d546ea9aa8ffa646a5",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "efce0ac6176be2900762",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "d9973ddcede4753ac0e1",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "9b14b747e9daed1bffd8",
-      "result": "decoded"
-    },
-    {
-      "event_id": "e05566542a7dcfd02d5c",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "e65d3ecdf30aaa4830ce",
-      "result": "decoded"
-    },
-    {
-      "event_id": "96555dd8b86757dd2311",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "5c1833b5c652aa352e3d",
-      "result": "decoded"
-    },
-    {
-      "event_id": "e9106f37c8d10285a151",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "749b661c8b6a7454a3f3",
-      "result": "decoded"
-    },
-    {
-      "event_id": "3caad104ff82c1fd45b1",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "9bb0abf998a3872d18fd",
-      "result": "decoded"
-    },
-    {
-      "event_id": "d9973ddcede4753ac0e1",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "73840dc10b54323e20c3",
-      "result": "decoded"
-    },
-    {
-      "event_id": "248e527c73d151afbe0d",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "a4888dd599770df310c6",
-      "result": "decoded"
-    },
-    {
-      "event_id": "485e2a84ed1345e528f5",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "fde29b98c6c8414ff709",
-      "result": "timeout"
-    },
-    {
-      "event_id": "d7439a2f00752919a1e1",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "a62932147fcb5a8ef199",
-      "result": "decoded"
-    },
-    {
-      "event_id": "3caad104ff82c1fd45b1",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "dd3821191587f116071c",
-      "result": "decoded"
-    },
-    {
-      "event_id": "dba708acaad0ed8ebacf",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "abefcfcd602e08995f4f",
-      "result": "decoded"
-    },
-    {
-      "event_id": "d7439a2f00752919a1e1",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "74739b224d26dcc48312",
-      "result": "decoded"
-    },
-    {
-      "event_id": "231f88fb8779bfe0a207",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "e278ab535083ff1d9c91",
-      "result": "decoded"
-    },
-    {
-      "event_id": "485e2a84ed1345e528f5",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "53fb8a572c5482f45da6",
-      "result": "decoded"
-    },
-    {
-      "event_id": "9ac897ed908d369ae01a",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "69f412bac9773dd2d03b",
-      "result": "decoded"
-    },
-    {
-      "event_id": "485e2a84ed1345e528f5",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "7ff615521d8e54af6886",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "bb806c998cfd34052c1d",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "fa2501035afb780d5747",
-      "result": "timeout"
-    },
-    {
-      "event_id": "124a5403406c20f3af90",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "2d1906eaf6a5b52c715a",
-      "result": "decoded"
-    },
-    {
-      "event_id": "bb806c998cfd34052c1d",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "5d1fe9e8dcc809deb6a8",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "dba708acaad0ed8ebacf",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "d36a85b709c4c975f86e",
-      "result": "decoded"
-    },
-    {
-      "event_id": "7680b8bf52ec322d7464",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "9121543b95f741544486",
-      "result": "decoded"
-    },
-    {
-      "event_id": "9ac897ed908d369ae01a",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "95ad12d32d68316b208d",
-      "result": "decoded"
-    },
-    {
-      "event_id": "23b30f926c9594696495",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "c1799f04d1643e9f2a9f",
-      "result": "decoded"
-    },
-    {
-      "event_id": "9dcd9d6a4c7e882eba8a",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "cee003378fcec8e1f043",
-      "result": "decoded"
-    },
-    {
-      "event_id": "96555dd8b86757dd2311",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "26acad65317efe85cb80",
-      "result": "timeout"
-    },
-    {
-      "event_id": "124a5403406c20f3af90",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "5afcf62594773100ff48",
-      "result": "decoded"
-    },
-    {
-      "event_id": "96555dd8b86757dd2311",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "cfa88aa3c8e86b1a45e3",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "23b30f926c9594696495",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "2b3296790e8b2a863227",
-      "result": "decoded"
-    },
-    {
-      "event_id": "9dcd9d6a4c7e882eba8a",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "a079fd5e0c842bf4035b",
-      "result": "decoded"
-    },
-    {
-      "event_id": "248e527c73d151afbe0d",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "dbf105b8135dc952b838",
-      "result": "timeout"
-    },
-    {
-      "event_id": "2d53fc1358e3ceb5e90c",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "27969121e0a632dc799e",
-      "result": "timeout"
-    },
-    {
-      "event_id": "d4b28a2480120af59b93",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "81b73d752cc26b369453",
-      "result": "decoded"
-    },
-    {
-      "event_id": "248e527c73d151afbe0d",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "c3aaf7c09dd22db9ba85",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "bab11869101af47d5069",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "eb77e58a22a5ee2988da",
-      "result": "decoded"
-    },
-    {
-      "event_id": "231f88fb8779bfe0a207",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "9263a5f248d40af385a7",
-      "result": "timeout"
-    },
-    {
-      "event_id": "231f88fb8779bfe0a207",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "4778ddad0804b7790941",
-      "result": "metadata_network_timeout"
     },
     {
       "event_id": "cc6610ad7cc4ecedfc1d",
@@ -1186,24 +629,59 @@
       "result": "decode_failed"
     },
     {
-      "event_id": "ccd3cff6913740ab90b7",
+      "event_id": "97bbf7f87138040fb451",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "5aae5f004a7b9cae9504",
+      "result": "decoded"
+    },
+    {
+      "event_id": "8e048335c6af1e1da5f8",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "0274c7e9911fa82a3a10",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "a0b57b96305a4e4e095e",
       "date": "2026-10-25",
       "source": "migu-backup",
-      "route_fingerprint": "4128e57efc1deb1f037e",
+      "route_fingerprint": "7c0f43bff5a2d142e134",
       "result": "decoded"
     },
     {
-      "event_id": "2d53fc1358e3ceb5e90c",
+      "event_id": "4b06a8240fbc713f4b23",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "a4ba0eec178508212a65",
+      "result": "decoded"
+    },
+    {
+      "event_id": "c4c6bac7c66b9398533a",
       "date": "2026-10-24",
       "source": "migu-primary",
-      "route_fingerprint": "c9fa74f900ac51181429",
+      "route_fingerprint": "0f6f956e7bba00a3847e",
       "result": "decoded"
     },
     {
-      "event_id": "61a7ec1a68c35c88faff",
+      "event_id": "8e048335c6af1e1da5f8",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "09cb0c8ca3c3254cec8a",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "3f1c281b52d68284a8f5",
       "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "caee5f953ae8625bbfe0",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "5b46da61824778bcabbb",
+      "date": "2026-10-25",
       "source": "migu-backup",
-      "route_fingerprint": "e8fc67e3c3f75f4e9a56",
+      "route_fingerprint": "02d6ed7a91b6a5479983",
       "result": "decoded"
     },
     {
@@ -1214,11 +692,25 @@
       "result": "decode_failed"
     },
     {
-      "event_id": "2d53fc1358e3ceb5e90c",
+      "event_id": "5ae47b40603d84e4d5fe",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "a01766c6ee4ade002b2c",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "3f1c281b52d68284a8f5",
       "date": "2026-10-24",
       "source": "migu-alt",
-      "route_fingerprint": "7937e51f0d2cd8295cbb",
+      "route_fingerprint": "e95823f543b523ac2c22",
       "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "5ae47b40603d84e4d5fe",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "b2c4568a1155d3cf45b0",
+      "result": "decode_failed"
     },
     {
       "event_id": "cc6610ad7cc4ecedfc1d",
@@ -1228,24 +720,906 @@
       "result": "metadata_network_timeout"
     },
     {
-      "event_id": "79fa7b31c02f61399cae",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "498d995c30bedddd7056",
-      "result": "decoded"
-    },
-    {
-      "event_id": "ccd3cff6913740ab90b7",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "6855aba64c97a8e17779",
-      "result": "decoded"
-    },
-    {
       "event_id": "3f1c281b52d68284a8f5",
       "date": "2026-10-24",
       "source": "migu-alt",
-      "route_fingerprint": "caee5f953ae8625bbfe0",
+      "route_fingerprint": "f5cb4d3461d989327edb",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "d228c0a7d26243999d53",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "a81bff0f4b8c670904a2",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "52c41ba8dc3cc8507dc9",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "50740c67a36995956487",
+      "result": "timeout"
+    },
+    {
+      "event_id": "5ae47b40603d84e4d5fe",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "b7c9c6799c7b038065c5",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "5b46da61824778bcabbb",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "46a3bbc655cacbf6c6ee",
+      "result": "decoded"
+    },
+    {
+      "event_id": "c01bdf33d1e49a598e2e",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "12363398f48dab8a645a",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "723557a2b690aa5e4b06",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "b57efeb6aa6afa6b4bf0",
+      "result": "decoded"
+    },
+    {
+      "event_id": "520f8f5366d6ebf063c2",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "f14eb677c276d07f20fc",
+      "result": "trial_stream"
+    },
+    {
+      "event_id": "c01bdf33d1e49a598e2e",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "12d9961c020a297a90f4",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "e14ca557e28a41c13421",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "3cbf57f7533b0349496f",
+      "result": "decoded"
+    },
+    {
+      "event_id": "530a671b0a0a728cf43b",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "5b0b054bfcd6ba1ecfdf",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "bb9fcd2c4ece26954164",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "323fabd2ea5a3525a7c9",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "ce813161110f3b1387d9",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "e2b72dee723582e536ea",
+      "result": "decoded"
+    },
+    {
+      "event_id": "277ac4b9be331aed84c2",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "3205cca8ca48792b037c",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "520f8f5366d6ebf063c2",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "21b444caa603d395873a",
+      "result": "login_required"
+    },
+    {
+      "event_id": "ef85db026576b9be53ca",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "a6729cea619ebb1bb3e7",
+      "result": "decoded"
+    },
+    {
+      "event_id": "69b77ddd0664ca470c9c",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "ac7a1bafd761c6748583",
+      "result": "trial_stream"
+    },
+    {
+      "event_id": "707f8d8c84b2631bbb31",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "03df998e5ccbd69f123f",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "bb9fcd2c4ece26954164",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "5a5f31b8b1b6683885ed",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "723557a2b690aa5e4b06",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "1697674f96dfd46c5702",
+      "result": "decoded"
+    },
+    {
+      "event_id": "520f8f5366d6ebf063c2",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "cca500985bd2c5cd7fc7",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "52c41ba8dc3cc8507dc9",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "2b703c67d1f8d6adf054",
+      "result": "decoded"
+    },
+    {
+      "event_id": "69b77ddd0664ca470c9c",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "f3d8c3ff8ba8a88b91fb",
+      "result": "login_required"
+    },
+    {
+      "event_id": "52c41ba8dc3cc8507dc9",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "f9968d06085815fa06f2",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "69b77ddd0664ca470c9c",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "c7425fa7ccda442ad0de",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "1beeee5615959c20557b",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "ca04c2d7b853b87c51eb",
+      "result": "decoded"
+    },
+    {
+      "event_id": "cc87c5a31b97b016b63f",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "5e9adc1c3608ce7e2df6",
+      "result": "decoded"
+    },
+    {
+      "event_id": "ef85db026576b9be53ca",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "5fe086bd8301b7a81d41",
+      "result": "decoded"
+    },
+    {
+      "event_id": "01f5b213af49386dc456",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "b8b29035f996eac8dd54",
+      "result": "decoded"
+    },
+    {
+      "event_id": "2071c7172dacdb816085",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "52d70928683fbfde0b79",
+      "result": "decoded"
+    },
+    {
+      "event_id": "1beeee5615959c20557b",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "f64896e4fb145c620d0e",
+      "result": "decoded"
+    },
+    {
+      "event_id": "2071c7172dacdb816085",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "3e4774e6d4baff9a9046",
+      "result": "decoded"
+    },
+    {
+      "event_id": "ce751850f7ef284f2f33",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "2c4423f543f9ef6146ac",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "3ae342b6a148bf3f537b",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "2067d82704cb015fff61",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "ce813161110f3b1387d9",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "0ddccdb02cdc1c93b5d0",
+      "result": "timeout"
+    },
+    {
+      "event_id": "3ae342b6a148bf3f537b",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "cdd798f359a614cd3220",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "9f3bb8fe95e2b54ff845",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "49cb4398e9f4591e7134",
+      "result": "timeout"
+    },
+    {
+      "event_id": "a08fd6a4cefe46f62c9c",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "f5f4bae3dddd0532d9a4",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "ce813161110f3b1387d9",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "87dc27c6138bccfb4b18",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "a08fd6a4cefe46f62c9c",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "8daba677151cba4963cb",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "3ae342b6a148bf3f537b",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "1fc262fe3435e3c62ce4",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "ce751850f7ef284f2f33",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "3950fdfc08956f813c04",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "a08fd6a4cefe46f62c9c",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "35e65d5c3e74474d0eb8",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "29a7f141950dd3488529",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "2c51ba3a0c38d6733c70",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "cd40241ab0c8f5b526fa",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "79471fd5be0e84aea13d",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "9aba6edf2bbb272501f7",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "a6091b26e35636ff915b",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "8ef7f83300d580a72e96",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "c616a76baef886907762",
+      "result": "decoded"
+    },
+    {
+      "event_id": "f1db1b9dcff25b9eb276",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "3bc68eb8c4322e23c1f2",
+      "result": "decoded"
+    },
+    {
+      "event_id": "29a7f141950dd3488529",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "b3f7ccda6c63e443b80e",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "9f3bb8fe95e2b54ff845",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "ccc87adbac456a6f8229",
+      "result": "timeout"
+    },
+    {
+      "event_id": "29a7f141950dd3488529",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "8495276b012fb4ba2421",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "9f3bb8fe95e2b54ff845",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "061a63b0e7021ae1218a",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "bf2bf3f62ca2663b90f5",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "c149c6d0730c223fb67a",
+      "result": "decoded"
+    },
+    {
+      "event_id": "e9106f37c8d10285a151",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "42c3c0e715efe64df1d4",
+      "result": "decoded"
+    },
+    {
+      "event_id": "3ce69afc806677bc4d46",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "5a599fd1afb85e88af47",
+      "result": "decoded"
+    },
+    {
+      "event_id": "8ef7f83300d580a72e96",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "dba72aec0e1bf45f9371",
+      "result": "decoded"
+    },
+    {
+      "event_id": "5a6bdcf8c06a4f3b4131",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "f1c5302d11c514f9ff2e",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "f1db1b9dcff25b9eb276",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "391f3e86e7192adeca3c",
+      "result": "decoded"
+    },
+    {
+      "event_id": "7a91a99c842e4c613f57",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "449f8a0999a73269d867",
+      "result": "timeout"
+    },
+    {
+      "event_id": "f3290a3f2e3a2c7cc105",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "7fb9fc334bb6bc3f4132",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "9888057ac2966701e668",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "41f7bb701c16a6bf7c17",
+      "result": "trial_stream"
+    },
+    {
+      "event_id": "5a6bdcf8c06a4f3b4131",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "da154b4b3ecfb51e726f",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "e9106f37c8d10285a151",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "749b661c8b6a7454a3f3",
+      "result": "decoded"
+    },
+    {
+      "event_id": "f3290a3f2e3a2c7cc105",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "7220f8c2bcb79b871779",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "9888057ac2966701e668",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "3772d08cb80384528968",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "3ce69afc806677bc4d46",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "6d16818b4c3a4c066b86",
+      "result": "decoded"
+    },
+    {
+      "event_id": "3caad104ff82c1fd45b1",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "9bb0abf998a3872d18fd",
+      "result": "decoded"
+    },
+    {
+      "event_id": "ad16e0db7f1b47f4ccab",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "4f04f87dc42fa38dfa58",
+      "result": "decoded"
+    },
+    {
+      "event_id": "f3290a3f2e3a2c7cc105",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "28d1c29c2a084ef7c6e1",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "9888057ac2966701e668",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "2a7b31f8ad6fe5aa520b",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "d7439a2f00752919a1e1",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "a62932147fcb5a8ef199",
+      "result": "decoded"
+    },
+    {
+      "event_id": "781489548d91a88f917a",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "6e9b0d37f3ab685fdebc",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "01f5b213af49386dc456",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "3402bb6b36b8904fa6a6",
+      "result": "timeout"
+    },
+    {
+      "event_id": "1354a01a01cc5a2ccfbb",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "41558448197cca8eebe0",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "3caad104ff82c1fd45b1",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "dd3821191587f116071c",
+      "result": "decoded"
+    },
+    {
+      "event_id": "0760b692de8f66279b8e",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "1b1bb1629f2404156170",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "01f5b213af49386dc456",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "80ff1a8091f4db2d4db7",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "bf2bf3f62ca2663b90f5",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "57b39a5804a6b010c7d7",
+      "result": "decoded"
+    },
+    {
+      "event_id": "348d06b40b34b8cbc0af",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "366db4579748c151632f",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "1354a01a01cc5a2ccfbb",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "3b41daecd5b3d480a82e",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "d3a7e10367925913a990",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "177a74150191175194de",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "7a91a99c842e4c613f57",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "97f525d21de4b45a79a5",
+      "result": "decoded"
+    },
+    {
+      "event_id": "d7439a2f00752919a1e1",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "74739b224d26dcc48312",
+      "result": "decoded"
+    },
+    {
+      "event_id": "7a91a99c842e4c613f57",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "aad64073e405a28e6991",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "1354a01a01cc5a2ccfbb",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "78fe019afd5aeaff09dd",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "d3a7e10367925913a990",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "fe546d472a96946fd0fc",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "380f3303802772c21bdf",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "f89bb4fcafbc40e98587",
+      "result": "decoded"
+    },
+    {
+      "event_id": "348d06b40b34b8cbc0af",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "ea4b86f6c80a278aba72",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "d3a7e10367925913a990",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "345b17813180df640852",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "467de89a722aefc871b4",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "dbf107b7d750ce22cfba",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "e05566542a7dcfd02d5c",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "c1cb02c77db85509e9d8",
+      "result": "decoded"
+    },
+    {
+      "event_id": "380f3303802772c21bdf",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "b6dc93e640faa3a97eaa",
+      "result": "decoded"
+    },
+    {
+      "event_id": "485e2a84ed1345e528f5",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "53fb8a572c5482f45da6",
+      "result": "decoded"
+    },
+    {
+      "event_id": "ad16e0db7f1b47f4ccab",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "e3fb14b05703aabae17b",
+      "result": "timeout"
+    },
+    {
+      "event_id": "abf2536ccedb176f9401",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "143a40667199c64931d1",
+      "result": "trial_stream"
+    },
+    {
+      "event_id": "abf2536ccedb176f9401",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "04a5728147edf56ac24c",
+      "result": "login_required"
+    },
+    {
+      "event_id": "db17bc36208738faed77",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "07ce7917dd73cc88d868",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "ad16e0db7f1b47f4ccab",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "d6b0f50a229cdd522e52",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "f65e9b12a89abd783e61",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "392deb86bc7e43c93535",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "2077fedc9e73978353dc",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "5fcab3a182d77650d8d4",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "abf2536ccedb176f9401",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "73e6722982fe9e0f0031",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "db17bc36208738faed77",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "91ffad75b3e4487282ad",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "9ac897ed908d369ae01a",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "69f412bac9773dd2d03b",
+      "result": "decoded"
+    },
+    {
+      "event_id": "8047f0be5704c12b5c3c",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "b39a8aa050718105701d",
+      "result": "trial_stream"
+    },
+    {
+      "event_id": "e05566542a7dcfd02d5c",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "e65d3ecdf30aaa4830ce",
+      "result": "decoded"
+    },
+    {
+      "event_id": "f65e9b12a89abd783e61",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "f4ddc506cc2de85606fc",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "2077fedc9e73978353dc",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "7fe7067dde31ca0b6a78",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "8047f0be5704c12b5c3c",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "ff09c15f50bfbf7db0f1",
+      "result": "login_required"
+    },
+    {
+      "event_id": "bb806c998cfd34052c1d",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "a1a62dee2a52e892a96c",
+      "result": "decoded"
+    },
+    {
+      "event_id": "96555dd8b86757dd2311",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "5c1833b5c652aa352e3d",
+      "result": "metadata_timeout"
+    },
+    {
+      "event_id": "5b95adcf9d7eea8fb4e1",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "691635dcdfbcdd19a932",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "9877f5feaca134190a14",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "45267ed5f2d28754799f",
+      "result": "trial_stream"
+    },
+    {
+      "event_id": "9877f5feaca134190a14",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "9333ac241ce3d9e0455f",
+      "result": "login_required"
+    },
+    {
+      "event_id": "2077fedc9e73978353dc",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "2bd74cea1fcfb81a3c9f",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "8047f0be5704c12b5c3c",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "da0c0ed8f215217a223d",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "9877f5feaca134190a14",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "09deb49730e6df6b6220",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "5b95adcf9d7eea8fb4e1",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "321ed652f7058158aaa2",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "9dcd9d6a4c7e882eba8a",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "cee003378fcec8e1f043",
+      "result": "timeout"
+    },
+    {
+      "event_id": "485e2a84ed1345e528f5",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "fde29b98c6c8414ff709",
+      "result": "timeout"
+    },
+    {
+      "event_id": "a986e620bb7ee4a61df2",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "4afa5360efb2ac53cf38",
+      "result": "trial_stream"
+    },
+    {
+      "event_id": "a986e620bb7ee4a61df2",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "d628a1958251d48486ca",
+      "result": "login_required"
+    },
+    {
+      "event_id": "5b95adcf9d7eea8fb4e1",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "431ae1c21b4476f71773",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "9ac897ed908d369ae01a",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "95ad12d32d68316b208d",
+      "result": "decoded"
+    },
+    {
+      "event_id": "61a7ec1a68c35c88faff",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "e8fc67e3c3f75f4e9a56",
+      "result": "decoded"
+    },
+    {
+      "event_id": "485e2a84ed1345e528f5",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "7ff615521d8e54af6886",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "a986e620bb7ee4a61df2",
+      "date": "2026-10-25",
+      "source": "migu-alt",
+      "route_fingerprint": "e16cd848dd31a1d8e621",
+      "result": "network_timeout"
+    },
+    {
+      "event_id": "9dcd9d6a4c7e882eba8a",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "a079fd5e0c842bf4035b",
+      "result": "decoded"
+    },
+    {
+      "event_id": "9b9540e77334fcf7fafb",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "c25e590a45ec949e6103",
+      "result": "decoded"
+    },
+    {
+      "event_id": "9dcd9d6a4c7e882eba8a",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "5bd108ee19eaae555af0",
       "result": "metadata_network_timeout"
     },
     {
@@ -1256,18 +1630,60 @@
       "result": "decoded"
     },
     {
-      "event_id": "7680b8bf52ec322d7464",
-      "date": "2026-10-25",
+      "event_id": "ec7e4aa6e9ad6831f831",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "80ecf8144f54beca3421",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "bb806c998cfd34052c1d",
+      "date": "2026-10-24",
       "source": "migu-backup",
-      "route_fingerprint": "faedec999bc8b149fa70",
+      "route_fingerprint": "fa2501035afb780d5747",
+      "result": "timeout"
+    },
+    {
+      "event_id": "96555dd8b86757dd2311",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "26acad65317efe85cb80",
+      "result": "timeout"
+    },
+    {
+      "event_id": "bb806c998cfd34052c1d",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "5d1fe9e8dcc809deb6a8",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "9b9540e77334fcf7fafb",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "8158872c8021a90c1238",
       "result": "decoded"
     },
     {
-      "event_id": "3f1c281b52d68284a8f5",
+      "event_id": "aedfb3507d77c4865f17",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "e60836341a0b59480b92",
+      "result": "decoded"
+    },
+    {
+      "event_id": "96555dd8b86757dd2311",
       "date": "2026-10-24",
       "source": "migu-alt",
-      "route_fingerprint": "e95823f543b523ac2c22",
+      "route_fingerprint": "cfa88aa3c8e86b1a45e3",
       "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "c2d8f8e91d84a644e8a8",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "f86372a05982c594bb2b",
+      "result": "decode_failed"
     },
     {
       "event_id": "5445bbe2f15b4fbece2e",
@@ -1277,53 +1693,32 @@
       "result": "decoded"
     },
     {
-      "event_id": "d228c0a7d26243999d53",
+      "event_id": "aedfb3507d77c4865f17",
       "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "a81bff0f4b8c670904a2",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "79fa7b31c02f61399cae",
-      "date": "2026-10-25",
       "source": "migu-primary",
-      "route_fingerprint": "b5b61c698a429c900330",
+      "route_fingerprint": "7467c93067ed0c7413a6",
       "result": "decoded"
     },
     {
-      "event_id": "3f1c281b52d68284a8f5",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "f5cb4d3461d989327edb",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "c01bdf33d1e49a598e2e",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "12363398f48dab8a645a",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "277ac4b9be331aed84c2",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "3205cca8ca48792b037c",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "c01bdf33d1e49a598e2e",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "12d9961c020a297a90f4",
-      "result": "metadata_network_timeout"
+      "event_id": "c2d8f8e91d84a644e8a8",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "c4fe849a6fc333b14ae0",
+      "result": "decode_failed"
     },
     {
       "event_id": "b6d19952719ea1254f3a",
       "date": "2026-10-24",
       "source": "migu-backup",
       "route_fingerprint": "60fda626ce1afe9db6cf",
-      "result": "decoded"
+      "result": "timeout"
+    },
+    {
+      "event_id": "807d8059ffd5b5d9f846",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "9c0b1f6917e37dca64aa",
+      "result": "decode_failed"
     },
     {
       "event_id": "5445bbe2f15b4fbece2e",
@@ -1340,11 +1735,18 @@
       "result": "decoded"
     },
     {
-      "event_id": "d4b28a2480120af59b93",
+      "event_id": "807d8059ffd5b5d9f846",
       "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "e373380dc4539e92a4aa",
-      "result": "timeout"
+      "source": "migu-primary",
+      "route_fingerprint": "2167fd96b77504d72fd9",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "807d8059ffd5b5d9f846",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "4072b4542e166cb7bea8",
+      "result": "metadata_network_timeout"
     },
     {
       "event_id": "b6d19952719ea1254f3a",
@@ -1354,11 +1756,11 @@
       "result": "decoded"
     },
     {
-      "event_id": "d4b28a2480120af59b93",
+      "event_id": "c14ff625dbc25f21209d",
       "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "3c1788d2db44573afb7f",
-      "result": "metadata_network_timeout"
+      "source": "migu-backup",
+      "route_fingerprint": "c85e0d683e5a333d94ac",
+      "result": "decoded"
     },
     {
       "event_id": "9100759d5eb9ab2310ab",
@@ -1368,290 +1770,17 @@
       "result": "decoded"
     },
     {
-      "event_id": "80854eb64395971151d4",
+      "event_id": "77f03ad9998172967c91",
       "date": "2026-10-24",
       "source": "migu-backup",
-      "route_fingerprint": "a232fcdfa7af556d8e00",
+      "route_fingerprint": "21158679de3ebb5f3cbf",
       "result": "decoded"
     },
     {
-      "event_id": "bab11869101af47d5069",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "aeb3588c25c14d8384fc",
-      "result": "timeout"
-    },
-    {
-      "event_id": "bab11869101af47d5069",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "6ba40e16aa19c9abb0b0",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "c14ff625dbc25f21209d",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "c85e0d683e5a333d94ac",
-      "result": "decoded"
-    },
-    {
-      "event_id": "80854eb64395971151d4",
+      "event_id": "231f88fb8779bfe0a207",
       "date": "2026-10-24",
       "source": "migu-primary",
-      "route_fingerprint": "7aec78c02be87df8d8d3",
-      "result": "decoded"
-    },
-    {
-      "event_id": "f6b53c509445572534f6",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "8cea24cca42c800ba45a",
-      "result": "decoded"
-    },
-    {
-      "event_id": "256e8736f33cad48e609",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "6686d7f162f0b91f094b",
-      "result": "decoded"
-    },
-    {
-      "event_id": "c14ff625dbc25f21209d",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "cf5d245b62395bfcd2d1",
-      "result": "decoded"
-    },
-    {
-      "event_id": "c2898a0bb4872c788af8",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "a9229d6e1484ffa1e78d",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "c3983555194a8ca42100",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "9fa87d3cdfe3645bbb2a",
-      "result": "decoded"
-    },
-    {
-      "event_id": "256e8736f33cad48e609",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "5a0ec94fb32f4e907646",
-      "result": "decoded"
-    },
-    {
-      "event_id": "e68348134f85fdccd368",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "6cb79e7b28c8bada956e",
-      "result": "decoded"
-    },
-    {
-      "event_id": "9eeeb0b3636749242a35",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "bf2242ab329f73a482b1",
-      "result": "timeout"
-    },
-    {
-      "event_id": "d1f48eda8734fb23766a",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "66d69cdf5c4c69be2925",
-      "result": "decoded"
-    },
-    {
-      "event_id": "e68348134f85fdccd368",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "41ee420798ab0a269c9a",
-      "result": "decoded"
-    },
-    {
-      "event_id": "c3983555194a8ca42100",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "5c0cb42af57403de9a60",
-      "result": "decoded"
-    },
-    {
-      "event_id": "ce751850f7ef284f2f33",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "2c4423f543f9ef6146ac",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "9eeeb0b3636749242a35",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "81ee15011f1920b4e37c",
-      "result": "decoded"
-    },
-    {
-      "event_id": "4629e205e94300934ebf",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "0bb4dd304180e9f37fc1",
-      "result": "decoded"
-    },
-    {
-      "event_id": "d1f48eda8734fb23766a",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "35b915e5f7899b06cd40",
-      "result": "decoded"
-    },
-    {
-      "event_id": "29a7f141950dd3488529",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "2c51ba3a0c38d6733c70",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "9eeeb0b3636749242a35",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "cedbf5bf47d67d007574",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "ce751850f7ef284f2f33",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "3950fdfc08956f813c04",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "781489548d91a88f917a",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "6e9b0d37f3ab685fdebc",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "c2e5f0356f7683c31227",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "34f1b72258ec3da75c9c",
-      "result": "decoded"
-    },
-    {
-      "event_id": "29a7f141950dd3488529",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "b3f7ccda6c63e443b80e",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "ae1e559b6e469975a4c8",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "976346a0f6a1252a93a7",
-      "result": "decoded"
-    },
-    {
-      "event_id": "29a7f141950dd3488529",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "8495276b012fb4ba2421",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "4629e205e94300934ebf",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "36d5b12dee0038138918",
-      "result": "decoded"
-    },
-    {
-      "event_id": "26b81b60955656fffb0b",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "d214dbe1da8638b4e22f",
-      "result": "decoded"
-    },
-    {
-      "event_id": "c2e5f0356f7683c31227",
-      "date": "2026-10-25",
-      "source": "migu-primary",
-      "route_fingerprint": "e66a59a1f86b0755cab3",
-      "result": "decoded"
-    },
-    {
-      "event_id": "348d06b40b34b8cbc0af",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "366db4579748c151632f",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "ae1e559b6e469975a4c8",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "0f09d33ec193eae11bd2",
-      "result": "decoded"
-    },
-    {
-      "event_id": "26b81b60955656fffb0b",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "062d74b9b49bc8068b92",
-      "result": "decoded"
-    },
-    {
-      "event_id": "1866a661fd23e451d855",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "8ba03c02a44e4b94f952",
-      "result": "decoded"
-    },
-    {
-      "event_id": "348d06b40b34b8cbc0af",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "ea4b86f6c80a278aba72",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "8fbe9b0508a43ce6a5fc",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "081d591d4ecee72b4ccd",
-      "result": "decoded"
-    },
-    {
-      "event_id": "3395e1330bc09dbffb0f",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "47818c38f4baeb920707",
-      "result": "decoded"
-    },
-    {
-      "event_id": "dcec0aac13171f1a8597",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "cd94e7d206285499d5f6",
-      "result": "decoded"
-    },
-    {
-      "event_id": "1866a661fd23e451d855",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "737f0d7136856d3ac0e1",
-      "result": "decoded"
-    },
-    {
-      "event_id": "8fbe9b0508a43ce6a5fc",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "61ca4e51f0a7bec5af94",
+      "route_fingerprint": "e278ab535083ff1d9c91",
       "result": "decoded"
     },
     {
@@ -1662,52 +1791,10 @@
       "result": "decoded"
     },
     {
-      "event_id": "3395e1330bc09dbffb0f",
+      "event_id": "c14ff625dbc25f21209d",
       "date": "2026-10-24",
       "source": "migu-primary",
-      "route_fingerprint": "74b2842270c544141a20",
-      "result": "decoded"
-    },
-    {
-      "event_id": "cd40241ab0c8f5b526fa",
-      "date": "2026-10-24",
-      "source": "migu-alt",
-      "route_fingerprint": "79471fd5be0e84aea13d",
-      "result": "metadata_network_timeout"
-    },
-    {
-      "event_id": "e21625e79f72d73bde56",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "f31a2ae375753f0b9698",
-      "result": "decoded"
-    },
-    {
-      "event_id": "dcec0aac13171f1a8597",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "1341e33fe70a78589114",
-      "result": "decoded"
-    },
-    {
-      "event_id": "7815a5ec9faf23ddaffa",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "a80e88d9a95271ae2790",
-      "result": "decoded"
-    },
-    {
-      "event_id": "f65e9b12a89abd783e61",
-      "date": "2026-10-25",
-      "source": "migu-backup",
-      "route_fingerprint": "392deb86bc7e43c93535",
-      "result": "decode_failed"
-    },
-    {
-      "event_id": "e21625e79f72d73bde56",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "b5ffb45d5d9644a24adc",
+      "route_fingerprint": "cf5d245b62395bfcd2d1",
       "result": "decoded"
     },
     {
@@ -1715,34 +1802,237 @@
       "date": "2026-10-24",
       "source": "migu-primary",
       "route_fingerprint": "b3e2594c52bbec38fa1a",
-      "result": "decoded"
+      "result": "metadata_timeout"
     },
     {
-      "event_id": "e6f3aeb2232256df435f",
+      "event_id": "dd094f7c8137b1976a93",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "11d6c46e65baeacd4f69",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "da12acada3b8680ed0a2",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "02b0d87fe1c82ade17ee",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "549054e08b5f42a649f0",
       "date": "2026-10-24",
       "source": "migu-backup",
-      "route_fingerprint": "8f02ece91a052a34cee0",
+      "route_fingerprint": "febe9c9c32894d5ad905",
       "result": "decoded"
     },
     {
-      "event_id": "f65e9b12a89abd783e61",
+      "event_id": "77f03ad9998172967c91",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "68414cfb41bd8c1babae",
+      "result": "decoded"
+    },
+    {
+      "event_id": "61f21b4104c83cca0188",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "49cc32f6b234399e1930",
+      "result": "timeout"
+    },
+    {
+      "event_id": "da12acada3b8680ed0a2",
       "date": "2026-10-25",
       "source": "migu-primary",
-      "route_fingerprint": "f4ddc506cc2de85606fc",
+      "route_fingerprint": "99e08ffaec14f89eb9c1",
       "result": "decode_failed"
     },
     {
-      "event_id": "5b95adcf9d7eea8fb4e1",
+      "event_id": "f6f77e487878dbe9414a",
       "date": "2026-10-24",
       "source": "migu-backup",
-      "route_fingerprint": "691635dcdfbcdd19a932",
+      "route_fingerprint": "ca6764498b1d0dce6cc9",
       "result": "decode_failed"
     },
     {
-      "event_id": "7815a5ec9faf23ddaffa",
+      "event_id": "549054e08b5f42a649f0",
       "date": "2026-10-24",
       "source": "migu-primary",
-      "route_fingerprint": "39f4c14fe0e8d46e94ce",
+      "route_fingerprint": "5f419dae190ab4584b8f",
+      "result": "decoded"
+    },
+    {
+      "event_id": "3f5e2a85ab51e01520f0",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "d3cc5cb002e8fa768dc4",
+      "result": "decoded"
+    },
+    {
+      "event_id": "f6f77e487878dbe9414a",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "c504bd1c2492009a8128",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "f6f77e487878dbe9414a",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "7f5de02b1bc733776959",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "f0dea6e8d1283449712d",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "a6faed34b9dafcb6de18",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "61f21b4104c83cca0188",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "37c94a8396776d05f92f",
+      "result": "timeout"
+    },
+    {
+      "event_id": "b5b681ae406b0ace7350",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "a426ec42d9baae850440",
+      "result": "timeout"
+    },
+    {
+      "event_id": "ae1e559b6e469975a4c8",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "976346a0f6a1252a93a7",
+      "result": "decoded"
+    },
+    {
+      "event_id": "61f21b4104c83cca0188",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "c9bac834a1b7a109024e",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "3f5e2a85ab51e01520f0",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "fd7436cf183097c4a315",
+      "result": "decoded"
+    },
+    {
+      "event_id": "f0dea6e8d1283449712d",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "08da4fabe17df859cefc",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "e68348134f85fdccd368",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "6cb79e7b28c8bada956e",
+      "result": "decoded"
+    },
+    {
+      "event_id": "b493eaa85d87c7a0a649",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "c740a5cd7a177ad23fde",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "ae1e559b6e469975a4c8",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "0f09d33ec193eae11bd2",
+      "result": "decoded"
+    },
+    {
+      "event_id": "231f88fb8779bfe0a207",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "9263a5f248d40af385a7",
+      "result": "timeout"
+    },
+    {
+      "event_id": "b5b681ae406b0ace7350",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "2d8b57cd1f8847e1eab0",
+      "result": "timeout"
+    },
+    {
+      "event_id": "231f88fb8779bfe0a207",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "4778ddad0804b7790941",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "b5b681ae406b0ace7350",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "d02b950f94b69d746373",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "a7a4a49313c2a56c0579",
+      "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "1d8f7de1a9080322cb8f",
+      "result": "decoded"
+    },
+    {
+      "event_id": "d1f48eda8734fb23766a",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "66d69cdf5c4c69be2925",
+      "result": "decoded"
+    },
+    {
+      "event_id": "b493eaa85d87c7a0a649",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "8c19a5487b22d33283ee",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "e68348134f85fdccd368",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "41ee420798ab0a269c9a",
+      "result": "decoded"
+    },
+    {
+      "event_id": "b493eaa85d87c7a0a649",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "db53e56459d93318cf0e",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "76f0b6c16c1037fbbdb1",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "27317e6359b231637b84",
+      "result": "timeout"
+    },
+    {
+      "event_id": "9af0a45f5d8b5000db27",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "186cba3bafbaa3446460",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "d1f48eda8734fb23766a",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "35b915e5f7899b06cd40",
       "result": "decoded"
     },
     {
@@ -1750,56 +2040,77 @@
       "date": "2026-10-24",
       "source": "migu-backup",
       "route_fingerprint": "9521376cfb31e811da80",
-      "result": "decoded"
+      "result": "timeout"
     },
     {
-      "event_id": "5b95adcf9d7eea8fb4e1",
-      "date": "2026-10-24",
+      "event_id": "9af0a45f5d8b5000db27",
+      "date": "2026-10-25",
       "source": "migu-primary",
-      "route_fingerprint": "321ed652f7058158aaa2",
+      "route_fingerprint": "4e13e927be0b4b20c21b",
       "result": "decode_failed"
     },
     {
-      "event_id": "8efc9c7c578f9285fd5f",
-      "date": "2026-10-25",
+      "event_id": "9db7b1b113faba8d6cf7",
+      "date": "2026-10-24",
       "source": "migu-backup",
-      "route_fingerprint": "261760ec6ed003186eac",
-      "result": "decoded"
+      "route_fingerprint": "b375fa66e71efdfa6f92",
+      "result": "decode_failed"
     },
     {
-      "event_id": "e6f3aeb2232256df435f",
+      "event_id": "228ac00913a2469e0d91",
       "date": "2026-10-24",
       "source": "migu-primary",
-      "route_fingerprint": "3e5a90c35e531a0a21f2",
+      "route_fingerprint": "b54d600bee171177156d",
       "result": "decoded"
     },
     {
-      "event_id": "5b95adcf9d7eea8fb4e1",
+      "event_id": "76f0b6c16c1037fbbdb1",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "9eec88cc99517fa7dc7b",
+      "result": "decoded"
+    },
+    {
+      "event_id": "ccd3cff6913740ab90b7",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "4128e57efc1deb1f037e",
+      "result": "decoded"
+    },
+    {
+      "event_id": "2f3dd091ed0de6e1fc7f",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "bc1dbaa325e96b66e00a",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "76f0b6c16c1037fbbdb1",
       "date": "2026-10-24",
       "source": "migu-alt",
-      "route_fingerprint": "431ae1c21b4476f71773",
+      "route_fingerprint": "e93c4e00bcb9c4fb1f24",
       "result": "metadata_network_timeout"
     },
     {
-      "event_id": "795289309e291c0042eb",
+      "event_id": "9db7b1b113faba8d6cf7",
       "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "01549804089263bbe9a1",
-      "result": "decoded"
-    },
-    {
-      "event_id": "8efc9c7c578f9285fd5f",
-      "date": "2026-10-25",
       "source": "migu-primary",
-      "route_fingerprint": "c1e62bb029627600ca3e",
+      "route_fingerprint": "65149a30530e95a25f0f",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "6065445f1e60bc53d47c",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "ee88a6e61bc7fb9dbf68",
       "result": "decoded"
     },
     {
-      "event_id": "d22b60f463ca9305cf54",
+      "event_id": "9db7b1b113faba8d6cf7",
       "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "d8c8ef0aa157c390558e",
-      "result": "decoded"
+      "source": "migu-alt",
+      "route_fingerprint": "67ab037b193d43ce5bd9",
+      "result": "metadata_network_timeout"
     },
     {
       "event_id": "bcb4c57836470dd1c907",
@@ -1809,74 +2120,144 @@
       "result": "decoded"
     },
     {
-      "event_id": "795289309e291c0042eb",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "45ce6d87e48ae14107e4",
-      "result": "decoded"
-    },
-    {
-      "event_id": "48b75cbeb89c12b2bc1a",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "3a82576b71066aeb5807",
-      "result": "decoded"
-    },
-    {
-      "event_id": "d52b02b830d87c7d4128",
-      "date": "2026-10-24",
-      "source": "migu-backup",
-      "route_fingerprint": "2242a39bd268a50db3d7",
-      "result": "decoded"
-    },
-    {
-      "event_id": "c2d8f8e91d84a644e8a8",
+      "event_id": "ccd3cff6913740ab90b7",
       "date": "2026-10-25",
+      "source": "migu-primary",
+      "route_fingerprint": "6855aba64c97a8e17779",
+      "result": "decoded"
+    },
+    {
+      "event_id": "8e34dbddebe0c6226394",
+      "date": "2026-10-24",
       "source": "migu-backup",
-      "route_fingerprint": "f86372a05982c594bb2b",
+      "route_fingerprint": "8f5307067262da3db1f8",
       "result": "decode_failed"
     },
     {
-      "event_id": "d22b60f463ca9305cf54",
+      "event_id": "bcb4c57836470dd1c907",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "50d3bcb33274901258f6",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "2f3dd091ed0de6e1fc7f",
       "date": "2026-10-24",
       "source": "migu-primary",
-      "route_fingerprint": "a2bcdc9a58203e11bc96",
+      "route_fingerprint": "21edbd54b79195e10c03",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "5332d57b1ea7172a720e",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "41f4e796a18271596c19",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "2f3dd091ed0de6e1fc7f",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "2c8044e9d64a16c86317",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "a7a4a49313c2a56c0579",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "3adf09c987e8fba1e9ec",
       "result": "timeout"
     },
     {
-      "event_id": "9f3bb8fe95e2b54ff845",
+      "event_id": "9eeeb0b3636749242a35",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "81ee15011f1920b4e37c",
+      "result": "decoded"
+    },
+    {
+      "event_id": "8e34dbddebe0c6226394",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "0dc12d9640aa69ed534b",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "5332d57b1ea7172a720e",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "721f9616477b3aa68dcb",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "3b1149880f72188b5fca",
       "date": "2026-10-24",
       "source": "migu-backup",
-      "route_fingerprint": "49cb4398e9f4591e7134",
+      "route_fingerprint": "b4673567db24b21f5b2a",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "5332d57b1ea7172a720e",
+      "date": "2026-10-24",
+      "source": "migu-alt",
+      "route_fingerprint": "f5bd55533290e5b45721",
+      "result": "metadata_network_timeout"
+    },
+    {
+      "event_id": "500ca7c8db85d10e3971",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "481df991c6e7722b2c8f",
+      "result": "decode_failed"
+    },
+    {
+      "event_id": "78d14e6a8bc204d078bc",
+      "date": "2026-10-24",
+      "source": "migu-backup",
+      "route_fingerprint": "d214dbe1da8638b4e22f",
+      "result": "timeout"
+    },
+    {
+      "event_id": "500ca7c8db85d10e3971",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "23955aaeffd7b93c7844",
       "result": "metadata_timeout"
     },
     {
-      "event_id": "48b75cbeb89c12b2bc1a",
+      "event_id": "3b1149880f72188b5fca",
       "date": "2026-10-24",
       "source": "migu-primary",
-      "route_fingerprint": "144948d59bcaa95c9c48",
+      "route_fingerprint": "acc8c4e37f7ab58dfa30",
       "result": "timeout"
     },
     {
-      "event_id": "807d8059ffd5b5d9f846",
+      "event_id": "2d53fc1358e3ceb5e90c",
+      "date": "2026-10-24",
+      "source": "migu-primary",
+      "route_fingerprint": "c9fa74f900ac51181429",
+      "result": "timeout"
+    },
+    {
+      "event_id": "79fa7b31c02f61399cae",
+      "date": "2026-10-25",
+      "source": "migu-backup",
+      "route_fingerprint": "498d995c30bedddd7056",
+      "result": "metadata_timeout"
+    },
+    {
+      "event_id": "228ac00913a2469e0d91",
       "date": "2026-10-24",
       "source": "migu-backup",
-      "route_fingerprint": "9c0b1f6917e37dca64aa",
+      "route_fingerprint": "82ed95f55452dacd0036",
       "result": "timeout"
-    },
-    {
-      "event_id": "d52b02b830d87c7d4128",
-      "date": "2026-10-24",
-      "source": "migu-primary",
-      "route_fingerprint": "7b1f6219019142e9dba5",
-      "result": "metadata_timeout"
     }
   ],
   "probe_order": "requested_then_distinct_fixtures_balanced_by_competition_and_date_before_extra_commentaries",
   "restored_recent_routes_omitted_by_catalogues": 6,
   "selection_policy": "recheck_previous_route_first_then_verified_backup",
-  "published_events": 117,
-  "reused_event_routes": 66,
+  "published_events": 130,
+  "reused_event_routes": 119,
   "source_discovery": {
     "registry": "state/upstreams.json",
     "schedule": "daily",
@@ -1894,7 +2275,7 @@
   },
   "upcoming_note": "赛前、试看、受限及未通过检测条目只保留在 schedule.json / schedule.md。检测不证明画面与标题一致或用户端全场稳定。",
   "frame_audit": {
-    "captured": 15,
+    "captured": 16,
     "attempted": 18,
     "entries_sampled": 6,
     "black_detection_available": true,
@@ -1907,8 +2288,8 @@
         "route_fingerprint": "02fece8d20cdb6e5cd18",
         "offset_seconds": 0,
         "status": "captured",
-        "captured_at": "2026-10-25T17:44:08+08:00",
-        "file": "1ac2624f91f6-6ce45f6a45eaff664a01-02fece8d20cdb6e5cd18-0.jpg"
+        "captured_at": "2026-10-25T21:00:34+08:00",
+        "file": "3da89e28b0ae-6ce45f6a45eaff664a01-02fece8d20cdb6e5cd18-0.jpg"
       },
       {
         "title": "CBA 上海久事VS福建晋江文旅 全场回放（赛场原声） 19:25",
@@ -1917,8 +2298,8 @@
         "route_fingerprint": "02fece8d20cdb6e5cd18",
         "offset_seconds": 3816,
         "status": "captured",
-        "captured_at": "2026-10-25T17:44:10+08:00",
-        "file": "1ac2624f91f6-6ce45f6a45eaff664a01-02fece8d20cdb6e5cd18-3816.jpg"
+        "captured_at": "2026-10-25T21:00:36+08:00",
+        "file": "3da89e28b0ae-6ce45f6a45eaff664a01-02fece8d20cdb6e5cd18-3816.jpg"
       },
       {
         "title": "CBA 上海久事VS福建晋江文旅 全场回放（赛场原声） 19:25",
@@ -1927,38 +2308,38 @@
         "route_fingerprint": "02fece8d20cdb6e5cd18",
         "offset_seconds": 6106,
         "status": "captured",
-        "captured_at": "2026-10-25T17:44:11+08:00",
-        "file": "1ac2624f91f6-6ce45f6a45eaff664a01-02fece8d20cdb6e5cd18-6106.jpg"
+        "captured_at": "2026-10-25T21:00:36+08:00",
+        "file": "3da89e28b0ae-6ce45f6a45eaff664a01-02fece8d20cdb6e5cd18-6106.jpg"
       },
       {
-        "title": "中超 深圳新鹏城VS上海申花 全场回放（AI智慧观赛） 15:15",
+        "title": "中超 武汉三镇VS山东泰山 全场回放（李欣、徐云龙、郭小仙儿） 15:15",
         "event_date": "2026-10-24",
         "source": "migu-backup",
-        "route_fingerprint": "9521376cfb31e811da80",
+        "route_fingerprint": "0bb4dd304180e9f37fc1",
         "offset_seconds": 0,
         "status": "captured",
-        "captured_at": "2026-10-25T17:44:14+08:00",
-        "file": "1ac2624f91f6-bcb4c57836470dd1c907-9521376cfb31e811da80-0.jpg"
+        "captured_at": "2026-10-25T21:00:37+08:00",
+        "file": "3da89e28b0ae-4629e205e94300934ebf-0bb4dd304180e9f37fc1-0.jpg"
       },
       {
-        "title": "中超 深圳新鹏城VS上海申花 全场回放（AI智慧观赛） 15:15",
+        "title": "中超 武汉三镇VS山东泰山 全场回放（李欣、徐云龙、郭小仙儿） 15:15",
         "event_date": "2026-10-24",
         "source": "migu-backup",
-        "route_fingerprint": "9521376cfb31e811da80",
-        "offset_seconds": 4287,
+        "route_fingerprint": "0bb4dd304180e9f37fc1",
+        "offset_seconds": 4802,
         "status": "captured",
-        "captured_at": "2026-10-25T17:44:20+08:00",
-        "file": "1ac2624f91f6-bcb4c57836470dd1c907-9521376cfb31e811da80-4287.jpg"
+        "captured_at": "2026-10-25T21:00:42+08:00",
+        "file": "3da89e28b0ae-4629e205e94300934ebf-0bb4dd304180e9f37fc1-4802.jpg"
       },
       {
-        "title": "中超 深圳新鹏城VS上海申花 全场回放（AI智慧观赛） 15:15",
+        "title": "中超 武汉三镇VS山东泰山 全场回放（李欣、徐云龙、郭小仙儿） 15:15",
         "event_date": "2026-10-24",
         "source": "migu-backup",
-        "route_fingerprint": "9521376cfb31e811da80",
-        "offset_seconds": 6859,
+        "route_fingerprint": "0bb4dd304180e9f37fc1",
+        "offset_seconds": 7684,
         "status": "captured",
-        "captured_at": "2026-10-25T17:44:20+08:00",
-        "file": "1ac2624f91f6-bcb4c57836470dd1c907-9521376cfb31e811da80-6859.jpg"
+        "captured_at": "2026-10-25T21:00:42+08:00",
+        "file": "3da89e28b0ae-4629e205e94300934ebf-0bb4dd304180e9f37fc1-7684.jpg"
       },
       {
         "title": "乒乓球亚锦赛 石油组合横扫晋级 陈熠笑傲姐妹战 2026亚洲乒乓球锦标赛男单半决赛回放：李天阳3-2郭冠宏（马特） 13:00",
@@ -1967,8 +2348,8 @@
         "route_fingerprint": "125d40cdf2ae8e7982cf",
         "offset_seconds": 0,
         "status": "captured",
-        "captured_at": "2026-10-25T17:44:20+08:00",
-        "file": "1ac2624f91f6-82a600b7d16ec0846459-125d40cdf2ae8e7982cf-0.jpg"
+        "captured_at": "2026-10-25T21:00:43+08:00",
+        "file": "3da89e28b0ae-82a600b7d16ec0846459-125d40cdf2ae8e7982cf-0.jpg"
       },
       {
         "title": "乒乓球亚锦赛 石油组合横扫晋级 陈熠笑傲姐妹战 2026亚洲乒乓球锦标赛男单半决赛回放：李天阳3-2郭冠宏（马特） 13:00",
@@ -1977,8 +2358,8 @@
         "route_fingerprint": "125d40cdf2ae8e7982cf",
         "offset_seconds": 1323,
         "status": "captured",
-        "captured_at": "2026-10-25T17:44:28+08:00",
-        "file": "1ac2624f91f6-82a600b7d16ec0846459-125d40cdf2ae8e7982cf-1323.jpg"
+        "captured_at": "2026-10-25T21:00:48+08:00",
+        "file": "3da89e28b0ae-82a600b7d16ec0846459-125d40cdf2ae8e7982cf-1323.jpg"
       },
       {
         "title": "乒乓球亚锦赛 石油组合横扫晋级 陈熠笑傲姐妹战 2026亚洲乒乓球锦标赛男单半决赛回放：李天阳3-2郭冠宏（马特） 13:00",
@@ -1986,9 +2367,9 @@
         "source": "migu-backup",
         "route_fingerprint": "125d40cdf2ae8e7982cf",
         "offset_seconds": 2117,
-        "status": "timeout",
-        "captured_at": "2026-10-25T17:44:30+08:00",
-        "file": null
+        "status": "captured",
+        "captured_at": "2026-10-25T21:00:50+08:00",
+        "file": "3da89e28b0ae-82a600b7d16ec0846459-125d40cdf2ae8e7982cf-2117.jpg"
       },
       {
         "title": "全国游泳锦标赛 张雨霏100米个人混合泳预赛第一晋级 2026全国游泳锦标赛Day3上午场全场回放（赛场原声） 09:00",
@@ -1997,8 +2378,8 @@
         "route_fingerprint": "96d2ba1f8e98b53b1df1",
         "offset_seconds": 0,
         "status": "captured",
-        "captured_at": "2026-10-25T17:44:24+08:00",
-        "file": "1ac2624f91f6-b8de2daf9cd3b682e884-96d2ba1f8e98b53b1df1-0.jpg"
+        "captured_at": "2026-10-25T21:00:47+08:00",
+        "file": "3da89e28b0ae-b8de2daf9cd3b682e884-96d2ba1f8e98b53b1df1-0.jpg"
       },
       {
         "title": "全国游泳锦标赛 张雨霏100米个人混合泳预赛第一晋级 2026全国游泳锦标赛Day3上午场全场回放（赛场原声） 09:00",
@@ -2007,8 +2388,8 @@
         "route_fingerprint": "96d2ba1f8e98b53b1df1",
         "offset_seconds": 5155,
         "status": "captured",
-        "captured_at": "2026-10-25T17:44:30+08:00",
-        "file": "1ac2624f91f6-b8de2daf9cd3b682e884-96d2ba1f8e98b53b1df1-5155.jpg"
+        "captured_at": "2026-10-25T21:00:54+08:00",
+        "file": "3da89e28b0ae-b8de2daf9cd3b682e884-96d2ba1f8e98b53b1df1-5155.jpg"
       },
       {
         "title": "全国游泳锦标赛 张雨霏100米个人混合泳预赛第一晋级 2026全国游泳锦标赛Day3上午场全场回放（赛场原声） 09:00",
@@ -2017,8 +2398,8 @@
         "route_fingerprint": "96d2ba1f8e98b53b1df1",
         "offset_seconds": 8249,
         "status": "captured",
-        "captured_at": "2026-10-25T17:44:36+08:00",
-        "file": "1ac2624f91f6-b8de2daf9cd3b682e884-96d2ba1f8e98b53b1df1-8249.jpg"
+        "captured_at": "2026-10-25T21:00:56+08:00",
+        "file": "3da89e28b0ae-b8de2daf9cd3b682e884-96d2ba1f8e98b53b1df1-8249.jpg"
       },
       {
         "title": "德甲 多特蒙德VS法兰克福 全场回放（AI观赛） 00:15",
@@ -2027,8 +2408,8 @@
         "route_fingerprint": "2d82d4c64f49df88fc1c",
         "offset_seconds": 0,
         "status": "captured",
-        "captured_at": "2026-10-25T17:44:39+08:00",
-        "file": "1ac2624f91f6-b1b04cd5a9dbfa540a2d-2d82d4c64f49df88fc1c-0.jpg"
+        "captured_at": "2026-10-25T21:00:57+08:00",
+        "file": "3da89e28b0ae-b1b04cd5a9dbfa540a2d-2d82d4c64f49df88fc1c-0.jpg"
       },
       {
         "title": "德甲 多特蒙德VS法兰克福 全场回放（AI观赛） 00:15",
@@ -2036,9 +2417,9 @@
         "source": "migu-backup",
         "route_fingerprint": "2d82d4c64f49df88fc1c",
         "offset_seconds": 4102,
-        "status": "timeout",
-        "captured_at": "2026-10-25T17:44:40+08:00",
-        "file": null
+        "status": "captured",
+        "captured_at": "2026-10-25T21:01:02+08:00",
+        "file": "3da89e28b0ae-b1b04cd5a9dbfa540a2d-2d82d4c64f49df88fc1c-4102.jpg"
       },
       {
         "title": "德甲 多特蒙德VS法兰克福 全场回放（AI观赛） 00:15",
@@ -2047,7 +2428,7 @@
         "route_fingerprint": "2d82d4c64f49df88fc1c",
         "offset_seconds": 6563,
         "status": "timeout",
-        "captured_at": "2026-10-25T17:44:46+08:00",
+        "captured_at": "2026-10-25T21:01:06+08:00",
         "file": null
       },
       {
@@ -2057,8 +2438,8 @@
         "route_fingerprint": "8c39ec0de05fd9c0ee2b",
         "offset_seconds": 0,
         "status": "captured",
-        "captured_at": "2026-10-25T17:44:47+08:00",
-        "file": "1ac2624f91f6-1bb1f9828a895be03e24-8c39ec0de05fd9c0ee2b-0.jpg"
+        "captured_at": "2026-10-25T21:01:07+08:00",
+        "file": "3da89e28b0ae-1bb1f9828a895be03e24-8c39ec0de05fd9c0ee2b-0.jpg"
       },
       {
         "title": "意甲 拉齐奥VS帕尔马 全场回放（鲁靖明） 02:30",
@@ -2067,8 +2448,8 @@
         "route_fingerprint": "8c39ec0de05fd9c0ee2b",
         "offset_seconds": 3614,
         "status": "captured",
-        "captured_at": "2026-10-25T17:44:49+08:00",
-        "file": "1ac2624f91f6-1bb1f9828a895be03e24-8c39ec0de05fd9c0ee2b-3614.jpg"
+        "captured_at": "2026-10-25T21:01:11+08:00",
+        "file": "3da89e28b0ae-1bb1f9828a895be03e24-8c39ec0de05fd9c0ee2b-3614.jpg"
       },
       {
         "title": "意甲 拉齐奥VS帕尔马 全场回放（鲁靖明） 02:30",
@@ -2076,9 +2457,9 @@
         "source": "migu-primary",
         "route_fingerprint": "8c39ec0de05fd9c0ee2b",
         "offset_seconds": 5782,
-        "status": "captured",
-        "captured_at": "2026-10-25T17:44:54+08:00",
-        "file": "1ac2624f91f6-1bb1f9828a895be03e24-8c39ec0de05fd9c0ee2b-5782.jpg"
+        "status": "timeout",
+        "captured_at": "2026-10-25T21:01:16+08:00",
+        "file": null
       }
     ],
     "note": "截图为有限抽样；黑屏检查覆盖本轮视频解码片段。未自动识别球队、比分、会员提示或画面与标题是否一致；截图失败不会冒充播放检测失败。"
