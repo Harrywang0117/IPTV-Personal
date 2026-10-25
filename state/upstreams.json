@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T09:29:24.102106+08:00",
+  "updated_at": "2026-10-25T09:37:52.207281+08:00",
   "sources": [
     {
       "url": "http://112.230.73.82:7788",
@@ -12,10 +12,15 @@
           "at": "2026-10-25T09:29:24.102106+08:00",
           "qualified": false,
           "error": "discovery_feed_unavailable"
+        },
+        {
+          "at": "2026-10-25T09:37:52.207281+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
         }
       ],
-      "last_checked_at": "2026-10-25T09:29:24.102106+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
+      "consecutive_failures": 2
     },
     {
       "url": "http://mi.dzpp.uk",
@@ -54,9 +59,449 @@
           ],
           "capabilities_observed": {},
           "cached": false
+        },
+        {
+          "at": "2026-10-25T09:37:52.207281+08:00",
+          "qualified": false,
+          "catalogue_entries": 437,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "cc6610ad7cc4ecedfc1d",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "27619411aa57a2dc1e0e",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T09:29:24.102106+08:00",
+      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
+      "consecutive_failures": 2
+    },
+    {
+      "url": "http://58.210.97.102:1234",
+      "id": "migu-discovered-0bd8bdc085",
+      "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
+      "status": "new",
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ]
+    },
+    {
+      "url": "http://115.195.166.33:1234",
+      "id": "migu-discovered-0ea86225b2",
+      "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T09:37:52.207281+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
+        }
+      ],
+      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://106.12.29.154:5050",
+      "id": "migu-discovered-1b9927c741",
+      "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T09:37:52.207281+08:00",
+          "qualified": false,
+          "catalogue_entries": 448,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "cc6610ad7cc4ecedfc1d",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "27619411aa57a2dc1e0e",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://47.104.178.59:3566",
+      "id": "migu-discovered-2ed20de05d",
+      "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
+      "status": "new",
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ]
+    },
+    {
+      "url": "http://123.113.205.253:3000",
+      "id": "migu-discovered-41d58a44d2",
+      "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T09:37:52.207281+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
+        }
+      ],
+      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://2280.eu.org:1234",
+      "id": "migu-discovered-46ace16008",
+      "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T09:37:52.207281+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
+        }
+      ],
+      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://47.103.64.145:8014",
+      "id": "migu-discovered-51bed89a2c",
+      "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
+      "status": "new",
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ]
+    },
+    {
+      "url": "http://111.76.19.197:1234",
+      "id": "migu-discovered-5ce5be7f20",
+      "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T09:37:52.207281+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
+        }
+      ],
+      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://106.52.119.159:1234",
+      "id": "migu-discovered-6bf23eb974",
+      "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T09:37:52.207281+08:00",
+          "qualified": false,
+          "catalogue_entries": 441,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "cc6610ad7cc4ecedfc1d",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "27619411aa57a2dc1e0e",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://222.213.105.65:7788",
+      "id": "migu-discovered-7e24b55e17",
+      "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T09:37:52.207281+08:00",
+          "qualified": false,
+          "catalogue_entries": 434,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "cc6610ad7cc4ecedfc1d",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "27619411aa57a2dc1e0e",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://112.80.137.135:1234",
+      "id": "migu-discovered-87b85a315b",
+      "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T09:37:52.207281+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
+        }
+      ],
+      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://42.94.210.22:7788",
+      "id": "migu-discovered-8c031d61a5",
+      "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T09:37:52.207281+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
+        }
+      ],
+      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://117.146.74.202:1234",
+      "id": "migu-discovered-9468ecf5ab",
+      "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T09:37:52.207281+08:00",
+          "qualified": false,
+          "catalogue_entries": 450,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "cc6610ad7cc4ecedfc1d",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "27619411aa57a2dc1e0e",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://103.236.77.86:29824",
+      "id": "migu-discovered-b0cad0fb83",
+      "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T09:37:52.207281+08:00",
+          "qualified": false,
+          "catalogue_entries": 457,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "cc6610ad7cc4ecedfc1d",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "27619411aa57a2dc1e0e",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
+        }
+      ],
+      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://mg.cttv.vip",
+      "id": "migu-discovered-bf18b4058d",
+      "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
+      "status": "new",
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ]
+    },
+    {
+      "url": "http://115.190.247.176:1111",
+      "id": "migu-discovered-cc696ab272",
+      "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T09:37:52.207281+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
+        }
+      ],
+      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
+      "consecutive_failures": 1
+    },
+    {
+      "url": "http://47.100.80.251:50001",
+      "id": "migu-discovered-e9e8c0d2e3",
+      "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
+      "status": "new",
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ]
+    },
+    {
+      "url": "http://223.241.233.130:7788",
+      "id": "migu-discovered-fc0e3da153",
+      "first_seen_at": "2026-10-25T09:37:52.207281+08:00",
+      "status": "quarantined",
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ],
+      "observations": [
+        {
+          "at": "2026-10-25T09:37:52.207281+08:00",
+          "qualified": false,
+          "error": "discovery_feed_curl_28"
+        }
+      ],
+      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
       "consecutive_failures": 1
     },
     {
@@ -96,10 +541,44 @@
           ],
           "capabilities_observed": {},
           "cached": false
+        },
+        {
+          "at": "2026-10-25T09:37:52.207281+08:00",
+          "qualified": false,
+          "catalogue_entries": 450,
+          "missing_dates": [],
+          "samples": [
+            {
+              "event_id": "d2b3f2f71d118b2ad5b5",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "cc6610ad7cc4ecedfc1d",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            },
+            {
+              "event_id": "27619411aa57a2dc1e0e",
+              "ok": false,
+              "reason": "decode_failed",
+              "kind": null,
+              "duration_seconds": null
+            }
+          ],
+          "capabilities_observed": {},
+          "cached": false
         }
       ],
-      "last_checked_at": "2026-10-25T09:29:24.102106+08:00",
-      "consecutive_failures": 1
+      "last_checked_at": "2026-10-25T09:37:52.207281+08:00",
+      "consecutive_failures": 2,
+      "discovered_from": [
+        "https://raw.githubusercontent.com/Harrywang0117/IPTV/main/iptv/all.m3u"
+      ]
     }
   ]
 }
