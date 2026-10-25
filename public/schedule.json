@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T14:42:32+08:00",
+  "generated_at": "2026-10-25T16:52:32+08:00",
   "note": "完整赛程目录；限制或待测条目不进入主订阅。",
   "events": [
     {
@@ -9,42 +9,52 @@
       "time_minutes": 30,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "d2b3f2f71d118b2ad5b5",
-      "name": "02:00 斯诺克 马克·威廉姆斯6-4吉尔伯特 杰克·琼斯6-5唐纳森 【回放】大卫·吉尔伯特4-6马克·威廉姆斯（杨江浩）（本轮未测通）",
+      "name": "02:00 斯诺克 马克·威廉姆斯6-4吉尔伯特 杰克·琼斯6-5唐纳森 【回放】大卫·吉尔伯特4-6马克·威廉姆斯（杨江浩）",
       "date": "2026-10-24",
       "time_minutes": 120,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "cc6610ad7cc4ecedfc1d",
-      "name": "02:00 斯诺克 马克·威廉姆斯6-4吉尔伯特 杰克·琼斯6-5唐纳森 【回放】大卫·吉尔伯特4-6马克·威廉姆斯（赛场原声）（本轮未测通）",
+      "name": "02:00 斯诺克 马克·威廉姆斯6-4吉尔伯特 杰克·琼斯6-5唐纳森 【回放】大卫·吉尔伯特4-6马克·威廉姆斯（赛场原声）",
       "date": "2026-10-24",
       "time_minutes": 120,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "27619411aa57a2dc1e0e",
-      "name": "02:00 斯诺克 马克·威廉姆斯6-4吉尔伯特 杰克·琼斯6-5唐纳森 【回放】杰克·琼斯6-5斯科特·唐纳森（赛场原声）（本轮未测通）",
+      "name": "02:00 斯诺克 马克·威廉姆斯6-4吉尔伯特 杰克·琼斯6-5唐纳森 【回放】杰克·琼斯6-5斯科特·唐纳森（赛场原声）",
       "date": "2026-10-24",
       "time_minutes": 120,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "485e2a84ed1345e528f5",
-      "name": "02:25 德甲 斯图加特VS门兴格拉德巴赫 全场回放（AI智慧观赛）",
+      "name": "02:25 德甲 斯图加特VS门兴格拉德巴赫 全场回放（AI智慧观赛）（沿用近期检测）",
       "date": "2026-10-24",
       "time_minutes": 145,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
+      "status": "recent_verified",
+      "status_text": "沿用24小时内的回放检测；本轮网络或预算未能复核",
+      "last_success_at": "2026-10-25T14:42:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -54,6 +64,8 @@
       "time_minutes": 145,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -63,6 +75,8 @@
       "time_minutes": 145,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -72,6 +86,8 @@
       "time_minutes": 160,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -81,6 +97,8 @@
       "time_minutes": 160,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -90,6 +108,8 @@
       "time_minutes": 165,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -99,6 +119,8 @@
       "time_minutes": 175,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -108,6 +130,8 @@
       "time_minutes": 175,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -117,6 +141,8 @@
       "time_minutes": 175,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -126,24 +152,30 @@
       "time_minutes": 175,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
       "id": "9c260f50f70559b6cbad",
-      "name": "03:55 NBA 雄鹿VS公牛 全场回放（宋俊潼）（本轮未测通）",
+      "name": "03:55 NBA 雄鹿VS公牛 全场回放（宋俊潼）",
       "date": "2026-10-24",
       "time_minutes": 235,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "e1cf40d9473b79def908",
-      "name": "03:55 NBA 雄鹿VS公牛 全场回放（英文原声）（本轮未测通）",
+      "name": "03:55 NBA 雄鹿VS公牛 全场回放（英文原声）",
       "date": "2026-10-24",
       "time_minutes": 235,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -153,6 +185,8 @@
       "time_minutes": 330,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -162,6 +196,8 @@
       "time_minutes": 330,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -171,105 +207,129 @@
       "time_minutes": 360,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
       "id": "71e3589020716e469f6e",
-      "name": "06:00 UFC前瞻与回顾 激战前夜：终极三番战！梅拉布再战彼得严 激战前夜全场回放：梅拉布VS彼得严特辑（陈瑞阳）（本轮未测通）",
+      "name": "06:00 UFC前瞻与回顾 激战前夜：终极三番战！梅拉布再战彼得严 激战前夜全场回放：梅拉布VS彼得严特辑（陈瑞阳）",
       "date": "2026-10-24",
       "time_minutes": 360,
-      "status": "timeout",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "262c058ea380644598f3",
-      "name": "06:55 NBA 凯尔特人VS尼克斯 全场回放（王冠证）（本轮未测通）",
+      "name": "06:55 NBA 凯尔特人VS尼克斯 全场回放（王冠证）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "29a7f141950dd3488529",
-      "name": "06:55 NBA 凯尔特人VS尼克斯 全场回放（英文原声）（本轮未测通）",
+      "name": "06:55 NBA 凯尔特人VS尼克斯 全场回放（英文原声）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "9384169a80cccdc2b2db",
-      "name": "06:55 NBA 奇才VS猛龙 全场回放（王凯）（本轮未测通）",
+      "name": "06:55 NBA 奇才VS猛龙 全场回放（王凯）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "5b95adcf9d7eea8fb4e1",
-      "name": "06:55 NBA 奇才VS猛龙 全场回放（英文原声）（本轮未测通）",
+      "name": "06:55 NBA 奇才VS猛龙 全场回放（英文原声）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "2aa5e86ddb8f8f43161c",
-      "name": "06:55 NBA 步行者VS独行侠 全场回放（罗森）（本轮未测通）",
+      "name": "06:55 NBA 步行者VS独行侠 全场回放（罗森）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "807d8059ffd5b5d9f846",
-      "name": "06:55 NBA 步行者VS独行侠 全场回放（英文原声）（本轮未测通）",
+      "name": "06:55 NBA 步行者VS独行侠 全场回放（英文原声）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "36eecf041a0802d6997b",
-      "name": "06:55 NBA 魔术VS森林狼 全场回放（盛哲）（本轮未测通）",
+      "name": "06:55 NBA 魔术VS森林狼 全场回放（盛哲）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "f6f77e487878dbe9414a",
-      "name": "06:55 NBA 魔术VS森林狼 全场回放（英文原声）（本轮未测通）",
+      "name": "06:55 NBA 魔术VS森林狼 全场回放（英文原声）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "b493eaa85d87c7a0a649",
-      "name": "06:55 NBA 黄蜂VS老鹰 全场回放（英文原声）（本轮未测通）",
+      "name": "06:55 NBA 黄蜂VS老鹰 全场回放（英文原声）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "b86e2866bde028680081",
-      "name": "06:55 NBA 黄蜂VS老鹰 全场回放（贾磊）（本轮未测通）",
+      "name": "06:55 NBA 黄蜂VS老鹰 全场回放（贾磊）",
       "date": "2026-10-24",
       "time_minutes": 415,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -279,6 +339,8 @@
       "time_minutes": 470,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -288,6 +350,8 @@
       "time_minutes": 470,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -297,24 +361,30 @@
       "time_minutes": 470,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
       "id": "3a95fdc559d54f12ed12",
-      "name": "07:55 NBA 热火VS活塞 全场回放（徐秦威）（本轮未测通）",
+      "name": "07:55 NBA 热火VS活塞 全场回放（徐秦威）",
       "date": "2026-10-24",
       "time_minutes": 475,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "9db7b1b113faba8d6cf7",
-      "name": "07:55 NBA 热火VS活塞 全场回放（英文原声）（本轮未测通）",
+      "name": "07:55 NBA 热火VS活塞 全场回放（英文原声）",
       "date": "2026-10-24",
       "time_minutes": 475,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -324,34 +394,86 @@
       "time_minutes": 480,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
+    },
+    {
+      "id": "8e3c0352807362aa47fc",
+      "name": "08:00 全国垂钓俱乐部挑战赛 2026“武昌鱼”杯全国垂钓俱乐部挑战赛（鄂城 · 鄂州） 2026“武昌鱼”杯全国垂钓俱乐部挑战赛（鄂州鄂城站）Day2全场回放（官方解说）（二）",
+      "date": "2026-10-24",
+      "time_minutes": 480,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
     },
     {
       "id": "2071c7172dacdb816085",
-      "name": "09:00 PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day5 2026PPA香港1500大满贯赛事Day5全场回放（赛场原声）（一）",
+      "name": "09:00 PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day5 2026PPA香港1500大满贯赛事Day5全场回放（赛场原声）（一）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 540,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
     },
     {
       "id": "5898623e540cf6989973",
-      "name": "09:00 PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day5 2026PPA香港1500大满贯赛事Day5全场回放（赛场原声）（三）",
+      "name": "09:00 PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day5 2026PPA香港1500大满贯赛事Day5全场回放（赛场原声）（三）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 540,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
     },
     {
       "id": "e8b831065dd0e5afaeaa",
-      "name": "09:00 PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day5 2026PPA香港1500大满贯赛事Day5全场回放（赛场原声）（二）",
+      "name": "09:00 PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day5 2026PPA香港1500大满贯赛事Day5全场回放（赛场原声）（二）（本轮未测通）",
       "date": "2026-10-24",
       "time_minutes": 540,
-      "status": "decoded",
-      "status_text": "本轮检测通过",
-      "published": true
+      "status": "metadata_network_timeout",
+      "status_text": "检测机器连接源站超时",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "1a898cbed45a810788c9",
+      "name": "09:00 PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day5 全场回放（赛场原声）（一）",
+      "date": "2026-10-24",
+      "time_minutes": 540,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "9e7d0fcd5410c3b701e1",
+      "name": "09:00 PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day5 全场回放（赛场原声）（三）",
+      "date": "2026-10-24",
+      "time_minutes": 540,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "aacf1e7bf3b615b4eeab",
+      "name": "09:00 PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day5 全场回放（赛场原声）（二）",
+      "date": "2026-10-24",
+      "time_minutes": 540,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
     },
     {
       "id": "9ac897ed908d369ae01a",
@@ -360,123 +482,173 @@
       "time_minutes": 540,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
       "id": "577e3acb84483042a7bc",
-      "name": "09:25 NBA 爵士VS鹈鹕 全场回放（刘沛元）（本轮未测通）",
+      "name": "09:25 NBA 爵士VS鹈鹕 全场回放（刘沛元）",
       "date": "2026-10-24",
       "time_minutes": 565,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "2f3dd091ed0de6e1fc7f",
-      "name": "09:25 NBA 爵士VS鹈鹕 全场回放（英文原声）（本轮未测通）",
+      "name": "09:25 NBA 爵士VS鹈鹕 全场回放（英文原声）",
       "date": "2026-10-24",
       "time_minutes": 565,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "499c184f0fa1ffe3f2c4",
-      "name": "09:25 NBA 马刺VS火箭 全场回放（杨健、丁彦雨航、周鹏、拜月宁）（本轮未测通）",
+      "name": "09:25 NBA 马刺VS火箭 全场回放（杨健、丁彦雨航、周鹏、拜月宁）",
       "date": "2026-10-24",
       "time_minutes": 565,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "a0f41db7252bfec9b6f2",
+      "name": "09:25 NBA 马刺VS火箭 全场回放（王晓晨）",
+      "date": "2026-10-24",
+      "time_minutes": 565,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "8e34dbddebe0c6226394",
+      "name": "09:25 NBA 马刺VS火箭 全场回放（英文原声）",
+      "date": "2026-10-24",
+      "time_minutes": 565,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "772b5ecd8607b4d67ea5",
-      "name": "09:45 NBA 勇士VS灰熊 全场回放（AI字幕）（本轮未测通）",
+      "name": "09:45 NBA 勇士VS灰熊 全场回放（AI字幕）",
       "date": "2026-10-24",
       "time_minutes": 585,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "d4bbfe3cc3b157fefb15",
-      "name": "09:45 NBA 勇士VS灰熊 全场回放（孙博、巩晓彬、闫宇峰、小七）（本轮未测通）",
+      "name": "09:45 NBA 勇士VS灰熊 全场回放（孙博、巩晓彬、闫宇峰、小七）",
       "date": "2026-10-24",
       "time_minutes": 585,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "3b1149880f72188b5fca",
-      "name": "09:45 NBA 勇士VS灰熊 全场回放（英文原声）（本轮未测通）",
+      "name": "09:45 NBA 勇士VS灰熊 全场回放（英文原声）",
       "date": "2026-10-24",
       "time_minutes": 585,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "1a6da816c3fce4895399",
-      "name": "09:45 NBA 勇士VS灰熊 全场回放（董倡硕）（本轮未测通）",
+      "name": "09:45 NBA 勇士VS灰熊 全场回放（董倡硕）",
       "date": "2026-10-24",
       "time_minutes": 585,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "b1a105721f534086d1bb",
-      "name": "09:45 NBA 湖人VS快船 全场回放（AI字幕）（本轮未测通）",
+      "name": "09:45 NBA 湖人VS快船 全场回放（AI字幕）",
       "date": "2026-10-24",
       "time_minutes": 585,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "3602610b1180ce0cc481",
-      "name": "09:45 NBA 湖人VS快船 全场回放（李天宇、徐咏、陈正昊、廖昕阳）（本轮未测通）",
+      "name": "09:45 NBA 湖人VS快船 全场回放（李天宇、徐咏、陈正昊、廖昕阳）",
       "date": "2026-10-24",
       "time_minutes": 585,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "500ca7c8db85d10e3971",
-      "name": "09:45 NBA 湖人VS快船 全场回放（英文原声）（本轮未测通）",
+      "name": "09:45 NBA 湖人VS快船 全场回放（英文原声）",
       "date": "2026-10-24",
       "time_minutes": 585,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "5332d57b1ea7172a720e",
-      "name": "09:55 NBA 国王VS开拓者 全场回放（英文原声）（本轮未测通）",
+      "name": "09:55 NBA 国王VS开拓者 全场回放（英文原声）",
       "date": "2026-10-24",
       "time_minutes": 595,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "c9ca2a17cb27eb04c52c",
-      "name": "09:55 NBA 国王VS开拓者 全场回放（邢晨）（本轮未测通）",
+      "name": "09:55 NBA 国王VS开拓者 全场回放（邢晨）",
       "date": "2026-10-24",
       "time_minutes": 595,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "9e59c0b7949dd2f30778",
-      "name": "09:55 NBA 国王VS开拓者 全场回放（邵化谦、季孟年）（本轮未测通）",
+      "name": "09:55 NBA 国王VS开拓者 全场回放（邵化谦、季孟年）",
       "date": "2026-10-24",
       "time_minutes": 595,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -486,6 +658,8 @@
       "time_minutes": 630,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -495,6 +669,8 @@
       "time_minutes": 630,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -504,6 +680,8 @@
       "time_minutes": 630,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -513,6 +691,8 @@
       "time_minutes": 630,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -522,6 +702,8 @@
       "time_minutes": 630,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -531,6 +713,8 @@
       "time_minutes": 630,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -540,6 +724,8 @@
       "time_minutes": 630,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -549,6 +735,8 @@
       "time_minutes": 630,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -558,6 +746,8 @@
       "time_minutes": 630,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -567,6 +757,8 @@
       "time_minutes": 660,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -576,6 +768,8 @@
       "time_minutes": 660,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -585,6 +779,8 @@
       "time_minutes": 660,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -594,6 +790,8 @@
       "time_minutes": 660,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -603,6 +801,8 @@
       "time_minutes": 720,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -612,6 +812,8 @@
       "time_minutes": 720,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -621,6 +823,8 @@
       "time_minutes": 780,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -630,6 +834,8 @@
       "time_minutes": 780,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -639,6 +845,8 @@
       "time_minutes": 780,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -648,6 +856,8 @@
       "time_minutes": 780,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -657,6 +867,8 @@
       "time_minutes": 780,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -666,6 +878,8 @@
       "time_minutes": 780,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -675,6 +889,8 @@
       "time_minutes": 780,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -684,6 +900,8 @@
       "time_minutes": 780,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -693,6 +911,8 @@
       "time_minutes": 780,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -702,6 +922,8 @@
       "time_minutes": 780,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -711,6 +933,8 @@
       "time_minutes": 780,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -720,6 +944,8 @@
       "time_minutes": 780,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -729,6 +955,8 @@
       "time_minutes": 780,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
@@ -738,33 +966,41 @@
       "time_minutes": 780,
       "status": "decoded",
       "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
       "published": true
     },
     {
       "id": "f47f2fedb881679312af",
-      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（四号桌）（本轮未测通）",
+      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（四号桌）",
       "date": "2026-10-24",
       "time_minutes": 780,
-      "status": "timeout",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "70a87f22bff088dfc59d",
-      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（徐儒叶）（本轮未测通）",
+      "name": "13:00 乒乓球亚锦赛 王艺迪、蒯曼皆横扫 石油3-1力克张本/篠塚 全场回放（徐儒叶）",
       "date": "2026-10-24",
       "time_minutes": 780,
-      "status": "timeout",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "7ca6330b91bce809ce6f",
-      "name": "13:55 超三联赛 超三联赛 总决赛 小组赛Day2下午场 【回放】山东10:16南昌凯锆商贸（本轮未测通）",
+      "name": "13:55 超三联赛 超三联赛 总决赛 小组赛Day2下午场 【回放】山东10:16南昌凯锆商贸",
       "date": "2026-10-24",
       "time_minutes": 835,
-      "status": "timeout",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -774,6 +1010,8 @@
       "time_minutes": 835,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -783,6 +1021,8 @@
       "time_minutes": 835,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -792,6 +1032,8 @@
       "time_minutes": 835,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -801,6 +1043,8 @@
       "time_minutes": 835,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -810,6 +1054,8 @@
       "time_minutes": 835,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -819,6 +1065,8 @@
       "time_minutes": 840,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -828,6 +1076,8 @@
       "time_minutes": 840,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -837,6 +1087,8 @@
       "time_minutes": 840,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -846,6 +1098,8 @@
       "time_minutes": 840,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -855,6 +1109,8 @@
       "time_minutes": 890,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -864,6 +1120,8 @@
       "time_minutes": 900,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -873,6 +1131,8 @@
       "time_minutes": 900,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -882,6 +1142,8 @@
       "time_minutes": 900,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -891,6 +1153,8 @@
       "time_minutes": 900,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -900,6 +1164,8 @@
       "time_minutes": 900,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -909,6 +1175,8 @@
       "time_minutes": 900,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -918,6 +1186,8 @@
       "time_minutes": 900,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -927,6 +1197,8 @@
       "time_minutes": 900,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -936,6 +1208,8 @@
       "time_minutes": 900,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -945,6 +1219,19 @@
       "time_minutes": 900,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "4079fac0343c4dbe3d1e",
+      "name": "15:15 中超 成都蓉城VS大连英博海发 全场回放（3D）",
+      "date": "2026-10-24",
+      "time_minutes": 915,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -954,6 +1241,8 @@
       "time_minutes": 915,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -963,6 +1252,8 @@
       "time_minutes": 915,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -972,6 +1263,8 @@
       "time_minutes": 915,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -981,6 +1274,8 @@
       "time_minutes": 915,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -990,6 +1285,8 @@
       "time_minutes": 915,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -999,6 +1296,8 @@
       "time_minutes": 915,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1008,6 +1307,8 @@
       "time_minutes": 915,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1017,6 +1318,8 @@
       "time_minutes": 915,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1026,6 +1329,8 @@
       "time_minutes": 915,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1035,6 +1340,8 @@
       "time_minutes": 915,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1044,6 +1351,8 @@
       "time_minutes": 920,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1053,6 +1362,8 @@
       "time_minutes": 920,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1062,6 +1373,8 @@
       "time_minutes": 920,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1071,6 +1384,8 @@
       "time_minutes": 920,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1080,6 +1395,8 @@
       "time_minutes": 925,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1089,6 +1406,8 @@
       "time_minutes": 925,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1098,6 +1417,8 @@
       "time_minutes": 925,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1107,6 +1428,8 @@
       "time_minutes": 925,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1116,6 +1439,8 @@
       "time_minutes": 925,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1125,6 +1450,8 @@
       "time_minutes": 925,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1134,6 +1461,8 @@
       "time_minutes": 925,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1143,6 +1472,8 @@
       "time_minutes": 925,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1152,6 +1483,8 @@
       "time_minutes": 925,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1161,6 +1494,8 @@
       "time_minutes": 930,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1170,6 +1505,8 @@
       "time_minutes": 930,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1179,6 +1516,8 @@
       "time_minutes": 950,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1188,6 +1527,8 @@
       "time_minutes": 950,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1197,6 +1538,8 @@
       "time_minutes": 950,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1206,6 +1549,8 @@
       "time_minutes": 1050,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1215,6 +1560,8 @@
       "time_minutes": 1050,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1224,6 +1571,8 @@
       "time_minutes": 1050,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1233,6 +1582,8 @@
       "time_minutes": 1050,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1242,6 +1593,8 @@
       "time_minutes": 1050,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1251,6 +1604,8 @@
       "time_minutes": 1050,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1260,6 +1615,8 @@
       "time_minutes": 1050,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1269,6 +1626,8 @@
       "time_minutes": 1050,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1278,6 +1637,8 @@
       "time_minutes": 1050,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1287,6 +1648,8 @@
       "time_minutes": 1050,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1296,6 +1659,8 @@
       "time_minutes": 1050,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1305,6 +1670,8 @@
       "time_minutes": 1050,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1314,6 +1681,8 @@
       "time_minutes": 1050,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1323,6 +1692,8 @@
       "time_minutes": 1050,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1332,6 +1703,8 @@
       "time_minutes": 1080,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1341,6 +1714,8 @@
       "time_minutes": 1120,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1350,6 +1725,8 @@
       "time_minutes": 1135,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1359,6 +1736,8 @@
       "time_minutes": 1135,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1368,6 +1747,30 @@
       "time_minutes": 1135,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "15d26878f15d0709e276",
+      "name": "18:55 JCK 库尔班江一致判定胜 马科斯惨遭TKO 主赛（官方解说）",
+      "date": "2026-10-24",
+      "time_minutes": 1135,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "a789a7a683af5dd373fb",
+      "name": "18:55 JCK 库尔班江一致判定胜 马科斯惨遭TKO 主赛（英文解说）",
+      "date": "2026-10-24",
+      "time_minutes": 1135,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1377,6 +1780,8 @@
       "time_minutes": 1135,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1386,6 +1791,8 @@
       "time_minutes": 1135,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1395,6 +1802,8 @@
       "time_minutes": 1135,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1404,6 +1813,8 @@
       "time_minutes": 1135,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1413,6 +1824,8 @@
       "time_minutes": 1135,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1422,6 +1835,8 @@
       "time_minutes": 1135,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1431,6 +1846,8 @@
       "time_minutes": 1135,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1440,6 +1857,8 @@
       "time_minutes": 1135,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1449,6 +1868,8 @@
       "time_minutes": 1135,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1458,6 +1879,8 @@
       "time_minutes": 1135,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1467,6 +1890,8 @@
       "time_minutes": 1140,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1476,6 +1901,8 @@
       "time_minutes": 1140,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1485,6 +1912,8 @@
       "time_minutes": 1140,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1494,6 +1923,8 @@
       "time_minutes": 1140,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1503,6 +1934,8 @@
       "time_minutes": 1140,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1512,6 +1945,8 @@
       "time_minutes": 1140,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1521,6 +1956,8 @@
       "time_minutes": 1140,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1530,6 +1967,8 @@
       "time_minutes": 1140,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1539,6 +1978,8 @@
       "time_minutes": 1150,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1548,6 +1989,8 @@
       "time_minutes": 1150,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1557,6 +2000,8 @@
       "time_minutes": 1150,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1564,18 +2009,22 @@
       "name": "19:15 英超 阿斯顿维拉VS曼城 全场回放（任锴、梁柏翘）",
       "date": "2026-10-24",
       "time_minutes": 1155,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "8ebfcae83be3f84f8a7d",
       "name": "19:15 英超 阿斯顿维拉VS曼城 全场回放（娄一晨、刘越、姚安妮）",
       "date": "2026-10-24",
       "time_minutes": 1155,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "e9106f37c8d10285a151",
@@ -1584,6 +2033,8 @@
       "time_minutes": 1160,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1593,6 +2044,8 @@
       "time_minutes": 1160,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1602,6 +2055,8 @@
       "time_minutes": 1160,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1611,6 +2066,8 @@
       "time_minutes": 1160,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1620,6 +2077,8 @@
       "time_minutes": 1160,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1629,6 +2088,8 @@
       "time_minutes": 1160,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1638,6 +2099,8 @@
       "time_minutes": 1160,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1647,6 +2110,8 @@
       "time_minutes": 1160,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1656,6 +2121,8 @@
       "time_minutes": 1165,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1665,6 +2132,8 @@
       "time_minutes": 1165,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1674,6 +2143,8 @@
       "time_minutes": 1165,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1683,6 +2154,8 @@
       "time_minutes": 1165,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1692,6 +2165,8 @@
       "time_minutes": 1165,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1701,6 +2176,8 @@
       "time_minutes": 1165,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1710,6 +2187,8 @@
       "time_minutes": 1170,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1719,6 +2198,8 @@
       "time_minutes": 1170,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1728,6 +2209,8 @@
       "time_minutes": 1170,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1737,6 +2220,8 @@
       "time_minutes": 1170,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1746,6 +2231,8 @@
       "time_minutes": 1170,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1755,6 +2242,8 @@
       "time_minutes": 1175,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1764,6 +2253,8 @@
       "time_minutes": 1175,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1773,6 +2264,8 @@
       "time_minutes": 1175,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1782,6 +2275,8 @@
       "time_minutes": 1175,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1791,6 +2286,8 @@
       "time_minutes": 1180,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1800,6 +2297,8 @@
       "time_minutes": 1180,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1809,6 +2308,8 @@
       "time_minutes": 1180,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1818,6 +2319,8 @@
       "time_minutes": 1180,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1827,6 +2330,8 @@
       "time_minutes": 1195,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1836,6 +2341,8 @@
       "time_minutes": 1195,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1845,6 +2352,8 @@
       "time_minutes": 1195,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1854,6 +2363,8 @@
       "time_minutes": 1195,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1863,6 +2374,8 @@
       "time_minutes": 1200,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1872,6 +2385,8 @@
       "time_minutes": 1200,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1881,6 +2396,8 @@
       "time_minutes": 1200,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1890,6 +2407,8 @@
       "time_minutes": 1200,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1899,6 +2418,8 @@
       "time_minutes": 1220,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1908,6 +2429,8 @@
       "time_minutes": 1220,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1917,6 +2440,8 @@
       "time_minutes": 1220,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1926,6 +2451,8 @@
       "time_minutes": 1245,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1935,6 +2462,8 @@
       "time_minutes": 1245,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1944,6 +2473,8 @@
       "time_minutes": 1275,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1953,6 +2484,8 @@
       "time_minutes": 1275,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1962,6 +2495,8 @@
       "time_minutes": 1275,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1971,6 +2506,8 @@
       "time_minutes": 1275,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1980,6 +2517,8 @@
       "time_minutes": 1275,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1989,6 +2528,8 @@
       "time_minutes": 1290,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -1998,78 +2539,96 @@
       "time_minutes": 1290,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
-      "id": "5fcfa2ac52a2fb9cdf6f",
-      "name": "21:30 UFC数字赛 彼得-严卫冕后叫阵宋亚东！ 主赛（智能字幕）",
+      "id": "ba8cf3d4f9f21a9cb992",
+      "name": "21:30 UFC数字赛 彼得-严卫冕后点名宋亚东 大帝终结不败羽鹰 主赛（智能字幕）",
       "date": "2026-10-24",
       "time_minutes": 1290,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
-      "id": "54d44792d6eb169c5533",
-      "name": "21:30 UFC数字赛 彼得-严卫冕后叫阵宋亚东！ 主赛（王琰博、郝俊、李景亮）",
+      "id": "1f8643f5ea85792481ee",
+      "name": "21:30 UFC数字赛 彼得-严卫冕后点名宋亚东 大帝终结不败羽鹰 主赛（王琰博、郝俊、李景亮）",
       "date": "2026-10-24",
       "time_minutes": 1290,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
-      "id": "5cd4372794100cd4db12",
-      "name": "21:30 UFC数字赛 彼得-严卫冕后叫阵宋亚东！ 主赛（英文原声）",
+      "id": "85c1a1b04a3f01e1a316",
+      "name": "21:30 UFC数字赛 彼得-严卫冕后点名宋亚东 大帝终结不败羽鹰 主赛（英文原声）",
       "date": "2026-10-24",
       "time_minutes": 1290,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
-      "id": "6b4af8775d73e477f8bc",
-      "name": "21:30 UFC数字赛 彼得-严卫冕后叫阵宋亚东！ 主赛（陈瑞阳、郑文祺、张名扬）",
+      "id": "0ec997d51781f3f45e6b",
+      "name": "21:30 UFC数字赛 彼得-严卫冕后点名宋亚东 大帝终结不败羽鹰 主赛（陈瑞阳、郑文祺、张名扬）",
       "date": "2026-10-24",
       "time_minutes": 1290,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
-      "id": "9b5f6eb3fb6ed9729c04",
-      "name": "21:30 UFC数字赛 彼得-严卫冕后叫阵宋亚东！ 副赛（智能字幕）",
+      "id": "50ac05f71c97ba3389d3",
+      "name": "21:30 UFC数字赛 彼得-严卫冕后点名宋亚东 大帝终结不败羽鹰 副赛（智能字幕）",
       "date": "2026-10-24",
       "time_minutes": 1290,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
-      "id": "6d85c6e02d132ee5cff9",
-      "name": "21:30 UFC数字赛 彼得-严卫冕后叫阵宋亚东！ 副赛（王琰博、郝俊、李景亮）",
+      "id": "30d35cdea141d44f06df",
+      "name": "21:30 UFC数字赛 彼得-严卫冕后点名宋亚东 大帝终结不败羽鹰 副赛（王琰博、郝俊、李景亮）",
       "date": "2026-10-24",
       "time_minutes": 1290,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
-      "id": "4a09f4118d401b60b594",
-      "name": "21:30 UFC数字赛 彼得-严卫冕后叫阵宋亚东！ 副赛（英文原声）",
+      "id": "2a6c3be85f9abf136d62",
+      "name": "21:30 UFC数字赛 彼得-严卫冕后点名宋亚东 大帝终结不败羽鹰 副赛（英文原声）",
       "date": "2026-10-24",
       "time_minutes": 1290,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
-      "id": "f61702b286a0faa16a8d",
-      "name": "21:30 UFC数字赛 彼得-严卫冕后叫阵宋亚东！ 副赛（陈瑞阳、郑文祺、张名扬）",
+      "id": "7d267a28d7b695c62744",
+      "name": "21:30 UFC数字赛 彼得-严卫冕后点名宋亚东 大帝终结不败羽鹰 副赛（陈瑞阳、郑文祺、张名扬）",
       "date": "2026-10-24",
       "time_minutes": 1290,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2079,6 +2638,8 @@
       "time_minutes": 1290,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2088,6 +2649,8 @@
       "time_minutes": 1290,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2097,6 +2660,8 @@
       "time_minutes": 1290,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2106,6 +2671,8 @@
       "time_minutes": 1290,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2115,6 +2682,8 @@
       "time_minutes": 1290,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2124,6 +2693,8 @@
       "time_minutes": 1290,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2133,6 +2704,8 @@
       "time_minutes": 1290,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2142,6 +2715,8 @@
       "time_minutes": 1305,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2151,6 +2726,8 @@
       "time_minutes": 1305,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2160,6 +2737,8 @@
       "time_minutes": 1310,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2169,6 +2748,8 @@
       "time_minutes": 1310,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2178,6 +2759,8 @@
       "time_minutes": 1320,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2185,9 +2768,11 @@
       "name": "00:00 英女超 布莱顿女足VS西汉姆联女足 全场回放（林梦鸽）",
       "date": "2026-10-25",
       "time_minutes": 0,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "9cd7dd241d44b76519f3",
@@ -2196,6 +2781,8 @@
       "time_minutes": 0,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2203,27 +2790,33 @@
       "name": "00:15 德甲 多特蒙德VS法兰克福 全场回放（AI观赛）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "35b6d57234ec90af02d0",
       "name": "00:15 德甲 多特蒙德VS法兰克福 全场回放（智能解说）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "1ca6c66efb4394e48978",
       "name": "00:15 德甲 多特蒙德VS法兰克福 全场回放（沈云怡、秦游夏）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "109197a44d4a800cc900",
@@ -2232,6 +2825,8 @@
       "time_minutes": 15,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2241,6 +2836,8 @@
       "time_minutes": 15,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2250,6 +2847,8 @@
       "time_minutes": 15,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2257,45 +2856,55 @@
       "name": "00:15 英超 切尔西VS托特纳姆热刺 全场回放（AI智慧观赛）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "4b06a8240fbc713f4b23",
       "name": "00:15 英超 切尔西VS托特纳姆热刺 全场回放（智能解说）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "ed1756a57d33c75b2aea",
       "name": "00:15 英超 切尔西VS托特纳姆热刺 全场回放（洪荒）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "bf981bcae9a8e466495f",
       "name": "00:15 英超 切尔西VS托特纳姆热刺 全场回放（詹俊、张路、郭小仙儿）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "bbdbeaa90e3691f7d56a",
       "name": "00:15 英超 切尔西VS托特纳姆热刺 全场回放（陈凯冬、何辉）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "9fe10ff7a378c628ea9a",
@@ -2304,6 +2913,8 @@
       "time_minutes": 15,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2313,6 +2924,8 @@
       "time_minutes": 15,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2322,6 +2935,8 @@
       "time_minutes": 15,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2329,9 +2944,11 @@
       "name": "00:15 西甲 瓦伦西亚VS比利亚雷亚尔 全场回放（周楚雄）",
       "date": "2026-10-25",
       "time_minutes": 15,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "0e547bebf78e377256f9",
@@ -2340,6 +2957,8 @@
       "time_minutes": 15,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2349,6 +2968,8 @@
       "time_minutes": 15,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2358,6 +2979,8 @@
       "time_minutes": 25,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2367,6 +2990,8 @@
       "time_minutes": 25,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2376,33 +3001,41 @@
       "time_minutes": 120,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
-      "id": "01ef9ad3e1949428d834",
-      "name": "02:00 斯诺克 马克·威廉姆斯VS杰克·琼斯 26/27赛季斯诺克北爱尔兰公开赛半决赛回放：马克·威廉姆斯5-6杰克·琼斯（AI观赛）",
+      "id": "0476a81e66615e4403f2",
+      "name": "02:00 斯诺克 马克·威廉姆斯VS杰克·琼斯 【回放】马克·威廉姆斯5-6杰克·琼斯（AI观赛）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 120,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "b0913336f15ceaaa7add",
-      "name": "02:00 斯诺克 马克·威廉姆斯VS杰克·琼斯 【回放】马克·威廉姆斯5-6杰克·琼斯（杨江源）",
+      "name": "02:00 斯诺克 马克·威廉姆斯VS杰克·琼斯 【回放】马克·威廉姆斯5-6杰克·琼斯（杨江源）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 120,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "5292b5e0073b48feace7",
-      "name": "02:00 斯诺克 马克·威廉姆斯VS杰克·琼斯 【回放】马克·威廉姆斯5-6杰克·琼斯（赛场原声）",
+      "name": "02:00 斯诺克 马克·威廉姆斯VS杰克·琼斯 【回放】马克·威廉姆斯5-6杰克·琼斯（赛场原声）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 120,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2412,6 +3045,8 @@
       "time_minutes": 120,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2419,9 +3054,11 @@
       "name": "02:30 意甲 拉齐奥VS帕尔马 全场回放（鲁靖明）",
       "date": "2026-10-25",
       "time_minutes": 150,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "e125bf9b9afc7953eaaa",
@@ -2430,6 +3067,8 @@
       "time_minutes": 150,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2439,6 +3078,8 @@
       "time_minutes": 150,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2446,9 +3087,11 @@
       "name": "02:30 法甲 朗斯VS巴黎FC 全场回放（邵煊）",
       "date": "2026-10-25",
       "time_minutes": 150,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "a8690c85ab5a838bb868",
@@ -2457,6 +3100,8 @@
       "time_minutes": 150,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2466,6 +3111,8 @@
       "time_minutes": 150,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2475,6 +3122,8 @@
       "time_minutes": 165,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2484,6 +3133,8 @@
       "time_minutes": 165,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2491,27 +3142,33 @@
       "name": "02:55 西甲 马德里竞技VS拉科鲁尼亚 全场回放(智能解说）",
       "date": "2026-10-25",
       "time_minutes": 175,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "a7a4a49313c2a56c0579",
       "name": "02:55 西甲 马德里竞技VS拉科鲁尼亚 全场回放（AI观赛)",
       "date": "2026-10-25",
       "time_minutes": 175,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "a7ef9bfbd8f96ee00eb5",
       "name": "02:55 西甲 马德里竞技VS拉科鲁尼亚 全场回放（张天翼、贺宇）",
       "date": "2026-10-25",
       "time_minutes": 175,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "775962563f5e1c7bcfbb",
@@ -2520,7 +3177,20 @@
       "time_minutes": 175,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
+    },
+    {
+      "id": "97bbf7f87138040fb451",
+      "name": "05:50 莫干山跑山赛 莫干山跑山赛 2026莫干山跑山赛Day3全场回放（官方解说）",
+      "date": "2026-10-25",
+      "time_minutes": 350,
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "bbfd5ddf7c27e093c6dd",
@@ -2529,24 +3199,30 @@
       "time_minutes": 350,
       "status": "not_checked",
       "status_text": "未完成检测",
-      "published": false
-    },
-    {
-      "id": "3888622d955e4a606426",
-      "name": "05:55 NBA 黄蜂VS热火 全场回放",
-      "date": "2026-10-25",
-      "time_minutes": 355,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "6aaae236f53836753133",
-      "name": "05:55 NBA 黄蜂VS热火 全场回放（张泽欣）",
+      "name": "05:55 NBA 黄蜂VS热火 全场回放（张泽欣）（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 355,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "bd1784c775bf5d134756",
+      "name": "05:55 NBA 黄蜂VS热火 全场回放（英文原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 355,
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2556,6 +3232,8 @@
       "time_minutes": 355,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2565,7 +3243,20 @@
       "time_minutes": 355,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
+    },
+    {
+      "id": "723557a2b690aa5e4b06",
+      "name": "06:45 马拉松系列赛 2026桐庐半程马拉松 2026桐庐半程马拉松全场回放（赛场原声）",
+      "date": "2026-10-25",
+      "time_minutes": 405,
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "04b1ab53ab3288381093",
@@ -2574,7 +3265,20 @@
       "time_minutes": 405,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
+    },
+    {
+      "id": "e14ca557e28a41c13421",
+      "name": "07:00 铁人三项系列赛 黄山国际铁人三项赛 2026黄山国际铁人三项赛全场回放（官方解说）",
+      "date": "2026-10-25",
+      "time_minutes": 420,
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "bf5e2d020e3fa3794532",
@@ -2583,6 +3287,30 @@
       "time_minutes": 420,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "6a97557bb75de5eb5274",
+      "name": "07:15 NBA 76人VS雄鹿 全场回放（孙博、巩晓彬、闫宇峰、佳依）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "ce751850f7ef284f2f33",
+      "name": "07:15 NBA 76人VS雄鹿 全场回放（英文原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2592,6 +3320,8 @@
       "time_minutes": 435,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2601,6 +3331,8 @@
       "time_minutes": 435,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2610,7 +3342,20 @@
       "time_minutes": 435,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
+    },
+    {
+      "id": "5b46da61824778bcabbb",
+      "name": "07:15 逐马计划 2026恒丰银行济南泉城马拉松 2026恒丰银行济南（泉城）马拉松全场回放（赛场原声）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "fa278df2bc7fc68d890f",
@@ -2619,6 +3364,19 @@
       "time_minutes": 435,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "58c7c5d01eec01baf630",
+      "name": "07:15 逐马计划 2026恒丰银行济南泉城马拉松 2026济南马拉松吴浩然视角全场回放（赛场原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "timeout",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2628,7 +3386,31 @@
       "time_minutes": 435,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
+    },
+    {
+      "id": "ccd3cff6913740ab90b7",
+      "name": "07:15 逐马计划 2026极氪汽车成都马拉松 2026极氪汽车成都马拉松全场回放（赛场原声）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
+    },
+    {
+      "id": "79fa7b31c02f61399cae",
+      "name": "07:15 马拉松系列赛 2026临汾半程马拉松 2026临汾半程马拉松全场回放（赛场原声）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "b1814ebe7e5132a654bb",
@@ -2637,6 +3419,19 @@
       "time_minutes": 435,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "8d2c509289c956b1b574",
+      "name": "07:15 马拉松系列赛 2026北京昌平马拉松 2026北京昌平马拉松全场回放（赛场原声）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2646,6 +3441,19 @@
       "time_minutes": 435,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "c2e5f0356f7683c31227",
+      "name": "07:15 马拉松系列赛 2026天津银行天津马拉松 2026天津银行天津马拉松全场回放（赛场原声）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "timeout",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2655,6 +3463,19 @@
       "time_minutes": 435,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "815372b9cda6d84c8fea",
+      "name": "07:15 马拉松系列赛 2026扬子江龙凤堂泰州马拉松 2026扬子江龙凤堂泰州马拉松（赛场原声）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2664,7 +3485,20 @@
       "time_minutes": 435,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
+    },
+    {
+      "id": "f6b53c509445572534f6",
+      "name": "07:15 马拉松系列赛 2026泗洪农商银行泗洪马拉松 2026泗洪农商银行泗洪马拉松全场回放（赛场原声）",
+      "date": "2026-10-25",
+      "time_minutes": 435,
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "a9b81a5c733b773d93c3",
@@ -2673,6 +3507,8 @@
       "time_minutes": 435,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2682,6 +3518,30 @@
       "time_minutes": 445,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "5812a8dc671e4feb3235",
+      "name": "07:25 NBA 骑士VS篮网 全场回放（姜帆）（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 445,
+      "status": "timeout",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "f65e9b12a89abd783e61",
+      "name": "07:25 NBA 骑士VS篮网 全场回放（英文原声）",
+      "date": "2026-10-25",
+      "time_minutes": 445,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2691,6 +3551,8 @@
       "time_minutes": 445,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2700,6 +3562,19 @@
       "time_minutes": 445,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "6065445f1e60bc53d47c",
+      "name": "07:45 铁人三项系列赛 中国铁人三项联赛暨“她铁”粉色铁人三项挑战赛无锡站 2026年中国铁人三项联赛暨“她铁”粉色铁人三项挑战赛无锡站全场回放（官方解说）",
+      "date": "2026-10-25",
+      "time_minutes": 465,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2709,7 +3584,20 @@
       "time_minutes": 465,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
+    },
+    {
+      "id": "256e8736f33cad48e609",
+      "name": "07:45 马拉松系列赛 2026北京房山良乡大学城半程马拉松 2026北京房山良乡大学城半程马拉松全场回放（赛场原声）",
+      "date": "2026-10-25",
+      "time_minutes": 465,
+      "status": "decoded",
+      "status_text": "本轮检测通过",
+      "last_success_at": "2026-10-25T16:52:32+08:00",
+      "player_entry_available": true,
+      "published": true
     },
     {
       "id": "f9b6b8a262bc430e60e8",
@@ -2718,6 +3606,19 @@
       "time_minutes": 465,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "8efc9c7c578f9285fd5f",
+      "name": "07:45 马拉松系列赛 2026华贵洪湖半程马拉松 2026华贵洪湖半程马拉松全场回放（赛场原声）",
+      "date": "2026-10-25",
+      "time_minutes": 465,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2727,6 +3628,8 @@
       "time_minutes": 465,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2736,6 +3639,30 @@
       "time_minutes": 470,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "df1a140bcdd9fc7eeff5",
+      "name": "07:55 NBA 公牛VS奇才 全场回放（刘芳宇）",
+      "date": "2026-10-25",
+      "time_minutes": 475,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "c2d8f8e91d84a644e8a8",
+      "name": "07:55 NBA 公牛VS奇才 全场回放（英文原声）",
+      "date": "2026-10-25",
+      "time_minutes": 475,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2745,6 +3672,8 @@
       "time_minutes": 475,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2754,6 +3683,41 @@
       "time_minutes": 475,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "5047e537ec306612f176",
+      "name": "07:55 NBA 独行侠VS马刺 全场回放（徐秦威）",
+      "date": "2026-10-25",
+      "time_minutes": 475,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "409bf93ca25e7a603915",
+      "name": "07:55 NBA 独行侠VS马刺 全场回放（王晓晨）",
+      "date": "2026-10-25",
+      "time_minutes": 475,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "da12acada3b8680ed0a2",
+      "name": "07:55 NBA 独行侠VS马刺 全场回放（英文原声）",
+      "date": "2026-10-25",
+      "time_minutes": 475,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2763,6 +3727,8 @@
       "time_minutes": 475,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2772,6 +3738,8 @@
       "time_minutes": 475,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2781,6 +3749,8 @@
       "time_minutes": 475,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2790,6 +3760,8 @@
       "time_minutes": 480,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2799,24 +3771,8 @@
       "time_minutes": 480,
       "status": "not_checked",
       "status_text": "未完成检测",
-      "published": false
-    },
-    {
-      "id": "3d06a0bede92d24300d6",
-      "name": "08:15 NBA 76人VS雄鹿 火箭vs老鹰",
-      "date": "2026-10-25",
-      "time_minutes": 495,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
-    },
-    {
-      "id": "787c11f032269d726221",
-      "name": "08:15 NBA 独行侠VS马刺 火箭vs老鹰",
-      "date": "2026-10-25",
-      "time_minutes": 495,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2826,6 +3782,30 @@
       "time_minutes": 495,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "f0dea6e8d1283449712d",
+      "name": "08:25 NBA 老鹰VS火箭 全场回放（英文原声）",
+      "date": "2026-10-25",
+      "time_minutes": 505,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "a241eca1e4bb5a902ffa",
+      "name": "08:25 NBA 老鹰VS火箭 全场回放（连睿、刘铁、周鹏、秋童）",
+      "date": "2026-10-25",
+      "time_minutes": 505,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2835,6 +3815,30 @@
       "time_minutes": 505,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "1ad4f016309923374b74",
+      "name": "08:55 NBA 掘金VS鹈鹕 全场回放（周赫）",
+      "date": "2026-10-25",
+      "time_minutes": 535,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "9af0a45f5d8b5000db27",
+      "name": "08:55 NBA 掘金VS鹈鹕 全场回放（英文原声）",
+      "date": "2026-10-25",
+      "time_minutes": 535,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2844,6 +3848,8 @@
       "time_minutes": 535,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2853,24 +3859,8 @@
       "time_minutes": 535,
       "status": "not_checked",
       "status_text": "未完成检测",
-      "published": false
-    },
-    {
-      "id": "362ca7d9c8c39a6234d5",
-      "name": "08:55 NBA 独行侠VS马刺 鹈鹕vs掘金",
-      "date": "2026-10-25",
-      "time_minutes": 535,
-      "status": "not_checked",
-      "status_text": "未完成检测",
-      "published": false
-    },
-    {
-      "id": "c50055064b88fcde7aba",
-      "name": "08:55 NBA 老鹰VS火箭 鹈鹕vs掘金",
-      "date": "2026-10-25",
-      "time_minutes": 535,
-      "status": "not_checked",
-      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2880,6 +3870,19 @@
       "time_minutes": 540,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "b8de2daf9cd3b682e884",
+      "name": "09:00 全国游泳锦标赛 张雨霏100米个人混合泳预赛第一晋级 2026全国游泳锦标赛Day3上午场全场回放（赛场原声）",
+      "date": "2026-10-25",
+      "time_minutes": 540,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2889,6 +3892,30 @@
       "time_minutes": 540,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "7fd0d421fd87b98ced82",
+      "name": "09:45 NBA 太阳VS勇士 全场回放（拜月宁）",
+      "date": "2026-10-25",
+      "time_minutes": 585,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "4dbab8fcac4af8b4ecfa",
+      "name": "09:45 NBA 太阳VS勇士 全场回放（李天宇、陈正昊、郭维盛、廖昕阳）",
+      "date": "2026-10-25",
+      "time_minutes": 585,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2898,6 +3925,8 @@
       "time_minutes": 585,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2907,6 +3936,8 @@
       "time_minutes": 585,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2916,6 +3947,8 @@
       "time_minutes": 595,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2925,69 +3958,107 @@
       "time_minutes": 595,
       "status": "not_checked",
       "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "b1fd7a48f571057adb64",
+      "name": "10:45 马拉松系列赛 2026哈密新星双城半程马拉松 2026哈密新星双城半程马拉松全场回放（赛场原声）",
+      "date": "2026-10-25",
+      "time_minutes": 645,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "b34ba6389a4cc2e8b177",
-      "name": "10:45 马拉松系列赛 2026哈密新星双城半程马拉松 清流播出（本轮未测通）",
+      "name": "10:45 马拉松系列赛 2026哈密新星双城半程马拉松 清流播出",
       "date": "2026-10-25",
       "time_minutes": 645,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "32fc8527fa8ddda8d2e0",
-      "name": "11:30 ITF世界网球巡回赛 争冠！孙心然迎战普什卡列娃 中心球场（本轮未测通）",
+      "name": "11:30 ITF世界网球巡回赛 争冠！孙心然迎战普什卡列娃 中心球场",
       "date": "2026-10-25",
       "time_minutes": 690,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "f6ea5c248184fce7ebbd",
-      "name": "11:30 ITF世界网球巡回赛 争冠！孙心然迎战普什卡列娃 中心球场中文解说（本轮未测通）",
+      "name": "11:30 ITF世界网球巡回赛 争冠！孙心然迎战普什卡列娃 中心球场中文解说",
       "date": "2026-10-25",
       "time_minutes": 690,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
-      "id": "d44af6eb8697b3ff45da",
-      "name": "12:30 WTA 克鲁格VS西尼亚科娃 宋光振（仅试看）",
+      "id": "9291e9207881261dc502",
+      "name": "12:30 WTA 克鲁格VS西尼亚科娃 全场回放",
       "date": "2026-10-25",
       "time_minutes": 750,
-      "status": "trial_stream",
-      "status_text": "仅试看",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "869bb52882dd254161bc",
+      "name": "12:30 WTA 克鲁格VS西尼亚科娃 全场回放（宋光振）",
+      "date": "2026-10-25",
+      "time_minutes": 750,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "5be9831b12dc74240b90",
-      "name": "12:30 WTA 克鲁格VS西尼亚科娃 英文原声（本轮未测通）",
+      "name": "12:30 WTA 克鲁格VS西尼亚科娃 英文原声",
       "date": "2026-10-25",
       "time_minutes": 750,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "92b995afb94a9e2e2853",
-      "name": "12:30 WTA 克鲁格VS西尼亚科娃 解说（本轮未测通）",
+      "name": "12:30 WTA 克鲁格VS西尼亚科娃 解说",
       "date": "2026-10-25",
       "time_minutes": 750,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "72310de1c27b4364bdaa",
-      "name": "12:30 WTA 克鲁格VS西尼亚科娃 赛场原声（本轮未测通）",
+      "name": "12:30 WTA 克鲁格VS西尼亚科娃 赛场原声",
       "date": "2026-10-25",
       "time_minutes": 750,
-      "status": "decode_failed",
-      "status_text": "本轮未测通",
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -2997,6 +4068,8 @@
       "time_minutes": 780,
       "status": "decode_failed",
       "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3006,6 +4079,8 @@
       "time_minutes": 780,
       "status": "decode_failed",
       "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3015,6 +4090,8 @@
       "time_minutes": 780,
       "status": "decode_failed",
       "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3024,6 +4101,63 @@
       "time_minutes": 780,
       "status": "decode_failed",
       "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "744ed08fc2b8ef160db0",
+      "name": "13:00 乒乓球亚锦赛 石油组合横扫晋级 蒯曼PK张本美和 1号桌（源提示需登录）",
+      "date": "2026-10-25",
+      "time_minutes": 780,
+      "status": "login_required",
+      "status_text": "需登录",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "1d1a9c562eb4c735474c",
+      "name": "13:00 乒乓球亚锦赛 石油组合横扫晋级 蒯曼PK张本美和 2号桌（源提示需登录）",
+      "date": "2026-10-25",
+      "time_minutes": 780,
+      "status": "login_required",
+      "status_text": "需登录",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "b975522ac1048ad6c577",
+      "name": "13:00 乒乓球亚锦赛 石油组合横扫晋级 蒯曼PK张本美和 马特（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 780,
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "82a600b7d16ec0846459",
+      "name": "13:00 乒乓球亚锦赛 石油组合横扫晋级 陈熠笑傲姐妹战 2026亚洲乒乓球锦标赛男单半决赛回放：李天阳3-2郭冠宏（马特）",
+      "date": "2026-10-25",
+      "time_minutes": 780,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "12e65c0ec44591f99e7e",
+      "name": "13:45 上海国际跳绳精英赛 上海国际跳绳精英赛 解说（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 825,
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3033,6 +4167,8 @@
       "time_minutes": 830,
       "status": "decode_failed",
       "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3042,6 +4178,8 @@
       "time_minutes": 830,
       "status": "decode_failed",
       "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3051,6 +4189,8 @@
       "time_minutes": 830,
       "status": "decode_failed",
       "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3060,6 +4200,52 @@
       "time_minutes": 830,
       "status": "decode_failed",
       "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "963119f9b85e8a7530a7",
+      "name": "13:55 超三联赛 超三联赛 总决赛 四分之一决赛 2026赛季超三联赛总决赛: 超三联赛 总决赛 四分之一决赛(蔡凯臣,李嘉伟)（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 835,
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "6ab6f98372d80d7a2acd",
+      "name": "13:55 超三联赛 超三联赛 总决赛 四分之一决赛 2026超三联赛总决赛四分之一决赛回放：上海久事22:17重庆瀚动",
+      "date": "2026-10-25",
+      "time_minutes": 835,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "367338767823b56fc1e6",
+      "name": "13:55 超三联赛 超三联赛 总决赛 四分之一决赛 2026超三联赛总决赛四分之一决赛回放：宁波海曙捷英21:9深圳龙华启航",
+      "date": "2026-10-25",
+      "time_minutes": 835,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "b30928d487a98ad1a04b",
+      "name": "13:55 超三联赛 超三联赛 总决赛 四分之一决赛 【回放】南昌凯锆21:17广东光正",
+      "date": "2026-10-25",
+      "time_minutes": 835,
+      "status": "not_checked",
+      "status_text": "未完成检测",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3069,6 +4255,8 @@
       "time_minutes": 835,
       "status": "decode_failed",
       "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3078,6 +4266,8 @@
       "time_minutes": 840,
       "status": "decode_failed",
       "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3087,6 +4277,8 @@
       "time_minutes": 840,
       "status": "decode_failed",
       "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3096,60 +4288,85 @@
       "time_minutes": 870,
       "status": "decode_failed",
       "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
-      "id": "2a06ec8be3ac4691f177",
-      "name": "14:30 WTA 布克沙/梅里查尔冲击女双冠军 鸿昆（仅试看）",
+      "id": "b5275004a092513c6b1d",
+      "name": "14:30 WTA 布克沙/梅里查尔冲击女双冠军 布克沙/梅里查尔-马丁内斯 VS 克劳茨克/斯朵拉（仅试看）",
       "date": "2026-10-25",
       "time_minutes": 870,
       "status": "trial_stream",
       "status_text": "仅试看",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "6d872e41ddb87c1c7e4c",
-      "name": "14:55 辽超 本溪队VS丹东队 赛场原声",
+      "name": "14:55 辽超 本溪队VS丹东队 赛场原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 895,
-      "status": "upcoming",
-      "status_text": "未开赛",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "a17a57b437ee3c1794b8",
-      "name": "15:30 琼超 乐东VS东方 赛场原声",
+      "name": "15:30 琼超 乐东VS东方 赛场原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 930,
-      "status": "upcoming",
-      "status_text": "未开赛",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "80bea637318071c9bbdc",
-      "name": "15:30 琼超 定安VS儋州 赛场原声",
+      "name": "15:30 琼超 定安VS儋州 赛场原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 930,
-      "status": "upcoming",
-      "status_text": "未开赛",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "89e9e97849656898d3ac",
+      "name": "15:54 琼超 临高VS琼海 赛场原声（本轮未测通）",
+      "date": "2026-10-25",
+      "time_minutes": 954,
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "852ce64e8bd610f9754f",
-      "name": "16:50 中乙 湖北青年星VS上海赛更达 解说",
+      "name": "16:50 中乙 湖北青年星VS上海赛更达 解说（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 1010,
-      "status": "upcoming",
-      "status_text": "未开赛",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
       "id": "d5b27163cfbc091dc241",
-      "name": "16:50 中乙 湖北青年星VS上海赛更达 赛场原声",
+      "name": "16:50 中乙 湖北青年星VS上海赛更达 赛场原声（本轮未测通）",
       "date": "2026-10-25",
       "time_minutes": 1010,
-      "status": "upcoming",
-      "status_text": "未开赛",
+      "status": "decode_failed",
+      "status_text": "本轮未测通",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3159,6 +4376,8 @@
       "time_minutes": 1020,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3168,6 +4387,52 @@
       "time_minutes": 1020,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "931b7c325d16525d83cb",
+      "name": "17:00 WTT 国乒接好签！王曼昱出席抽签仪式 亚锦赛决赛 激战中",
+      "date": "2026-10-25",
+      "time_minutes": 1020,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "707f8d8c84b2631bbb31",
+      "name": "17:00 WTT 抽签仪式 亚锦赛决赛 激战中",
+      "date": "2026-10-25",
+      "time_minutes": 1020,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "5826de44b3c996f1861a",
+      "name": "17:00 乒乓球亚锦赛 争冠！林诗栋/黄友政vs温瑞博/袁励岑 蒯曼/王艺迪战日乒 周冠达 侯英超 程靖淇",
+      "date": "2026-10-25",
+      "time_minutes": 1020,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "7efcd8a666097394e7ef",
+      "name": "17:00 乒乓球亚锦赛 争冠！陈熠战张本美和 李天阳PK张本智和 周冠达 侯英超 程靖淇",
+      "date": "2026-10-25",
+      "time_minutes": 1020,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3177,6 +4442,8 @@
       "time_minutes": 1020,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3186,6 +4453,8 @@
       "time_minutes": 1080,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3195,24 +4464,19 @@
       "time_minutes": 1080,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
-      "id": "031c33a88b69b8fcea05",
-      "name": "18:00 BWF 安洗莹PK辛杜 凤凰组合冲击金牌 余博洋",
+      "id": "0b3a5b53e83b6e6c9477",
+      "name": "18:00 BWF 安洗莹PK辛杜 凤凰组合冲击金牌 安洗莹VS辛杜",
       "date": "2026-10-25",
       "time_minutes": 1080,
       "status": "upcoming",
       "status_text": "未开赛",
-      "published": false
-    },
-    {
-      "id": "1039b3b9a99fef2000cc",
-      "name": "18:00 BWF 安洗莹PK辛杜 凤凰组合冲击金牌 金子嘉",
-      "date": "2026-10-25",
-      "time_minutes": 1080,
-      "status": "upcoming",
-      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3222,6 +4486,8 @@
       "time_minutes": 1080,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3231,6 +4497,41 @@
       "time_minutes": 1080,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "5c503271ebbeb9830fae",
+      "name": "18:00 NBA经典赛事 NBA精彩重播：雄鹿vs76人 孙博 闫宇峰 佳依",
+      "date": "2026-10-25",
+      "time_minutes": 1080,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "c949f11eaad76fca19f5",
+      "name": "18:00 乒乓球亚锦赛 争冠！林诗栋/黄友政vs温瑞博/袁励岑 蒯曼/王艺迪战日乒 赛场原声",
+      "date": "2026-10-25",
+      "time_minutes": 1080,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "9aba6edf2bbb272501f7",
+      "name": "18:00 乒乓球亚锦赛 争冠！陈熠战张本美和 李天阳PK张本智和 赛场原声",
+      "date": "2026-10-25",
+      "time_minutes": 1080,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3240,15 +4541,8 @@
       "time_minutes": 1080,
       "status": "upcoming",
       "status_text": "未开赛",
-      "published": false
-    },
-    {
-      "id": "6cf32c80569ba653776a",
-      "name": "18:30 BWF 安洗莹PK辛杜 凤凰组合冲击金牌 余博洋",
-      "date": "2026-10-25",
-      "time_minutes": 1110,
-      "status": "upcoming",
-      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3258,6 +4552,8 @@
       "time_minutes": 1130,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3267,6 +4563,19 @@
       "time_minutes": 1130,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "bb9fcd2c4ece26954164",
+      "name": "18:55 超三联赛 超三联赛 总决赛 半决赛及决赛 2026赛季超三联赛总决赛: 超三联赛 总决赛 半决赛及决赛(蔡凯臣,李嘉伟)",
+      "date": "2026-10-25",
+      "time_minutes": 1135,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3276,6 +4585,8 @@
       "time_minutes": 1135,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3285,6 +4596,8 @@
       "time_minutes": 1140,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3294,6 +4607,19 @@
       "time_minutes": 1140,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "5a6bdcf8c06a4f3b4131",
+      "name": "19:00 全国游泳锦标赛 潘展乐男子100米自由泳冲冠 清流播出",
+      "date": "2026-10-25",
+      "time_minutes": 1140,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3303,15 +4629,8 @@
       "time_minutes": 1140,
       "status": "upcoming",
       "status_text": "未开赛",
-      "published": false
-    },
-    {
-      "id": "fb435c7dadf50ff70995",
-      "name": "19:10 BWF 安洗莹PK辛杜 凤凰组合冲击金牌 鸿昆",
-      "date": "2026-10-25",
-      "time_minutes": 1150,
-      "status": "upcoming",
-      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3321,6 +4640,8 @@
       "time_minutes": 1155,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3330,6 +4651,8 @@
       "time_minutes": 1155,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3339,6 +4662,8 @@
       "time_minutes": 1155,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3348,6 +4673,8 @@
       "time_minutes": 1160,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3357,6 +4684,8 @@
       "time_minutes": 1160,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3366,6 +4695,8 @@
       "time_minutes": 1160,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3375,6 +4706,8 @@
       "time_minutes": 1160,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3384,6 +4717,8 @@
       "time_minutes": 1160,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3393,6 +4728,8 @@
       "time_minutes": 1160,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3402,6 +4739,8 @@
       "time_minutes": 1160,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3411,6 +4750,8 @@
       "time_minutes": 1160,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3420,6 +4761,8 @@
       "time_minutes": 1160,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3429,6 +4772,8 @@
       "time_minutes": 1160,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3438,6 +4783,8 @@
       "time_minutes": 1160,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3447,6 +4794,8 @@
       "time_minutes": 1160,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3456,6 +4805,8 @@
       "time_minutes": 1160,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3465,6 +4816,8 @@
       "time_minutes": 1160,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3474,6 +4827,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3483,6 +4838,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3492,6 +4849,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3501,6 +4860,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3510,6 +4871,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3519,6 +4882,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3528,6 +4893,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3537,6 +4904,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3546,6 +4915,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3555,6 +4926,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3564,6 +4937,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3573,6 +4948,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3582,6 +4959,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3591,6 +4970,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3600,6 +4981,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3609,6 +4992,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3618,6 +5003,8 @@
       "time_minutes": 1170,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3627,6 +5014,8 @@
       "time_minutes": 1170,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3636,6 +5025,8 @@
       "time_minutes": 1175,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3645,6 +5036,8 @@
       "time_minutes": 1175,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3654,6 +5047,8 @@
       "time_minutes": 1185,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3663,6 +5058,8 @@
       "time_minutes": 1185,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3672,15 +5069,8 @@
       "time_minutes": 1195,
       "status": "upcoming",
       "status_text": "未开赛",
-      "published": false
-    },
-    {
-      "id": "df4abf9812d0ea3051b4",
-      "name": "20:00 BWF 安洗莹PK辛杜 凤凰组合冲击金牌 鸿昆",
-      "date": "2026-10-25",
-      "time_minutes": 1200,
-      "status": "upcoming",
-      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3690,33 +5080,8 @@
       "time_minutes": 1200,
       "status": "upcoming",
       "status_text": "未开赛",
-      "published": false
-    },
-    {
-      "id": "91847108eb9d183a8e9a",
-      "name": "20:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 1号桌",
-      "date": "2026-10-25",
-      "time_minutes": 1200,
-      "status": "upcoming",
-      "status_text": "未开赛",
-      "published": false
-    },
-    {
-      "id": "bb34a07a5110087e50ae",
-      "name": "20:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 AI智慧观赛",
-      "date": "2026-10-25",
-      "time_minutes": 1200,
-      "status": "upcoming",
-      "status_text": "未开赛",
-      "published": false
-    },
-    {
-      "id": "9d2b640ccfeb28f2e3c6",
-      "name": "20:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 朱峰立",
-      "date": "2026-10-25",
-      "time_minutes": 1200,
-      "status": "upcoming",
-      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3726,6 +5091,8 @@
       "time_minutes": 1245,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3735,15 +5102,30 @@
       "time_minutes": 1245,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
-      "id": "03fddacb503194b24712",
-      "name": "20:50 BWF 安洗莹PK辛杜 凤凰组合冲击金牌 鸿昆",
+      "id": "71951e77d23282370729",
+      "name": "21:00 WTT 国乒接好签！王曼昱出席抽签仪式 抽签仪式",
       "date": "2026-10-25",
-      "time_minutes": 1250,
+      "time_minutes": 1260,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "ac0d0e8b89e2496b35a3",
+      "name": "21:00 WTT 抽签仪式 抽签仪式",
+      "date": "2026-10-25",
+      "time_minutes": 1260,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3753,6 +5135,52 @@
       "time_minutes": 1260,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "c5115640e88a2423a77b",
+      "name": "21:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 1号桌",
+      "date": "2026-10-25",
+      "time_minutes": 1260,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "6e60e508c3492e1e809c",
+      "name": "21:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 AI智慧分析",
+      "date": "2026-10-25",
+      "time_minutes": 1260,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "3b38b80af507e86c1fba",
+      "name": "21:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 AI智慧观赛",
+      "date": "2026-10-25",
+      "time_minutes": 1260,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "c123f40f1ab3fcc2542b",
+      "name": "21:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 朱峰立",
+      "date": "2026-10-25",
+      "time_minutes": 1260,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3762,6 +5190,8 @@
       "time_minutes": 1290,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3771,6 +5201,8 @@
       "time_minutes": 1290,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3780,6 +5212,8 @@
       "time_minutes": 1290,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3789,6 +5223,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3798,6 +5234,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3807,6 +5245,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3816,6 +5256,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3825,6 +5267,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3834,6 +5278,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3843,6 +5289,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3852,6 +5300,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3861,6 +5311,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3870,6 +5322,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3879,6 +5333,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3888,6 +5344,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3897,6 +5355,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3906,6 +5366,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3915,6 +5377,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3924,6 +5388,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3933,6 +5399,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3942,6 +5410,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3951,6 +5421,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3960,6 +5432,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3969,6 +5443,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3978,6 +5454,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3987,6 +5465,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -3996,6 +5476,8 @@
       "time_minutes": 1305,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4005,6 +5487,8 @@
       "time_minutes": 1315,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4014,6 +5498,8 @@
       "time_minutes": 1315,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4023,6 +5509,8 @@
       "time_minutes": 1335,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4032,6 +5520,8 @@
       "time_minutes": 1335,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4041,6 +5531,8 @@
       "time_minutes": 1380,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4050,6 +5542,8 @@
       "time_minutes": 1380,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4059,6 +5553,8 @@
       "time_minutes": 1390,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4068,6 +5564,8 @@
       "time_minutes": 1435,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4077,6 +5575,8 @@
       "time_minutes": 1435,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4086,6 +5586,8 @@
       "time_minutes": 1435,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4095,6 +5597,8 @@
       "time_minutes": 0,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4104,6 +5608,8 @@
       "time_minutes": 0,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4113,6 +5619,8 @@
       "time_minutes": 0,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4122,6 +5630,8 @@
       "time_minutes": 0,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4131,6 +5641,8 @@
       "time_minutes": 0,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4140,6 +5652,8 @@
       "time_minutes": 0,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4149,6 +5663,8 @@
       "time_minutes": 0,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4158,6 +5674,8 @@
       "time_minutes": 0,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4167,6 +5685,8 @@
       "time_minutes": 0,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4176,6 +5696,8 @@
       "time_minutes": 0,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4185,6 +5707,8 @@
       "time_minutes": 15,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4194,6 +5718,8 @@
       "time_minutes": 15,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4203,6 +5729,8 @@
       "time_minutes": 15,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4212,6 +5740,8 @@
       "time_minutes": 15,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4221,6 +5751,8 @@
       "time_minutes": 15,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4230,6 +5762,8 @@
       "time_minutes": 25,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4239,6 +5773,8 @@
       "time_minutes": 45,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4248,6 +5784,8 @@
       "time_minutes": 45,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4257,6 +5795,8 @@
       "time_minutes": 75,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4266,6 +5806,8 @@
       "time_minutes": 75,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4275,6 +5817,8 @@
       "time_minutes": 105,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4284,6 +5828,8 @@
       "time_minutes": 105,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4293,33 +5839,52 @@
       "time_minutes": 120,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
-      "id": "a684d95cabea1ae998da",
-      "name": "02:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 1号桌",
+      "id": "b8cc558f143867560e96",
+      "name": "03:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 1号桌",
       "date": "2026-10-26",
-      "time_minutes": 120,
+      "time_minutes": 180,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
-      "id": "d9d57a7af79814a5c7a7",
-      "name": "02:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 AI智慧观赛",
+      "id": "a802081f0136f0c448b6",
+      "name": "03:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 AI智慧分析",
       "date": "2026-10-26",
-      "time_minutes": 120,
+      "time_minutes": 180,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
-      "id": "6f5d4f13c88d1383fe23",
-      "name": "02:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 卢正浩",
+      "id": "15fba5d78593b4862337",
+      "name": "03:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 AI智慧观赛",
       "date": "2026-10-26",
-      "time_minutes": 120,
+      "time_minutes": 180,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "380dc19605e70b9f465c",
+      "name": "03:00 斯诺克 凯伦·威尔逊VS杰克·琼斯 卢正浩",
+      "date": "2026-10-26",
+      "time_minutes": 180,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4329,6 +5894,8 @@
       "time_minutes": 210,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4338,6 +5905,8 @@
       "time_minutes": 210,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4347,6 +5916,8 @@
       "time_minutes": 210,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4356,6 +5927,8 @@
       "time_minutes": 220,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4365,6 +5938,8 @@
       "time_minutes": 225,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4374,6 +5949,8 @@
       "time_minutes": 225,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4383,6 +5960,140 @@
       "time_minutes": 235,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "cc1caee8a2f49e4a8831",
+      "name": "04:55 NBA 爵士VS湖人 姜帆 季孟年",
+      "date": "2026-10-26",
+      "time_minutes": 295,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "523ded670f2f1f34b470",
+      "name": "04:55 NBA 爵士VS湖人 英文原声",
+      "date": "2026-10-26",
+      "time_minutes": 295,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "fe54db30b8574bdde418",
+      "name": "05:55 NBA 篮网VS步行者 刘芳宇",
+      "date": "2026-10-26",
+      "time_minutes": 355,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "80bb5bee5010645f7f04",
+      "name": "05:55 NBA 篮网VS步行者 英文原声",
+      "date": "2026-10-26",
+      "time_minutes": 355,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "e5d2ec18987ed03a8608",
+      "name": "06:55 NBA 尼克斯VS魔术 张泽欣",
+      "date": "2026-10-26",
+      "time_minutes": 415,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "ad9ec9b9bd43e11f7dca",
+      "name": "06:55 NBA 尼克斯VS魔术 英文原声",
+      "date": "2026-10-26",
+      "time_minutes": 415,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "2a45d38448627c248c87",
+      "name": "06:55 NBA 森林狼VS猛龙 盛哲",
+      "date": "2026-10-26",
+      "time_minutes": 415,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "5563f7416c7a3294a0c9",
+      "name": "06:55 NBA 森林狼VS猛龙 英文原声",
+      "date": "2026-10-26",
+      "time_minutes": 415,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "c4ae7b345aa9dc2fcf91",
+      "name": "06:55 NBA 雷霆VS快船 周赫",
+      "date": "2026-10-26",
+      "time_minutes": 415,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "5af1719d1ebfc4c353f3",
+      "name": "06:55 NBA 雷霆VS快船 英文原声",
+      "date": "2026-10-26",
+      "time_minutes": 415,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "ef5ae570bbf86eff58ca",
+      "name": "07:00 NBA 76人VS活塞 王冠证 陈正昊 王羽希",
+      "date": "2026-10-26",
+      "time_minutes": 420,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "1148a3287837d069c648",
+      "name": "07:25 NBA 76人VS活塞 英文原声",
+      "date": "2026-10-26",
+      "time_minutes": 445,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4392,6 +6103,30 @@
       "time_minutes": 480,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "52a96fc664e464731400",
+      "name": "08:55 NBA 国王VS灰熊 英文原声",
+      "date": "2026-10-26",
+      "time_minutes": 535,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
+      "published": false
+    },
+    {
+      "id": "144f00b8a147ee2da6a1",
+      "name": "08:55 NBA 国王VS灰熊 贾磊",
+      "date": "2026-10-26",
+      "time_minutes": 535,
+      "status": "upcoming",
+      "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4401,6 +6136,8 @@
       "time_minutes": 540,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4410,6 +6147,8 @@
       "time_minutes": 570,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4419,6 +6158,8 @@
       "time_minutes": 570,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4428,6 +6169,8 @@
       "time_minutes": 570,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4437,6 +6180,8 @@
       "time_minutes": 900,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4446,6 +6191,8 @@
       "time_minutes": 1140,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4455,6 +6202,8 @@
       "time_minutes": 1140,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4464,6 +6213,8 @@
       "time_minutes": 1140,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4473,6 +6224,8 @@
       "time_minutes": 1160,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4482,6 +6235,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4491,6 +6246,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4500,6 +6257,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4509,6 +6268,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4518,6 +6279,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4527,6 +6290,8 @@
       "time_minutes": 1165,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4536,6 +6301,8 @@
       "time_minutes": 1170,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4545,6 +6312,8 @@
       "time_minutes": 1290,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4554,6 +6323,8 @@
       "time_minutes": 1290,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     },
     {
@@ -4563,6 +6334,8 @@
       "time_minutes": 1300,
       "status": "upcoming",
       "status_text": "未开赛",
+      "last_success_at": null,
+      "player_entry_available": true,
       "published": false
     }
   ]

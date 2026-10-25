@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-10-25T14:42:32+08:00",
-  "finished_at": "2026-10-25T14:59:20+08:00",
+  "generated_at": "2026-10-25T16:52:32+08:00",
+  "finished_at": "2026-10-25T17:09:20+08:00",
   "accepted": true,
   "errors": [],
   "warnings": [
+    "some_vods_reuse_recent_evidence_with_original_timestamp",
     "restricted_and_unverified_events_only_in_schedule",
     "some_sports_entries_require_login",
     "trial_streams_not_counted_as_verified",
@@ -13,8 +14,8 @@
     {
       "id": "migu-primary",
       "ok": true,
-      "parsed": 578,
-      "selected": 572,
+      "parsed": 592,
+      "selected": 586,
       "cached": false
     },
     {
@@ -23,14 +24,14 @@
       "parsed": 565,
       "selected": 437,
       "cached": true,
-      "cache_age_hours": 6.91,
+      "cache_age_hours": 9.07,
       "fetch_error": "source_fetch_failed_curl_28"
     },
     {
       "id": "migu-backup",
       "ok": true,
-      "parsed": 585,
-      "selected": 579,
+      "parsed": 595,
+      "selected": 589,
       "cached": false
     }
   ],
@@ -38,31 +39,37 @@
   "channels": 433,
   "events": {
     "2026-10-24": {
-      "listed": 242,
-      "verified": 48,
+      "listed": 251,
+      "verified": 47,
+      "fresh_verified": 46,
+      "recent_verified": 1,
       "upcoming": 0,
-      "not_checked": 160,
+      "not_checked": 201,
       "membership_required": 0,
       "login_required": 0,
       "trial_stream": 0,
       "observation_pending": 0,
-      "failed_checks": 34
+      "failed_checks": 3
     },
     "2026-10-25": {
-      "listed": 212,
-      "verified": 0,
-      "upcoming": 109,
-      "not_checked": 83,
+      "listed": 257,
+      "verified": 23,
+      "fresh_verified": 23,
+      "recent_verified": 0,
+      "upcoming": 111,
+      "not_checked": 89,
       "membership_required": 0,
-      "login_required": 0,
-      "trial_stream": 2,
+      "login_required": 2,
+      "trial_stream": 1,
       "observation_pending": 0,
-      "failed_checks": 20
+      "failed_checks": 34
     },
     "2026-10-26": {
-      "listed": 53,
+      "listed": 68,
       "verified": 0,
-      "upcoming": 53,
+      "fresh_verified": 0,
+      "recent_verified": 0,
+      "upcoming": 68,
       "not_checked": 0,
       "membership_required": 0,
       "login_required": 0,
@@ -72,14 +79,15 @@
     }
   },
   "probe": {
-    "trial_stream": 4,
-    "decode_failed": 106,
-    "login_required": 6,
-    "vod_duration_unknown": 80,
-    "decoded": 69,
-    "timeout": 32,
-    "event_budget": 579,
-    "upcoming_lines": 311
+    "decoded": 103,
+    "timeout": 34,
+    "metadata_network_timeout": 31,
+    "decode_failed": 60,
+    "login_required": 4,
+    "trial_stream": 1,
+    "metadata_timeout": 1,
+    "event_budget": 631,
+    "upcoming_lines": 336
   },
   "max_lines": 2,
   "event_policy": "qualified_only_with_separate_complete_schedule",
@@ -104,55 +112,271 @@
     "中超": {
       "2026-10-24": {
         "matches": 8,
-        "entries": 19,
+        "entries": 20,
         "decoded_entries": 0
       }
     }
   },
+  "catalogue_subscription": null,
   "source_media_checks": {
     "migu-backup": {
-      "decode_failed": 47,
-      "trial_stream": 4,
-      "decoded": 22,
-      "timeout": 30,
-      "event_budget": 191
-    },
-    "migu-alt": {
-      "decode_failed": 18,
-      "vod_duration_unknown": 79,
-      "event_budget": 190
+      "decoded": 37,
+      "timeout": 32,
+      "decode_failed": 21,
+      "trial_stream": 1,
+      "metadata_timeout": 1,
+      "event_budget": 206
     },
     "migu-primary": {
-      "decode_failed": 41,
-      "login_required": 6,
-      "decoded": 47,
+      "decoded": 66,
       "timeout": 2,
-      "vod_duration_unknown": 1,
-      "event_budget": 198
+      "login_required": 4,
+      "decode_failed": 22,
+      "event_budget": 200
+    },
+    "migu-alt": {
+      "metadata_network_timeout": 31,
+      "decode_failed": 17,
+      "event_budget": 225
     }
   },
+  "source_failure_examples": {
+    "migu-backup": [
+      {
+        "title": "PPA亚洲职业匹克球巡回赛 PPA香港1500大满贯赛事 Day6 清流播出 13:00",
+        "reason": "decode_failed",
+        "error": "[in#0 @ 0x55f979482400] Error opening input: Invalid data found when processing input\nError opening input file [url]\nError opening input files: Invalid data found when processing input\n"
+      }
+    ],
+    "migu-primary": [
+      {
+        "title": "乒乓球亚锦赛 石油组合横扫晋级 蒯曼PK张本美和 马特 13:00",
+        "reason": "decode_failed",
+        "error": "[in#0 @ 0x55a85682e400] Error opening input: Invalid data found when processing input\nError opening input file [url]\nError opening input files: Invalid data found when processing input\n"
+      }
+    ],
+    "migu-alt": [
+      {
+        "title": "德甲 斯图加特VS门兴格拉德巴赫 全场回放（AI智慧观赛） 02:25",
+        "reason": "metadata_network_timeout",
+        "error": "[tcp @ 0x5563d1e14f40] Connection to tcp://112.230.73.82:7788 failed: Connection timed out\n[url] Connection timed out\n"
+      },
+      {
+        "title": "乒乓球亚锦赛 石油组合冲决赛 蒯曼对决张本美和 1号桌 13:00",
+        "reason": "decode_failed",
+        "error": "[tcp @ 0x55d926d94f40] Connection to tcp://112.230.73.82:7788 failed: Connection timed out\n[in#0 @ 0x55d926ddc400] Error opening input: Connection timed out\nError opening input file [url]\nError opening input files: Connection timed out\n"
+      }
+    ]
+  },
+  "probe_order": "requested_then_retained_then_live_then_today_then_older_unpublished",
   "selection_policy": "recheck_previous_route_first_then_verified_backup",
-  "published_events": 48,
+  "published_events": 70,
   "source_discovery": {
     "registry": "state/upstreams.json",
     "schedule": "daily",
     "automatic_promotion": "two_qualified_observations_at_least_6_hours_apart"
   },
-  "requested_event_check": [],
+  "requested_event_check": [
+    "曼城"
+  ],
   "mode": "events_only",
   "channel_validation_at": "2026-10-25T07:52:25+08:00",
   "verification": "decoded_video_and_optional_audio_at_generator_location",
   "decode_seconds": 3,
   "event_validation": {
     "vod": "at_least_1200_seconds_and_decoded_at_start_midpoint_80_percent",
+    "reused_vod_max_age_hours": 24,
     "live": "15_second_decode_twice_at_least_20_minutes_apart_same_route"
   },
   "upcoming_note": "赛前、试看、受限及未通过检测条目只保留在 schedule.json / schedule.md。检测不证明画面与标题一致或用户端全场稳定。",
-  "retained_previous_publication": {
-    "restored_at": "2026-10-25T16:43:02+08:00",
-    "from_commit": "8a75716",
-    "failed_run": 40174303250,
-    "failed_attempt_at": "2026-10-25T15:50:56+08:00",
-    "reason": "network_inconclusive_update_must_not_erase_previous_verified_playback"
+  "frame_audit": {
+    "captured": 14,
+    "attempted": 18,
+    "entries_sampled": 6,
+    "black_detection_available": true,
+    "semantic_match_checked": false,
+    "records": [
+      {
+        "title": "英超 阿斯顿维拉VS曼城 全场回放（任锴、梁柏翘） 19:15",
+        "event_date": "2026-10-24",
+        "source": "migu-backup",
+        "route_fingerprint": "a232fcdfa7af556d8e00",
+        "offset_seconds": 0,
+        "status": "captured",
+        "captured_at": "2026-10-25T17:09:23+08:00",
+        "file": "7ad21378e0d6-80854eb64395971151d4-a232fcdfa7af556d8e00-0.jpg"
+      },
+      {
+        "title": "英超 阿斯顿维拉VS曼城 全场回放（任锴、梁柏翘） 19:15",
+        "event_date": "2026-10-24",
+        "source": "migu-backup",
+        "route_fingerprint": "a232fcdfa7af556d8e00",
+        "offset_seconds": 3719,
+        "status": "captured",
+        "captured_at": "2026-10-25T17:09:27+08:00",
+        "file": "7ad21378e0d6-80854eb64395971151d4-a232fcdfa7af556d8e00-3719.jpg"
+      },
+      {
+        "title": "英超 阿斯顿维拉VS曼城 全场回放（任锴、梁柏翘） 19:15",
+        "event_date": "2026-10-24",
+        "source": "migu-backup",
+        "route_fingerprint": "a232fcdfa7af556d8e00",
+        "offset_seconds": 5951,
+        "status": "captured",
+        "captured_at": "2026-10-25T17:09:26+08:00",
+        "file": "7ad21378e0d6-80854eb64395971151d4-a232fcdfa7af556d8e00-5951.jpg"
+      },
+      {
+        "title": "英女超 布莱顿女足VS西汉姆联女足 全场回放（林梦鸽） 00:00",
+        "event_date": "2026-10-25",
+        "source": "migu-primary",
+        "route_fingerprint": "044ff79c7905705f4a50",
+        "offset_seconds": 0,
+        "status": "captured",
+        "captured_at": "2026-10-25T17:09:30+08:00",
+        "file": "7ad21378e0d6-a0b57b96305a4e4e095e-044ff79c7905705f4a50-0.jpg"
+      },
+      {
+        "title": "英女超 布莱顿女足VS西汉姆联女足 全场回放（林梦鸽） 00:00",
+        "event_date": "2026-10-25",
+        "source": "migu-primary",
+        "route_fingerprint": "044ff79c7905705f4a50",
+        "offset_seconds": 3890,
+        "status": "captured",
+        "captured_at": "2026-10-25T17:09:35+08:00",
+        "file": "7ad21378e0d6-a0b57b96305a4e4e095e-044ff79c7905705f4a50-3890.jpg"
+      },
+      {
+        "title": "英女超 布莱顿女足VS西汉姆联女足 全场回放（林梦鸽） 00:00",
+        "event_date": "2026-10-25",
+        "source": "migu-primary",
+        "route_fingerprint": "044ff79c7905705f4a50",
+        "offset_seconds": 6224,
+        "status": "captured",
+        "captured_at": "2026-10-25T17:09:37+08:00",
+        "file": "7ad21378e0d6-a0b57b96305a4e4e095e-044ff79c7905705f4a50-6224.jpg"
+      },
+      {
+        "title": "德甲 多特蒙德VS法兰克福 全场回放（AI观赛） 00:15",
+        "event_date": "2026-10-25",
+        "source": "migu-backup",
+        "route_fingerprint": "2d82d4c64f49df88fc1c",
+        "offset_seconds": 0,
+        "status": "captured",
+        "captured_at": "2026-10-25T17:09:37+08:00",
+        "file": "7ad21378e0d6-b1b04cd5a9dbfa540a2d-2d82d4c64f49df88fc1c-0.jpg"
+      },
+      {
+        "title": "德甲 多特蒙德VS法兰克福 全场回放（AI观赛） 00:15",
+        "event_date": "2026-10-25",
+        "source": "migu-backup",
+        "route_fingerprint": "2d82d4c64f49df88fc1c",
+        "offset_seconds": 4102,
+        "status": "captured",
+        "captured_at": "2026-10-25T17:09:45+08:00",
+        "file": "7ad21378e0d6-b1b04cd5a9dbfa540a2d-2d82d4c64f49df88fc1c-4102.jpg"
+      },
+      {
+        "title": "德甲 多特蒙德VS法兰克福 全场回放（AI观赛） 00:15",
+        "event_date": "2026-10-25",
+        "source": "migu-backup",
+        "route_fingerprint": "2d82d4c64f49df88fc1c",
+        "offset_seconds": 6563,
+        "status": "timeout",
+        "captured_at": "2026-10-25T17:09:47+08:00",
+        "file": null
+      },
+      {
+        "title": "英超 切尔西VS托特纳姆热刺 全场回放（AI智慧观赛） 00:15",
+        "event_date": "2026-10-25",
+        "source": "migu-backup",
+        "route_fingerprint": "a06c2b7116077c6f1484",
+        "offset_seconds": 0,
+        "status": "captured",
+        "captured_at": "2026-10-25T17:09:44+08:00",
+        "file": "7ad21378e0d6-f97647adac1592e0895c-a06c2b7116077c6f1484-0.jpg"
+      },
+      {
+        "title": "英超 切尔西VS托特纳姆热刺 全场回放（AI智慧观赛） 00:15",
+        "event_date": "2026-10-25",
+        "source": "migu-backup",
+        "route_fingerprint": "a06c2b7116077c6f1484",
+        "offset_seconds": 4773,
+        "status": "captured",
+        "captured_at": "2026-10-25T17:09:52+08:00",
+        "file": "7ad21378e0d6-f97647adac1592e0895c-a06c2b7116077c6f1484-4773.jpg"
+      },
+      {
+        "title": "英超 切尔西VS托特纳姆热刺 全场回放（AI智慧观赛） 00:15",
+        "event_date": "2026-10-25",
+        "source": "migu-backup",
+        "route_fingerprint": "a06c2b7116077c6f1484",
+        "offset_seconds": 7638,
+        "status": "captured",
+        "captured_at": "2026-10-25T17:09:54+08:00",
+        "file": "7ad21378e0d6-f97647adac1592e0895c-a06c2b7116077c6f1484-7638.jpg"
+      },
+      {
+        "title": "西甲 瓦伦西亚VS比利亚雷亚尔 全场回放（周楚雄） 00:15",
+        "event_date": "2026-10-25",
+        "source": "migu-primary",
+        "route_fingerprint": "dbe656da914996303400",
+        "offset_seconds": 0,
+        "status": "timeout",
+        "captured_at": "2026-10-25T17:09:57+08:00",
+        "file": null
+      },
+      {
+        "title": "西甲 瓦伦西亚VS比利亚雷亚尔 全场回放（周楚雄） 00:15",
+        "event_date": "2026-10-25",
+        "source": "migu-primary",
+        "route_fingerprint": "dbe656da914996303400",
+        "offset_seconds": 3737,
+        "status": "timeout",
+        "captured_at": "2026-10-25T17:10:02+08:00",
+        "file": null
+      },
+      {
+        "title": "西甲 瓦伦西亚VS比利亚雷亚尔 全场回放（周楚雄） 00:15",
+        "event_date": "2026-10-25",
+        "source": "migu-primary",
+        "route_fingerprint": "dbe656da914996303400",
+        "offset_seconds": 5980,
+        "status": "timeout",
+        "captured_at": "2026-10-25T17:10:04+08:00",
+        "file": null
+      },
+      {
+        "title": "意甲 拉齐奥VS帕尔马 全场回放（鲁靖明） 02:30",
+        "event_date": "2026-10-25",
+        "source": "migu-primary",
+        "route_fingerprint": "8c39ec0de05fd9c0ee2b",
+        "offset_seconds": 0,
+        "status": "captured",
+        "captured_at": "2026-10-25T17:10:04+08:00",
+        "file": "7ad21378e0d6-1bb1f9828a895be03e24-8c39ec0de05fd9c0ee2b-0.jpg"
+      },
+      {
+        "title": "意甲 拉齐奥VS帕尔马 全场回放（鲁靖明） 02:30",
+        "event_date": "2026-10-25",
+        "source": "migu-primary",
+        "route_fingerprint": "8c39ec0de05fd9c0ee2b",
+        "offset_seconds": 3614,
+        "status": "captured",
+        "captured_at": "2026-10-25T17:10:12+08:00",
+        "file": "7ad21378e0d6-1bb1f9828a895be03e24-8c39ec0de05fd9c0ee2b-3614.jpg"
+      },
+      {
+        "title": "意甲 拉齐奥VS帕尔马 全场回放（鲁靖明） 02:30",
+        "event_date": "2026-10-25",
+        "source": "migu-primary",
+        "route_fingerprint": "8c39ec0de05fd9c0ee2b",
+        "offset_seconds": 5782,
+        "status": "captured",
+        "captured_at": "2026-10-25T17:10:13+08:00",
+        "file": "7ad21378e0d6-1bb1f9828a895be03e24-8c39ec0de05fd9c0ee2b-5782.jpg"
+      }
+    ],
+    "note": "截图为有限抽样；黑屏检查覆盖本轮视频解码片段。未自动识别球队、比分、会员提示或画面与标题是否一致；截图失败不会冒充播放检测失败。"
   }
 }
